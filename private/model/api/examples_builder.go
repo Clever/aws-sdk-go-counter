@@ -246,9 +246,9 @@ func (builder defaultExamplesBuilder) Imports(a *API) string {
 	"strings"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/Clever/aws-sdk-go-counter/aws"
+	"github.com/Clever/aws-sdk-go-counter/aws/awserr"
+	"github.com/Clever/aws-sdk-go-counter/aws/session"
 	`)
 
 	buf.WriteString(fmt.Sprintf("\"%s/%s\"", "github.com/aws/aws-sdk-go/service", a.PackageName()))

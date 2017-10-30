@@ -64,6 +64,4 @@ map[ListBuckets:1]
 ## Developing
 
 This repo uses a modified version of aws-sdk-go's codegen to produce the code in the `counter/` directory.
-The imports in the codegen assume that it exists in the `github.com/aws/aws-sdk-go` package.
-Thus, for the codegen to work properly, you must clone this repo into `$GOPATH/github.com/aws/aws-sdk-go`.
-Then you can run `make all` in the the `counter` directory to generate the counters.
+Run `make all` in the the `counter` directory to generate the counters.

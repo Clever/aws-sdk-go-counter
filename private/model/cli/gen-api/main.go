@@ -17,8 +17,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/aws/aws-sdk-go/private/model/api"
-	"github.com/aws/aws-sdk-go/private/util"
+	"github.com/Clever/aws-sdk-go-counter/private/model/api"
+	"github.com/Clever/aws-sdk-go-counter/private/util"
 )
 
 type generateInfo struct {
