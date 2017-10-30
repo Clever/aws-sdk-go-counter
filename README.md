@@ -61,6 +61,20 @@ Output:
 map[ListBuckets:1]
 ```
 
+You could also print the values periodically in the background e.g.
+
+```go
+	go func() {
+		ticker := time.NewTicker(10 * time.Second)
+		for _ = range ticker.C {
+			fmt.Printf("%v\n", svc.Counters())
+		}
+	}()
+```
+
+At Clever you could also route logs to metrics backends like SignalFX, e.g. https://github.com/Clever/workflow-manager/pull/87.
+
+
 ## Developing
 
 This repo uses a modified version of aws-sdk-go's codegen to produce the code in the `counter/` directory.
