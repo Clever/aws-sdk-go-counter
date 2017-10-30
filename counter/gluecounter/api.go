@@ -647,14 +647,14 @@ func (c *Glue) GetClassifiersPages(input *glue.GetClassifiersInput, fn func(*glu
 		c.inc("GetClassifiers")
 		return fn(page, lastPage)
 	}
-	return c.GetClassifiersPages(input, wrappedFn)
+	return c.svc.GetClassifiersPages(input, wrappedFn)
 }
 
 // GetClassifiersPagesWithContext is a passthrough to the underlying GetClassifiersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetClassifiers when applied to the request.
 func (c *Glue) GetClassifiersPagesWithContext(ctx aws.Context, input *glue.GetClassifiersInput, fn func(*glue.GetClassifiersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetClassifiers"))
-	return c.GetClassifiersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetClassifiersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetConnectionRequest is a passthrough to the underlying GetConnectionRequest.
@@ -708,14 +708,14 @@ func (c *Glue) GetConnectionsPages(input *glue.GetConnectionsInput, fn func(*glu
 		c.inc("GetConnections")
 		return fn(page, lastPage)
 	}
-	return c.GetConnectionsPages(input, wrappedFn)
+	return c.svc.GetConnectionsPages(input, wrappedFn)
 }
 
 // GetConnectionsPagesWithContext is a passthrough to the underlying GetConnectionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetConnections when applied to the request.
 func (c *Glue) GetConnectionsPagesWithContext(ctx aws.Context, input *glue.GetConnectionsInput, fn func(*glue.GetConnectionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetConnections"))
-	return c.GetConnectionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetConnectionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetCrawlerRequest is a passthrough to the underlying GetCrawlerRequest.
@@ -769,14 +769,14 @@ func (c *Glue) GetCrawlerMetricsPages(input *glue.GetCrawlerMetricsInput, fn fun
 		c.inc("GetCrawlerMetrics")
 		return fn(page, lastPage)
 	}
-	return c.GetCrawlerMetricsPages(input, wrappedFn)
+	return c.svc.GetCrawlerMetricsPages(input, wrappedFn)
 }
 
 // GetCrawlerMetricsPagesWithContext is a passthrough to the underlying GetCrawlerMetricsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetCrawlerMetrics when applied to the request.
 func (c *Glue) GetCrawlerMetricsPagesWithContext(ctx aws.Context, input *glue.GetCrawlerMetricsInput, fn func(*glue.GetCrawlerMetricsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetCrawlerMetrics"))
-	return c.GetCrawlerMetricsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetCrawlerMetricsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetCrawlersRequest is a passthrough to the underlying GetCrawlersRequest.
@@ -809,14 +809,14 @@ func (c *Glue) GetCrawlersPages(input *glue.GetCrawlersInput, fn func(*glue.GetC
 		c.inc("GetCrawlers")
 		return fn(page, lastPage)
 	}
-	return c.GetCrawlersPages(input, wrappedFn)
+	return c.svc.GetCrawlersPages(input, wrappedFn)
 }
 
 // GetCrawlersPagesWithContext is a passthrough to the underlying GetCrawlersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetCrawlers when applied to the request.
 func (c *Glue) GetCrawlersPagesWithContext(ctx aws.Context, input *glue.GetCrawlersInput, fn func(*glue.GetCrawlersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetCrawlers"))
-	return c.GetCrawlersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetCrawlersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetDatabaseRequest is a passthrough to the underlying GetDatabaseRequest.
@@ -870,14 +870,14 @@ func (c *Glue) GetDatabasesPages(input *glue.GetDatabasesInput, fn func(*glue.Ge
 		c.inc("GetDatabases")
 		return fn(page, lastPage)
 	}
-	return c.GetDatabasesPages(input, wrappedFn)
+	return c.svc.GetDatabasesPages(input, wrappedFn)
 }
 
 // GetDatabasesPagesWithContext is a passthrough to the underlying GetDatabasesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetDatabases when applied to the request.
 func (c *Glue) GetDatabasesPagesWithContext(ctx aws.Context, input *glue.GetDatabasesInput, fn func(*glue.GetDatabasesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetDatabases"))
-	return c.GetDatabasesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetDatabasesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetDataflowGraphRequest is a passthrough to the underlying GetDataflowGraphRequest.
@@ -952,14 +952,14 @@ func (c *Glue) GetDevEndpointsPages(input *glue.GetDevEndpointsInput, fn func(*g
 		c.inc("GetDevEndpoints")
 		return fn(page, lastPage)
 	}
-	return c.GetDevEndpointsPages(input, wrappedFn)
+	return c.svc.GetDevEndpointsPages(input, wrappedFn)
 }
 
 // GetDevEndpointsPagesWithContext is a passthrough to the underlying GetDevEndpointsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetDevEndpoints when applied to the request.
 func (c *Glue) GetDevEndpointsPagesWithContext(ctx aws.Context, input *glue.GetDevEndpointsInput, fn func(*glue.GetDevEndpointsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetDevEndpoints"))
-	return c.GetDevEndpointsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetDevEndpointsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetJobRequest is a passthrough to the underlying GetJobRequest.
@@ -1034,14 +1034,14 @@ func (c *Glue) GetJobRunsPages(input *glue.GetJobRunsInput, fn func(*glue.GetJob
 		c.inc("GetJobRuns")
 		return fn(page, lastPage)
 	}
-	return c.GetJobRunsPages(input, wrappedFn)
+	return c.svc.GetJobRunsPages(input, wrappedFn)
 }
 
 // GetJobRunsPagesWithContext is a passthrough to the underlying GetJobRunsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetJobRuns when applied to the request.
 func (c *Glue) GetJobRunsPagesWithContext(ctx aws.Context, input *glue.GetJobRunsInput, fn func(*glue.GetJobRunsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetJobRuns"))
-	return c.GetJobRunsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetJobRunsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetJobsRequest is a passthrough to the underlying GetJobsRequest.
@@ -1074,14 +1074,14 @@ func (c *Glue) GetJobsPages(input *glue.GetJobsInput, fn func(*glue.GetJobsOutpu
 		c.inc("GetJobs")
 		return fn(page, lastPage)
 	}
-	return c.GetJobsPages(input, wrappedFn)
+	return c.svc.GetJobsPages(input, wrappedFn)
 }
 
 // GetJobsPagesWithContext is a passthrough to the underlying GetJobsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetJobs when applied to the request.
 func (c *Glue) GetJobsPagesWithContext(ctx aws.Context, input *glue.GetJobsInput, fn func(*glue.GetJobsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetJobs"))
-	return c.GetJobsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetJobsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetMappingRequest is a passthrough to the underlying GetMappingRequest.
@@ -1156,14 +1156,14 @@ func (c *Glue) GetPartitionsPages(input *glue.GetPartitionsInput, fn func(*glue.
 		c.inc("GetPartitions")
 		return fn(page, lastPage)
 	}
-	return c.GetPartitionsPages(input, wrappedFn)
+	return c.svc.GetPartitionsPages(input, wrappedFn)
 }
 
 // GetPartitionsPagesWithContext is a passthrough to the underlying GetPartitionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetPartitions when applied to the request.
 func (c *Glue) GetPartitionsPagesWithContext(ctx aws.Context, input *glue.GetPartitionsInput, fn func(*glue.GetPartitionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetPartitions"))
-	return c.GetPartitionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetPartitionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetPlanRequest is a passthrough to the underlying GetPlanRequest.
@@ -1238,14 +1238,14 @@ func (c *Glue) GetTableVersionsPages(input *glue.GetTableVersionsInput, fn func(
 		c.inc("GetTableVersions")
 		return fn(page, lastPage)
 	}
-	return c.GetTableVersionsPages(input, wrappedFn)
+	return c.svc.GetTableVersionsPages(input, wrappedFn)
 }
 
 // GetTableVersionsPagesWithContext is a passthrough to the underlying GetTableVersionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetTableVersions when applied to the request.
 func (c *Glue) GetTableVersionsPagesWithContext(ctx aws.Context, input *glue.GetTableVersionsInput, fn func(*glue.GetTableVersionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetTableVersions"))
-	return c.GetTableVersionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetTableVersionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetTablesRequest is a passthrough to the underlying GetTablesRequest.
@@ -1278,14 +1278,14 @@ func (c *Glue) GetTablesPages(input *glue.GetTablesInput, fn func(*glue.GetTable
 		c.inc("GetTables")
 		return fn(page, lastPage)
 	}
-	return c.GetTablesPages(input, wrappedFn)
+	return c.svc.GetTablesPages(input, wrappedFn)
 }
 
 // GetTablesPagesWithContext is a passthrough to the underlying GetTablesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetTables when applied to the request.
 func (c *Glue) GetTablesPagesWithContext(ctx aws.Context, input *glue.GetTablesInput, fn func(*glue.GetTablesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetTables"))
-	return c.GetTablesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetTablesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetTriggerRequest is a passthrough to the underlying GetTriggerRequest.
@@ -1339,14 +1339,14 @@ func (c *Glue) GetTriggersPages(input *glue.GetTriggersInput, fn func(*glue.GetT
 		c.inc("GetTriggers")
 		return fn(page, lastPage)
 	}
-	return c.GetTriggersPages(input, wrappedFn)
+	return c.svc.GetTriggersPages(input, wrappedFn)
 }
 
 // GetTriggersPagesWithContext is a passthrough to the underlying GetTriggersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetTriggers when applied to the request.
 func (c *Glue) GetTriggersPagesWithContext(ctx aws.Context, input *glue.GetTriggersInput, fn func(*glue.GetTriggersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetTriggers"))
-	return c.GetTriggersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetTriggersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetUserDefinedFunctionRequest is a passthrough to the underlying GetUserDefinedFunctionRequest.
@@ -1400,14 +1400,14 @@ func (c *Glue) GetUserDefinedFunctionsPages(input *glue.GetUserDefinedFunctionsI
 		c.inc("GetUserDefinedFunctions")
 		return fn(page, lastPage)
 	}
-	return c.GetUserDefinedFunctionsPages(input, wrappedFn)
+	return c.svc.GetUserDefinedFunctionsPages(input, wrappedFn)
 }
 
 // GetUserDefinedFunctionsPagesWithContext is a passthrough to the underlying GetUserDefinedFunctionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetUserDefinedFunctions when applied to the request.
 func (c *Glue) GetUserDefinedFunctionsPagesWithContext(ctx aws.Context, input *glue.GetUserDefinedFunctionsInput, fn func(*glue.GetUserDefinedFunctionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetUserDefinedFunctions"))
-	return c.GetUserDefinedFunctionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetUserDefinedFunctionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ImportCatalogToGlueRequest is a passthrough to the underlying ImportCatalogToGlueRequest.

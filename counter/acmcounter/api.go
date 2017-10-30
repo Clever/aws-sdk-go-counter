@@ -143,14 +143,14 @@ func (c *ACM) ListCertificatesPages(input *acm.ListCertificatesInput, fn func(*a
 		c.inc("ListCertificates")
 		return fn(page, lastPage)
 	}
-	return c.ListCertificatesPages(input, wrappedFn)
+	return c.svc.ListCertificatesPages(input, wrappedFn)
 }
 
 // ListCertificatesPagesWithContext is a passthrough to the underlying ListCertificatesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListCertificates when applied to the request.
 func (c *ACM) ListCertificatesPagesWithContext(ctx aws.Context, input *acm.ListCertificatesInput, fn func(*acm.ListCertificatesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListCertificates"))
-	return c.ListCertificatesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListCertificatesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTagsForCertificateRequest is a passthrough to the underlying ListTagsForCertificateRequest.

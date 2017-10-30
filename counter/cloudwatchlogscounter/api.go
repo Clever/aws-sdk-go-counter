@@ -290,14 +290,14 @@ func (c *CloudWatchLogs) DescribeDestinationsPages(input *cloudwatchlogs.Describ
 		c.inc("DescribeDestinations")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDestinationsPages(input, wrappedFn)
+	return c.svc.DescribeDestinationsPages(input, wrappedFn)
 }
 
 // DescribeDestinationsPagesWithContext is a passthrough to the underlying DescribeDestinationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDestinations when applied to the request.
 func (c *CloudWatchLogs) DescribeDestinationsPagesWithContext(ctx aws.Context, input *cloudwatchlogs.DescribeDestinationsInput, fn func(*cloudwatchlogs.DescribeDestinationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDestinations"))
-	return c.DescribeDestinationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDestinationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeExportTasksRequest is a passthrough to the underlying DescribeExportTasksRequest.
@@ -351,14 +351,14 @@ func (c *CloudWatchLogs) DescribeLogGroupsPages(input *cloudwatchlogs.DescribeLo
 		c.inc("DescribeLogGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeLogGroupsPages(input, wrappedFn)
+	return c.svc.DescribeLogGroupsPages(input, wrappedFn)
 }
 
 // DescribeLogGroupsPagesWithContext is a passthrough to the underlying DescribeLogGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeLogGroups when applied to the request.
 func (c *CloudWatchLogs) DescribeLogGroupsPagesWithContext(ctx aws.Context, input *cloudwatchlogs.DescribeLogGroupsInput, fn func(*cloudwatchlogs.DescribeLogGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeLogGroups"))
-	return c.DescribeLogGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeLogGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeLogStreamsRequest is a passthrough to the underlying DescribeLogStreamsRequest.
@@ -391,14 +391,14 @@ func (c *CloudWatchLogs) DescribeLogStreamsPages(input *cloudwatchlogs.DescribeL
 		c.inc("DescribeLogStreams")
 		return fn(page, lastPage)
 	}
-	return c.DescribeLogStreamsPages(input, wrappedFn)
+	return c.svc.DescribeLogStreamsPages(input, wrappedFn)
 }
 
 // DescribeLogStreamsPagesWithContext is a passthrough to the underlying DescribeLogStreamsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeLogStreams when applied to the request.
 func (c *CloudWatchLogs) DescribeLogStreamsPagesWithContext(ctx aws.Context, input *cloudwatchlogs.DescribeLogStreamsInput, fn func(*cloudwatchlogs.DescribeLogStreamsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeLogStreams"))
-	return c.DescribeLogStreamsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeLogStreamsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeMetricFiltersRequest is a passthrough to the underlying DescribeMetricFiltersRequest.
@@ -431,14 +431,14 @@ func (c *CloudWatchLogs) DescribeMetricFiltersPages(input *cloudwatchlogs.Descri
 		c.inc("DescribeMetricFilters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeMetricFiltersPages(input, wrappedFn)
+	return c.svc.DescribeMetricFiltersPages(input, wrappedFn)
 }
 
 // DescribeMetricFiltersPagesWithContext is a passthrough to the underlying DescribeMetricFiltersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeMetricFilters when applied to the request.
 func (c *CloudWatchLogs) DescribeMetricFiltersPagesWithContext(ctx aws.Context, input *cloudwatchlogs.DescribeMetricFiltersInput, fn func(*cloudwatchlogs.DescribeMetricFiltersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeMetricFilters"))
-	return c.DescribeMetricFiltersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeMetricFiltersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeResourcePoliciesRequest is a passthrough to the underlying DescribeResourcePoliciesRequest.
@@ -492,14 +492,14 @@ func (c *CloudWatchLogs) DescribeSubscriptionFiltersPages(input *cloudwatchlogs.
 		c.inc("DescribeSubscriptionFilters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeSubscriptionFiltersPages(input, wrappedFn)
+	return c.svc.DescribeSubscriptionFiltersPages(input, wrappedFn)
 }
 
 // DescribeSubscriptionFiltersPagesWithContext is a passthrough to the underlying DescribeSubscriptionFiltersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeSubscriptionFilters when applied to the request.
 func (c *CloudWatchLogs) DescribeSubscriptionFiltersPagesWithContext(ctx aws.Context, input *cloudwatchlogs.DescribeSubscriptionFiltersInput, fn func(*cloudwatchlogs.DescribeSubscriptionFiltersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeSubscriptionFilters"))
-	return c.DescribeSubscriptionFiltersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeSubscriptionFiltersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DisassociateKmsKeyRequest is a passthrough to the underlying DisassociateKmsKeyRequest.
@@ -553,14 +553,14 @@ func (c *CloudWatchLogs) FilterLogEventsPages(input *cloudwatchlogs.FilterLogEve
 		c.inc("FilterLogEvents")
 		return fn(page, lastPage)
 	}
-	return c.FilterLogEventsPages(input, wrappedFn)
+	return c.svc.FilterLogEventsPages(input, wrappedFn)
 }
 
 // FilterLogEventsPagesWithContext is a passthrough to the underlying FilterLogEventsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to FilterLogEvents when applied to the request.
 func (c *CloudWatchLogs) FilterLogEventsPagesWithContext(ctx aws.Context, input *cloudwatchlogs.FilterLogEventsInput, fn func(*cloudwatchlogs.FilterLogEventsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("FilterLogEvents"))
-	return c.FilterLogEventsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.FilterLogEventsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetLogEventsRequest is a passthrough to the underlying GetLogEventsRequest.
@@ -593,14 +593,14 @@ func (c *CloudWatchLogs) GetLogEventsPages(input *cloudwatchlogs.GetLogEventsInp
 		c.inc("GetLogEvents")
 		return fn(page, lastPage)
 	}
-	return c.GetLogEventsPages(input, wrappedFn)
+	return c.svc.GetLogEventsPages(input, wrappedFn)
 }
 
 // GetLogEventsPagesWithContext is a passthrough to the underlying GetLogEventsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetLogEvents when applied to the request.
 func (c *CloudWatchLogs) GetLogEventsPagesWithContext(ctx aws.Context, input *cloudwatchlogs.GetLogEventsInput, fn func(*cloudwatchlogs.GetLogEventsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetLogEvents"))
-	return c.GetLogEventsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetLogEventsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTagsLogGroupRequest is a passthrough to the underlying ListTagsLogGroupRequest.

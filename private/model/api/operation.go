@@ -102,7 +102,7 @@ func (c *{{ .API.StructName }}) {{ .ExportedName }}Pages(` +
 		c.inc("{{ .ExportedName }}")
 		return fn(page, lastPage)
 	}
-	return c.{{ .ExportedName }}Pages(input, wrappedFn)
+	return c.svc.{{ .ExportedName }}Pages(input, wrappedFn)
 }
 
 // {{ .ExportedName }}PagesWithContext is a passthrough to the underlying {{ .ExportedName }}PagesWithContext method.
@@ -113,7 +113,7 @@ func (c *{{ .API.StructName }}) {{ .ExportedName }}PagesWithContext(` +
 	`fn func({{ .OutputRef.GoTypeWithPkgName }}, bool) bool, ` +
 	`opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("{{ .ExportedName }}"))
-	return c.{{ .ExportedName }}PagesWithContext(ctx, input, fn, opts...)
+	return c.svc.{{ .ExportedName }}PagesWithContext(ctx, input, fn, opts...)
 }
 {{ end }}
 `))

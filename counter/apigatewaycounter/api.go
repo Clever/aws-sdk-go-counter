@@ -857,14 +857,14 @@ func (c *APIGateway) GetApiKeysPages(input *apigateway.GetApiKeysInput, fn func(
 		c.inc("GetApiKeys")
 		return fn(page, lastPage)
 	}
-	return c.GetApiKeysPages(input, wrappedFn)
+	return c.svc.GetApiKeysPages(input, wrappedFn)
 }
 
 // GetApiKeysPagesWithContext is a passthrough to the underlying GetApiKeysPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetApiKeys when applied to the request.
 func (c *APIGateway) GetApiKeysPagesWithContext(ctx aws.Context, input *apigateway.GetApiKeysInput, fn func(*apigateway.GetApiKeysOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetApiKeys"))
-	return c.GetApiKeysPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetApiKeysPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetAuthorizerRequest is a passthrough to the underlying GetAuthorizerRequest.
@@ -960,14 +960,14 @@ func (c *APIGateway) GetBasePathMappingsPages(input *apigateway.GetBasePathMappi
 		c.inc("GetBasePathMappings")
 		return fn(page, lastPage)
 	}
-	return c.GetBasePathMappingsPages(input, wrappedFn)
+	return c.svc.GetBasePathMappingsPages(input, wrappedFn)
 }
 
 // GetBasePathMappingsPagesWithContext is a passthrough to the underlying GetBasePathMappingsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetBasePathMappings when applied to the request.
 func (c *APIGateway) GetBasePathMappingsPagesWithContext(ctx aws.Context, input *apigateway.GetBasePathMappingsInput, fn func(*apigateway.GetBasePathMappingsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetBasePathMappings"))
-	return c.GetBasePathMappingsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetBasePathMappingsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetClientCertificateRequest is a passthrough to the underlying GetClientCertificateRequest.
@@ -1021,14 +1021,14 @@ func (c *APIGateway) GetClientCertificatesPages(input *apigateway.GetClientCerti
 		c.inc("GetClientCertificates")
 		return fn(page, lastPage)
 	}
-	return c.GetClientCertificatesPages(input, wrappedFn)
+	return c.svc.GetClientCertificatesPages(input, wrappedFn)
 }
 
 // GetClientCertificatesPagesWithContext is a passthrough to the underlying GetClientCertificatesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetClientCertificates when applied to the request.
 func (c *APIGateway) GetClientCertificatesPagesWithContext(ctx aws.Context, input *apigateway.GetClientCertificatesInput, fn func(*apigateway.GetClientCertificatesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetClientCertificates"))
-	return c.GetClientCertificatesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetClientCertificatesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetDeploymentRequest is a passthrough to the underlying GetDeploymentRequest.
@@ -1082,14 +1082,14 @@ func (c *APIGateway) GetDeploymentsPages(input *apigateway.GetDeploymentsInput, 
 		c.inc("GetDeployments")
 		return fn(page, lastPage)
 	}
-	return c.GetDeploymentsPages(input, wrappedFn)
+	return c.svc.GetDeploymentsPages(input, wrappedFn)
 }
 
 // GetDeploymentsPagesWithContext is a passthrough to the underlying GetDeploymentsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetDeployments when applied to the request.
 func (c *APIGateway) GetDeploymentsPagesWithContext(ctx aws.Context, input *apigateway.GetDeploymentsInput, fn func(*apigateway.GetDeploymentsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetDeployments"))
-	return c.GetDeploymentsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetDeploymentsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetDocumentationPartRequest is a passthrough to the underlying GetDocumentationPartRequest.
@@ -1227,14 +1227,14 @@ func (c *APIGateway) GetDomainNamesPages(input *apigateway.GetDomainNamesInput, 
 		c.inc("GetDomainNames")
 		return fn(page, lastPage)
 	}
-	return c.GetDomainNamesPages(input, wrappedFn)
+	return c.svc.GetDomainNamesPages(input, wrappedFn)
 }
 
 // GetDomainNamesPagesWithContext is a passthrough to the underlying GetDomainNamesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetDomainNames when applied to the request.
 func (c *APIGateway) GetDomainNamesPagesWithContext(ctx aws.Context, input *apigateway.GetDomainNamesInput, fn func(*apigateway.GetDomainNamesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetDomainNames"))
-	return c.GetDomainNamesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetDomainNamesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetExportRequest is a passthrough to the underlying GetExportRequest.
@@ -1456,14 +1456,14 @@ func (c *APIGateway) GetModelsPages(input *apigateway.GetModelsInput, fn func(*a
 		c.inc("GetModels")
 		return fn(page, lastPage)
 	}
-	return c.GetModelsPages(input, wrappedFn)
+	return c.svc.GetModelsPages(input, wrappedFn)
 }
 
 // GetModelsPagesWithContext is a passthrough to the underlying GetModelsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetModels when applied to the request.
 func (c *APIGateway) GetModelsPagesWithContext(ctx aws.Context, input *apigateway.GetModelsInput, fn func(*apigateway.GetModelsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetModels"))
-	return c.GetModelsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetModelsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetRequestValidatorRequest is a passthrough to the underlying GetRequestValidatorRequest.
@@ -1559,14 +1559,14 @@ func (c *APIGateway) GetResourcesPages(input *apigateway.GetResourcesInput, fn f
 		c.inc("GetResources")
 		return fn(page, lastPage)
 	}
-	return c.GetResourcesPages(input, wrappedFn)
+	return c.svc.GetResourcesPages(input, wrappedFn)
 }
 
 // GetResourcesPagesWithContext is a passthrough to the underlying GetResourcesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetResources when applied to the request.
 func (c *APIGateway) GetResourcesPagesWithContext(ctx aws.Context, input *apigateway.GetResourcesInput, fn func(*apigateway.GetResourcesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetResources"))
-	return c.GetResourcesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetResourcesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetRestApiRequest is a passthrough to the underlying GetRestApiRequest.
@@ -1620,14 +1620,14 @@ func (c *APIGateway) GetRestApisPages(input *apigateway.GetRestApisInput, fn fun
 		c.inc("GetRestApis")
 		return fn(page, lastPage)
 	}
-	return c.GetRestApisPages(input, wrappedFn)
+	return c.svc.GetRestApisPages(input, wrappedFn)
 }
 
 // GetRestApisPagesWithContext is a passthrough to the underlying GetRestApisPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetRestApis when applied to the request.
 func (c *APIGateway) GetRestApisPagesWithContext(ctx aws.Context, input *apigateway.GetRestApisInput, fn func(*apigateway.GetRestApisOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetRestApis"))
-	return c.GetRestApisPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetRestApisPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetSdkRequest is a passthrough to the underlying GetSdkRequest.
@@ -1765,14 +1765,14 @@ func (c *APIGateway) GetUsagePages(input *apigateway.GetUsageInput, fn func(*api
 		c.inc("GetUsage")
 		return fn(page, lastPage)
 	}
-	return c.GetUsagePages(input, wrappedFn)
+	return c.svc.GetUsagePages(input, wrappedFn)
 }
 
 // GetUsagePagesWithContext is a passthrough to the underlying GetUsagePagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetUsage when applied to the request.
 func (c *APIGateway) GetUsagePagesWithContext(ctx aws.Context, input *apigateway.GetUsageInput, fn func(*apigateway.Usage, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetUsage"))
-	return c.GetUsagePagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetUsagePagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetUsagePlanRequest is a passthrough to the underlying GetUsagePlanRequest.
@@ -1847,14 +1847,14 @@ func (c *APIGateway) GetUsagePlanKeysPages(input *apigateway.GetUsagePlanKeysInp
 		c.inc("GetUsagePlanKeys")
 		return fn(page, lastPage)
 	}
-	return c.GetUsagePlanKeysPages(input, wrappedFn)
+	return c.svc.GetUsagePlanKeysPages(input, wrappedFn)
 }
 
 // GetUsagePlanKeysPagesWithContext is a passthrough to the underlying GetUsagePlanKeysPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetUsagePlanKeys when applied to the request.
 func (c *APIGateway) GetUsagePlanKeysPagesWithContext(ctx aws.Context, input *apigateway.GetUsagePlanKeysInput, fn func(*apigateway.GetUsagePlanKeysOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetUsagePlanKeys"))
-	return c.GetUsagePlanKeysPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetUsagePlanKeysPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetUsagePlansRequest is a passthrough to the underlying GetUsagePlansRequest.
@@ -1887,14 +1887,14 @@ func (c *APIGateway) GetUsagePlansPages(input *apigateway.GetUsagePlansInput, fn
 		c.inc("GetUsagePlans")
 		return fn(page, lastPage)
 	}
-	return c.GetUsagePlansPages(input, wrappedFn)
+	return c.svc.GetUsagePlansPages(input, wrappedFn)
 }
 
 // GetUsagePlansPagesWithContext is a passthrough to the underlying GetUsagePlansPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetUsagePlans when applied to the request.
 func (c *APIGateway) GetUsagePlansPagesWithContext(ctx aws.Context, input *apigateway.GetUsagePlansInput, fn func(*apigateway.GetUsagePlansOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetUsagePlans"))
-	return c.GetUsagePlansPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetUsagePlansPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ImportApiKeysRequest is a passthrough to the underlying ImportApiKeysRequest.

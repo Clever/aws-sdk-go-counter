@@ -59,14 +59,14 @@ func (c *CostandUsageReportService) DescribeReportDefinitionsPages(input *costan
 		c.inc("DescribeReportDefinitions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReportDefinitionsPages(input, wrappedFn)
+	return c.svc.DescribeReportDefinitionsPages(input, wrappedFn)
 }
 
 // DescribeReportDefinitionsPagesWithContext is a passthrough to the underlying DescribeReportDefinitionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReportDefinitions when applied to the request.
 func (c *CostandUsageReportService) DescribeReportDefinitionsPagesWithContext(ctx aws.Context, input *costandusagereportservice.DescribeReportDefinitionsInput, fn func(*costandusagereportservice.DescribeReportDefinitionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReportDefinitions"))
-	return c.DescribeReportDefinitionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReportDefinitionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PutReportDefinitionRequest is a passthrough to the underlying PutReportDefinitionRequest.

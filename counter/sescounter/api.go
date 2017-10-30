@@ -689,14 +689,14 @@ func (c *SES) ListIdentitiesPages(input *ses.ListIdentitiesInput, fn func(*ses.L
 		c.inc("ListIdentities")
 		return fn(page, lastPage)
 	}
-	return c.ListIdentitiesPages(input, wrappedFn)
+	return c.svc.ListIdentitiesPages(input, wrappedFn)
 }
 
 // ListIdentitiesPagesWithContext is a passthrough to the underlying ListIdentitiesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListIdentities when applied to the request.
 func (c *SES) ListIdentitiesPagesWithContext(ctx aws.Context, input *ses.ListIdentitiesInput, fn func(*ses.ListIdentitiesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListIdentities"))
-	return c.ListIdentitiesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListIdentitiesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListIdentityPoliciesRequest is a passthrough to the underlying ListIdentityPoliciesRequest.

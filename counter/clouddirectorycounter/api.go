@@ -668,14 +668,14 @@ func (c *CloudDirectory) ListAppliedSchemaArnsPages(input *clouddirectory.ListAp
 		c.inc("ListAppliedSchemaArns")
 		return fn(page, lastPage)
 	}
-	return c.ListAppliedSchemaArnsPages(input, wrappedFn)
+	return c.svc.ListAppliedSchemaArnsPages(input, wrappedFn)
 }
 
 // ListAppliedSchemaArnsPagesWithContext is a passthrough to the underlying ListAppliedSchemaArnsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAppliedSchemaArns when applied to the request.
 func (c *CloudDirectory) ListAppliedSchemaArnsPagesWithContext(ctx aws.Context, input *clouddirectory.ListAppliedSchemaArnsInput, fn func(*clouddirectory.ListAppliedSchemaArnsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAppliedSchemaArns"))
-	return c.ListAppliedSchemaArnsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAppliedSchemaArnsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListAttachedIndicesRequest is a passthrough to the underlying ListAttachedIndicesRequest.
@@ -708,14 +708,14 @@ func (c *CloudDirectory) ListAttachedIndicesPages(input *clouddirectory.ListAtta
 		c.inc("ListAttachedIndices")
 		return fn(page, lastPage)
 	}
-	return c.ListAttachedIndicesPages(input, wrappedFn)
+	return c.svc.ListAttachedIndicesPages(input, wrappedFn)
 }
 
 // ListAttachedIndicesPagesWithContext is a passthrough to the underlying ListAttachedIndicesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAttachedIndices when applied to the request.
 func (c *CloudDirectory) ListAttachedIndicesPagesWithContext(ctx aws.Context, input *clouddirectory.ListAttachedIndicesInput, fn func(*clouddirectory.ListAttachedIndicesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAttachedIndices"))
-	return c.ListAttachedIndicesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAttachedIndicesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListDevelopmentSchemaArnsRequest is a passthrough to the underlying ListDevelopmentSchemaArnsRequest.
@@ -748,14 +748,14 @@ func (c *CloudDirectory) ListDevelopmentSchemaArnsPages(input *clouddirectory.Li
 		c.inc("ListDevelopmentSchemaArns")
 		return fn(page, lastPage)
 	}
-	return c.ListDevelopmentSchemaArnsPages(input, wrappedFn)
+	return c.svc.ListDevelopmentSchemaArnsPages(input, wrappedFn)
 }
 
 // ListDevelopmentSchemaArnsPagesWithContext is a passthrough to the underlying ListDevelopmentSchemaArnsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDevelopmentSchemaArns when applied to the request.
 func (c *CloudDirectory) ListDevelopmentSchemaArnsPagesWithContext(ctx aws.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput, fn func(*clouddirectory.ListDevelopmentSchemaArnsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDevelopmentSchemaArns"))
-	return c.ListDevelopmentSchemaArnsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDevelopmentSchemaArnsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListDirectoriesRequest is a passthrough to the underlying ListDirectoriesRequest.
@@ -788,14 +788,14 @@ func (c *CloudDirectory) ListDirectoriesPages(input *clouddirectory.ListDirector
 		c.inc("ListDirectories")
 		return fn(page, lastPage)
 	}
-	return c.ListDirectoriesPages(input, wrappedFn)
+	return c.svc.ListDirectoriesPages(input, wrappedFn)
 }
 
 // ListDirectoriesPagesWithContext is a passthrough to the underlying ListDirectoriesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDirectories when applied to the request.
 func (c *CloudDirectory) ListDirectoriesPagesWithContext(ctx aws.Context, input *clouddirectory.ListDirectoriesInput, fn func(*clouddirectory.ListDirectoriesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDirectories"))
-	return c.ListDirectoriesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDirectoriesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListFacetAttributesRequest is a passthrough to the underlying ListFacetAttributesRequest.
@@ -828,14 +828,14 @@ func (c *CloudDirectory) ListFacetAttributesPages(input *clouddirectory.ListFace
 		c.inc("ListFacetAttributes")
 		return fn(page, lastPage)
 	}
-	return c.ListFacetAttributesPages(input, wrappedFn)
+	return c.svc.ListFacetAttributesPages(input, wrappedFn)
 }
 
 // ListFacetAttributesPagesWithContext is a passthrough to the underlying ListFacetAttributesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListFacetAttributes when applied to the request.
 func (c *CloudDirectory) ListFacetAttributesPagesWithContext(ctx aws.Context, input *clouddirectory.ListFacetAttributesInput, fn func(*clouddirectory.ListFacetAttributesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListFacetAttributes"))
-	return c.ListFacetAttributesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListFacetAttributesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListFacetNamesRequest is a passthrough to the underlying ListFacetNamesRequest.
@@ -868,14 +868,14 @@ func (c *CloudDirectory) ListFacetNamesPages(input *clouddirectory.ListFacetName
 		c.inc("ListFacetNames")
 		return fn(page, lastPage)
 	}
-	return c.ListFacetNamesPages(input, wrappedFn)
+	return c.svc.ListFacetNamesPages(input, wrappedFn)
 }
 
 // ListFacetNamesPagesWithContext is a passthrough to the underlying ListFacetNamesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListFacetNames when applied to the request.
 func (c *CloudDirectory) ListFacetNamesPagesWithContext(ctx aws.Context, input *clouddirectory.ListFacetNamesInput, fn func(*clouddirectory.ListFacetNamesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListFacetNames"))
-	return c.ListFacetNamesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListFacetNamesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListIncomingTypedLinksRequest is a passthrough to the underlying ListIncomingTypedLinksRequest.
@@ -929,14 +929,14 @@ func (c *CloudDirectory) ListIndexPages(input *clouddirectory.ListIndexInput, fn
 		c.inc("ListIndex")
 		return fn(page, lastPage)
 	}
-	return c.ListIndexPages(input, wrappedFn)
+	return c.svc.ListIndexPages(input, wrappedFn)
 }
 
 // ListIndexPagesWithContext is a passthrough to the underlying ListIndexPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListIndex when applied to the request.
 func (c *CloudDirectory) ListIndexPagesWithContext(ctx aws.Context, input *clouddirectory.ListIndexInput, fn func(*clouddirectory.ListIndexOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListIndex"))
-	return c.ListIndexPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListIndexPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListObjectAttributesRequest is a passthrough to the underlying ListObjectAttributesRequest.
@@ -969,14 +969,14 @@ func (c *CloudDirectory) ListObjectAttributesPages(input *clouddirectory.ListObj
 		c.inc("ListObjectAttributes")
 		return fn(page, lastPage)
 	}
-	return c.ListObjectAttributesPages(input, wrappedFn)
+	return c.svc.ListObjectAttributesPages(input, wrappedFn)
 }
 
 // ListObjectAttributesPagesWithContext is a passthrough to the underlying ListObjectAttributesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListObjectAttributes when applied to the request.
 func (c *CloudDirectory) ListObjectAttributesPagesWithContext(ctx aws.Context, input *clouddirectory.ListObjectAttributesInput, fn func(*clouddirectory.ListObjectAttributesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListObjectAttributes"))
-	return c.ListObjectAttributesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListObjectAttributesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListObjectChildrenRequest is a passthrough to the underlying ListObjectChildrenRequest.
@@ -1009,14 +1009,14 @@ func (c *CloudDirectory) ListObjectChildrenPages(input *clouddirectory.ListObjec
 		c.inc("ListObjectChildren")
 		return fn(page, lastPage)
 	}
-	return c.ListObjectChildrenPages(input, wrappedFn)
+	return c.svc.ListObjectChildrenPages(input, wrappedFn)
 }
 
 // ListObjectChildrenPagesWithContext is a passthrough to the underlying ListObjectChildrenPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListObjectChildren when applied to the request.
 func (c *CloudDirectory) ListObjectChildrenPagesWithContext(ctx aws.Context, input *clouddirectory.ListObjectChildrenInput, fn func(*clouddirectory.ListObjectChildrenOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListObjectChildren"))
-	return c.ListObjectChildrenPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListObjectChildrenPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListObjectParentPathsRequest is a passthrough to the underlying ListObjectParentPathsRequest.
@@ -1049,14 +1049,14 @@ func (c *CloudDirectory) ListObjectParentPathsPages(input *clouddirectory.ListOb
 		c.inc("ListObjectParentPaths")
 		return fn(page, lastPage)
 	}
-	return c.ListObjectParentPathsPages(input, wrappedFn)
+	return c.svc.ListObjectParentPathsPages(input, wrappedFn)
 }
 
 // ListObjectParentPathsPagesWithContext is a passthrough to the underlying ListObjectParentPathsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListObjectParentPaths when applied to the request.
 func (c *CloudDirectory) ListObjectParentPathsPagesWithContext(ctx aws.Context, input *clouddirectory.ListObjectParentPathsInput, fn func(*clouddirectory.ListObjectParentPathsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListObjectParentPaths"))
-	return c.ListObjectParentPathsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListObjectParentPathsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListObjectParentsRequest is a passthrough to the underlying ListObjectParentsRequest.
@@ -1089,14 +1089,14 @@ func (c *CloudDirectory) ListObjectParentsPages(input *clouddirectory.ListObject
 		c.inc("ListObjectParents")
 		return fn(page, lastPage)
 	}
-	return c.ListObjectParentsPages(input, wrappedFn)
+	return c.svc.ListObjectParentsPages(input, wrappedFn)
 }
 
 // ListObjectParentsPagesWithContext is a passthrough to the underlying ListObjectParentsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListObjectParents when applied to the request.
 func (c *CloudDirectory) ListObjectParentsPagesWithContext(ctx aws.Context, input *clouddirectory.ListObjectParentsInput, fn func(*clouddirectory.ListObjectParentsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListObjectParents"))
-	return c.ListObjectParentsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListObjectParentsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListObjectPoliciesRequest is a passthrough to the underlying ListObjectPoliciesRequest.
@@ -1129,14 +1129,14 @@ func (c *CloudDirectory) ListObjectPoliciesPages(input *clouddirectory.ListObjec
 		c.inc("ListObjectPolicies")
 		return fn(page, lastPage)
 	}
-	return c.ListObjectPoliciesPages(input, wrappedFn)
+	return c.svc.ListObjectPoliciesPages(input, wrappedFn)
 }
 
 // ListObjectPoliciesPagesWithContext is a passthrough to the underlying ListObjectPoliciesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListObjectPolicies when applied to the request.
 func (c *CloudDirectory) ListObjectPoliciesPagesWithContext(ctx aws.Context, input *clouddirectory.ListObjectPoliciesInput, fn func(*clouddirectory.ListObjectPoliciesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListObjectPolicies"))
-	return c.ListObjectPoliciesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListObjectPoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListOutgoingTypedLinksRequest is a passthrough to the underlying ListOutgoingTypedLinksRequest.
@@ -1190,14 +1190,14 @@ func (c *CloudDirectory) ListPolicyAttachmentsPages(input *clouddirectory.ListPo
 		c.inc("ListPolicyAttachments")
 		return fn(page, lastPage)
 	}
-	return c.ListPolicyAttachmentsPages(input, wrappedFn)
+	return c.svc.ListPolicyAttachmentsPages(input, wrappedFn)
 }
 
 // ListPolicyAttachmentsPagesWithContext is a passthrough to the underlying ListPolicyAttachmentsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPolicyAttachments when applied to the request.
 func (c *CloudDirectory) ListPolicyAttachmentsPagesWithContext(ctx aws.Context, input *clouddirectory.ListPolicyAttachmentsInput, fn func(*clouddirectory.ListPolicyAttachmentsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPolicyAttachments"))
-	return c.ListPolicyAttachmentsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPolicyAttachmentsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListPublishedSchemaArnsRequest is a passthrough to the underlying ListPublishedSchemaArnsRequest.
@@ -1230,14 +1230,14 @@ func (c *CloudDirectory) ListPublishedSchemaArnsPages(input *clouddirectory.List
 		c.inc("ListPublishedSchemaArns")
 		return fn(page, lastPage)
 	}
-	return c.ListPublishedSchemaArnsPages(input, wrappedFn)
+	return c.svc.ListPublishedSchemaArnsPages(input, wrappedFn)
 }
 
 // ListPublishedSchemaArnsPagesWithContext is a passthrough to the underlying ListPublishedSchemaArnsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPublishedSchemaArns when applied to the request.
 func (c *CloudDirectory) ListPublishedSchemaArnsPagesWithContext(ctx aws.Context, input *clouddirectory.ListPublishedSchemaArnsInput, fn func(*clouddirectory.ListPublishedSchemaArnsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPublishedSchemaArns"))
-	return c.ListPublishedSchemaArnsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPublishedSchemaArnsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTagsForResourceRequest is a passthrough to the underlying ListTagsForResourceRequest.
@@ -1270,14 +1270,14 @@ func (c *CloudDirectory) ListTagsForResourcePages(input *clouddirectory.ListTags
 		c.inc("ListTagsForResource")
 		return fn(page, lastPage)
 	}
-	return c.ListTagsForResourcePages(input, wrappedFn)
+	return c.svc.ListTagsForResourcePages(input, wrappedFn)
 }
 
 // ListTagsForResourcePagesWithContext is a passthrough to the underlying ListTagsForResourcePagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListTagsForResource when applied to the request.
 func (c *CloudDirectory) ListTagsForResourcePagesWithContext(ctx aws.Context, input *clouddirectory.ListTagsForResourceInput, fn func(*clouddirectory.ListTagsForResourceOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListTagsForResource"))
-	return c.ListTagsForResourcePagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListTagsForResourcePagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTypedLinkFacetAttributesRequest is a passthrough to the underlying ListTypedLinkFacetAttributesRequest.
@@ -1310,14 +1310,14 @@ func (c *CloudDirectory) ListTypedLinkFacetAttributesPages(input *clouddirectory
 		c.inc("ListTypedLinkFacetAttributes")
 		return fn(page, lastPage)
 	}
-	return c.ListTypedLinkFacetAttributesPages(input, wrappedFn)
+	return c.svc.ListTypedLinkFacetAttributesPages(input, wrappedFn)
 }
 
 // ListTypedLinkFacetAttributesPagesWithContext is a passthrough to the underlying ListTypedLinkFacetAttributesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListTypedLinkFacetAttributes when applied to the request.
 func (c *CloudDirectory) ListTypedLinkFacetAttributesPagesWithContext(ctx aws.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput, fn func(*clouddirectory.ListTypedLinkFacetAttributesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListTypedLinkFacetAttributes"))
-	return c.ListTypedLinkFacetAttributesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListTypedLinkFacetAttributesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTypedLinkFacetNamesRequest is a passthrough to the underlying ListTypedLinkFacetNamesRequest.
@@ -1350,14 +1350,14 @@ func (c *CloudDirectory) ListTypedLinkFacetNamesPages(input *clouddirectory.List
 		c.inc("ListTypedLinkFacetNames")
 		return fn(page, lastPage)
 	}
-	return c.ListTypedLinkFacetNamesPages(input, wrappedFn)
+	return c.svc.ListTypedLinkFacetNamesPages(input, wrappedFn)
 }
 
 // ListTypedLinkFacetNamesPagesWithContext is a passthrough to the underlying ListTypedLinkFacetNamesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListTypedLinkFacetNames when applied to the request.
 func (c *CloudDirectory) ListTypedLinkFacetNamesPagesWithContext(ctx aws.Context, input *clouddirectory.ListTypedLinkFacetNamesInput, fn func(*clouddirectory.ListTypedLinkFacetNamesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListTypedLinkFacetNames"))
-	return c.ListTypedLinkFacetNamesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListTypedLinkFacetNamesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // LookupPolicyRequest is a passthrough to the underlying LookupPolicyRequest.
@@ -1390,14 +1390,14 @@ func (c *CloudDirectory) LookupPolicyPages(input *clouddirectory.LookupPolicyInp
 		c.inc("LookupPolicy")
 		return fn(page, lastPage)
 	}
-	return c.LookupPolicyPages(input, wrappedFn)
+	return c.svc.LookupPolicyPages(input, wrappedFn)
 }
 
 // LookupPolicyPagesWithContext is a passthrough to the underlying LookupPolicyPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to LookupPolicy when applied to the request.
 func (c *CloudDirectory) LookupPolicyPagesWithContext(ctx aws.Context, input *clouddirectory.LookupPolicyInput, fn func(*clouddirectory.LookupPolicyOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("LookupPolicy"))
-	return c.LookupPolicyPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.LookupPolicyPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PublishSchemaRequest is a passthrough to the underlying PublishSchemaRequest.

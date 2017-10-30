@@ -206,14 +206,14 @@ func (c *CloudTrail) LookupEventsPages(input *cloudtrail.LookupEventsInput, fn f
 		c.inc("LookupEvents")
 		return fn(page, lastPage)
 	}
-	return c.LookupEventsPages(input, wrappedFn)
+	return c.svc.LookupEventsPages(input, wrappedFn)
 }
 
 // LookupEventsPagesWithContext is a passthrough to the underlying LookupEventsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to LookupEvents when applied to the request.
 func (c *CloudTrail) LookupEventsPagesWithContext(ctx aws.Context, input *cloudtrail.LookupEventsInput, fn func(*cloudtrail.LookupEventsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("LookupEvents"))
-	return c.LookupEventsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.LookupEventsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PutEventSelectorsRequest is a passthrough to the underlying PutEventSelectorsRequest.

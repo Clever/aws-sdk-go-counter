@@ -143,14 +143,14 @@ func (c *Kinesis) DescribeStreamPages(input *kinesis.DescribeStreamInput, fn fun
 		c.inc("DescribeStream")
 		return fn(page, lastPage)
 	}
-	return c.DescribeStreamPages(input, wrappedFn)
+	return c.svc.DescribeStreamPages(input, wrappedFn)
 }
 
 // DescribeStreamPagesWithContext is a passthrough to the underlying DescribeStreamPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeStream when applied to the request.
 func (c *Kinesis) DescribeStreamPagesWithContext(ctx aws.Context, input *kinesis.DescribeStreamInput, fn func(*kinesis.DescribeStreamOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeStream"))
-	return c.DescribeStreamPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeStreamPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DisableEnhancedMonitoringRequest is a passthrough to the underlying DisableEnhancedMonitoringRequest.
@@ -288,14 +288,14 @@ func (c *Kinesis) ListStreamsPages(input *kinesis.ListStreamsInput, fn func(*kin
 		c.inc("ListStreams")
 		return fn(page, lastPage)
 	}
-	return c.ListStreamsPages(input, wrappedFn)
+	return c.svc.ListStreamsPages(input, wrappedFn)
 }
 
 // ListStreamsPagesWithContext is a passthrough to the underlying ListStreamsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListStreams when applied to the request.
 func (c *Kinesis) ListStreamsPagesWithContext(ctx aws.Context, input *kinesis.ListStreamsInput, fn func(*kinesis.ListStreamsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListStreams"))
-	return c.ListStreamsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListStreamsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTagsForStreamRequest is a passthrough to the underlying ListTagsForStreamRequest.

@@ -2453,14 +2453,14 @@ func (c *EC2) DescribeInstanceStatusPages(input *ec2.DescribeInstanceStatusInput
 		c.inc("DescribeInstanceStatus")
 		return fn(page, lastPage)
 	}
-	return c.DescribeInstanceStatusPages(input, wrappedFn)
+	return c.svc.DescribeInstanceStatusPages(input, wrappedFn)
 }
 
 // DescribeInstanceStatusPagesWithContext is a passthrough to the underlying DescribeInstanceStatusPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeInstanceStatus when applied to the request.
 func (c *EC2) DescribeInstanceStatusPagesWithContext(ctx aws.Context, input *ec2.DescribeInstanceStatusInput, fn func(*ec2.DescribeInstanceStatusOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeInstanceStatus"))
-	return c.DescribeInstanceStatusPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeInstanceStatusPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeInstancesRequest is a passthrough to the underlying DescribeInstancesRequest.
@@ -2493,14 +2493,14 @@ func (c *EC2) DescribeInstancesPages(input *ec2.DescribeInstancesInput, fn func(
 		c.inc("DescribeInstances")
 		return fn(page, lastPage)
 	}
-	return c.DescribeInstancesPages(input, wrappedFn)
+	return c.svc.DescribeInstancesPages(input, wrappedFn)
 }
 
 // DescribeInstancesPagesWithContext is a passthrough to the underlying DescribeInstancesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeInstances when applied to the request.
 func (c *EC2) DescribeInstancesPagesWithContext(ctx aws.Context, input *ec2.DescribeInstancesInput, fn func(*ec2.DescribeInstancesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeInstances"))
-	return c.DescribeInstancesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeInstancesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeInternetGatewaysRequest is a passthrough to the underlying DescribeInternetGatewaysRequest.
@@ -2596,14 +2596,14 @@ func (c *EC2) DescribeNatGatewaysPages(input *ec2.DescribeNatGatewaysInput, fn f
 		c.inc("DescribeNatGateways")
 		return fn(page, lastPage)
 	}
-	return c.DescribeNatGatewaysPages(input, wrappedFn)
+	return c.svc.DescribeNatGatewaysPages(input, wrappedFn)
 }
 
 // DescribeNatGatewaysPagesWithContext is a passthrough to the underlying DescribeNatGatewaysPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeNatGateways when applied to the request.
 func (c *EC2) DescribeNatGatewaysPagesWithContext(ctx aws.Context, input *ec2.DescribeNatGatewaysInput, fn func(*ec2.DescribeNatGatewaysOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeNatGateways"))
-	return c.DescribeNatGatewaysPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeNatGatewaysPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeNetworkAclsRequest is a passthrough to the underlying DescribeNetworkAclsRequest.
@@ -2825,14 +2825,14 @@ func (c *EC2) DescribeReservedInstancesModificationsPages(input *ec2.DescribeRes
 		c.inc("DescribeReservedInstancesModifications")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReservedInstancesModificationsPages(input, wrappedFn)
+	return c.svc.DescribeReservedInstancesModificationsPages(input, wrappedFn)
 }
 
 // DescribeReservedInstancesModificationsPagesWithContext is a passthrough to the underlying DescribeReservedInstancesModificationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReservedInstancesModifications when applied to the request.
 func (c *EC2) DescribeReservedInstancesModificationsPagesWithContext(ctx aws.Context, input *ec2.DescribeReservedInstancesModificationsInput, fn func(*ec2.DescribeReservedInstancesModificationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReservedInstancesModifications"))
-	return c.DescribeReservedInstancesModificationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReservedInstancesModificationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeReservedInstancesOfferingsRequest is a passthrough to the underlying DescribeReservedInstancesOfferingsRequest.
@@ -2865,14 +2865,14 @@ func (c *EC2) DescribeReservedInstancesOfferingsPages(input *ec2.DescribeReserve
 		c.inc("DescribeReservedInstancesOfferings")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReservedInstancesOfferingsPages(input, wrappedFn)
+	return c.svc.DescribeReservedInstancesOfferingsPages(input, wrappedFn)
 }
 
 // DescribeReservedInstancesOfferingsPagesWithContext is a passthrough to the underlying DescribeReservedInstancesOfferingsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReservedInstancesOfferings when applied to the request.
 func (c *EC2) DescribeReservedInstancesOfferingsPagesWithContext(ctx aws.Context, input *ec2.DescribeReservedInstancesOfferingsInput, fn func(*ec2.DescribeReservedInstancesOfferingsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReservedInstancesOfferings"))
-	return c.DescribeReservedInstancesOfferingsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReservedInstancesOfferingsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeRouteTablesRequest is a passthrough to the underlying DescribeRouteTablesRequest.
@@ -3031,14 +3031,14 @@ func (c *EC2) DescribeSnapshotsPages(input *ec2.DescribeSnapshotsInput, fn func(
 		c.inc("DescribeSnapshots")
 		return fn(page, lastPage)
 	}
-	return c.DescribeSnapshotsPages(input, wrappedFn)
+	return c.svc.DescribeSnapshotsPages(input, wrappedFn)
 }
 
 // DescribeSnapshotsPagesWithContext is a passthrough to the underlying DescribeSnapshotsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeSnapshots when applied to the request.
 func (c *EC2) DescribeSnapshotsPagesWithContext(ctx aws.Context, input *ec2.DescribeSnapshotsInput, fn func(*ec2.DescribeSnapshotsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeSnapshots"))
-	return c.DescribeSnapshotsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeSnapshotsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeSpotDatafeedSubscriptionRequest is a passthrough to the underlying DescribeSpotDatafeedSubscriptionRequest.
@@ -3134,14 +3134,14 @@ func (c *EC2) DescribeSpotFleetRequestsPages(input *ec2.DescribeSpotFleetRequest
 		c.inc("DescribeSpotFleetRequests")
 		return fn(page, lastPage)
 	}
-	return c.DescribeSpotFleetRequestsPages(input, wrappedFn)
+	return c.svc.DescribeSpotFleetRequestsPages(input, wrappedFn)
 }
 
 // DescribeSpotFleetRequestsPagesWithContext is a passthrough to the underlying DescribeSpotFleetRequestsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeSpotFleetRequests when applied to the request.
 func (c *EC2) DescribeSpotFleetRequestsPagesWithContext(ctx aws.Context, input *ec2.DescribeSpotFleetRequestsInput, fn func(*ec2.DescribeSpotFleetRequestsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeSpotFleetRequests"))
-	return c.DescribeSpotFleetRequestsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeSpotFleetRequestsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeSpotInstanceRequestsRequest is a passthrough to the underlying DescribeSpotInstanceRequestsRequest.
@@ -3195,14 +3195,14 @@ func (c *EC2) DescribeSpotPriceHistoryPages(input *ec2.DescribeSpotPriceHistoryI
 		c.inc("DescribeSpotPriceHistory")
 		return fn(page, lastPage)
 	}
-	return c.DescribeSpotPriceHistoryPages(input, wrappedFn)
+	return c.svc.DescribeSpotPriceHistoryPages(input, wrappedFn)
 }
 
 // DescribeSpotPriceHistoryPagesWithContext is a passthrough to the underlying DescribeSpotPriceHistoryPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeSpotPriceHistory when applied to the request.
 func (c *EC2) DescribeSpotPriceHistoryPagesWithContext(ctx aws.Context, input *ec2.DescribeSpotPriceHistoryInput, fn func(*ec2.DescribeSpotPriceHistoryOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeSpotPriceHistory"))
-	return c.DescribeSpotPriceHistoryPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeSpotPriceHistoryPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeStaleSecurityGroupsRequest is a passthrough to the underlying DescribeStaleSecurityGroupsRequest.
@@ -3277,14 +3277,14 @@ func (c *EC2) DescribeTagsPages(input *ec2.DescribeTagsInput, fn func(*ec2.Descr
 		c.inc("DescribeTags")
 		return fn(page, lastPage)
 	}
-	return c.DescribeTagsPages(input, wrappedFn)
+	return c.svc.DescribeTagsPages(input, wrappedFn)
 }
 
 // DescribeTagsPagesWithContext is a passthrough to the underlying DescribeTagsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeTags when applied to the request.
 func (c *EC2) DescribeTagsPagesWithContext(ctx aws.Context, input *ec2.DescribeTagsInput, fn func(*ec2.DescribeTagsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeTags"))
-	return c.DescribeTagsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeTagsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeVolumeAttributeRequest is a passthrough to the underlying DescribeVolumeAttributeRequest.
@@ -3338,14 +3338,14 @@ func (c *EC2) DescribeVolumeStatusPages(input *ec2.DescribeVolumeStatusInput, fn
 		c.inc("DescribeVolumeStatus")
 		return fn(page, lastPage)
 	}
-	return c.DescribeVolumeStatusPages(input, wrappedFn)
+	return c.svc.DescribeVolumeStatusPages(input, wrappedFn)
 }
 
 // DescribeVolumeStatusPagesWithContext is a passthrough to the underlying DescribeVolumeStatusPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeVolumeStatus when applied to the request.
 func (c *EC2) DescribeVolumeStatusPagesWithContext(ctx aws.Context, input *ec2.DescribeVolumeStatusInput, fn func(*ec2.DescribeVolumeStatusOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeVolumeStatus"))
-	return c.DescribeVolumeStatusPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeVolumeStatusPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeVolumesRequest is a passthrough to the underlying DescribeVolumesRequest.
@@ -3378,14 +3378,14 @@ func (c *EC2) DescribeVolumesPages(input *ec2.DescribeVolumesInput, fn func(*ec2
 		c.inc("DescribeVolumes")
 		return fn(page, lastPage)
 	}
-	return c.DescribeVolumesPages(input, wrappedFn)
+	return c.svc.DescribeVolumesPages(input, wrappedFn)
 }
 
 // DescribeVolumesPagesWithContext is a passthrough to the underlying DescribeVolumesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeVolumes when applied to the request.
 func (c *EC2) DescribeVolumesPagesWithContext(ctx aws.Context, input *ec2.DescribeVolumesInput, fn func(*ec2.DescribeVolumesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeVolumes"))
-	return c.DescribeVolumesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeVolumesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeVolumesModificationsRequest is a passthrough to the underlying DescribeVolumesModificationsRequest.

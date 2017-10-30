@@ -563,14 +563,14 @@ func (c *OpsWorks) DescribeEcsClustersPages(input *opsworks.DescribeEcsClustersI
 		c.inc("DescribeEcsClusters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEcsClustersPages(input, wrappedFn)
+	return c.svc.DescribeEcsClustersPages(input, wrappedFn)
 }
 
 // DescribeEcsClustersPagesWithContext is a passthrough to the underlying DescribeEcsClustersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEcsClusters when applied to the request.
 func (c *OpsWorks) DescribeEcsClustersPagesWithContext(ctx aws.Context, input *opsworks.DescribeEcsClustersInput, fn func(*opsworks.DescribeEcsClustersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEcsClusters"))
-	return c.DescribeEcsClustersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEcsClustersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeElasticIpsRequest is a passthrough to the underlying DescribeElasticIpsRequest.

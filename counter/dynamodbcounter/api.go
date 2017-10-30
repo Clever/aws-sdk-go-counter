@@ -38,14 +38,14 @@ func (c *DynamoDB) BatchGetItemPages(input *dynamodb.BatchGetItemInput, fn func(
 		c.inc("BatchGetItem")
 		return fn(page, lastPage)
 	}
-	return c.BatchGetItemPages(input, wrappedFn)
+	return c.svc.BatchGetItemPages(input, wrappedFn)
 }
 
 // BatchGetItemPagesWithContext is a passthrough to the underlying BatchGetItemPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to BatchGetItem when applied to the request.
 func (c *DynamoDB) BatchGetItemPagesWithContext(ctx aws.Context, input *dynamodb.BatchGetItemInput, fn func(*dynamodb.BatchGetItemOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("BatchGetItem"))
-	return c.BatchGetItemPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.BatchGetItemPagesWithContext(ctx, input, fn, opts...)
 }
 
 // BatchWriteItemRequest is a passthrough to the underlying BatchWriteItemRequest.
@@ -246,14 +246,14 @@ func (c *DynamoDB) ListTablesPages(input *dynamodb.ListTablesInput, fn func(*dyn
 		c.inc("ListTables")
 		return fn(page, lastPage)
 	}
-	return c.ListTablesPages(input, wrappedFn)
+	return c.svc.ListTablesPages(input, wrappedFn)
 }
 
 // ListTablesPagesWithContext is a passthrough to the underlying ListTablesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListTables when applied to the request.
 func (c *DynamoDB) ListTablesPagesWithContext(ctx aws.Context, input *dynamodb.ListTablesInput, fn func(*dynamodb.ListTablesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListTables"))
-	return c.ListTablesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListTablesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTagsOfResourceRequest is a passthrough to the underlying ListTagsOfResourceRequest.
@@ -328,14 +328,14 @@ func (c *DynamoDB) QueryPages(input *dynamodb.QueryInput, fn func(*dynamodb.Quer
 		c.inc("Query")
 		return fn(page, lastPage)
 	}
-	return c.QueryPages(input, wrappedFn)
+	return c.svc.QueryPages(input, wrappedFn)
 }
 
 // QueryPagesWithContext is a passthrough to the underlying QueryPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to Query when applied to the request.
 func (c *DynamoDB) QueryPagesWithContext(ctx aws.Context, input *dynamodb.QueryInput, fn func(*dynamodb.QueryOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("Query"))
-	return c.QueryPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.QueryPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ScanRequest is a passthrough to the underlying ScanRequest.
@@ -368,14 +368,14 @@ func (c *DynamoDB) ScanPages(input *dynamodb.ScanInput, fn func(*dynamodb.ScanOu
 		c.inc("Scan")
 		return fn(page, lastPage)
 	}
-	return c.ScanPages(input, wrappedFn)
+	return c.svc.ScanPages(input, wrappedFn)
 }
 
 // ScanPagesWithContext is a passthrough to the underlying ScanPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to Scan when applied to the request.
 func (c *DynamoDB) ScanPagesWithContext(ctx aws.Context, input *dynamodb.ScanInput, fn func(*dynamodb.ScanOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("Scan"))
-	return c.ScanPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ScanPagesWithContext(ctx, input, fn, opts...)
 }
 
 // TagResourceRequest is a passthrough to the underlying TagResourceRequest.

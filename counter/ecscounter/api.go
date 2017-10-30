@@ -332,14 +332,14 @@ func (c *ECS) ListClustersPages(input *ecs.ListClustersInput, fn func(*ecs.ListC
 		c.inc("ListClusters")
 		return fn(page, lastPage)
 	}
-	return c.ListClustersPages(input, wrappedFn)
+	return c.svc.ListClustersPages(input, wrappedFn)
 }
 
 // ListClustersPagesWithContext is a passthrough to the underlying ListClustersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListClusters when applied to the request.
 func (c *ECS) ListClustersPagesWithContext(ctx aws.Context, input *ecs.ListClustersInput, fn func(*ecs.ListClustersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListClusters"))
-	return c.ListClustersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListClustersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListContainerInstancesRequest is a passthrough to the underlying ListContainerInstancesRequest.
@@ -372,14 +372,14 @@ func (c *ECS) ListContainerInstancesPages(input *ecs.ListContainerInstancesInput
 		c.inc("ListContainerInstances")
 		return fn(page, lastPage)
 	}
-	return c.ListContainerInstancesPages(input, wrappedFn)
+	return c.svc.ListContainerInstancesPages(input, wrappedFn)
 }
 
 // ListContainerInstancesPagesWithContext is a passthrough to the underlying ListContainerInstancesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListContainerInstances when applied to the request.
 func (c *ECS) ListContainerInstancesPagesWithContext(ctx aws.Context, input *ecs.ListContainerInstancesInput, fn func(*ecs.ListContainerInstancesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListContainerInstances"))
-	return c.ListContainerInstancesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListContainerInstancesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListServicesRequest is a passthrough to the underlying ListServicesRequest.
@@ -412,14 +412,14 @@ func (c *ECS) ListServicesPages(input *ecs.ListServicesInput, fn func(*ecs.ListS
 		c.inc("ListServices")
 		return fn(page, lastPage)
 	}
-	return c.ListServicesPages(input, wrappedFn)
+	return c.svc.ListServicesPages(input, wrappedFn)
 }
 
 // ListServicesPagesWithContext is a passthrough to the underlying ListServicesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListServices when applied to the request.
 func (c *ECS) ListServicesPagesWithContext(ctx aws.Context, input *ecs.ListServicesInput, fn func(*ecs.ListServicesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListServices"))
-	return c.ListServicesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListServicesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTaskDefinitionFamiliesRequest is a passthrough to the underlying ListTaskDefinitionFamiliesRequest.
@@ -452,14 +452,14 @@ func (c *ECS) ListTaskDefinitionFamiliesPages(input *ecs.ListTaskDefinitionFamil
 		c.inc("ListTaskDefinitionFamilies")
 		return fn(page, lastPage)
 	}
-	return c.ListTaskDefinitionFamiliesPages(input, wrappedFn)
+	return c.svc.ListTaskDefinitionFamiliesPages(input, wrappedFn)
 }
 
 // ListTaskDefinitionFamiliesPagesWithContext is a passthrough to the underlying ListTaskDefinitionFamiliesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListTaskDefinitionFamilies when applied to the request.
 func (c *ECS) ListTaskDefinitionFamiliesPagesWithContext(ctx aws.Context, input *ecs.ListTaskDefinitionFamiliesInput, fn func(*ecs.ListTaskDefinitionFamiliesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListTaskDefinitionFamilies"))
-	return c.ListTaskDefinitionFamiliesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListTaskDefinitionFamiliesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTaskDefinitionsRequest is a passthrough to the underlying ListTaskDefinitionsRequest.
@@ -492,14 +492,14 @@ func (c *ECS) ListTaskDefinitionsPages(input *ecs.ListTaskDefinitionsInput, fn f
 		c.inc("ListTaskDefinitions")
 		return fn(page, lastPage)
 	}
-	return c.ListTaskDefinitionsPages(input, wrappedFn)
+	return c.svc.ListTaskDefinitionsPages(input, wrappedFn)
 }
 
 // ListTaskDefinitionsPagesWithContext is a passthrough to the underlying ListTaskDefinitionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListTaskDefinitions when applied to the request.
 func (c *ECS) ListTaskDefinitionsPagesWithContext(ctx aws.Context, input *ecs.ListTaskDefinitionsInput, fn func(*ecs.ListTaskDefinitionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListTaskDefinitions"))
-	return c.ListTaskDefinitionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListTaskDefinitionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTasksRequest is a passthrough to the underlying ListTasksRequest.
@@ -532,14 +532,14 @@ func (c *ECS) ListTasksPages(input *ecs.ListTasksInput, fn func(*ecs.ListTasksOu
 		c.inc("ListTasks")
 		return fn(page, lastPage)
 	}
-	return c.ListTasksPages(input, wrappedFn)
+	return c.svc.ListTasksPages(input, wrappedFn)
 }
 
 // ListTasksPagesWithContext is a passthrough to the underlying ListTasksPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListTasks when applied to the request.
 func (c *ECS) ListTasksPagesWithContext(ctx aws.Context, input *ecs.ListTasksInput, fn func(*ecs.ListTasksOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListTasks"))
-	return c.ListTasksPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListTasksPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PutAttributesRequest is a passthrough to the underlying PutAttributesRequest.

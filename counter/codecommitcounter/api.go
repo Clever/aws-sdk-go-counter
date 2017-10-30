@@ -206,14 +206,14 @@ func (c *CodeCommit) GetDifferencesPages(input *codecommit.GetDifferencesInput, 
 		c.inc("GetDifferences")
 		return fn(page, lastPage)
 	}
-	return c.GetDifferencesPages(input, wrappedFn)
+	return c.svc.GetDifferencesPages(input, wrappedFn)
 }
 
 // GetDifferencesPagesWithContext is a passthrough to the underlying GetDifferencesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetDifferences when applied to the request.
 func (c *CodeCommit) GetDifferencesPagesWithContext(ctx aws.Context, input *codecommit.GetDifferencesInput, fn func(*codecommit.GetDifferencesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetDifferences"))
-	return c.GetDifferencesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetDifferencesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetRepositoryRequest is a passthrough to the underlying GetRepositoryRequest.
@@ -288,14 +288,14 @@ func (c *CodeCommit) ListBranchesPages(input *codecommit.ListBranchesInput, fn f
 		c.inc("ListBranches")
 		return fn(page, lastPage)
 	}
-	return c.ListBranchesPages(input, wrappedFn)
+	return c.svc.ListBranchesPages(input, wrappedFn)
 }
 
 // ListBranchesPagesWithContext is a passthrough to the underlying ListBranchesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListBranches when applied to the request.
 func (c *CodeCommit) ListBranchesPagesWithContext(ctx aws.Context, input *codecommit.ListBranchesInput, fn func(*codecommit.ListBranchesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListBranches"))
-	return c.ListBranchesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListBranchesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListRepositoriesRequest is a passthrough to the underlying ListRepositoriesRequest.
@@ -328,14 +328,14 @@ func (c *CodeCommit) ListRepositoriesPages(input *codecommit.ListRepositoriesInp
 		c.inc("ListRepositories")
 		return fn(page, lastPage)
 	}
-	return c.ListRepositoriesPages(input, wrappedFn)
+	return c.svc.ListRepositoriesPages(input, wrappedFn)
 }
 
 // ListRepositoriesPagesWithContext is a passthrough to the underlying ListRepositoriesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListRepositories when applied to the request.
 func (c *CodeCommit) ListRepositoriesPagesWithContext(ctx aws.Context, input *codecommit.ListRepositoriesInput, fn func(*codecommit.ListRepositoriesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListRepositories"))
-	return c.ListRepositoriesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListRepositoriesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PutRepositoryTriggersRequest is a passthrough to the underlying PutRepositoryTriggersRequest.

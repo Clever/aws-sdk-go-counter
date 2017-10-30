@@ -416,14 +416,14 @@ func (c *DirectoryService) DescribeDomainControllersPages(input *directoryservic
 		c.inc("DescribeDomainControllers")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDomainControllersPages(input, wrappedFn)
+	return c.svc.DescribeDomainControllersPages(input, wrappedFn)
 }
 
 // DescribeDomainControllersPagesWithContext is a passthrough to the underlying DescribeDomainControllersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDomainControllers when applied to the request.
 func (c *DirectoryService) DescribeDomainControllersPagesWithContext(ctx aws.Context, input *directoryservice.DescribeDomainControllersInput, fn func(*directoryservice.DescribeDomainControllersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDomainControllers"))
-	return c.DescribeDomainControllersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDomainControllersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEventTopicsRequest is a passthrough to the underlying DescribeEventTopicsRequest.

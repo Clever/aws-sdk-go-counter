@@ -458,14 +458,14 @@ func (c *KMS) ListAliasesPages(input *kms.ListAliasesInput, fn func(*kms.ListAli
 		c.inc("ListAliases")
 		return fn(page, lastPage)
 	}
-	return c.ListAliasesPages(input, wrappedFn)
+	return c.svc.ListAliasesPages(input, wrappedFn)
 }
 
 // ListAliasesPagesWithContext is a passthrough to the underlying ListAliasesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAliases when applied to the request.
 func (c *KMS) ListAliasesPagesWithContext(ctx aws.Context, input *kms.ListAliasesInput, fn func(*kms.ListAliasesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAliases"))
-	return c.ListAliasesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAliasesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListGrantsRequest is a passthrough to the underlying ListGrantsRequest.
@@ -498,14 +498,14 @@ func (c *KMS) ListGrantsPages(input *kms.ListGrantsInput, fn func(*kms.ListGrant
 		c.inc("ListGrants")
 		return fn(page, lastPage)
 	}
-	return c.ListGrantsPages(input, wrappedFn)
+	return c.svc.ListGrantsPages(input, wrappedFn)
 }
 
 // ListGrantsPagesWithContext is a passthrough to the underlying ListGrantsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListGrants when applied to the request.
 func (c *KMS) ListGrantsPagesWithContext(ctx aws.Context, input *kms.ListGrantsInput, fn func(*kms.ListGrantsResponse, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListGrants"))
-	return c.ListGrantsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListGrantsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListKeyPoliciesRequest is a passthrough to the underlying ListKeyPoliciesRequest.
@@ -538,14 +538,14 @@ func (c *KMS) ListKeyPoliciesPages(input *kms.ListKeyPoliciesInput, fn func(*kms
 		c.inc("ListKeyPolicies")
 		return fn(page, lastPage)
 	}
-	return c.ListKeyPoliciesPages(input, wrappedFn)
+	return c.svc.ListKeyPoliciesPages(input, wrappedFn)
 }
 
 // ListKeyPoliciesPagesWithContext is a passthrough to the underlying ListKeyPoliciesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListKeyPolicies when applied to the request.
 func (c *KMS) ListKeyPoliciesPagesWithContext(ctx aws.Context, input *kms.ListKeyPoliciesInput, fn func(*kms.ListKeyPoliciesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListKeyPolicies"))
-	return c.ListKeyPoliciesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListKeyPoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListKeysRequest is a passthrough to the underlying ListKeysRequest.
@@ -578,14 +578,14 @@ func (c *KMS) ListKeysPages(input *kms.ListKeysInput, fn func(*kms.ListKeysOutpu
 		c.inc("ListKeys")
 		return fn(page, lastPage)
 	}
-	return c.ListKeysPages(input, wrappedFn)
+	return c.svc.ListKeysPages(input, wrappedFn)
 }
 
 // ListKeysPagesWithContext is a passthrough to the underlying ListKeysPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListKeys when applied to the request.
 func (c *KMS) ListKeysPagesWithContext(ctx aws.Context, input *kms.ListKeysInput, fn func(*kms.ListKeysOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListKeys"))
-	return c.ListKeysPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListKeysPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListResourceTagsRequest is a passthrough to the underlying ListResourceTagsRequest.

@@ -122,14 +122,14 @@ func (c *Support) DescribeCasesPages(input *support.DescribeCasesInput, fn func(
 		c.inc("DescribeCases")
 		return fn(page, lastPage)
 	}
-	return c.DescribeCasesPages(input, wrappedFn)
+	return c.svc.DescribeCasesPages(input, wrappedFn)
 }
 
 // DescribeCasesPagesWithContext is a passthrough to the underlying DescribeCasesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeCases when applied to the request.
 func (c *Support) DescribeCasesPagesWithContext(ctx aws.Context, input *support.DescribeCasesInput, fn func(*support.DescribeCasesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeCases"))
-	return c.DescribeCasesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeCasesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeCommunicationsRequest is a passthrough to the underlying DescribeCommunicationsRequest.
@@ -162,14 +162,14 @@ func (c *Support) DescribeCommunicationsPages(input *support.DescribeCommunicati
 		c.inc("DescribeCommunications")
 		return fn(page, lastPage)
 	}
-	return c.DescribeCommunicationsPages(input, wrappedFn)
+	return c.svc.DescribeCommunicationsPages(input, wrappedFn)
 }
 
 // DescribeCommunicationsPagesWithContext is a passthrough to the underlying DescribeCommunicationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeCommunications when applied to the request.
 func (c *Support) DescribeCommunicationsPagesWithContext(ctx aws.Context, input *support.DescribeCommunicationsInput, fn func(*support.DescribeCommunicationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeCommunications"))
-	return c.DescribeCommunicationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeCommunicationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeServicesRequest is a passthrough to the underlying DescribeServicesRequest.

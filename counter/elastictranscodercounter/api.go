@@ -164,14 +164,14 @@ func (c *ElasticTranscoder) ListJobsByPipelinePages(input *elastictranscoder.Lis
 		c.inc("ListJobsByPipeline")
 		return fn(page, lastPage)
 	}
-	return c.ListJobsByPipelinePages(input, wrappedFn)
+	return c.svc.ListJobsByPipelinePages(input, wrappedFn)
 }
 
 // ListJobsByPipelinePagesWithContext is a passthrough to the underlying ListJobsByPipelinePagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListJobsByPipeline when applied to the request.
 func (c *ElasticTranscoder) ListJobsByPipelinePagesWithContext(ctx aws.Context, input *elastictranscoder.ListJobsByPipelineInput, fn func(*elastictranscoder.ListJobsByPipelineOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListJobsByPipeline"))
-	return c.ListJobsByPipelinePagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListJobsByPipelinePagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListJobsByStatusRequest is a passthrough to the underlying ListJobsByStatusRequest.
@@ -204,14 +204,14 @@ func (c *ElasticTranscoder) ListJobsByStatusPages(input *elastictranscoder.ListJ
 		c.inc("ListJobsByStatus")
 		return fn(page, lastPage)
 	}
-	return c.ListJobsByStatusPages(input, wrappedFn)
+	return c.svc.ListJobsByStatusPages(input, wrappedFn)
 }
 
 // ListJobsByStatusPagesWithContext is a passthrough to the underlying ListJobsByStatusPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListJobsByStatus when applied to the request.
 func (c *ElasticTranscoder) ListJobsByStatusPagesWithContext(ctx aws.Context, input *elastictranscoder.ListJobsByStatusInput, fn func(*elastictranscoder.ListJobsByStatusOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListJobsByStatus"))
-	return c.ListJobsByStatusPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListJobsByStatusPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListPipelinesRequest is a passthrough to the underlying ListPipelinesRequest.
@@ -244,14 +244,14 @@ func (c *ElasticTranscoder) ListPipelinesPages(input *elastictranscoder.ListPipe
 		c.inc("ListPipelines")
 		return fn(page, lastPage)
 	}
-	return c.ListPipelinesPages(input, wrappedFn)
+	return c.svc.ListPipelinesPages(input, wrappedFn)
 }
 
 // ListPipelinesPagesWithContext is a passthrough to the underlying ListPipelinesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPipelines when applied to the request.
 func (c *ElasticTranscoder) ListPipelinesPagesWithContext(ctx aws.Context, input *elastictranscoder.ListPipelinesInput, fn func(*elastictranscoder.ListPipelinesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPipelines"))
-	return c.ListPipelinesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPipelinesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListPresetsRequest is a passthrough to the underlying ListPresetsRequest.
@@ -284,14 +284,14 @@ func (c *ElasticTranscoder) ListPresetsPages(input *elastictranscoder.ListPreset
 		c.inc("ListPresets")
 		return fn(page, lastPage)
 	}
-	return c.ListPresetsPages(input, wrappedFn)
+	return c.svc.ListPresetsPages(input, wrappedFn)
 }
 
 // ListPresetsPagesWithContext is a passthrough to the underlying ListPresetsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPresets when applied to the request.
 func (c *ElasticTranscoder) ListPresetsPagesWithContext(ctx aws.Context, input *elastictranscoder.ListPresetsInput, fn func(*elastictranscoder.ListPresetsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPresets"))
-	return c.ListPresetsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPresetsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ReadJobRequest is a passthrough to the underlying ReadJobRequest.

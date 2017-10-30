@@ -269,14 +269,14 @@ func (c *SWF) GetWorkflowExecutionHistoryPages(input *swf.GetWorkflowExecutionHi
 		c.inc("GetWorkflowExecutionHistory")
 		return fn(page, lastPage)
 	}
-	return c.GetWorkflowExecutionHistoryPages(input, wrappedFn)
+	return c.svc.GetWorkflowExecutionHistoryPages(input, wrappedFn)
 }
 
 // GetWorkflowExecutionHistoryPagesWithContext is a passthrough to the underlying GetWorkflowExecutionHistoryPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetWorkflowExecutionHistory when applied to the request.
 func (c *SWF) GetWorkflowExecutionHistoryPagesWithContext(ctx aws.Context, input *swf.GetWorkflowExecutionHistoryInput, fn func(*swf.GetWorkflowExecutionHistoryOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetWorkflowExecutionHistory"))
-	return c.GetWorkflowExecutionHistoryPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetWorkflowExecutionHistoryPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListActivityTypesRequest is a passthrough to the underlying ListActivityTypesRequest.
@@ -309,14 +309,14 @@ func (c *SWF) ListActivityTypesPages(input *swf.ListActivityTypesInput, fn func(
 		c.inc("ListActivityTypes")
 		return fn(page, lastPage)
 	}
-	return c.ListActivityTypesPages(input, wrappedFn)
+	return c.svc.ListActivityTypesPages(input, wrappedFn)
 }
 
 // ListActivityTypesPagesWithContext is a passthrough to the underlying ListActivityTypesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListActivityTypes when applied to the request.
 func (c *SWF) ListActivityTypesPagesWithContext(ctx aws.Context, input *swf.ListActivityTypesInput, fn func(*swf.ListActivityTypesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListActivityTypes"))
-	return c.ListActivityTypesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListActivityTypesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListClosedWorkflowExecutionsRequest is a passthrough to the underlying ListClosedWorkflowExecutionsRequest.
@@ -349,14 +349,14 @@ func (c *SWF) ListClosedWorkflowExecutionsPages(input *swf.ListClosedWorkflowExe
 		c.inc("ListClosedWorkflowExecutions")
 		return fn(page, lastPage)
 	}
-	return c.ListClosedWorkflowExecutionsPages(input, wrappedFn)
+	return c.svc.ListClosedWorkflowExecutionsPages(input, wrappedFn)
 }
 
 // ListClosedWorkflowExecutionsPagesWithContext is a passthrough to the underlying ListClosedWorkflowExecutionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListClosedWorkflowExecutions when applied to the request.
 func (c *SWF) ListClosedWorkflowExecutionsPagesWithContext(ctx aws.Context, input *swf.ListClosedWorkflowExecutionsInput, fn func(*swf.WorkflowExecutionInfos, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListClosedWorkflowExecutions"))
-	return c.ListClosedWorkflowExecutionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListClosedWorkflowExecutionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListDomainsRequest is a passthrough to the underlying ListDomainsRequest.
@@ -389,14 +389,14 @@ func (c *SWF) ListDomainsPages(input *swf.ListDomainsInput, fn func(*swf.ListDom
 		c.inc("ListDomains")
 		return fn(page, lastPage)
 	}
-	return c.ListDomainsPages(input, wrappedFn)
+	return c.svc.ListDomainsPages(input, wrappedFn)
 }
 
 // ListDomainsPagesWithContext is a passthrough to the underlying ListDomainsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDomains when applied to the request.
 func (c *SWF) ListDomainsPagesWithContext(ctx aws.Context, input *swf.ListDomainsInput, fn func(*swf.ListDomainsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDomains"))
-	return c.ListDomainsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDomainsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListOpenWorkflowExecutionsRequest is a passthrough to the underlying ListOpenWorkflowExecutionsRequest.
@@ -429,14 +429,14 @@ func (c *SWF) ListOpenWorkflowExecutionsPages(input *swf.ListOpenWorkflowExecuti
 		c.inc("ListOpenWorkflowExecutions")
 		return fn(page, lastPage)
 	}
-	return c.ListOpenWorkflowExecutionsPages(input, wrappedFn)
+	return c.svc.ListOpenWorkflowExecutionsPages(input, wrappedFn)
 }
 
 // ListOpenWorkflowExecutionsPagesWithContext is a passthrough to the underlying ListOpenWorkflowExecutionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListOpenWorkflowExecutions when applied to the request.
 func (c *SWF) ListOpenWorkflowExecutionsPagesWithContext(ctx aws.Context, input *swf.ListOpenWorkflowExecutionsInput, fn func(*swf.WorkflowExecutionInfos, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListOpenWorkflowExecutions"))
-	return c.ListOpenWorkflowExecutionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListOpenWorkflowExecutionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListWorkflowTypesRequest is a passthrough to the underlying ListWorkflowTypesRequest.
@@ -469,14 +469,14 @@ func (c *SWF) ListWorkflowTypesPages(input *swf.ListWorkflowTypesInput, fn func(
 		c.inc("ListWorkflowTypes")
 		return fn(page, lastPage)
 	}
-	return c.ListWorkflowTypesPages(input, wrappedFn)
+	return c.svc.ListWorkflowTypesPages(input, wrappedFn)
 }
 
 // ListWorkflowTypesPagesWithContext is a passthrough to the underlying ListWorkflowTypesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListWorkflowTypes when applied to the request.
 func (c *SWF) ListWorkflowTypesPagesWithContext(ctx aws.Context, input *swf.ListWorkflowTypesInput, fn func(*swf.ListWorkflowTypesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListWorkflowTypes"))
-	return c.ListWorkflowTypesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListWorkflowTypesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PollForActivityTaskRequest is a passthrough to the underlying PollForActivityTaskRequest.
@@ -530,14 +530,14 @@ func (c *SWF) PollForDecisionTaskPages(input *swf.PollForDecisionTaskInput, fn f
 		c.inc("PollForDecisionTask")
 		return fn(page, lastPage)
 	}
-	return c.PollForDecisionTaskPages(input, wrappedFn)
+	return c.svc.PollForDecisionTaskPages(input, wrappedFn)
 }
 
 // PollForDecisionTaskPagesWithContext is a passthrough to the underlying PollForDecisionTaskPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to PollForDecisionTask when applied to the request.
 func (c *SWF) PollForDecisionTaskPagesWithContext(ctx aws.Context, input *swf.PollForDecisionTaskInput, fn func(*swf.PollForDecisionTaskOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("PollForDecisionTask"))
-	return c.PollForDecisionTaskPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.PollForDecisionTaskPagesWithContext(ctx, input, fn, opts...)
 }
 
 // RecordActivityTaskHeartbeatRequest is a passthrough to the underlying RecordActivityTaskHeartbeatRequest.

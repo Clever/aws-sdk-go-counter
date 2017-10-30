@@ -458,14 +458,14 @@ func (c *Glacier) ListJobsPages(input *glacier.ListJobsInput, fn func(*glacier.L
 		c.inc("ListJobs")
 		return fn(page, lastPage)
 	}
-	return c.ListJobsPages(input, wrappedFn)
+	return c.svc.ListJobsPages(input, wrappedFn)
 }
 
 // ListJobsPagesWithContext is a passthrough to the underlying ListJobsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListJobs when applied to the request.
 func (c *Glacier) ListJobsPagesWithContext(ctx aws.Context, input *glacier.ListJobsInput, fn func(*glacier.ListJobsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListJobs"))
-	return c.ListJobsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListJobsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListMultipartUploadsRequest is a passthrough to the underlying ListMultipartUploadsRequest.
@@ -498,14 +498,14 @@ func (c *Glacier) ListMultipartUploadsPages(input *glacier.ListMultipartUploadsI
 		c.inc("ListMultipartUploads")
 		return fn(page, lastPage)
 	}
-	return c.ListMultipartUploadsPages(input, wrappedFn)
+	return c.svc.ListMultipartUploadsPages(input, wrappedFn)
 }
 
 // ListMultipartUploadsPagesWithContext is a passthrough to the underlying ListMultipartUploadsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListMultipartUploads when applied to the request.
 func (c *Glacier) ListMultipartUploadsPagesWithContext(ctx aws.Context, input *glacier.ListMultipartUploadsInput, fn func(*glacier.ListMultipartUploadsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListMultipartUploads"))
-	return c.ListMultipartUploadsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListMultipartUploadsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListPartsRequest is a passthrough to the underlying ListPartsRequest.
@@ -538,14 +538,14 @@ func (c *Glacier) ListPartsPages(input *glacier.ListPartsInput, fn func(*glacier
 		c.inc("ListParts")
 		return fn(page, lastPage)
 	}
-	return c.ListPartsPages(input, wrappedFn)
+	return c.svc.ListPartsPages(input, wrappedFn)
 }
 
 // ListPartsPagesWithContext is a passthrough to the underlying ListPartsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListParts when applied to the request.
 func (c *Glacier) ListPartsPagesWithContext(ctx aws.Context, input *glacier.ListPartsInput, fn func(*glacier.ListPartsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListParts"))
-	return c.ListPartsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPartsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListProvisionedCapacityRequest is a passthrough to the underlying ListProvisionedCapacityRequest.
@@ -620,14 +620,14 @@ func (c *Glacier) ListVaultsPages(input *glacier.ListVaultsInput, fn func(*glaci
 		c.inc("ListVaults")
 		return fn(page, lastPage)
 	}
-	return c.ListVaultsPages(input, wrappedFn)
+	return c.svc.ListVaultsPages(input, wrappedFn)
 }
 
 // ListVaultsPagesWithContext is a passthrough to the underlying ListVaultsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListVaults when applied to the request.
 func (c *Glacier) ListVaultsPagesWithContext(ctx aws.Context, input *glacier.ListVaultsInput, fn func(*glacier.ListVaultsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListVaults"))
-	return c.ListVaultsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListVaultsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PurchaseProvisionedCapacityRequest is a passthrough to the underlying PurchaseProvisionedCapacityRequest.

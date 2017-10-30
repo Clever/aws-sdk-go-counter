@@ -374,14 +374,14 @@ func (c *AutoScaling) DescribeAutoScalingGroupsPages(input *autoscaling.Describe
 		c.inc("DescribeAutoScalingGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeAutoScalingGroupsPages(input, wrappedFn)
+	return c.svc.DescribeAutoScalingGroupsPages(input, wrappedFn)
 }
 
 // DescribeAutoScalingGroupsPagesWithContext is a passthrough to the underlying DescribeAutoScalingGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeAutoScalingGroups when applied to the request.
 func (c *AutoScaling) DescribeAutoScalingGroupsPagesWithContext(ctx aws.Context, input *autoscaling.DescribeAutoScalingGroupsInput, fn func(*autoscaling.DescribeAutoScalingGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeAutoScalingGroups"))
-	return c.DescribeAutoScalingGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeAutoScalingGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeAutoScalingInstancesRequest is a passthrough to the underlying DescribeAutoScalingInstancesRequest.
@@ -414,14 +414,14 @@ func (c *AutoScaling) DescribeAutoScalingInstancesPages(input *autoscaling.Descr
 		c.inc("DescribeAutoScalingInstances")
 		return fn(page, lastPage)
 	}
-	return c.DescribeAutoScalingInstancesPages(input, wrappedFn)
+	return c.svc.DescribeAutoScalingInstancesPages(input, wrappedFn)
 }
 
 // DescribeAutoScalingInstancesPagesWithContext is a passthrough to the underlying DescribeAutoScalingInstancesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeAutoScalingInstances when applied to the request.
 func (c *AutoScaling) DescribeAutoScalingInstancesPagesWithContext(ctx aws.Context, input *autoscaling.DescribeAutoScalingInstancesInput, fn func(*autoscaling.DescribeAutoScalingInstancesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeAutoScalingInstances"))
-	return c.DescribeAutoScalingInstancesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeAutoScalingInstancesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeAutoScalingNotificationTypesRequest is a passthrough to the underlying DescribeAutoScalingNotificationTypesRequest.
@@ -475,14 +475,14 @@ func (c *AutoScaling) DescribeLaunchConfigurationsPages(input *autoscaling.Descr
 		c.inc("DescribeLaunchConfigurations")
 		return fn(page, lastPage)
 	}
-	return c.DescribeLaunchConfigurationsPages(input, wrappedFn)
+	return c.svc.DescribeLaunchConfigurationsPages(input, wrappedFn)
 }
 
 // DescribeLaunchConfigurationsPagesWithContext is a passthrough to the underlying DescribeLaunchConfigurationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeLaunchConfigurations when applied to the request.
 func (c *AutoScaling) DescribeLaunchConfigurationsPagesWithContext(ctx aws.Context, input *autoscaling.DescribeLaunchConfigurationsInput, fn func(*autoscaling.DescribeLaunchConfigurationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeLaunchConfigurations"))
-	return c.DescribeLaunchConfigurationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeLaunchConfigurationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeLifecycleHookTypesRequest is a passthrough to the underlying DescribeLifecycleHookTypesRequest.
@@ -620,14 +620,14 @@ func (c *AutoScaling) DescribeNotificationConfigurationsPages(input *autoscaling
 		c.inc("DescribeNotificationConfigurations")
 		return fn(page, lastPage)
 	}
-	return c.DescribeNotificationConfigurationsPages(input, wrappedFn)
+	return c.svc.DescribeNotificationConfigurationsPages(input, wrappedFn)
 }
 
 // DescribeNotificationConfigurationsPagesWithContext is a passthrough to the underlying DescribeNotificationConfigurationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeNotificationConfigurations when applied to the request.
 func (c *AutoScaling) DescribeNotificationConfigurationsPagesWithContext(ctx aws.Context, input *autoscaling.DescribeNotificationConfigurationsInput, fn func(*autoscaling.DescribeNotificationConfigurationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeNotificationConfigurations"))
-	return c.DescribeNotificationConfigurationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeNotificationConfigurationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribePoliciesRequest is a passthrough to the underlying DescribePoliciesRequest.
@@ -660,14 +660,14 @@ func (c *AutoScaling) DescribePoliciesPages(input *autoscaling.DescribePoliciesI
 		c.inc("DescribePolicies")
 		return fn(page, lastPage)
 	}
-	return c.DescribePoliciesPages(input, wrappedFn)
+	return c.svc.DescribePoliciesPages(input, wrappedFn)
 }
 
 // DescribePoliciesPagesWithContext is a passthrough to the underlying DescribePoliciesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribePolicies when applied to the request.
 func (c *AutoScaling) DescribePoliciesPagesWithContext(ctx aws.Context, input *autoscaling.DescribePoliciesInput, fn func(*autoscaling.DescribePoliciesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribePolicies"))
-	return c.DescribePoliciesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribePoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeScalingActivitiesRequest is a passthrough to the underlying DescribeScalingActivitiesRequest.
@@ -700,14 +700,14 @@ func (c *AutoScaling) DescribeScalingActivitiesPages(input *autoscaling.Describe
 		c.inc("DescribeScalingActivities")
 		return fn(page, lastPage)
 	}
-	return c.DescribeScalingActivitiesPages(input, wrappedFn)
+	return c.svc.DescribeScalingActivitiesPages(input, wrappedFn)
 }
 
 // DescribeScalingActivitiesPagesWithContext is a passthrough to the underlying DescribeScalingActivitiesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeScalingActivities when applied to the request.
 func (c *AutoScaling) DescribeScalingActivitiesPagesWithContext(ctx aws.Context, input *autoscaling.DescribeScalingActivitiesInput, fn func(*autoscaling.DescribeScalingActivitiesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeScalingActivities"))
-	return c.DescribeScalingActivitiesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeScalingActivitiesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeScalingProcessTypesRequest is a passthrough to the underlying DescribeScalingProcessTypesRequest.
@@ -761,14 +761,14 @@ func (c *AutoScaling) DescribeScheduledActionsPages(input *autoscaling.DescribeS
 		c.inc("DescribeScheduledActions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeScheduledActionsPages(input, wrappedFn)
+	return c.svc.DescribeScheduledActionsPages(input, wrappedFn)
 }
 
 // DescribeScheduledActionsPagesWithContext is a passthrough to the underlying DescribeScheduledActionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeScheduledActions when applied to the request.
 func (c *AutoScaling) DescribeScheduledActionsPagesWithContext(ctx aws.Context, input *autoscaling.DescribeScheduledActionsInput, fn func(*autoscaling.DescribeScheduledActionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeScheduledActions"))
-	return c.DescribeScheduledActionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeScheduledActionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeTagsRequest is a passthrough to the underlying DescribeTagsRequest.
@@ -801,14 +801,14 @@ func (c *AutoScaling) DescribeTagsPages(input *autoscaling.DescribeTagsInput, fn
 		c.inc("DescribeTags")
 		return fn(page, lastPage)
 	}
-	return c.DescribeTagsPages(input, wrappedFn)
+	return c.svc.DescribeTagsPages(input, wrappedFn)
 }
 
 // DescribeTagsPagesWithContext is a passthrough to the underlying DescribeTagsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeTags when applied to the request.
 func (c *AutoScaling) DescribeTagsPagesWithContext(ctx aws.Context, input *autoscaling.DescribeTagsInput, fn func(*autoscaling.DescribeTagsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeTags"))
-	return c.DescribeTagsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeTagsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeTerminationPolicyTypesRequest is a passthrough to the underlying DescribeTerminationPolicyTypesRequest.

@@ -38,14 +38,14 @@ func (c *Health) DescribeAffectedEntitiesPages(input *health.DescribeAffectedEnt
 		c.inc("DescribeAffectedEntities")
 		return fn(page, lastPage)
 	}
-	return c.DescribeAffectedEntitiesPages(input, wrappedFn)
+	return c.svc.DescribeAffectedEntitiesPages(input, wrappedFn)
 }
 
 // DescribeAffectedEntitiesPagesWithContext is a passthrough to the underlying DescribeAffectedEntitiesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeAffectedEntities when applied to the request.
 func (c *Health) DescribeAffectedEntitiesPagesWithContext(ctx aws.Context, input *health.DescribeAffectedEntitiesInput, fn func(*health.DescribeAffectedEntitiesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeAffectedEntities"))
-	return c.DescribeAffectedEntitiesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeAffectedEntitiesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEntityAggregatesRequest is a passthrough to the underlying DescribeEntityAggregatesRequest.
@@ -99,14 +99,14 @@ func (c *Health) DescribeEventAggregatesPages(input *health.DescribeEventAggrega
 		c.inc("DescribeEventAggregates")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEventAggregatesPages(input, wrappedFn)
+	return c.svc.DescribeEventAggregatesPages(input, wrappedFn)
 }
 
 // DescribeEventAggregatesPagesWithContext is a passthrough to the underlying DescribeEventAggregatesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEventAggregates when applied to the request.
 func (c *Health) DescribeEventAggregatesPagesWithContext(ctx aws.Context, input *health.DescribeEventAggregatesInput, fn func(*health.DescribeEventAggregatesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEventAggregates"))
-	return c.DescribeEventAggregatesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEventAggregatesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEventDetailsRequest is a passthrough to the underlying DescribeEventDetailsRequest.
@@ -160,14 +160,14 @@ func (c *Health) DescribeEventTypesPages(input *health.DescribeEventTypesInput, 
 		c.inc("DescribeEventTypes")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEventTypesPages(input, wrappedFn)
+	return c.svc.DescribeEventTypesPages(input, wrappedFn)
 }
 
 // DescribeEventTypesPagesWithContext is a passthrough to the underlying DescribeEventTypesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEventTypes when applied to the request.
 func (c *Health) DescribeEventTypesPagesWithContext(ctx aws.Context, input *health.DescribeEventTypesInput, fn func(*health.DescribeEventTypesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEventTypes"))
-	return c.DescribeEventTypesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEventTypesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEventsRequest is a passthrough to the underlying DescribeEventsRequest.
@@ -200,12 +200,12 @@ func (c *Health) DescribeEventsPages(input *health.DescribeEventsInput, fn func(
 		c.inc("DescribeEvents")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEventsPages(input, wrappedFn)
+	return c.svc.DescribeEventsPages(input, wrappedFn)
 }
 
 // DescribeEventsPagesWithContext is a passthrough to the underlying DescribeEventsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEvents when applied to the request.
 func (c *Health) DescribeEventsPagesWithContext(ctx aws.Context, input *health.DescribeEventsInput, fn func(*health.DescribeEventsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEvents"))
-	return c.DescribeEventsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEventsPagesWithContext(ctx, input, fn, opts...)
 }

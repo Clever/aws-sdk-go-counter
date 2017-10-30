@@ -668,14 +668,14 @@ func (c *ServiceCatalog) ListAcceptedPortfolioSharesPages(input *servicecatalog.
 		c.inc("ListAcceptedPortfolioShares")
 		return fn(page, lastPage)
 	}
-	return c.ListAcceptedPortfolioSharesPages(input, wrappedFn)
+	return c.svc.ListAcceptedPortfolioSharesPages(input, wrappedFn)
 }
 
 // ListAcceptedPortfolioSharesPagesWithContext is a passthrough to the underlying ListAcceptedPortfolioSharesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAcceptedPortfolioShares when applied to the request.
 func (c *ServiceCatalog) ListAcceptedPortfolioSharesPagesWithContext(ctx aws.Context, input *servicecatalog.ListAcceptedPortfolioSharesInput, fn func(*servicecatalog.ListAcceptedPortfolioSharesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAcceptedPortfolioShares"))
-	return c.ListAcceptedPortfolioSharesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAcceptedPortfolioSharesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListConstraintsForPortfolioRequest is a passthrough to the underlying ListConstraintsForPortfolioRequest.
@@ -708,14 +708,14 @@ func (c *ServiceCatalog) ListConstraintsForPortfolioPages(input *servicecatalog.
 		c.inc("ListConstraintsForPortfolio")
 		return fn(page, lastPage)
 	}
-	return c.ListConstraintsForPortfolioPages(input, wrappedFn)
+	return c.svc.ListConstraintsForPortfolioPages(input, wrappedFn)
 }
 
 // ListConstraintsForPortfolioPagesWithContext is a passthrough to the underlying ListConstraintsForPortfolioPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListConstraintsForPortfolio when applied to the request.
 func (c *ServiceCatalog) ListConstraintsForPortfolioPagesWithContext(ctx aws.Context, input *servicecatalog.ListConstraintsForPortfolioInput, fn func(*servicecatalog.ListConstraintsForPortfolioOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListConstraintsForPortfolio"))
-	return c.ListConstraintsForPortfolioPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListConstraintsForPortfolioPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListLaunchPathsRequest is a passthrough to the underlying ListLaunchPathsRequest.
@@ -748,14 +748,14 @@ func (c *ServiceCatalog) ListLaunchPathsPages(input *servicecatalog.ListLaunchPa
 		c.inc("ListLaunchPaths")
 		return fn(page, lastPage)
 	}
-	return c.ListLaunchPathsPages(input, wrappedFn)
+	return c.svc.ListLaunchPathsPages(input, wrappedFn)
 }
 
 // ListLaunchPathsPagesWithContext is a passthrough to the underlying ListLaunchPathsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListLaunchPaths when applied to the request.
 func (c *ServiceCatalog) ListLaunchPathsPagesWithContext(ctx aws.Context, input *servicecatalog.ListLaunchPathsInput, fn func(*servicecatalog.ListLaunchPathsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListLaunchPaths"))
-	return c.ListLaunchPathsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListLaunchPathsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListPortfolioAccessRequest is a passthrough to the underlying ListPortfolioAccessRequest.
@@ -809,14 +809,14 @@ func (c *ServiceCatalog) ListPortfoliosPages(input *servicecatalog.ListPortfolio
 		c.inc("ListPortfolios")
 		return fn(page, lastPage)
 	}
-	return c.ListPortfoliosPages(input, wrappedFn)
+	return c.svc.ListPortfoliosPages(input, wrappedFn)
 }
 
 // ListPortfoliosPagesWithContext is a passthrough to the underlying ListPortfoliosPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPortfolios when applied to the request.
 func (c *ServiceCatalog) ListPortfoliosPagesWithContext(ctx aws.Context, input *servicecatalog.ListPortfoliosInput, fn func(*servicecatalog.ListPortfoliosOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPortfolios"))
-	return c.ListPortfoliosPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPortfoliosPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListPortfoliosForProductRequest is a passthrough to the underlying ListPortfoliosForProductRequest.
@@ -849,14 +849,14 @@ func (c *ServiceCatalog) ListPortfoliosForProductPages(input *servicecatalog.Lis
 		c.inc("ListPortfoliosForProduct")
 		return fn(page, lastPage)
 	}
-	return c.ListPortfoliosForProductPages(input, wrappedFn)
+	return c.svc.ListPortfoliosForProductPages(input, wrappedFn)
 }
 
 // ListPortfoliosForProductPagesWithContext is a passthrough to the underlying ListPortfoliosForProductPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPortfoliosForProduct when applied to the request.
 func (c *ServiceCatalog) ListPortfoliosForProductPagesWithContext(ctx aws.Context, input *servicecatalog.ListPortfoliosForProductInput, fn func(*servicecatalog.ListPortfoliosForProductOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPortfoliosForProduct"))
-	return c.ListPortfoliosForProductPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPortfoliosForProductPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListPrincipalsForPortfolioRequest is a passthrough to the underlying ListPrincipalsForPortfolioRequest.
@@ -889,14 +889,14 @@ func (c *ServiceCatalog) ListPrincipalsForPortfolioPages(input *servicecatalog.L
 		c.inc("ListPrincipalsForPortfolio")
 		return fn(page, lastPage)
 	}
-	return c.ListPrincipalsForPortfolioPages(input, wrappedFn)
+	return c.svc.ListPrincipalsForPortfolioPages(input, wrappedFn)
 }
 
 // ListPrincipalsForPortfolioPagesWithContext is a passthrough to the underlying ListPrincipalsForPortfolioPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPrincipalsForPortfolio when applied to the request.
 func (c *ServiceCatalog) ListPrincipalsForPortfolioPagesWithContext(ctx aws.Context, input *servicecatalog.ListPrincipalsForPortfolioInput, fn func(*servicecatalog.ListPrincipalsForPortfolioOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPrincipalsForPortfolio"))
-	return c.ListPrincipalsForPortfolioPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPrincipalsForPortfolioPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListProvisioningArtifactsRequest is a passthrough to the underlying ListProvisioningArtifactsRequest.
@@ -971,14 +971,14 @@ func (c *ServiceCatalog) ListResourcesForTagOptionPages(input *servicecatalog.Li
 		c.inc("ListResourcesForTagOption")
 		return fn(page, lastPage)
 	}
-	return c.ListResourcesForTagOptionPages(input, wrappedFn)
+	return c.svc.ListResourcesForTagOptionPages(input, wrappedFn)
 }
 
 // ListResourcesForTagOptionPagesWithContext is a passthrough to the underlying ListResourcesForTagOptionPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListResourcesForTagOption when applied to the request.
 func (c *ServiceCatalog) ListResourcesForTagOptionPagesWithContext(ctx aws.Context, input *servicecatalog.ListResourcesForTagOptionInput, fn func(*servicecatalog.ListResourcesForTagOptionOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListResourcesForTagOption"))
-	return c.ListResourcesForTagOptionPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListResourcesForTagOptionPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTagOptionsRequest is a passthrough to the underlying ListTagOptionsRequest.
@@ -1011,14 +1011,14 @@ func (c *ServiceCatalog) ListTagOptionsPages(input *servicecatalog.ListTagOption
 		c.inc("ListTagOptions")
 		return fn(page, lastPage)
 	}
-	return c.ListTagOptionsPages(input, wrappedFn)
+	return c.svc.ListTagOptionsPages(input, wrappedFn)
 }
 
 // ListTagOptionsPagesWithContext is a passthrough to the underlying ListTagOptionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListTagOptions when applied to the request.
 func (c *ServiceCatalog) ListTagOptionsPagesWithContext(ctx aws.Context, input *servicecatalog.ListTagOptionsInput, fn func(*servicecatalog.ListTagOptionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListTagOptions"))
-	return c.ListTagOptionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListTagOptionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ProvisionProductRequest is a passthrough to the underlying ProvisionProductRequest.
@@ -1114,14 +1114,14 @@ func (c *ServiceCatalog) SearchProductsPages(input *servicecatalog.SearchProduct
 		c.inc("SearchProducts")
 		return fn(page, lastPage)
 	}
-	return c.SearchProductsPages(input, wrappedFn)
+	return c.svc.SearchProductsPages(input, wrappedFn)
 }
 
 // SearchProductsPagesWithContext is a passthrough to the underlying SearchProductsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to SearchProducts when applied to the request.
 func (c *ServiceCatalog) SearchProductsPagesWithContext(ctx aws.Context, input *servicecatalog.SearchProductsInput, fn func(*servicecatalog.SearchProductsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("SearchProducts"))
-	return c.SearchProductsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.SearchProductsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // SearchProductsAsAdminRequest is a passthrough to the underlying SearchProductsAsAdminRequest.
@@ -1154,14 +1154,14 @@ func (c *ServiceCatalog) SearchProductsAsAdminPages(input *servicecatalog.Search
 		c.inc("SearchProductsAsAdmin")
 		return fn(page, lastPage)
 	}
-	return c.SearchProductsAsAdminPages(input, wrappedFn)
+	return c.svc.SearchProductsAsAdminPages(input, wrappedFn)
 }
 
 // SearchProductsAsAdminPagesWithContext is a passthrough to the underlying SearchProductsAsAdminPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to SearchProductsAsAdmin when applied to the request.
 func (c *ServiceCatalog) SearchProductsAsAdminPagesWithContext(ctx aws.Context, input *servicecatalog.SearchProductsAsAdminInput, fn func(*servicecatalog.SearchProductsAsAdminOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("SearchProductsAsAdmin"))
-	return c.SearchProductsAsAdminPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.SearchProductsAsAdminPagesWithContext(ctx, input, fn, opts...)
 }
 
 // TerminateProvisionedProductRequest is a passthrough to the underlying TerminateProvisionedProductRequest.

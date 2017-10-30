@@ -269,14 +269,14 @@ func (c *Route53Domains) ListDomainsPages(input *route53domains.ListDomainsInput
 		c.inc("ListDomains")
 		return fn(page, lastPage)
 	}
-	return c.ListDomainsPages(input, wrappedFn)
+	return c.svc.ListDomainsPages(input, wrappedFn)
 }
 
 // ListDomainsPagesWithContext is a passthrough to the underlying ListDomainsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDomains when applied to the request.
 func (c *Route53Domains) ListDomainsPagesWithContext(ctx aws.Context, input *route53domains.ListDomainsInput, fn func(*route53domains.ListDomainsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDomains"))
-	return c.ListDomainsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDomainsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListOperationsRequest is a passthrough to the underlying ListOperationsRequest.
@@ -309,14 +309,14 @@ func (c *Route53Domains) ListOperationsPages(input *route53domains.ListOperation
 		c.inc("ListOperations")
 		return fn(page, lastPage)
 	}
-	return c.ListOperationsPages(input, wrappedFn)
+	return c.svc.ListOperationsPages(input, wrappedFn)
 }
 
 // ListOperationsPagesWithContext is a passthrough to the underlying ListOperationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListOperations when applied to the request.
 func (c *Route53Domains) ListOperationsPagesWithContext(ctx aws.Context, input *route53domains.ListOperationsInput, fn func(*route53domains.ListOperationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListOperations"))
-	return c.ListOperationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListOperationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTagsForDomainRequest is a passthrough to the underlying ListTagsForDomainRequest.

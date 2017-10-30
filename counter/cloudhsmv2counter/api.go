@@ -122,14 +122,14 @@ func (c *CloudHSMV2) DescribeBackupsPages(input *cloudhsmv2.DescribeBackupsInput
 		c.inc("DescribeBackups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeBackupsPages(input, wrappedFn)
+	return c.svc.DescribeBackupsPages(input, wrappedFn)
 }
 
 // DescribeBackupsPagesWithContext is a passthrough to the underlying DescribeBackupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeBackups when applied to the request.
 func (c *CloudHSMV2) DescribeBackupsPagesWithContext(ctx aws.Context, input *cloudhsmv2.DescribeBackupsInput, fn func(*cloudhsmv2.DescribeBackupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeBackups"))
-	return c.DescribeBackupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeBackupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeClustersRequest is a passthrough to the underlying DescribeClustersRequest.
@@ -162,14 +162,14 @@ func (c *CloudHSMV2) DescribeClustersPages(input *cloudhsmv2.DescribeClustersInp
 		c.inc("DescribeClusters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeClustersPages(input, wrappedFn)
+	return c.svc.DescribeClustersPages(input, wrappedFn)
 }
 
 // DescribeClustersPagesWithContext is a passthrough to the underlying DescribeClustersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeClusters when applied to the request.
 func (c *CloudHSMV2) DescribeClustersPagesWithContext(ctx aws.Context, input *cloudhsmv2.DescribeClustersInput, fn func(*cloudhsmv2.DescribeClustersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeClusters"))
-	return c.DescribeClustersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeClustersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // InitializeClusterRequest is a passthrough to the underlying InitializeClusterRequest.
@@ -223,14 +223,14 @@ func (c *CloudHSMV2) ListTagsPages(input *cloudhsmv2.ListTagsInput, fn func(*clo
 		c.inc("ListTags")
 		return fn(page, lastPage)
 	}
-	return c.ListTagsPages(input, wrappedFn)
+	return c.svc.ListTagsPages(input, wrappedFn)
 }
 
 // ListTagsPagesWithContext is a passthrough to the underlying ListTagsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListTags when applied to the request.
 func (c *CloudHSMV2) ListTagsPagesWithContext(ctx aws.Context, input *cloudhsmv2.ListTagsInput, fn func(*cloudhsmv2.ListTagsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListTags"))
-	return c.ListTagsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListTagsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // TagResourceRequest is a passthrough to the underlying TagResourceRequest.

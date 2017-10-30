@@ -416,14 +416,14 @@ func (c *ConfigService) GetResourceConfigHistoryPages(input *configservice.GetRe
 		c.inc("GetResourceConfigHistory")
 		return fn(page, lastPage)
 	}
-	return c.GetResourceConfigHistoryPages(input, wrappedFn)
+	return c.svc.GetResourceConfigHistoryPages(input, wrappedFn)
 }
 
 // GetResourceConfigHistoryPagesWithContext is a passthrough to the underlying GetResourceConfigHistoryPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetResourceConfigHistory when applied to the request.
 func (c *ConfigService) GetResourceConfigHistoryPagesWithContext(ctx aws.Context, input *configservice.GetResourceConfigHistoryInput, fn func(*configservice.GetResourceConfigHistoryOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetResourceConfigHistory"))
-	return c.GetResourceConfigHistoryPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetResourceConfigHistoryPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListDiscoveredResourcesRequest is a passthrough to the underlying ListDiscoveredResourcesRequest.

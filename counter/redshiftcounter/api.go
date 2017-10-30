@@ -521,14 +521,14 @@ func (c *Redshift) DescribeClusterParameterGroupsPages(input *redshift.DescribeC
 		c.inc("DescribeClusterParameterGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeClusterParameterGroupsPages(input, wrappedFn)
+	return c.svc.DescribeClusterParameterGroupsPages(input, wrappedFn)
 }
 
 // DescribeClusterParameterGroupsPagesWithContext is a passthrough to the underlying DescribeClusterParameterGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeClusterParameterGroups when applied to the request.
 func (c *Redshift) DescribeClusterParameterGroupsPagesWithContext(ctx aws.Context, input *redshift.DescribeClusterParameterGroupsInput, fn func(*redshift.DescribeClusterParameterGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeClusterParameterGroups"))
-	return c.DescribeClusterParameterGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeClusterParameterGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeClusterParametersRequest is a passthrough to the underlying DescribeClusterParametersRequest.
@@ -561,14 +561,14 @@ func (c *Redshift) DescribeClusterParametersPages(input *redshift.DescribeCluste
 		c.inc("DescribeClusterParameters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeClusterParametersPages(input, wrappedFn)
+	return c.svc.DescribeClusterParametersPages(input, wrappedFn)
 }
 
 // DescribeClusterParametersPagesWithContext is a passthrough to the underlying DescribeClusterParametersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeClusterParameters when applied to the request.
 func (c *Redshift) DescribeClusterParametersPagesWithContext(ctx aws.Context, input *redshift.DescribeClusterParametersInput, fn func(*redshift.DescribeClusterParametersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeClusterParameters"))
-	return c.DescribeClusterParametersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeClusterParametersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeClusterSecurityGroupsRequest is a passthrough to the underlying DescribeClusterSecurityGroupsRequest.
@@ -601,14 +601,14 @@ func (c *Redshift) DescribeClusterSecurityGroupsPages(input *redshift.DescribeCl
 		c.inc("DescribeClusterSecurityGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeClusterSecurityGroupsPages(input, wrappedFn)
+	return c.svc.DescribeClusterSecurityGroupsPages(input, wrappedFn)
 }
 
 // DescribeClusterSecurityGroupsPagesWithContext is a passthrough to the underlying DescribeClusterSecurityGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeClusterSecurityGroups when applied to the request.
 func (c *Redshift) DescribeClusterSecurityGroupsPagesWithContext(ctx aws.Context, input *redshift.DescribeClusterSecurityGroupsInput, fn func(*redshift.DescribeClusterSecurityGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeClusterSecurityGroups"))
-	return c.DescribeClusterSecurityGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeClusterSecurityGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeClusterSnapshotsRequest is a passthrough to the underlying DescribeClusterSnapshotsRequest.
@@ -641,14 +641,14 @@ func (c *Redshift) DescribeClusterSnapshotsPages(input *redshift.DescribeCluster
 		c.inc("DescribeClusterSnapshots")
 		return fn(page, lastPage)
 	}
-	return c.DescribeClusterSnapshotsPages(input, wrappedFn)
+	return c.svc.DescribeClusterSnapshotsPages(input, wrappedFn)
 }
 
 // DescribeClusterSnapshotsPagesWithContext is a passthrough to the underlying DescribeClusterSnapshotsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeClusterSnapshots when applied to the request.
 func (c *Redshift) DescribeClusterSnapshotsPagesWithContext(ctx aws.Context, input *redshift.DescribeClusterSnapshotsInput, fn func(*redshift.DescribeClusterSnapshotsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeClusterSnapshots"))
-	return c.DescribeClusterSnapshotsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeClusterSnapshotsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeClusterSubnetGroupsRequest is a passthrough to the underlying DescribeClusterSubnetGroupsRequest.
@@ -681,14 +681,14 @@ func (c *Redshift) DescribeClusterSubnetGroupsPages(input *redshift.DescribeClus
 		c.inc("DescribeClusterSubnetGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeClusterSubnetGroupsPages(input, wrappedFn)
+	return c.svc.DescribeClusterSubnetGroupsPages(input, wrappedFn)
 }
 
 // DescribeClusterSubnetGroupsPagesWithContext is a passthrough to the underlying DescribeClusterSubnetGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeClusterSubnetGroups when applied to the request.
 func (c *Redshift) DescribeClusterSubnetGroupsPagesWithContext(ctx aws.Context, input *redshift.DescribeClusterSubnetGroupsInput, fn func(*redshift.DescribeClusterSubnetGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeClusterSubnetGroups"))
-	return c.DescribeClusterSubnetGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeClusterSubnetGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeClusterVersionsRequest is a passthrough to the underlying DescribeClusterVersionsRequest.
@@ -721,14 +721,14 @@ func (c *Redshift) DescribeClusterVersionsPages(input *redshift.DescribeClusterV
 		c.inc("DescribeClusterVersions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeClusterVersionsPages(input, wrappedFn)
+	return c.svc.DescribeClusterVersionsPages(input, wrappedFn)
 }
 
 // DescribeClusterVersionsPagesWithContext is a passthrough to the underlying DescribeClusterVersionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeClusterVersions when applied to the request.
 func (c *Redshift) DescribeClusterVersionsPagesWithContext(ctx aws.Context, input *redshift.DescribeClusterVersionsInput, fn func(*redshift.DescribeClusterVersionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeClusterVersions"))
-	return c.DescribeClusterVersionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeClusterVersionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeClustersRequest is a passthrough to the underlying DescribeClustersRequest.
@@ -761,14 +761,14 @@ func (c *Redshift) DescribeClustersPages(input *redshift.DescribeClustersInput, 
 		c.inc("DescribeClusters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeClustersPages(input, wrappedFn)
+	return c.svc.DescribeClustersPages(input, wrappedFn)
 }
 
 // DescribeClustersPagesWithContext is a passthrough to the underlying DescribeClustersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeClusters when applied to the request.
 func (c *Redshift) DescribeClustersPagesWithContext(ctx aws.Context, input *redshift.DescribeClustersInput, fn func(*redshift.DescribeClustersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeClusters"))
-	return c.DescribeClustersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeClustersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeDefaultClusterParametersRequest is a passthrough to the underlying DescribeDefaultClusterParametersRequest.
@@ -801,14 +801,14 @@ func (c *Redshift) DescribeDefaultClusterParametersPages(input *redshift.Describ
 		c.inc("DescribeDefaultClusterParameters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDefaultClusterParametersPages(input, wrappedFn)
+	return c.svc.DescribeDefaultClusterParametersPages(input, wrappedFn)
 }
 
 // DescribeDefaultClusterParametersPagesWithContext is a passthrough to the underlying DescribeDefaultClusterParametersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDefaultClusterParameters when applied to the request.
 func (c *Redshift) DescribeDefaultClusterParametersPagesWithContext(ctx aws.Context, input *redshift.DescribeDefaultClusterParametersInput, fn func(*redshift.DescribeDefaultClusterParametersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDefaultClusterParameters"))
-	return c.DescribeDefaultClusterParametersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDefaultClusterParametersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEventCategoriesRequest is a passthrough to the underlying DescribeEventCategoriesRequest.
@@ -862,14 +862,14 @@ func (c *Redshift) DescribeEventSubscriptionsPages(input *redshift.DescribeEvent
 		c.inc("DescribeEventSubscriptions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEventSubscriptionsPages(input, wrappedFn)
+	return c.svc.DescribeEventSubscriptionsPages(input, wrappedFn)
 }
 
 // DescribeEventSubscriptionsPagesWithContext is a passthrough to the underlying DescribeEventSubscriptionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEventSubscriptions when applied to the request.
 func (c *Redshift) DescribeEventSubscriptionsPagesWithContext(ctx aws.Context, input *redshift.DescribeEventSubscriptionsInput, fn func(*redshift.DescribeEventSubscriptionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEventSubscriptions"))
-	return c.DescribeEventSubscriptionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEventSubscriptionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEventsRequest is a passthrough to the underlying DescribeEventsRequest.
@@ -902,14 +902,14 @@ func (c *Redshift) DescribeEventsPages(input *redshift.DescribeEventsInput, fn f
 		c.inc("DescribeEvents")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEventsPages(input, wrappedFn)
+	return c.svc.DescribeEventsPages(input, wrappedFn)
 }
 
 // DescribeEventsPagesWithContext is a passthrough to the underlying DescribeEventsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEvents when applied to the request.
 func (c *Redshift) DescribeEventsPagesWithContext(ctx aws.Context, input *redshift.DescribeEventsInput, fn func(*redshift.DescribeEventsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEvents"))
-	return c.DescribeEventsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEventsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeHsmClientCertificatesRequest is a passthrough to the underlying DescribeHsmClientCertificatesRequest.
@@ -942,14 +942,14 @@ func (c *Redshift) DescribeHsmClientCertificatesPages(input *redshift.DescribeHs
 		c.inc("DescribeHsmClientCertificates")
 		return fn(page, lastPage)
 	}
-	return c.DescribeHsmClientCertificatesPages(input, wrappedFn)
+	return c.svc.DescribeHsmClientCertificatesPages(input, wrappedFn)
 }
 
 // DescribeHsmClientCertificatesPagesWithContext is a passthrough to the underlying DescribeHsmClientCertificatesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeHsmClientCertificates when applied to the request.
 func (c *Redshift) DescribeHsmClientCertificatesPagesWithContext(ctx aws.Context, input *redshift.DescribeHsmClientCertificatesInput, fn func(*redshift.DescribeHsmClientCertificatesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeHsmClientCertificates"))
-	return c.DescribeHsmClientCertificatesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeHsmClientCertificatesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeHsmConfigurationsRequest is a passthrough to the underlying DescribeHsmConfigurationsRequest.
@@ -982,14 +982,14 @@ func (c *Redshift) DescribeHsmConfigurationsPages(input *redshift.DescribeHsmCon
 		c.inc("DescribeHsmConfigurations")
 		return fn(page, lastPage)
 	}
-	return c.DescribeHsmConfigurationsPages(input, wrappedFn)
+	return c.svc.DescribeHsmConfigurationsPages(input, wrappedFn)
 }
 
 // DescribeHsmConfigurationsPagesWithContext is a passthrough to the underlying DescribeHsmConfigurationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeHsmConfigurations when applied to the request.
 func (c *Redshift) DescribeHsmConfigurationsPagesWithContext(ctx aws.Context, input *redshift.DescribeHsmConfigurationsInput, fn func(*redshift.DescribeHsmConfigurationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeHsmConfigurations"))
-	return c.DescribeHsmConfigurationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeHsmConfigurationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeLoggingStatusRequest is a passthrough to the underlying DescribeLoggingStatusRequest.
@@ -1043,14 +1043,14 @@ func (c *Redshift) DescribeOrderableClusterOptionsPages(input *redshift.Describe
 		c.inc("DescribeOrderableClusterOptions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeOrderableClusterOptionsPages(input, wrappedFn)
+	return c.svc.DescribeOrderableClusterOptionsPages(input, wrappedFn)
 }
 
 // DescribeOrderableClusterOptionsPagesWithContext is a passthrough to the underlying DescribeOrderableClusterOptionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeOrderableClusterOptions when applied to the request.
 func (c *Redshift) DescribeOrderableClusterOptionsPagesWithContext(ctx aws.Context, input *redshift.DescribeOrderableClusterOptionsInput, fn func(*redshift.DescribeOrderableClusterOptionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeOrderableClusterOptions"))
-	return c.DescribeOrderableClusterOptionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeOrderableClusterOptionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeReservedNodeOfferingsRequest is a passthrough to the underlying DescribeReservedNodeOfferingsRequest.
@@ -1083,14 +1083,14 @@ func (c *Redshift) DescribeReservedNodeOfferingsPages(input *redshift.DescribeRe
 		c.inc("DescribeReservedNodeOfferings")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReservedNodeOfferingsPages(input, wrappedFn)
+	return c.svc.DescribeReservedNodeOfferingsPages(input, wrappedFn)
 }
 
 // DescribeReservedNodeOfferingsPagesWithContext is a passthrough to the underlying DescribeReservedNodeOfferingsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReservedNodeOfferings when applied to the request.
 func (c *Redshift) DescribeReservedNodeOfferingsPagesWithContext(ctx aws.Context, input *redshift.DescribeReservedNodeOfferingsInput, fn func(*redshift.DescribeReservedNodeOfferingsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReservedNodeOfferings"))
-	return c.DescribeReservedNodeOfferingsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReservedNodeOfferingsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeReservedNodesRequest is a passthrough to the underlying DescribeReservedNodesRequest.
@@ -1123,14 +1123,14 @@ func (c *Redshift) DescribeReservedNodesPages(input *redshift.DescribeReservedNo
 		c.inc("DescribeReservedNodes")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReservedNodesPages(input, wrappedFn)
+	return c.svc.DescribeReservedNodesPages(input, wrappedFn)
 }
 
 // DescribeReservedNodesPagesWithContext is a passthrough to the underlying DescribeReservedNodesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReservedNodes when applied to the request.
 func (c *Redshift) DescribeReservedNodesPagesWithContext(ctx aws.Context, input *redshift.DescribeReservedNodesInput, fn func(*redshift.DescribeReservedNodesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReservedNodes"))
-	return c.DescribeReservedNodesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReservedNodesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeResizeRequest is a passthrough to the underlying DescribeResizeRequest.

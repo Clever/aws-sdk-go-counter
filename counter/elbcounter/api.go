@@ -416,14 +416,14 @@ func (c *ELB) DescribeLoadBalancersPages(input *elb.DescribeLoadBalancersInput, 
 		c.inc("DescribeLoadBalancers")
 		return fn(page, lastPage)
 	}
-	return c.DescribeLoadBalancersPages(input, wrappedFn)
+	return c.svc.DescribeLoadBalancersPages(input, wrappedFn)
 }
 
 // DescribeLoadBalancersPagesWithContext is a passthrough to the underlying DescribeLoadBalancersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeLoadBalancers when applied to the request.
 func (c *ELB) DescribeLoadBalancersPagesWithContext(ctx aws.Context, input *elb.DescribeLoadBalancersInput, fn func(*elb.DescribeLoadBalancersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeLoadBalancers"))
-	return c.DescribeLoadBalancersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeLoadBalancersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeTagsRequest is a passthrough to the underlying DescribeTagsRequest.

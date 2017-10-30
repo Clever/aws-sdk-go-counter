@@ -122,14 +122,14 @@ func (c *WorkSpaces) DescribeWorkspaceBundlesPages(input *workspaces.DescribeWor
 		c.inc("DescribeWorkspaceBundles")
 		return fn(page, lastPage)
 	}
-	return c.DescribeWorkspaceBundlesPages(input, wrappedFn)
+	return c.svc.DescribeWorkspaceBundlesPages(input, wrappedFn)
 }
 
 // DescribeWorkspaceBundlesPagesWithContext is a passthrough to the underlying DescribeWorkspaceBundlesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeWorkspaceBundles when applied to the request.
 func (c *WorkSpaces) DescribeWorkspaceBundlesPagesWithContext(ctx aws.Context, input *workspaces.DescribeWorkspaceBundlesInput, fn func(*workspaces.DescribeWorkspaceBundlesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeWorkspaceBundles"))
-	return c.DescribeWorkspaceBundlesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeWorkspaceBundlesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeWorkspaceDirectoriesRequest is a passthrough to the underlying DescribeWorkspaceDirectoriesRequest.
@@ -162,14 +162,14 @@ func (c *WorkSpaces) DescribeWorkspaceDirectoriesPages(input *workspaces.Describ
 		c.inc("DescribeWorkspaceDirectories")
 		return fn(page, lastPage)
 	}
-	return c.DescribeWorkspaceDirectoriesPages(input, wrappedFn)
+	return c.svc.DescribeWorkspaceDirectoriesPages(input, wrappedFn)
 }
 
 // DescribeWorkspaceDirectoriesPagesWithContext is a passthrough to the underlying DescribeWorkspaceDirectoriesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeWorkspaceDirectories when applied to the request.
 func (c *WorkSpaces) DescribeWorkspaceDirectoriesPagesWithContext(ctx aws.Context, input *workspaces.DescribeWorkspaceDirectoriesInput, fn func(*workspaces.DescribeWorkspaceDirectoriesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeWorkspaceDirectories"))
-	return c.DescribeWorkspaceDirectoriesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeWorkspaceDirectoriesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeWorkspacesRequest is a passthrough to the underlying DescribeWorkspacesRequest.
@@ -202,14 +202,14 @@ func (c *WorkSpaces) DescribeWorkspacesPages(input *workspaces.DescribeWorkspace
 		c.inc("DescribeWorkspaces")
 		return fn(page, lastPage)
 	}
-	return c.DescribeWorkspacesPages(input, wrappedFn)
+	return c.svc.DescribeWorkspacesPages(input, wrappedFn)
 }
 
 // DescribeWorkspacesPagesWithContext is a passthrough to the underlying DescribeWorkspacesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeWorkspaces when applied to the request.
 func (c *WorkSpaces) DescribeWorkspacesPagesWithContext(ctx aws.Context, input *workspaces.DescribeWorkspacesInput, fn func(*workspaces.DescribeWorkspacesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeWorkspaces"))
-	return c.DescribeWorkspacesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeWorkspacesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeWorkspacesConnectionStatusRequest is a passthrough to the underlying DescribeWorkspacesConnectionStatusRequest.

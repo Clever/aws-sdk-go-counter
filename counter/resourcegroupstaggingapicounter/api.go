@@ -38,14 +38,14 @@ func (c *ResourceGroupsTaggingAPI) GetResourcesPages(input *resourcegroupstaggin
 		c.inc("GetResources")
 		return fn(page, lastPage)
 	}
-	return c.GetResourcesPages(input, wrappedFn)
+	return c.svc.GetResourcesPages(input, wrappedFn)
 }
 
 // GetResourcesPagesWithContext is a passthrough to the underlying GetResourcesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetResources when applied to the request.
 func (c *ResourceGroupsTaggingAPI) GetResourcesPagesWithContext(ctx aws.Context, input *resourcegroupstaggingapi.GetResourcesInput, fn func(*resourcegroupstaggingapi.GetResourcesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetResources"))
-	return c.GetResourcesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetResourcesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetTagKeysRequest is a passthrough to the underlying GetTagKeysRequest.
@@ -78,14 +78,14 @@ func (c *ResourceGroupsTaggingAPI) GetTagKeysPages(input *resourcegroupstagginga
 		c.inc("GetTagKeys")
 		return fn(page, lastPage)
 	}
-	return c.GetTagKeysPages(input, wrappedFn)
+	return c.svc.GetTagKeysPages(input, wrappedFn)
 }
 
 // GetTagKeysPagesWithContext is a passthrough to the underlying GetTagKeysPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetTagKeys when applied to the request.
 func (c *ResourceGroupsTaggingAPI) GetTagKeysPagesWithContext(ctx aws.Context, input *resourcegroupstaggingapi.GetTagKeysInput, fn func(*resourcegroupstaggingapi.GetTagKeysOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetTagKeys"))
-	return c.GetTagKeysPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetTagKeysPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetTagValuesRequest is a passthrough to the underlying GetTagValuesRequest.
@@ -118,14 +118,14 @@ func (c *ResourceGroupsTaggingAPI) GetTagValuesPages(input *resourcegroupstaggin
 		c.inc("GetTagValues")
 		return fn(page, lastPage)
 	}
-	return c.GetTagValuesPages(input, wrappedFn)
+	return c.svc.GetTagValuesPages(input, wrappedFn)
 }
 
 // GetTagValuesPagesWithContext is a passthrough to the underlying GetTagValuesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetTagValues when applied to the request.
 func (c *ResourceGroupsTaggingAPI) GetTagValuesPagesWithContext(ctx aws.Context, input *resourcegroupstaggingapi.GetTagValuesInput, fn func(*resourcegroupstaggingapi.GetTagValuesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetTagValues"))
-	return c.GetTagValuesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetTagValuesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // TagResourcesRequest is a passthrough to the underlying TagResourcesRequest.

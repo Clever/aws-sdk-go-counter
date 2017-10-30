@@ -752,14 +752,14 @@ func (c *Route53) ListHealthChecksPages(input *route53.ListHealthChecksInput, fn
 		c.inc("ListHealthChecks")
 		return fn(page, lastPage)
 	}
-	return c.ListHealthChecksPages(input, wrappedFn)
+	return c.svc.ListHealthChecksPages(input, wrappedFn)
 }
 
 // ListHealthChecksPagesWithContext is a passthrough to the underlying ListHealthChecksPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListHealthChecks when applied to the request.
 func (c *Route53) ListHealthChecksPagesWithContext(ctx aws.Context, input *route53.ListHealthChecksInput, fn func(*route53.ListHealthChecksOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListHealthChecks"))
-	return c.ListHealthChecksPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListHealthChecksPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListHostedZonesRequest is a passthrough to the underlying ListHostedZonesRequest.
@@ -792,14 +792,14 @@ func (c *Route53) ListHostedZonesPages(input *route53.ListHostedZonesInput, fn f
 		c.inc("ListHostedZones")
 		return fn(page, lastPage)
 	}
-	return c.ListHostedZonesPages(input, wrappedFn)
+	return c.svc.ListHostedZonesPages(input, wrappedFn)
 }
 
 // ListHostedZonesPagesWithContext is a passthrough to the underlying ListHostedZonesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListHostedZones when applied to the request.
 func (c *Route53) ListHostedZonesPagesWithContext(ctx aws.Context, input *route53.ListHostedZonesInput, fn func(*route53.ListHostedZonesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListHostedZones"))
-	return c.ListHostedZonesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListHostedZonesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListHostedZonesByNameRequest is a passthrough to the underlying ListHostedZonesByNameRequest.
@@ -874,14 +874,14 @@ func (c *Route53) ListResourceRecordSetsPages(input *route53.ListResourceRecordS
 		c.inc("ListResourceRecordSets")
 		return fn(page, lastPage)
 	}
-	return c.ListResourceRecordSetsPages(input, wrappedFn)
+	return c.svc.ListResourceRecordSetsPages(input, wrappedFn)
 }
 
 // ListResourceRecordSetsPagesWithContext is a passthrough to the underlying ListResourceRecordSetsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListResourceRecordSets when applied to the request.
 func (c *Route53) ListResourceRecordSetsPagesWithContext(ctx aws.Context, input *route53.ListResourceRecordSetsInput, fn func(*route53.ListResourceRecordSetsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListResourceRecordSets"))
-	return c.ListResourceRecordSetsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListResourceRecordSetsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListReusableDelegationSetsRequest is a passthrough to the underlying ListReusableDelegationSetsRequest.

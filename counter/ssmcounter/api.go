@@ -479,14 +479,14 @@ func (c *SSM) DescribeActivationsPages(input *ssm.DescribeActivationsInput, fn f
 		c.inc("DescribeActivations")
 		return fn(page, lastPage)
 	}
-	return c.DescribeActivationsPages(input, wrappedFn)
+	return c.svc.DescribeActivationsPages(input, wrappedFn)
 }
 
 // DescribeActivationsPagesWithContext is a passthrough to the underlying DescribeActivationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeActivations when applied to the request.
 func (c *SSM) DescribeActivationsPagesWithContext(ctx aws.Context, input *ssm.DescribeActivationsInput, fn func(*ssm.DescribeActivationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeActivations"))
-	return c.DescribeActivationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeActivationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeAssociationRequest is a passthrough to the underlying DescribeAssociationRequest.
@@ -687,14 +687,14 @@ func (c *SSM) DescribeInstanceInformationPages(input *ssm.DescribeInstanceInform
 		c.inc("DescribeInstanceInformation")
 		return fn(page, lastPage)
 	}
-	return c.DescribeInstanceInformationPages(input, wrappedFn)
+	return c.svc.DescribeInstanceInformationPages(input, wrappedFn)
 }
 
 // DescribeInstanceInformationPagesWithContext is a passthrough to the underlying DescribeInstanceInformationPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeInstanceInformation when applied to the request.
 func (c *SSM) DescribeInstanceInformationPagesWithContext(ctx aws.Context, input *ssm.DescribeInstanceInformationInput, fn func(*ssm.DescribeInstanceInformationOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeInstanceInformation"))
-	return c.DescribeInstanceInformationPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeInstanceInformationPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeInstancePatchStatesRequest is a passthrough to the underlying DescribeInstancePatchStatesRequest.
@@ -916,14 +916,14 @@ func (c *SSM) DescribeParametersPages(input *ssm.DescribeParametersInput, fn fun
 		c.inc("DescribeParameters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeParametersPages(input, wrappedFn)
+	return c.svc.DescribeParametersPages(input, wrappedFn)
 }
 
 // DescribeParametersPagesWithContext is a passthrough to the underlying DescribeParametersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeParameters when applied to the request.
 func (c *SSM) DescribeParametersPagesWithContext(ctx aws.Context, input *ssm.DescribeParametersInput, fn func(*ssm.DescribeParametersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeParameters"))
-	return c.DescribeParametersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeParametersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribePatchBaselinesRequest is a passthrough to the underlying DescribePatchBaselinesRequest.
@@ -1292,14 +1292,14 @@ func (c *SSM) GetParameterHistoryPages(input *ssm.GetParameterHistoryInput, fn f
 		c.inc("GetParameterHistory")
 		return fn(page, lastPage)
 	}
-	return c.GetParameterHistoryPages(input, wrappedFn)
+	return c.svc.GetParameterHistoryPages(input, wrappedFn)
 }
 
 // GetParameterHistoryPagesWithContext is a passthrough to the underlying GetParameterHistoryPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetParameterHistory when applied to the request.
 func (c *SSM) GetParameterHistoryPagesWithContext(ctx aws.Context, input *ssm.GetParameterHistoryInput, fn func(*ssm.GetParameterHistoryOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetParameterHistory"))
-	return c.GetParameterHistoryPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetParameterHistoryPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetParametersRequest is a passthrough to the underlying GetParametersRequest.
@@ -1353,14 +1353,14 @@ func (c *SSM) GetParametersByPathPages(input *ssm.GetParametersByPathInput, fn f
 		c.inc("GetParametersByPath")
 		return fn(page, lastPage)
 	}
-	return c.GetParametersByPathPages(input, wrappedFn)
+	return c.svc.GetParametersByPathPages(input, wrappedFn)
 }
 
 // GetParametersByPathPagesWithContext is a passthrough to the underlying GetParametersByPathPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetParametersByPath when applied to the request.
 func (c *SSM) GetParametersByPathPagesWithContext(ctx aws.Context, input *ssm.GetParametersByPathInput, fn func(*ssm.GetParametersByPathOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetParametersByPath"))
-	return c.GetParametersByPathPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetParametersByPathPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetPatchBaselineRequest is a passthrough to the underlying GetPatchBaselineRequest.
@@ -1456,14 +1456,14 @@ func (c *SSM) ListAssociationsPages(input *ssm.ListAssociationsInput, fn func(*s
 		c.inc("ListAssociations")
 		return fn(page, lastPage)
 	}
-	return c.ListAssociationsPages(input, wrappedFn)
+	return c.svc.ListAssociationsPages(input, wrappedFn)
 }
 
 // ListAssociationsPagesWithContext is a passthrough to the underlying ListAssociationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAssociations when applied to the request.
 func (c *SSM) ListAssociationsPagesWithContext(ctx aws.Context, input *ssm.ListAssociationsInput, fn func(*ssm.ListAssociationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAssociations"))
-	return c.ListAssociationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAssociationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListCommandInvocationsRequest is a passthrough to the underlying ListCommandInvocationsRequest.
@@ -1496,14 +1496,14 @@ func (c *SSM) ListCommandInvocationsPages(input *ssm.ListCommandInvocationsInput
 		c.inc("ListCommandInvocations")
 		return fn(page, lastPage)
 	}
-	return c.ListCommandInvocationsPages(input, wrappedFn)
+	return c.svc.ListCommandInvocationsPages(input, wrappedFn)
 }
 
 // ListCommandInvocationsPagesWithContext is a passthrough to the underlying ListCommandInvocationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListCommandInvocations when applied to the request.
 func (c *SSM) ListCommandInvocationsPagesWithContext(ctx aws.Context, input *ssm.ListCommandInvocationsInput, fn func(*ssm.ListCommandInvocationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListCommandInvocations"))
-	return c.ListCommandInvocationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListCommandInvocationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListCommandsRequest is a passthrough to the underlying ListCommandsRequest.
@@ -1536,14 +1536,14 @@ func (c *SSM) ListCommandsPages(input *ssm.ListCommandsInput, fn func(*ssm.ListC
 		c.inc("ListCommands")
 		return fn(page, lastPage)
 	}
-	return c.ListCommandsPages(input, wrappedFn)
+	return c.svc.ListCommandsPages(input, wrappedFn)
 }
 
 // ListCommandsPagesWithContext is a passthrough to the underlying ListCommandsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListCommands when applied to the request.
 func (c *SSM) ListCommandsPagesWithContext(ctx aws.Context, input *ssm.ListCommandsInput, fn func(*ssm.ListCommandsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListCommands"))
-	return c.ListCommandsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListCommandsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListComplianceItemsRequest is a passthrough to the underlying ListComplianceItemsRequest.
@@ -1639,14 +1639,14 @@ func (c *SSM) ListDocumentsPages(input *ssm.ListDocumentsInput, fn func(*ssm.Lis
 		c.inc("ListDocuments")
 		return fn(page, lastPage)
 	}
-	return c.ListDocumentsPages(input, wrappedFn)
+	return c.svc.ListDocumentsPages(input, wrappedFn)
 }
 
 // ListDocumentsPagesWithContext is a passthrough to the underlying ListDocumentsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDocuments when applied to the request.
 func (c *SSM) ListDocumentsPagesWithContext(ctx aws.Context, input *ssm.ListDocumentsInput, fn func(*ssm.ListDocumentsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDocuments"))
-	return c.ListDocumentsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDocumentsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListInventoryEntriesRequest is a passthrough to the underlying ListInventoryEntriesRequest.

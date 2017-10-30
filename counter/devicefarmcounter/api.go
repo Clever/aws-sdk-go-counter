@@ -395,14 +395,14 @@ func (c *DeviceFarm) GetOfferingStatusPages(input *devicefarm.GetOfferingStatusI
 		c.inc("GetOfferingStatus")
 		return fn(page, lastPage)
 	}
-	return c.GetOfferingStatusPages(input, wrappedFn)
+	return c.svc.GetOfferingStatusPages(input, wrappedFn)
 }
 
 // GetOfferingStatusPagesWithContext is a passthrough to the underlying GetOfferingStatusPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetOfferingStatus when applied to the request.
 func (c *DeviceFarm) GetOfferingStatusPagesWithContext(ctx aws.Context, input *devicefarm.GetOfferingStatusInput, fn func(*devicefarm.GetOfferingStatusOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetOfferingStatus"))
-	return c.GetOfferingStatusPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetOfferingStatusPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetProjectRequest is a passthrough to the underlying GetProjectRequest.
@@ -582,14 +582,14 @@ func (c *DeviceFarm) ListArtifactsPages(input *devicefarm.ListArtifactsInput, fn
 		c.inc("ListArtifacts")
 		return fn(page, lastPage)
 	}
-	return c.ListArtifactsPages(input, wrappedFn)
+	return c.svc.ListArtifactsPages(input, wrappedFn)
 }
 
 // ListArtifactsPagesWithContext is a passthrough to the underlying ListArtifactsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListArtifacts when applied to the request.
 func (c *DeviceFarm) ListArtifactsPagesWithContext(ctx aws.Context, input *devicefarm.ListArtifactsInput, fn func(*devicefarm.ListArtifactsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListArtifacts"))
-	return c.ListArtifactsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListArtifactsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListDevicePoolsRequest is a passthrough to the underlying ListDevicePoolsRequest.
@@ -622,14 +622,14 @@ func (c *DeviceFarm) ListDevicePoolsPages(input *devicefarm.ListDevicePoolsInput
 		c.inc("ListDevicePools")
 		return fn(page, lastPage)
 	}
-	return c.ListDevicePoolsPages(input, wrappedFn)
+	return c.svc.ListDevicePoolsPages(input, wrappedFn)
 }
 
 // ListDevicePoolsPagesWithContext is a passthrough to the underlying ListDevicePoolsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDevicePools when applied to the request.
 func (c *DeviceFarm) ListDevicePoolsPagesWithContext(ctx aws.Context, input *devicefarm.ListDevicePoolsInput, fn func(*devicefarm.ListDevicePoolsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDevicePools"))
-	return c.ListDevicePoolsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDevicePoolsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListDevicesRequest is a passthrough to the underlying ListDevicesRequest.
@@ -662,14 +662,14 @@ func (c *DeviceFarm) ListDevicesPages(input *devicefarm.ListDevicesInput, fn fun
 		c.inc("ListDevices")
 		return fn(page, lastPage)
 	}
-	return c.ListDevicesPages(input, wrappedFn)
+	return c.svc.ListDevicesPages(input, wrappedFn)
 }
 
 // ListDevicesPagesWithContext is a passthrough to the underlying ListDevicesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDevices when applied to the request.
 func (c *DeviceFarm) ListDevicesPagesWithContext(ctx aws.Context, input *devicefarm.ListDevicesInput, fn func(*devicefarm.ListDevicesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDevices"))
-	return c.ListDevicesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDevicesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListJobsRequest is a passthrough to the underlying ListJobsRequest.
@@ -702,14 +702,14 @@ func (c *DeviceFarm) ListJobsPages(input *devicefarm.ListJobsInput, fn func(*dev
 		c.inc("ListJobs")
 		return fn(page, lastPage)
 	}
-	return c.ListJobsPages(input, wrappedFn)
+	return c.svc.ListJobsPages(input, wrappedFn)
 }
 
 // ListJobsPagesWithContext is a passthrough to the underlying ListJobsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListJobs when applied to the request.
 func (c *DeviceFarm) ListJobsPagesWithContext(ctx aws.Context, input *devicefarm.ListJobsInput, fn func(*devicefarm.ListJobsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListJobs"))
-	return c.ListJobsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListJobsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListNetworkProfilesRequest is a passthrough to the underlying ListNetworkProfilesRequest.
@@ -784,14 +784,14 @@ func (c *DeviceFarm) ListOfferingTransactionsPages(input *devicefarm.ListOfferin
 		c.inc("ListOfferingTransactions")
 		return fn(page, lastPage)
 	}
-	return c.ListOfferingTransactionsPages(input, wrappedFn)
+	return c.svc.ListOfferingTransactionsPages(input, wrappedFn)
 }
 
 // ListOfferingTransactionsPagesWithContext is a passthrough to the underlying ListOfferingTransactionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListOfferingTransactions when applied to the request.
 func (c *DeviceFarm) ListOfferingTransactionsPagesWithContext(ctx aws.Context, input *devicefarm.ListOfferingTransactionsInput, fn func(*devicefarm.ListOfferingTransactionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListOfferingTransactions"))
-	return c.ListOfferingTransactionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListOfferingTransactionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListOfferingsRequest is a passthrough to the underlying ListOfferingsRequest.
@@ -824,14 +824,14 @@ func (c *DeviceFarm) ListOfferingsPages(input *devicefarm.ListOfferingsInput, fn
 		c.inc("ListOfferings")
 		return fn(page, lastPage)
 	}
-	return c.ListOfferingsPages(input, wrappedFn)
+	return c.svc.ListOfferingsPages(input, wrappedFn)
 }
 
 // ListOfferingsPagesWithContext is a passthrough to the underlying ListOfferingsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListOfferings when applied to the request.
 func (c *DeviceFarm) ListOfferingsPagesWithContext(ctx aws.Context, input *devicefarm.ListOfferingsInput, fn func(*devicefarm.ListOfferingsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListOfferings"))
-	return c.ListOfferingsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListOfferingsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListProjectsRequest is a passthrough to the underlying ListProjectsRequest.
@@ -864,14 +864,14 @@ func (c *DeviceFarm) ListProjectsPages(input *devicefarm.ListProjectsInput, fn f
 		c.inc("ListProjects")
 		return fn(page, lastPage)
 	}
-	return c.ListProjectsPages(input, wrappedFn)
+	return c.svc.ListProjectsPages(input, wrappedFn)
 }
 
 // ListProjectsPagesWithContext is a passthrough to the underlying ListProjectsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListProjects when applied to the request.
 func (c *DeviceFarm) ListProjectsPagesWithContext(ctx aws.Context, input *devicefarm.ListProjectsInput, fn func(*devicefarm.ListProjectsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListProjects"))
-	return c.ListProjectsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListProjectsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListRemoteAccessSessionsRequest is a passthrough to the underlying ListRemoteAccessSessionsRequest.
@@ -925,14 +925,14 @@ func (c *DeviceFarm) ListRunsPages(input *devicefarm.ListRunsInput, fn func(*dev
 		c.inc("ListRuns")
 		return fn(page, lastPage)
 	}
-	return c.ListRunsPages(input, wrappedFn)
+	return c.svc.ListRunsPages(input, wrappedFn)
 }
 
 // ListRunsPagesWithContext is a passthrough to the underlying ListRunsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListRuns when applied to the request.
 func (c *DeviceFarm) ListRunsPagesWithContext(ctx aws.Context, input *devicefarm.ListRunsInput, fn func(*devicefarm.ListRunsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListRuns"))
-	return c.ListRunsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListRunsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListSamplesRequest is a passthrough to the underlying ListSamplesRequest.
@@ -965,14 +965,14 @@ func (c *DeviceFarm) ListSamplesPages(input *devicefarm.ListSamplesInput, fn fun
 		c.inc("ListSamples")
 		return fn(page, lastPage)
 	}
-	return c.ListSamplesPages(input, wrappedFn)
+	return c.svc.ListSamplesPages(input, wrappedFn)
 }
 
 // ListSamplesPagesWithContext is a passthrough to the underlying ListSamplesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListSamples when applied to the request.
 func (c *DeviceFarm) ListSamplesPagesWithContext(ctx aws.Context, input *devicefarm.ListSamplesInput, fn func(*devicefarm.ListSamplesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListSamples"))
-	return c.ListSamplesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListSamplesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListSuitesRequest is a passthrough to the underlying ListSuitesRequest.
@@ -1005,14 +1005,14 @@ func (c *DeviceFarm) ListSuitesPages(input *devicefarm.ListSuitesInput, fn func(
 		c.inc("ListSuites")
 		return fn(page, lastPage)
 	}
-	return c.ListSuitesPages(input, wrappedFn)
+	return c.svc.ListSuitesPages(input, wrappedFn)
 }
 
 // ListSuitesPagesWithContext is a passthrough to the underlying ListSuitesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListSuites when applied to the request.
 func (c *DeviceFarm) ListSuitesPagesWithContext(ctx aws.Context, input *devicefarm.ListSuitesInput, fn func(*devicefarm.ListSuitesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListSuites"))
-	return c.ListSuitesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListSuitesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTestsRequest is a passthrough to the underlying ListTestsRequest.
@@ -1045,14 +1045,14 @@ func (c *DeviceFarm) ListTestsPages(input *devicefarm.ListTestsInput, fn func(*d
 		c.inc("ListTests")
 		return fn(page, lastPage)
 	}
-	return c.ListTestsPages(input, wrappedFn)
+	return c.svc.ListTestsPages(input, wrappedFn)
 }
 
 // ListTestsPagesWithContext is a passthrough to the underlying ListTestsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListTests when applied to the request.
 func (c *DeviceFarm) ListTestsPagesWithContext(ctx aws.Context, input *devicefarm.ListTestsInput, fn func(*devicefarm.ListTestsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListTests"))
-	return c.ListTestsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListTestsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListUniqueProblemsRequest is a passthrough to the underlying ListUniqueProblemsRequest.
@@ -1085,14 +1085,14 @@ func (c *DeviceFarm) ListUniqueProblemsPages(input *devicefarm.ListUniqueProblem
 		c.inc("ListUniqueProblems")
 		return fn(page, lastPage)
 	}
-	return c.ListUniqueProblemsPages(input, wrappedFn)
+	return c.svc.ListUniqueProblemsPages(input, wrappedFn)
 }
 
 // ListUniqueProblemsPagesWithContext is a passthrough to the underlying ListUniqueProblemsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListUniqueProblems when applied to the request.
 func (c *DeviceFarm) ListUniqueProblemsPagesWithContext(ctx aws.Context, input *devicefarm.ListUniqueProblemsInput, fn func(*devicefarm.ListUniqueProblemsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListUniqueProblems"))
-	return c.ListUniqueProblemsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListUniqueProblemsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListUploadsRequest is a passthrough to the underlying ListUploadsRequest.
@@ -1125,14 +1125,14 @@ func (c *DeviceFarm) ListUploadsPages(input *devicefarm.ListUploadsInput, fn fun
 		c.inc("ListUploads")
 		return fn(page, lastPage)
 	}
-	return c.ListUploadsPages(input, wrappedFn)
+	return c.svc.ListUploadsPages(input, wrappedFn)
 }
 
 // ListUploadsPagesWithContext is a passthrough to the underlying ListUploadsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListUploads when applied to the request.
 func (c *DeviceFarm) ListUploadsPagesWithContext(ctx aws.Context, input *devicefarm.ListUploadsInput, fn func(*devicefarm.ListUploadsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListUploads"))
-	return c.ListUploadsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListUploadsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PurchaseOfferingRequest is a passthrough to the underlying PurchaseOfferingRequest.

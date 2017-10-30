@@ -206,14 +206,14 @@ func (c *SFN) GetExecutionHistoryPages(input *sfn.GetExecutionHistoryInput, fn f
 		c.inc("GetExecutionHistory")
 		return fn(page, lastPage)
 	}
-	return c.GetExecutionHistoryPages(input, wrappedFn)
+	return c.svc.GetExecutionHistoryPages(input, wrappedFn)
 }
 
 // GetExecutionHistoryPagesWithContext is a passthrough to the underlying GetExecutionHistoryPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetExecutionHistory when applied to the request.
 func (c *SFN) GetExecutionHistoryPagesWithContext(ctx aws.Context, input *sfn.GetExecutionHistoryInput, fn func(*sfn.GetExecutionHistoryOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetExecutionHistory"))
-	return c.GetExecutionHistoryPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetExecutionHistoryPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListActivitiesRequest is a passthrough to the underlying ListActivitiesRequest.
@@ -246,14 +246,14 @@ func (c *SFN) ListActivitiesPages(input *sfn.ListActivitiesInput, fn func(*sfn.L
 		c.inc("ListActivities")
 		return fn(page, lastPage)
 	}
-	return c.ListActivitiesPages(input, wrappedFn)
+	return c.svc.ListActivitiesPages(input, wrappedFn)
 }
 
 // ListActivitiesPagesWithContext is a passthrough to the underlying ListActivitiesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListActivities when applied to the request.
 func (c *SFN) ListActivitiesPagesWithContext(ctx aws.Context, input *sfn.ListActivitiesInput, fn func(*sfn.ListActivitiesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListActivities"))
-	return c.ListActivitiesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListActivitiesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListExecutionsRequest is a passthrough to the underlying ListExecutionsRequest.
@@ -286,14 +286,14 @@ func (c *SFN) ListExecutionsPages(input *sfn.ListExecutionsInput, fn func(*sfn.L
 		c.inc("ListExecutions")
 		return fn(page, lastPage)
 	}
-	return c.ListExecutionsPages(input, wrappedFn)
+	return c.svc.ListExecutionsPages(input, wrappedFn)
 }
 
 // ListExecutionsPagesWithContext is a passthrough to the underlying ListExecutionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListExecutions when applied to the request.
 func (c *SFN) ListExecutionsPagesWithContext(ctx aws.Context, input *sfn.ListExecutionsInput, fn func(*sfn.ListExecutionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListExecutions"))
-	return c.ListExecutionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListExecutionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListStateMachinesRequest is a passthrough to the underlying ListStateMachinesRequest.
@@ -326,14 +326,14 @@ func (c *SFN) ListStateMachinesPages(input *sfn.ListStateMachinesInput, fn func(
 		c.inc("ListStateMachines")
 		return fn(page, lastPage)
 	}
-	return c.ListStateMachinesPages(input, wrappedFn)
+	return c.svc.ListStateMachinesPages(input, wrappedFn)
 }
 
 // ListStateMachinesPagesWithContext is a passthrough to the underlying ListStateMachinesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListStateMachines when applied to the request.
 func (c *SFN) ListStateMachinesPagesWithContext(ctx aws.Context, input *sfn.ListStateMachinesInput, fn func(*sfn.ListStateMachinesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListStateMachines"))
-	return c.ListStateMachinesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListStateMachinesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // SendTaskFailureRequest is a passthrough to the underlying SendTaskFailureRequest.

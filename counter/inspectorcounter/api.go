@@ -374,14 +374,14 @@ func (c *Inspector) ListAssessmentRunAgentsPages(input *inspector.ListAssessment
 		c.inc("ListAssessmentRunAgents")
 		return fn(page, lastPage)
 	}
-	return c.ListAssessmentRunAgentsPages(input, wrappedFn)
+	return c.svc.ListAssessmentRunAgentsPages(input, wrappedFn)
 }
 
 // ListAssessmentRunAgentsPagesWithContext is a passthrough to the underlying ListAssessmentRunAgentsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAssessmentRunAgents when applied to the request.
 func (c *Inspector) ListAssessmentRunAgentsPagesWithContext(ctx aws.Context, input *inspector.ListAssessmentRunAgentsInput, fn func(*inspector.ListAssessmentRunAgentsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAssessmentRunAgents"))
-	return c.ListAssessmentRunAgentsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAssessmentRunAgentsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListAssessmentRunsRequest is a passthrough to the underlying ListAssessmentRunsRequest.
@@ -414,14 +414,14 @@ func (c *Inspector) ListAssessmentRunsPages(input *inspector.ListAssessmentRunsI
 		c.inc("ListAssessmentRuns")
 		return fn(page, lastPage)
 	}
-	return c.ListAssessmentRunsPages(input, wrappedFn)
+	return c.svc.ListAssessmentRunsPages(input, wrappedFn)
 }
 
 // ListAssessmentRunsPagesWithContext is a passthrough to the underlying ListAssessmentRunsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAssessmentRuns when applied to the request.
 func (c *Inspector) ListAssessmentRunsPagesWithContext(ctx aws.Context, input *inspector.ListAssessmentRunsInput, fn func(*inspector.ListAssessmentRunsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAssessmentRuns"))
-	return c.ListAssessmentRunsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAssessmentRunsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListAssessmentTargetsRequest is a passthrough to the underlying ListAssessmentTargetsRequest.
@@ -454,14 +454,14 @@ func (c *Inspector) ListAssessmentTargetsPages(input *inspector.ListAssessmentTa
 		c.inc("ListAssessmentTargets")
 		return fn(page, lastPage)
 	}
-	return c.ListAssessmentTargetsPages(input, wrappedFn)
+	return c.svc.ListAssessmentTargetsPages(input, wrappedFn)
 }
 
 // ListAssessmentTargetsPagesWithContext is a passthrough to the underlying ListAssessmentTargetsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAssessmentTargets when applied to the request.
 func (c *Inspector) ListAssessmentTargetsPagesWithContext(ctx aws.Context, input *inspector.ListAssessmentTargetsInput, fn func(*inspector.ListAssessmentTargetsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAssessmentTargets"))
-	return c.ListAssessmentTargetsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAssessmentTargetsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListAssessmentTemplatesRequest is a passthrough to the underlying ListAssessmentTemplatesRequest.
@@ -494,14 +494,14 @@ func (c *Inspector) ListAssessmentTemplatesPages(input *inspector.ListAssessment
 		c.inc("ListAssessmentTemplates")
 		return fn(page, lastPage)
 	}
-	return c.ListAssessmentTemplatesPages(input, wrappedFn)
+	return c.svc.ListAssessmentTemplatesPages(input, wrappedFn)
 }
 
 // ListAssessmentTemplatesPagesWithContext is a passthrough to the underlying ListAssessmentTemplatesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAssessmentTemplates when applied to the request.
 func (c *Inspector) ListAssessmentTemplatesPagesWithContext(ctx aws.Context, input *inspector.ListAssessmentTemplatesInput, fn func(*inspector.ListAssessmentTemplatesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAssessmentTemplates"))
-	return c.ListAssessmentTemplatesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAssessmentTemplatesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListEventSubscriptionsRequest is a passthrough to the underlying ListEventSubscriptionsRequest.
@@ -534,14 +534,14 @@ func (c *Inspector) ListEventSubscriptionsPages(input *inspector.ListEventSubscr
 		c.inc("ListEventSubscriptions")
 		return fn(page, lastPage)
 	}
-	return c.ListEventSubscriptionsPages(input, wrappedFn)
+	return c.svc.ListEventSubscriptionsPages(input, wrappedFn)
 }
 
 // ListEventSubscriptionsPagesWithContext is a passthrough to the underlying ListEventSubscriptionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListEventSubscriptions when applied to the request.
 func (c *Inspector) ListEventSubscriptionsPagesWithContext(ctx aws.Context, input *inspector.ListEventSubscriptionsInput, fn func(*inspector.ListEventSubscriptionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListEventSubscriptions"))
-	return c.ListEventSubscriptionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListEventSubscriptionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListFindingsRequest is a passthrough to the underlying ListFindingsRequest.
@@ -574,14 +574,14 @@ func (c *Inspector) ListFindingsPages(input *inspector.ListFindingsInput, fn fun
 		c.inc("ListFindings")
 		return fn(page, lastPage)
 	}
-	return c.ListFindingsPages(input, wrappedFn)
+	return c.svc.ListFindingsPages(input, wrappedFn)
 }
 
 // ListFindingsPagesWithContext is a passthrough to the underlying ListFindingsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListFindings when applied to the request.
 func (c *Inspector) ListFindingsPagesWithContext(ctx aws.Context, input *inspector.ListFindingsInput, fn func(*inspector.ListFindingsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListFindings"))
-	return c.ListFindingsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListFindingsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListRulesPackagesRequest is a passthrough to the underlying ListRulesPackagesRequest.
@@ -614,14 +614,14 @@ func (c *Inspector) ListRulesPackagesPages(input *inspector.ListRulesPackagesInp
 		c.inc("ListRulesPackages")
 		return fn(page, lastPage)
 	}
-	return c.ListRulesPackagesPages(input, wrappedFn)
+	return c.svc.ListRulesPackagesPages(input, wrappedFn)
 }
 
 // ListRulesPackagesPagesWithContext is a passthrough to the underlying ListRulesPackagesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListRulesPackages when applied to the request.
 func (c *Inspector) ListRulesPackagesPagesWithContext(ctx aws.Context, input *inspector.ListRulesPackagesInput, fn func(*inspector.ListRulesPackagesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListRulesPackages"))
-	return c.ListRulesPackagesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListRulesPackagesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTagsForResourceRequest is a passthrough to the underlying ListTagsForResourceRequest.
@@ -675,14 +675,14 @@ func (c *Inspector) PreviewAgentsPages(input *inspector.PreviewAgentsInput, fn f
 		c.inc("PreviewAgents")
 		return fn(page, lastPage)
 	}
-	return c.PreviewAgentsPages(input, wrappedFn)
+	return c.svc.PreviewAgentsPages(input, wrappedFn)
 }
 
 // PreviewAgentsPagesWithContext is a passthrough to the underlying PreviewAgentsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to PreviewAgents when applied to the request.
 func (c *Inspector) PreviewAgentsPagesWithContext(ctx aws.Context, input *inspector.PreviewAgentsInput, fn func(*inspector.PreviewAgentsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("PreviewAgents"))
-	return c.PreviewAgentsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.PreviewAgentsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // RegisterCrossAccountAccessRoleRequest is a passthrough to the underlying RegisterCrossAccountAccessRoleRequest.

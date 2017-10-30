@@ -1067,14 +1067,14 @@ func (c *IAM) GetAccountAuthorizationDetailsPages(input *iam.GetAccountAuthoriza
 		c.inc("GetAccountAuthorizationDetails")
 		return fn(page, lastPage)
 	}
-	return c.GetAccountAuthorizationDetailsPages(input, wrappedFn)
+	return c.svc.GetAccountAuthorizationDetailsPages(input, wrappedFn)
 }
 
 // GetAccountAuthorizationDetailsPagesWithContext is a passthrough to the underlying GetAccountAuthorizationDetailsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetAccountAuthorizationDetails when applied to the request.
 func (c *IAM) GetAccountAuthorizationDetailsPagesWithContext(ctx aws.Context, input *iam.GetAccountAuthorizationDetailsInput, fn func(*iam.GetAccountAuthorizationDetailsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetAccountAuthorizationDetails"))
-	return c.GetAccountAuthorizationDetailsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetAccountAuthorizationDetailsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetAccountPasswordPolicyRequest is a passthrough to the underlying GetAccountPasswordPolicyRequest.
@@ -1212,14 +1212,14 @@ func (c *IAM) GetGroupPages(input *iam.GetGroupInput, fn func(*iam.GetGroupOutpu
 		c.inc("GetGroup")
 		return fn(page, lastPage)
 	}
-	return c.GetGroupPages(input, wrappedFn)
+	return c.svc.GetGroupPages(input, wrappedFn)
 }
 
 // GetGroupPagesWithContext is a passthrough to the underlying GetGroupPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetGroup when applied to the request.
 func (c *IAM) GetGroupPagesWithContext(ctx aws.Context, input *iam.GetGroupInput, fn func(*iam.GetGroupOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetGroup"))
-	return c.GetGroupPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetGroupPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetGroupPolicyRequest is a passthrough to the underlying GetGroupPolicyRequest.
@@ -1546,14 +1546,14 @@ func (c *IAM) ListAccessKeysPages(input *iam.ListAccessKeysInput, fn func(*iam.L
 		c.inc("ListAccessKeys")
 		return fn(page, lastPage)
 	}
-	return c.ListAccessKeysPages(input, wrappedFn)
+	return c.svc.ListAccessKeysPages(input, wrappedFn)
 }
 
 // ListAccessKeysPagesWithContext is a passthrough to the underlying ListAccessKeysPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAccessKeys when applied to the request.
 func (c *IAM) ListAccessKeysPagesWithContext(ctx aws.Context, input *iam.ListAccessKeysInput, fn func(*iam.ListAccessKeysOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAccessKeys"))
-	return c.ListAccessKeysPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAccessKeysPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListAccountAliasesRequest is a passthrough to the underlying ListAccountAliasesRequest.
@@ -1586,14 +1586,14 @@ func (c *IAM) ListAccountAliasesPages(input *iam.ListAccountAliasesInput, fn fun
 		c.inc("ListAccountAliases")
 		return fn(page, lastPage)
 	}
-	return c.ListAccountAliasesPages(input, wrappedFn)
+	return c.svc.ListAccountAliasesPages(input, wrappedFn)
 }
 
 // ListAccountAliasesPagesWithContext is a passthrough to the underlying ListAccountAliasesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAccountAliases when applied to the request.
 func (c *IAM) ListAccountAliasesPagesWithContext(ctx aws.Context, input *iam.ListAccountAliasesInput, fn func(*iam.ListAccountAliasesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAccountAliases"))
-	return c.ListAccountAliasesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAccountAliasesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListAttachedGroupPoliciesRequest is a passthrough to the underlying ListAttachedGroupPoliciesRequest.
@@ -1626,14 +1626,14 @@ func (c *IAM) ListAttachedGroupPoliciesPages(input *iam.ListAttachedGroupPolicie
 		c.inc("ListAttachedGroupPolicies")
 		return fn(page, lastPage)
 	}
-	return c.ListAttachedGroupPoliciesPages(input, wrappedFn)
+	return c.svc.ListAttachedGroupPoliciesPages(input, wrappedFn)
 }
 
 // ListAttachedGroupPoliciesPagesWithContext is a passthrough to the underlying ListAttachedGroupPoliciesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAttachedGroupPolicies when applied to the request.
 func (c *IAM) ListAttachedGroupPoliciesPagesWithContext(ctx aws.Context, input *iam.ListAttachedGroupPoliciesInput, fn func(*iam.ListAttachedGroupPoliciesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAttachedGroupPolicies"))
-	return c.ListAttachedGroupPoliciesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAttachedGroupPoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListAttachedRolePoliciesRequest is a passthrough to the underlying ListAttachedRolePoliciesRequest.
@@ -1666,14 +1666,14 @@ func (c *IAM) ListAttachedRolePoliciesPages(input *iam.ListAttachedRolePoliciesI
 		c.inc("ListAttachedRolePolicies")
 		return fn(page, lastPage)
 	}
-	return c.ListAttachedRolePoliciesPages(input, wrappedFn)
+	return c.svc.ListAttachedRolePoliciesPages(input, wrappedFn)
 }
 
 // ListAttachedRolePoliciesPagesWithContext is a passthrough to the underlying ListAttachedRolePoliciesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAttachedRolePolicies when applied to the request.
 func (c *IAM) ListAttachedRolePoliciesPagesWithContext(ctx aws.Context, input *iam.ListAttachedRolePoliciesInput, fn func(*iam.ListAttachedRolePoliciesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAttachedRolePolicies"))
-	return c.ListAttachedRolePoliciesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAttachedRolePoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListAttachedUserPoliciesRequest is a passthrough to the underlying ListAttachedUserPoliciesRequest.
@@ -1706,14 +1706,14 @@ func (c *IAM) ListAttachedUserPoliciesPages(input *iam.ListAttachedUserPoliciesI
 		c.inc("ListAttachedUserPolicies")
 		return fn(page, lastPage)
 	}
-	return c.ListAttachedUserPoliciesPages(input, wrappedFn)
+	return c.svc.ListAttachedUserPoliciesPages(input, wrappedFn)
 }
 
 // ListAttachedUserPoliciesPagesWithContext is a passthrough to the underlying ListAttachedUserPoliciesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAttachedUserPolicies when applied to the request.
 func (c *IAM) ListAttachedUserPoliciesPagesWithContext(ctx aws.Context, input *iam.ListAttachedUserPoliciesInput, fn func(*iam.ListAttachedUserPoliciesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAttachedUserPolicies"))
-	return c.ListAttachedUserPoliciesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAttachedUserPoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListEntitiesForPolicyRequest is a passthrough to the underlying ListEntitiesForPolicyRequest.
@@ -1746,14 +1746,14 @@ func (c *IAM) ListEntitiesForPolicyPages(input *iam.ListEntitiesForPolicyInput, 
 		c.inc("ListEntitiesForPolicy")
 		return fn(page, lastPage)
 	}
-	return c.ListEntitiesForPolicyPages(input, wrappedFn)
+	return c.svc.ListEntitiesForPolicyPages(input, wrappedFn)
 }
 
 // ListEntitiesForPolicyPagesWithContext is a passthrough to the underlying ListEntitiesForPolicyPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListEntitiesForPolicy when applied to the request.
 func (c *IAM) ListEntitiesForPolicyPagesWithContext(ctx aws.Context, input *iam.ListEntitiesForPolicyInput, fn func(*iam.ListEntitiesForPolicyOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListEntitiesForPolicy"))
-	return c.ListEntitiesForPolicyPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListEntitiesForPolicyPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListGroupPoliciesRequest is a passthrough to the underlying ListGroupPoliciesRequest.
@@ -1786,14 +1786,14 @@ func (c *IAM) ListGroupPoliciesPages(input *iam.ListGroupPoliciesInput, fn func(
 		c.inc("ListGroupPolicies")
 		return fn(page, lastPage)
 	}
-	return c.ListGroupPoliciesPages(input, wrappedFn)
+	return c.svc.ListGroupPoliciesPages(input, wrappedFn)
 }
 
 // ListGroupPoliciesPagesWithContext is a passthrough to the underlying ListGroupPoliciesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListGroupPolicies when applied to the request.
 func (c *IAM) ListGroupPoliciesPagesWithContext(ctx aws.Context, input *iam.ListGroupPoliciesInput, fn func(*iam.ListGroupPoliciesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListGroupPolicies"))
-	return c.ListGroupPoliciesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListGroupPoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListGroupsRequest is a passthrough to the underlying ListGroupsRequest.
@@ -1826,14 +1826,14 @@ func (c *IAM) ListGroupsPages(input *iam.ListGroupsInput, fn func(*iam.ListGroup
 		c.inc("ListGroups")
 		return fn(page, lastPage)
 	}
-	return c.ListGroupsPages(input, wrappedFn)
+	return c.svc.ListGroupsPages(input, wrappedFn)
 }
 
 // ListGroupsPagesWithContext is a passthrough to the underlying ListGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListGroups when applied to the request.
 func (c *IAM) ListGroupsPagesWithContext(ctx aws.Context, input *iam.ListGroupsInput, fn func(*iam.ListGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListGroups"))
-	return c.ListGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListGroupsForUserRequest is a passthrough to the underlying ListGroupsForUserRequest.
@@ -1866,14 +1866,14 @@ func (c *IAM) ListGroupsForUserPages(input *iam.ListGroupsForUserInput, fn func(
 		c.inc("ListGroupsForUser")
 		return fn(page, lastPage)
 	}
-	return c.ListGroupsForUserPages(input, wrappedFn)
+	return c.svc.ListGroupsForUserPages(input, wrappedFn)
 }
 
 // ListGroupsForUserPagesWithContext is a passthrough to the underlying ListGroupsForUserPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListGroupsForUser when applied to the request.
 func (c *IAM) ListGroupsForUserPagesWithContext(ctx aws.Context, input *iam.ListGroupsForUserInput, fn func(*iam.ListGroupsForUserOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListGroupsForUser"))
-	return c.ListGroupsForUserPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListGroupsForUserPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListInstanceProfilesRequest is a passthrough to the underlying ListInstanceProfilesRequest.
@@ -1906,14 +1906,14 @@ func (c *IAM) ListInstanceProfilesPages(input *iam.ListInstanceProfilesInput, fn
 		c.inc("ListInstanceProfiles")
 		return fn(page, lastPage)
 	}
-	return c.ListInstanceProfilesPages(input, wrappedFn)
+	return c.svc.ListInstanceProfilesPages(input, wrappedFn)
 }
 
 // ListInstanceProfilesPagesWithContext is a passthrough to the underlying ListInstanceProfilesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListInstanceProfiles when applied to the request.
 func (c *IAM) ListInstanceProfilesPagesWithContext(ctx aws.Context, input *iam.ListInstanceProfilesInput, fn func(*iam.ListInstanceProfilesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListInstanceProfiles"))
-	return c.ListInstanceProfilesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListInstanceProfilesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListInstanceProfilesForRoleRequest is a passthrough to the underlying ListInstanceProfilesForRoleRequest.
@@ -1946,14 +1946,14 @@ func (c *IAM) ListInstanceProfilesForRolePages(input *iam.ListInstanceProfilesFo
 		c.inc("ListInstanceProfilesForRole")
 		return fn(page, lastPage)
 	}
-	return c.ListInstanceProfilesForRolePages(input, wrappedFn)
+	return c.svc.ListInstanceProfilesForRolePages(input, wrappedFn)
 }
 
 // ListInstanceProfilesForRolePagesWithContext is a passthrough to the underlying ListInstanceProfilesForRolePagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListInstanceProfilesForRole when applied to the request.
 func (c *IAM) ListInstanceProfilesForRolePagesWithContext(ctx aws.Context, input *iam.ListInstanceProfilesForRoleInput, fn func(*iam.ListInstanceProfilesForRoleOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListInstanceProfilesForRole"))
-	return c.ListInstanceProfilesForRolePagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListInstanceProfilesForRolePagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListMFADevicesRequest is a passthrough to the underlying ListMFADevicesRequest.
@@ -1986,14 +1986,14 @@ func (c *IAM) ListMFADevicesPages(input *iam.ListMFADevicesInput, fn func(*iam.L
 		c.inc("ListMFADevices")
 		return fn(page, lastPage)
 	}
-	return c.ListMFADevicesPages(input, wrappedFn)
+	return c.svc.ListMFADevicesPages(input, wrappedFn)
 }
 
 // ListMFADevicesPagesWithContext is a passthrough to the underlying ListMFADevicesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListMFADevices when applied to the request.
 func (c *IAM) ListMFADevicesPagesWithContext(ctx aws.Context, input *iam.ListMFADevicesInput, fn func(*iam.ListMFADevicesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListMFADevices"))
-	return c.ListMFADevicesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListMFADevicesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListOpenIDConnectProvidersRequest is a passthrough to the underlying ListOpenIDConnectProvidersRequest.
@@ -2047,14 +2047,14 @@ func (c *IAM) ListPoliciesPages(input *iam.ListPoliciesInput, fn func(*iam.ListP
 		c.inc("ListPolicies")
 		return fn(page, lastPage)
 	}
-	return c.ListPoliciesPages(input, wrappedFn)
+	return c.svc.ListPoliciesPages(input, wrappedFn)
 }
 
 // ListPoliciesPagesWithContext is a passthrough to the underlying ListPoliciesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPolicies when applied to the request.
 func (c *IAM) ListPoliciesPagesWithContext(ctx aws.Context, input *iam.ListPoliciesInput, fn func(*iam.ListPoliciesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPolicies"))
-	return c.ListPoliciesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListPolicyVersionsRequest is a passthrough to the underlying ListPolicyVersionsRequest.
@@ -2087,14 +2087,14 @@ func (c *IAM) ListPolicyVersionsPages(input *iam.ListPolicyVersionsInput, fn fun
 		c.inc("ListPolicyVersions")
 		return fn(page, lastPage)
 	}
-	return c.ListPolicyVersionsPages(input, wrappedFn)
+	return c.svc.ListPolicyVersionsPages(input, wrappedFn)
 }
 
 // ListPolicyVersionsPagesWithContext is a passthrough to the underlying ListPolicyVersionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPolicyVersions when applied to the request.
 func (c *IAM) ListPolicyVersionsPagesWithContext(ctx aws.Context, input *iam.ListPolicyVersionsInput, fn func(*iam.ListPolicyVersionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPolicyVersions"))
-	return c.ListPolicyVersionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPolicyVersionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListRolePoliciesRequest is a passthrough to the underlying ListRolePoliciesRequest.
@@ -2127,14 +2127,14 @@ func (c *IAM) ListRolePoliciesPages(input *iam.ListRolePoliciesInput, fn func(*i
 		c.inc("ListRolePolicies")
 		return fn(page, lastPage)
 	}
-	return c.ListRolePoliciesPages(input, wrappedFn)
+	return c.svc.ListRolePoliciesPages(input, wrappedFn)
 }
 
 // ListRolePoliciesPagesWithContext is a passthrough to the underlying ListRolePoliciesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListRolePolicies when applied to the request.
 func (c *IAM) ListRolePoliciesPagesWithContext(ctx aws.Context, input *iam.ListRolePoliciesInput, fn func(*iam.ListRolePoliciesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListRolePolicies"))
-	return c.ListRolePoliciesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListRolePoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListRolesRequest is a passthrough to the underlying ListRolesRequest.
@@ -2167,14 +2167,14 @@ func (c *IAM) ListRolesPages(input *iam.ListRolesInput, fn func(*iam.ListRolesOu
 		c.inc("ListRoles")
 		return fn(page, lastPage)
 	}
-	return c.ListRolesPages(input, wrappedFn)
+	return c.svc.ListRolesPages(input, wrappedFn)
 }
 
 // ListRolesPagesWithContext is a passthrough to the underlying ListRolesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListRoles when applied to the request.
 func (c *IAM) ListRolesPagesWithContext(ctx aws.Context, input *iam.ListRolesInput, fn func(*iam.ListRolesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListRoles"))
-	return c.ListRolesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListRolesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListSAMLProvidersRequest is a passthrough to the underlying ListSAMLProvidersRequest.
@@ -2228,14 +2228,14 @@ func (c *IAM) ListSSHPublicKeysPages(input *iam.ListSSHPublicKeysInput, fn func(
 		c.inc("ListSSHPublicKeys")
 		return fn(page, lastPage)
 	}
-	return c.ListSSHPublicKeysPages(input, wrappedFn)
+	return c.svc.ListSSHPublicKeysPages(input, wrappedFn)
 }
 
 // ListSSHPublicKeysPagesWithContext is a passthrough to the underlying ListSSHPublicKeysPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListSSHPublicKeys when applied to the request.
 func (c *IAM) ListSSHPublicKeysPagesWithContext(ctx aws.Context, input *iam.ListSSHPublicKeysInput, fn func(*iam.ListSSHPublicKeysOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListSSHPublicKeys"))
-	return c.ListSSHPublicKeysPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListSSHPublicKeysPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListServerCertificatesRequest is a passthrough to the underlying ListServerCertificatesRequest.
@@ -2268,14 +2268,14 @@ func (c *IAM) ListServerCertificatesPages(input *iam.ListServerCertificatesInput
 		c.inc("ListServerCertificates")
 		return fn(page, lastPage)
 	}
-	return c.ListServerCertificatesPages(input, wrappedFn)
+	return c.svc.ListServerCertificatesPages(input, wrappedFn)
 }
 
 // ListServerCertificatesPagesWithContext is a passthrough to the underlying ListServerCertificatesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListServerCertificates when applied to the request.
 func (c *IAM) ListServerCertificatesPagesWithContext(ctx aws.Context, input *iam.ListServerCertificatesInput, fn func(*iam.ListServerCertificatesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListServerCertificates"))
-	return c.ListServerCertificatesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListServerCertificatesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListServiceSpecificCredentialsRequest is a passthrough to the underlying ListServiceSpecificCredentialsRequest.
@@ -2329,14 +2329,14 @@ func (c *IAM) ListSigningCertificatesPages(input *iam.ListSigningCertificatesInp
 		c.inc("ListSigningCertificates")
 		return fn(page, lastPage)
 	}
-	return c.ListSigningCertificatesPages(input, wrappedFn)
+	return c.svc.ListSigningCertificatesPages(input, wrappedFn)
 }
 
 // ListSigningCertificatesPagesWithContext is a passthrough to the underlying ListSigningCertificatesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListSigningCertificates when applied to the request.
 func (c *IAM) ListSigningCertificatesPagesWithContext(ctx aws.Context, input *iam.ListSigningCertificatesInput, fn func(*iam.ListSigningCertificatesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListSigningCertificates"))
-	return c.ListSigningCertificatesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListSigningCertificatesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListUserPoliciesRequest is a passthrough to the underlying ListUserPoliciesRequest.
@@ -2369,14 +2369,14 @@ func (c *IAM) ListUserPoliciesPages(input *iam.ListUserPoliciesInput, fn func(*i
 		c.inc("ListUserPolicies")
 		return fn(page, lastPage)
 	}
-	return c.ListUserPoliciesPages(input, wrappedFn)
+	return c.svc.ListUserPoliciesPages(input, wrappedFn)
 }
 
 // ListUserPoliciesPagesWithContext is a passthrough to the underlying ListUserPoliciesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListUserPolicies when applied to the request.
 func (c *IAM) ListUserPoliciesPagesWithContext(ctx aws.Context, input *iam.ListUserPoliciesInput, fn func(*iam.ListUserPoliciesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListUserPolicies"))
-	return c.ListUserPoliciesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListUserPoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListUsersRequest is a passthrough to the underlying ListUsersRequest.
@@ -2409,14 +2409,14 @@ func (c *IAM) ListUsersPages(input *iam.ListUsersInput, fn func(*iam.ListUsersOu
 		c.inc("ListUsers")
 		return fn(page, lastPage)
 	}
-	return c.ListUsersPages(input, wrappedFn)
+	return c.svc.ListUsersPages(input, wrappedFn)
 }
 
 // ListUsersPagesWithContext is a passthrough to the underlying ListUsersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListUsers when applied to the request.
 func (c *IAM) ListUsersPagesWithContext(ctx aws.Context, input *iam.ListUsersInput, fn func(*iam.ListUsersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListUsers"))
-	return c.ListUsersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListUsersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListVirtualMFADevicesRequest is a passthrough to the underlying ListVirtualMFADevicesRequest.
@@ -2449,14 +2449,14 @@ func (c *IAM) ListVirtualMFADevicesPages(input *iam.ListVirtualMFADevicesInput, 
 		c.inc("ListVirtualMFADevices")
 		return fn(page, lastPage)
 	}
-	return c.ListVirtualMFADevicesPages(input, wrappedFn)
+	return c.svc.ListVirtualMFADevicesPages(input, wrappedFn)
 }
 
 // ListVirtualMFADevicesPagesWithContext is a passthrough to the underlying ListVirtualMFADevicesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListVirtualMFADevices when applied to the request.
 func (c *IAM) ListVirtualMFADevicesPagesWithContext(ctx aws.Context, input *iam.ListVirtualMFADevicesInput, fn func(*iam.ListVirtualMFADevicesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListVirtualMFADevices"))
-	return c.ListVirtualMFADevicesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListVirtualMFADevicesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PutGroupPolicyRequest is a passthrough to the underlying PutGroupPolicyRequest.
@@ -2678,14 +2678,14 @@ func (c *IAM) SimulateCustomPolicyPages(input *iam.SimulateCustomPolicyInput, fn
 		c.inc("SimulateCustomPolicy")
 		return fn(page, lastPage)
 	}
-	return c.SimulateCustomPolicyPages(input, wrappedFn)
+	return c.svc.SimulateCustomPolicyPages(input, wrappedFn)
 }
 
 // SimulateCustomPolicyPagesWithContext is a passthrough to the underlying SimulateCustomPolicyPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to SimulateCustomPolicy when applied to the request.
 func (c *IAM) SimulateCustomPolicyPagesWithContext(ctx aws.Context, input *iam.SimulateCustomPolicyInput, fn func(*iam.SimulatePolicyResponse, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("SimulateCustomPolicy"))
-	return c.SimulateCustomPolicyPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.SimulateCustomPolicyPagesWithContext(ctx, input, fn, opts...)
 }
 
 // SimulatePrincipalPolicyRequest is a passthrough to the underlying SimulatePrincipalPolicyRequest.
@@ -2718,14 +2718,14 @@ func (c *IAM) SimulatePrincipalPolicyPages(input *iam.SimulatePrincipalPolicyInp
 		c.inc("SimulatePrincipalPolicy")
 		return fn(page, lastPage)
 	}
-	return c.SimulatePrincipalPolicyPages(input, wrappedFn)
+	return c.svc.SimulatePrincipalPolicyPages(input, wrappedFn)
 }
 
 // SimulatePrincipalPolicyPagesWithContext is a passthrough to the underlying SimulatePrincipalPolicyPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to SimulatePrincipalPolicy when applied to the request.
 func (c *IAM) SimulatePrincipalPolicyPagesWithContext(ctx aws.Context, input *iam.SimulatePrincipalPolicyInput, fn func(*iam.SimulatePolicyResponse, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("SimulatePrincipalPolicy"))
-	return c.SimulatePrincipalPolicyPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.SimulatePrincipalPolicyPagesWithContext(ctx, input, fn, opts...)
 }
 
 // UpdateAccessKeyRequest is a passthrough to the underlying UpdateAccessKeyRequest.

@@ -311,14 +311,14 @@ func (c *DatabaseMigrationService) DescribeCertificatesPages(input *databasemigr
 		c.inc("DescribeCertificates")
 		return fn(page, lastPage)
 	}
-	return c.DescribeCertificatesPages(input, wrappedFn)
+	return c.svc.DescribeCertificatesPages(input, wrappedFn)
 }
 
 // DescribeCertificatesPagesWithContext is a passthrough to the underlying DescribeCertificatesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeCertificates when applied to the request.
 func (c *DatabaseMigrationService) DescribeCertificatesPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeCertificatesInput, fn func(*databasemigrationservice.DescribeCertificatesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeCertificates"))
-	return c.DescribeCertificatesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeCertificatesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeConnectionsRequest is a passthrough to the underlying DescribeConnectionsRequest.
@@ -351,14 +351,14 @@ func (c *DatabaseMigrationService) DescribeConnectionsPages(input *databasemigra
 		c.inc("DescribeConnections")
 		return fn(page, lastPage)
 	}
-	return c.DescribeConnectionsPages(input, wrappedFn)
+	return c.svc.DescribeConnectionsPages(input, wrappedFn)
 }
 
 // DescribeConnectionsPagesWithContext is a passthrough to the underlying DescribeConnectionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeConnections when applied to the request.
 func (c *DatabaseMigrationService) DescribeConnectionsPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeConnectionsInput, fn func(*databasemigrationservice.DescribeConnectionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeConnections"))
-	return c.DescribeConnectionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeConnectionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEndpointTypesRequest is a passthrough to the underlying DescribeEndpointTypesRequest.
@@ -391,14 +391,14 @@ func (c *DatabaseMigrationService) DescribeEndpointTypesPages(input *databasemig
 		c.inc("DescribeEndpointTypes")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEndpointTypesPages(input, wrappedFn)
+	return c.svc.DescribeEndpointTypesPages(input, wrappedFn)
 }
 
 // DescribeEndpointTypesPagesWithContext is a passthrough to the underlying DescribeEndpointTypesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEndpointTypes when applied to the request.
 func (c *DatabaseMigrationService) DescribeEndpointTypesPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeEndpointTypesInput, fn func(*databasemigrationservice.DescribeEndpointTypesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEndpointTypes"))
-	return c.DescribeEndpointTypesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEndpointTypesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEndpointsRequest is a passthrough to the underlying DescribeEndpointsRequest.
@@ -431,14 +431,14 @@ func (c *DatabaseMigrationService) DescribeEndpointsPages(input *databasemigrati
 		c.inc("DescribeEndpoints")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEndpointsPages(input, wrappedFn)
+	return c.svc.DescribeEndpointsPages(input, wrappedFn)
 }
 
 // DescribeEndpointsPagesWithContext is a passthrough to the underlying DescribeEndpointsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEndpoints when applied to the request.
 func (c *DatabaseMigrationService) DescribeEndpointsPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeEndpointsInput, fn func(*databasemigrationservice.DescribeEndpointsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEndpoints"))
-	return c.DescribeEndpointsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEndpointsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEventCategoriesRequest is a passthrough to the underlying DescribeEventCategoriesRequest.
@@ -492,14 +492,14 @@ func (c *DatabaseMigrationService) DescribeEventSubscriptionsPages(input *databa
 		c.inc("DescribeEventSubscriptions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEventSubscriptionsPages(input, wrappedFn)
+	return c.svc.DescribeEventSubscriptionsPages(input, wrappedFn)
 }
 
 // DescribeEventSubscriptionsPagesWithContext is a passthrough to the underlying DescribeEventSubscriptionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEventSubscriptions when applied to the request.
 func (c *DatabaseMigrationService) DescribeEventSubscriptionsPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeEventSubscriptionsInput, fn func(*databasemigrationservice.DescribeEventSubscriptionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEventSubscriptions"))
-	return c.DescribeEventSubscriptionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEventSubscriptionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEventsRequest is a passthrough to the underlying DescribeEventsRequest.
@@ -532,14 +532,14 @@ func (c *DatabaseMigrationService) DescribeEventsPages(input *databasemigrations
 		c.inc("DescribeEvents")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEventsPages(input, wrappedFn)
+	return c.svc.DescribeEventsPages(input, wrappedFn)
 }
 
 // DescribeEventsPagesWithContext is a passthrough to the underlying DescribeEventsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEvents when applied to the request.
 func (c *DatabaseMigrationService) DescribeEventsPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeEventsInput, fn func(*databasemigrationservice.DescribeEventsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEvents"))
-	return c.DescribeEventsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEventsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeOrderableReplicationInstancesRequest is a passthrough to the underlying DescribeOrderableReplicationInstancesRequest.
@@ -572,14 +572,14 @@ func (c *DatabaseMigrationService) DescribeOrderableReplicationInstancesPages(in
 		c.inc("DescribeOrderableReplicationInstances")
 		return fn(page, lastPage)
 	}
-	return c.DescribeOrderableReplicationInstancesPages(input, wrappedFn)
+	return c.svc.DescribeOrderableReplicationInstancesPages(input, wrappedFn)
 }
 
 // DescribeOrderableReplicationInstancesPagesWithContext is a passthrough to the underlying DescribeOrderableReplicationInstancesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeOrderableReplicationInstances when applied to the request.
 func (c *DatabaseMigrationService) DescribeOrderableReplicationInstancesPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeOrderableReplicationInstancesInput, fn func(*databasemigrationservice.DescribeOrderableReplicationInstancesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeOrderableReplicationInstances"))
-	return c.DescribeOrderableReplicationInstancesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeOrderableReplicationInstancesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeRefreshSchemasStatusRequest is a passthrough to the underlying DescribeRefreshSchemasStatusRequest.
@@ -633,14 +633,14 @@ func (c *DatabaseMigrationService) DescribeReplicationInstancesPages(input *data
 		c.inc("DescribeReplicationInstances")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReplicationInstancesPages(input, wrappedFn)
+	return c.svc.DescribeReplicationInstancesPages(input, wrappedFn)
 }
 
 // DescribeReplicationInstancesPagesWithContext is a passthrough to the underlying DescribeReplicationInstancesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReplicationInstances when applied to the request.
 func (c *DatabaseMigrationService) DescribeReplicationInstancesPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeReplicationInstancesInput, fn func(*databasemigrationservice.DescribeReplicationInstancesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReplicationInstances"))
-	return c.DescribeReplicationInstancesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReplicationInstancesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeReplicationSubnetGroupsRequest is a passthrough to the underlying DescribeReplicationSubnetGroupsRequest.
@@ -673,14 +673,14 @@ func (c *DatabaseMigrationService) DescribeReplicationSubnetGroupsPages(input *d
 		c.inc("DescribeReplicationSubnetGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReplicationSubnetGroupsPages(input, wrappedFn)
+	return c.svc.DescribeReplicationSubnetGroupsPages(input, wrappedFn)
 }
 
 // DescribeReplicationSubnetGroupsPagesWithContext is a passthrough to the underlying DescribeReplicationSubnetGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReplicationSubnetGroups when applied to the request.
 func (c *DatabaseMigrationService) DescribeReplicationSubnetGroupsPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeReplicationSubnetGroupsInput, fn func(*databasemigrationservice.DescribeReplicationSubnetGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReplicationSubnetGroups"))
-	return c.DescribeReplicationSubnetGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReplicationSubnetGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeReplicationTasksRequest is a passthrough to the underlying DescribeReplicationTasksRequest.
@@ -713,14 +713,14 @@ func (c *DatabaseMigrationService) DescribeReplicationTasksPages(input *database
 		c.inc("DescribeReplicationTasks")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReplicationTasksPages(input, wrappedFn)
+	return c.svc.DescribeReplicationTasksPages(input, wrappedFn)
 }
 
 // DescribeReplicationTasksPagesWithContext is a passthrough to the underlying DescribeReplicationTasksPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReplicationTasks when applied to the request.
 func (c *DatabaseMigrationService) DescribeReplicationTasksPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeReplicationTasksInput, fn func(*databasemigrationservice.DescribeReplicationTasksOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReplicationTasks"))
-	return c.DescribeReplicationTasksPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReplicationTasksPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeSchemasRequest is a passthrough to the underlying DescribeSchemasRequest.
@@ -753,14 +753,14 @@ func (c *DatabaseMigrationService) DescribeSchemasPages(input *databasemigration
 		c.inc("DescribeSchemas")
 		return fn(page, lastPage)
 	}
-	return c.DescribeSchemasPages(input, wrappedFn)
+	return c.svc.DescribeSchemasPages(input, wrappedFn)
 }
 
 // DescribeSchemasPagesWithContext is a passthrough to the underlying DescribeSchemasPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeSchemas when applied to the request.
 func (c *DatabaseMigrationService) DescribeSchemasPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeSchemasInput, fn func(*databasemigrationservice.DescribeSchemasOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeSchemas"))
-	return c.DescribeSchemasPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeSchemasPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeTableStatisticsRequest is a passthrough to the underlying DescribeTableStatisticsRequest.
@@ -793,14 +793,14 @@ func (c *DatabaseMigrationService) DescribeTableStatisticsPages(input *databasem
 		c.inc("DescribeTableStatistics")
 		return fn(page, lastPage)
 	}
-	return c.DescribeTableStatisticsPages(input, wrappedFn)
+	return c.svc.DescribeTableStatisticsPages(input, wrappedFn)
 }
 
 // DescribeTableStatisticsPagesWithContext is a passthrough to the underlying DescribeTableStatisticsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeTableStatistics when applied to the request.
 func (c *DatabaseMigrationService) DescribeTableStatisticsPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeTableStatisticsInput, fn func(*databasemigrationservice.DescribeTableStatisticsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeTableStatistics"))
-	return c.DescribeTableStatisticsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeTableStatisticsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ImportCertificateRequest is a passthrough to the underlying ImportCertificateRequest.

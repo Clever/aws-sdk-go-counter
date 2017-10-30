@@ -374,14 +374,14 @@ func (c *Lambda) ListEventSourceMappingsPages(input *lambda.ListEventSourceMappi
 		c.inc("ListEventSourceMappings")
 		return fn(page, lastPage)
 	}
-	return c.ListEventSourceMappingsPages(input, wrappedFn)
+	return c.svc.ListEventSourceMappingsPages(input, wrappedFn)
 }
 
 // ListEventSourceMappingsPagesWithContext is a passthrough to the underlying ListEventSourceMappingsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListEventSourceMappings when applied to the request.
 func (c *Lambda) ListEventSourceMappingsPagesWithContext(ctx aws.Context, input *lambda.ListEventSourceMappingsInput, fn func(*lambda.ListEventSourceMappingsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListEventSourceMappings"))
-	return c.ListEventSourceMappingsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListEventSourceMappingsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListFunctionsRequest is a passthrough to the underlying ListFunctionsRequest.
@@ -414,14 +414,14 @@ func (c *Lambda) ListFunctionsPages(input *lambda.ListFunctionsInput, fn func(*l
 		c.inc("ListFunctions")
 		return fn(page, lastPage)
 	}
-	return c.ListFunctionsPages(input, wrappedFn)
+	return c.svc.ListFunctionsPages(input, wrappedFn)
 }
 
 // ListFunctionsPagesWithContext is a passthrough to the underlying ListFunctionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListFunctions when applied to the request.
 func (c *Lambda) ListFunctionsPagesWithContext(ctx aws.Context, input *lambda.ListFunctionsInput, fn func(*lambda.ListFunctionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListFunctions"))
-	return c.ListFunctionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListFunctionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTagsRequest is a passthrough to the underlying ListTagsRequest.

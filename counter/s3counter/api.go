@@ -1004,14 +1004,14 @@ func (c *S3) ListMultipartUploadsPages(input *s3.ListMultipartUploadsInput, fn f
 		c.inc("ListMultipartUploads")
 		return fn(page, lastPage)
 	}
-	return c.ListMultipartUploadsPages(input, wrappedFn)
+	return c.svc.ListMultipartUploadsPages(input, wrappedFn)
 }
 
 // ListMultipartUploadsPagesWithContext is a passthrough to the underlying ListMultipartUploadsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListMultipartUploads when applied to the request.
 func (c *S3) ListMultipartUploadsPagesWithContext(ctx aws.Context, input *s3.ListMultipartUploadsInput, fn func(*s3.ListMultipartUploadsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListMultipartUploads"))
-	return c.ListMultipartUploadsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListMultipartUploadsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListObjectVersionsRequest is a passthrough to the underlying ListObjectVersionsRequest.
@@ -1044,14 +1044,14 @@ func (c *S3) ListObjectVersionsPages(input *s3.ListObjectVersionsInput, fn func(
 		c.inc("ListObjectVersions")
 		return fn(page, lastPage)
 	}
-	return c.ListObjectVersionsPages(input, wrappedFn)
+	return c.svc.ListObjectVersionsPages(input, wrappedFn)
 }
 
 // ListObjectVersionsPagesWithContext is a passthrough to the underlying ListObjectVersionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListObjectVersions when applied to the request.
 func (c *S3) ListObjectVersionsPagesWithContext(ctx aws.Context, input *s3.ListObjectVersionsInput, fn func(*s3.ListObjectVersionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListObjectVersions"))
-	return c.ListObjectVersionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListObjectVersionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListObjectsRequest is a passthrough to the underlying ListObjectsRequest.
@@ -1084,14 +1084,14 @@ func (c *S3) ListObjectsPages(input *s3.ListObjectsInput, fn func(*s3.ListObject
 		c.inc("ListObjects")
 		return fn(page, lastPage)
 	}
-	return c.ListObjectsPages(input, wrappedFn)
+	return c.svc.ListObjectsPages(input, wrappedFn)
 }
 
 // ListObjectsPagesWithContext is a passthrough to the underlying ListObjectsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListObjects when applied to the request.
 func (c *S3) ListObjectsPagesWithContext(ctx aws.Context, input *s3.ListObjectsInput, fn func(*s3.ListObjectsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListObjects"))
-	return c.ListObjectsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListObjectsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListObjectsV2Request is a passthrough to the underlying ListObjectsV2Request.
@@ -1124,14 +1124,14 @@ func (c *S3) ListObjectsV2Pages(input *s3.ListObjectsV2Input, fn func(*s3.ListOb
 		c.inc("ListObjectsV2")
 		return fn(page, lastPage)
 	}
-	return c.ListObjectsV2Pages(input, wrappedFn)
+	return c.svc.ListObjectsV2Pages(input, wrappedFn)
 }
 
 // ListObjectsV2PagesWithContext is a passthrough to the underlying ListObjectsV2PagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListObjectsV2 when applied to the request.
 func (c *S3) ListObjectsV2PagesWithContext(ctx aws.Context, input *s3.ListObjectsV2Input, fn func(*s3.ListObjectsV2Output, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListObjectsV2"))
-	return c.ListObjectsV2PagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListObjectsV2PagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListPartsRequest is a passthrough to the underlying ListPartsRequest.
@@ -1164,14 +1164,14 @@ func (c *S3) ListPartsPages(input *s3.ListPartsInput, fn func(*s3.ListPartsOutpu
 		c.inc("ListParts")
 		return fn(page, lastPage)
 	}
-	return c.ListPartsPages(input, wrappedFn)
+	return c.svc.ListPartsPages(input, wrappedFn)
 }
 
 // ListPartsPagesWithContext is a passthrough to the underlying ListPartsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListParts when applied to the request.
 func (c *S3) ListPartsPagesWithContext(ctx aws.Context, input *s3.ListPartsInput, fn func(*s3.ListPartsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListParts"))
-	return c.ListPartsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPartsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PutBucketAccelerateConfigurationRequest is a passthrough to the underlying PutBucketAccelerateConfigurationRequest.

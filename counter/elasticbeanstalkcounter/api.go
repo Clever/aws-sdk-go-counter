@@ -542,14 +542,14 @@ func (c *ElasticBeanstalk) DescribeEventsPages(input *elasticbeanstalk.DescribeE
 		c.inc("DescribeEvents")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEventsPages(input, wrappedFn)
+	return c.svc.DescribeEventsPages(input, wrappedFn)
 }
 
 // DescribeEventsPagesWithContext is a passthrough to the underlying DescribeEventsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEvents when applied to the request.
 func (c *ElasticBeanstalk) DescribeEventsPagesWithContext(ctx aws.Context, input *elasticbeanstalk.DescribeEventsInput, fn func(*elasticbeanstalk.DescribeEventsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEvents"))
-	return c.DescribeEventsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEventsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeInstancesHealthRequest is a passthrough to the underlying DescribeInstancesHealthRequest.

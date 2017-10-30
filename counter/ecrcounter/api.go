@@ -206,14 +206,14 @@ func (c *ECR) DescribeImagesPages(input *ecr.DescribeImagesInput, fn func(*ecr.D
 		c.inc("DescribeImages")
 		return fn(page, lastPage)
 	}
-	return c.DescribeImagesPages(input, wrappedFn)
+	return c.svc.DescribeImagesPages(input, wrappedFn)
 }
 
 // DescribeImagesPagesWithContext is a passthrough to the underlying DescribeImagesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeImages when applied to the request.
 func (c *ECR) DescribeImagesPagesWithContext(ctx aws.Context, input *ecr.DescribeImagesInput, fn func(*ecr.DescribeImagesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeImages"))
-	return c.DescribeImagesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeImagesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeRepositoriesRequest is a passthrough to the underlying DescribeRepositoriesRequest.
@@ -246,14 +246,14 @@ func (c *ECR) DescribeRepositoriesPages(input *ecr.DescribeRepositoriesInput, fn
 		c.inc("DescribeRepositories")
 		return fn(page, lastPage)
 	}
-	return c.DescribeRepositoriesPages(input, wrappedFn)
+	return c.svc.DescribeRepositoriesPages(input, wrappedFn)
 }
 
 // DescribeRepositoriesPagesWithContext is a passthrough to the underlying DescribeRepositoriesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeRepositories when applied to the request.
 func (c *ECR) DescribeRepositoriesPagesWithContext(ctx aws.Context, input *ecr.DescribeRepositoriesInput, fn func(*ecr.DescribeRepositoriesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeRepositories"))
-	return c.DescribeRepositoriesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeRepositoriesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetAuthorizationTokenRequest is a passthrough to the underlying GetAuthorizationTokenRequest.
@@ -412,14 +412,14 @@ func (c *ECR) ListImagesPages(input *ecr.ListImagesInput, fn func(*ecr.ListImage
 		c.inc("ListImages")
 		return fn(page, lastPage)
 	}
-	return c.ListImagesPages(input, wrappedFn)
+	return c.svc.ListImagesPages(input, wrappedFn)
 }
 
 // ListImagesPagesWithContext is a passthrough to the underlying ListImagesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListImages when applied to the request.
 func (c *ECR) ListImagesPagesWithContext(ctx aws.Context, input *ecr.ListImagesInput, fn func(*ecr.ListImagesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListImages"))
-	return c.ListImagesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListImagesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PutImageRequest is a passthrough to the underlying PutImageRequest.

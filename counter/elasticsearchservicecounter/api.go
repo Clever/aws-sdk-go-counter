@@ -227,14 +227,14 @@ func (c *ElasticsearchService) ListElasticsearchInstanceTypesPages(input *elasti
 		c.inc("ListElasticsearchInstanceTypes")
 		return fn(page, lastPage)
 	}
-	return c.ListElasticsearchInstanceTypesPages(input, wrappedFn)
+	return c.svc.ListElasticsearchInstanceTypesPages(input, wrappedFn)
 }
 
 // ListElasticsearchInstanceTypesPagesWithContext is a passthrough to the underlying ListElasticsearchInstanceTypesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListElasticsearchInstanceTypes when applied to the request.
 func (c *ElasticsearchService) ListElasticsearchInstanceTypesPagesWithContext(ctx aws.Context, input *elasticsearchservice.ListElasticsearchInstanceTypesInput, fn func(*elasticsearchservice.ListElasticsearchInstanceTypesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListElasticsearchInstanceTypes"))
-	return c.ListElasticsearchInstanceTypesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListElasticsearchInstanceTypesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListElasticsearchVersionsRequest is a passthrough to the underlying ListElasticsearchVersionsRequest.
@@ -267,14 +267,14 @@ func (c *ElasticsearchService) ListElasticsearchVersionsPages(input *elasticsear
 		c.inc("ListElasticsearchVersions")
 		return fn(page, lastPage)
 	}
-	return c.ListElasticsearchVersionsPages(input, wrappedFn)
+	return c.svc.ListElasticsearchVersionsPages(input, wrappedFn)
 }
 
 // ListElasticsearchVersionsPagesWithContext is a passthrough to the underlying ListElasticsearchVersionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListElasticsearchVersions when applied to the request.
 func (c *ElasticsearchService) ListElasticsearchVersionsPagesWithContext(ctx aws.Context, input *elasticsearchservice.ListElasticsearchVersionsInput, fn func(*elasticsearchservice.ListElasticsearchVersionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListElasticsearchVersions"))
-	return c.ListElasticsearchVersionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListElasticsearchVersionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTagsRequest is a passthrough to the underlying ListTagsRequest.

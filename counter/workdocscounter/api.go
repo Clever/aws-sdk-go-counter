@@ -458,14 +458,14 @@ func (c *WorkDocs) DescribeDocumentVersionsPages(input *workdocs.DescribeDocumen
 		c.inc("DescribeDocumentVersions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDocumentVersionsPages(input, wrappedFn)
+	return c.svc.DescribeDocumentVersionsPages(input, wrappedFn)
 }
 
 // DescribeDocumentVersionsPagesWithContext is a passthrough to the underlying DescribeDocumentVersionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDocumentVersions when applied to the request.
 func (c *WorkDocs) DescribeDocumentVersionsPagesWithContext(ctx aws.Context, input *workdocs.DescribeDocumentVersionsInput, fn func(*workdocs.DescribeDocumentVersionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDocumentVersions"))
-	return c.DescribeDocumentVersionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDocumentVersionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeFolderContentsRequest is a passthrough to the underlying DescribeFolderContentsRequest.
@@ -498,14 +498,14 @@ func (c *WorkDocs) DescribeFolderContentsPages(input *workdocs.DescribeFolderCon
 		c.inc("DescribeFolderContents")
 		return fn(page, lastPage)
 	}
-	return c.DescribeFolderContentsPages(input, wrappedFn)
+	return c.svc.DescribeFolderContentsPages(input, wrappedFn)
 }
 
 // DescribeFolderContentsPagesWithContext is a passthrough to the underlying DescribeFolderContentsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeFolderContents when applied to the request.
 func (c *WorkDocs) DescribeFolderContentsPagesWithContext(ctx aws.Context, input *workdocs.DescribeFolderContentsInput, fn func(*workdocs.DescribeFolderContentsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeFolderContents"))
-	return c.DescribeFolderContentsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeFolderContentsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeNotificationSubscriptionsRequest is a passthrough to the underlying DescribeNotificationSubscriptionsRequest.
@@ -601,14 +601,14 @@ func (c *WorkDocs) DescribeUsersPages(input *workdocs.DescribeUsersInput, fn fun
 		c.inc("DescribeUsers")
 		return fn(page, lastPage)
 	}
-	return c.DescribeUsersPages(input, wrappedFn)
+	return c.svc.DescribeUsersPages(input, wrappedFn)
 }
 
 // DescribeUsersPagesWithContext is a passthrough to the underlying DescribeUsersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeUsers when applied to the request.
 func (c *WorkDocs) DescribeUsersPagesWithContext(ctx aws.Context, input *workdocs.DescribeUsersInput, fn func(*workdocs.DescribeUsersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeUsers"))
-	return c.DescribeUsersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeUsersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetCurrentUserRequest is a passthrough to the underlying GetCurrentUserRequest.

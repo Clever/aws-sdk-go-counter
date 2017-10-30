@@ -143,14 +143,14 @@ func (c *DataPipeline) DescribeObjectsPages(input *datapipeline.DescribeObjectsI
 		c.inc("DescribeObjects")
 		return fn(page, lastPage)
 	}
-	return c.DescribeObjectsPages(input, wrappedFn)
+	return c.svc.DescribeObjectsPages(input, wrappedFn)
 }
 
 // DescribeObjectsPagesWithContext is a passthrough to the underlying DescribeObjectsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeObjects when applied to the request.
 func (c *DataPipeline) DescribeObjectsPagesWithContext(ctx aws.Context, input *datapipeline.DescribeObjectsInput, fn func(*datapipeline.DescribeObjectsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeObjects"))
-	return c.DescribeObjectsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeObjectsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribePipelinesRequest is a passthrough to the underlying DescribePipelinesRequest.
@@ -246,14 +246,14 @@ func (c *DataPipeline) ListPipelinesPages(input *datapipeline.ListPipelinesInput
 		c.inc("ListPipelines")
 		return fn(page, lastPage)
 	}
-	return c.ListPipelinesPages(input, wrappedFn)
+	return c.svc.ListPipelinesPages(input, wrappedFn)
 }
 
 // ListPipelinesPagesWithContext is a passthrough to the underlying ListPipelinesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPipelines when applied to the request.
 func (c *DataPipeline) ListPipelinesPagesWithContext(ctx aws.Context, input *datapipeline.ListPipelinesInput, fn func(*datapipeline.ListPipelinesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPipelines"))
-	return c.ListPipelinesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPipelinesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PollForTaskRequest is a passthrough to the underlying PollForTaskRequest.
@@ -328,14 +328,14 @@ func (c *DataPipeline) QueryObjectsPages(input *datapipeline.QueryObjectsInput, 
 		c.inc("QueryObjects")
 		return fn(page, lastPage)
 	}
-	return c.QueryObjectsPages(input, wrappedFn)
+	return c.svc.QueryObjectsPages(input, wrappedFn)
 }
 
 // QueryObjectsPagesWithContext is a passthrough to the underlying QueryObjectsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to QueryObjects when applied to the request.
 func (c *DataPipeline) QueryObjectsPagesWithContext(ctx aws.Context, input *datapipeline.QueryObjectsInput, fn func(*datapipeline.QueryObjectsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("QueryObjects"))
-	return c.QueryObjectsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.QueryObjectsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // RemoveTagsRequest is a passthrough to the underlying RemoveTagsRequest.

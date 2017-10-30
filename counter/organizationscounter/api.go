@@ -521,14 +521,14 @@ func (c *Organizations) ListAccountsPages(input *organizations.ListAccountsInput
 		c.inc("ListAccounts")
 		return fn(page, lastPage)
 	}
-	return c.ListAccountsPages(input, wrappedFn)
+	return c.svc.ListAccountsPages(input, wrappedFn)
 }
 
 // ListAccountsPagesWithContext is a passthrough to the underlying ListAccountsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAccounts when applied to the request.
 func (c *Organizations) ListAccountsPagesWithContext(ctx aws.Context, input *organizations.ListAccountsInput, fn func(*organizations.ListAccountsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAccounts"))
-	return c.ListAccountsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAccountsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListAccountsForParentRequest is a passthrough to the underlying ListAccountsForParentRequest.
@@ -561,14 +561,14 @@ func (c *Organizations) ListAccountsForParentPages(input *organizations.ListAcco
 		c.inc("ListAccountsForParent")
 		return fn(page, lastPage)
 	}
-	return c.ListAccountsForParentPages(input, wrappedFn)
+	return c.svc.ListAccountsForParentPages(input, wrappedFn)
 }
 
 // ListAccountsForParentPagesWithContext is a passthrough to the underlying ListAccountsForParentPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAccountsForParent when applied to the request.
 func (c *Organizations) ListAccountsForParentPagesWithContext(ctx aws.Context, input *organizations.ListAccountsForParentInput, fn func(*organizations.ListAccountsForParentOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAccountsForParent"))
-	return c.ListAccountsForParentPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAccountsForParentPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListChildrenRequest is a passthrough to the underlying ListChildrenRequest.
@@ -601,14 +601,14 @@ func (c *Organizations) ListChildrenPages(input *organizations.ListChildrenInput
 		c.inc("ListChildren")
 		return fn(page, lastPage)
 	}
-	return c.ListChildrenPages(input, wrappedFn)
+	return c.svc.ListChildrenPages(input, wrappedFn)
 }
 
 // ListChildrenPagesWithContext is a passthrough to the underlying ListChildrenPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListChildren when applied to the request.
 func (c *Organizations) ListChildrenPagesWithContext(ctx aws.Context, input *organizations.ListChildrenInput, fn func(*organizations.ListChildrenOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListChildren"))
-	return c.ListChildrenPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListChildrenPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListCreateAccountStatusRequest is a passthrough to the underlying ListCreateAccountStatusRequest.
@@ -641,14 +641,14 @@ func (c *Organizations) ListCreateAccountStatusPages(input *organizations.ListCr
 		c.inc("ListCreateAccountStatus")
 		return fn(page, lastPage)
 	}
-	return c.ListCreateAccountStatusPages(input, wrappedFn)
+	return c.svc.ListCreateAccountStatusPages(input, wrappedFn)
 }
 
 // ListCreateAccountStatusPagesWithContext is a passthrough to the underlying ListCreateAccountStatusPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListCreateAccountStatus when applied to the request.
 func (c *Organizations) ListCreateAccountStatusPagesWithContext(ctx aws.Context, input *organizations.ListCreateAccountStatusInput, fn func(*organizations.ListCreateAccountStatusOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListCreateAccountStatus"))
-	return c.ListCreateAccountStatusPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListCreateAccountStatusPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListHandshakesForAccountRequest is a passthrough to the underlying ListHandshakesForAccountRequest.
@@ -681,14 +681,14 @@ func (c *Organizations) ListHandshakesForAccountPages(input *organizations.ListH
 		c.inc("ListHandshakesForAccount")
 		return fn(page, lastPage)
 	}
-	return c.ListHandshakesForAccountPages(input, wrappedFn)
+	return c.svc.ListHandshakesForAccountPages(input, wrappedFn)
 }
 
 // ListHandshakesForAccountPagesWithContext is a passthrough to the underlying ListHandshakesForAccountPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListHandshakesForAccount when applied to the request.
 func (c *Organizations) ListHandshakesForAccountPagesWithContext(ctx aws.Context, input *organizations.ListHandshakesForAccountInput, fn func(*organizations.ListHandshakesForAccountOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListHandshakesForAccount"))
-	return c.ListHandshakesForAccountPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListHandshakesForAccountPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListHandshakesForOrganizationRequest is a passthrough to the underlying ListHandshakesForOrganizationRequest.
@@ -721,14 +721,14 @@ func (c *Organizations) ListHandshakesForOrganizationPages(input *organizations.
 		c.inc("ListHandshakesForOrganization")
 		return fn(page, lastPage)
 	}
-	return c.ListHandshakesForOrganizationPages(input, wrappedFn)
+	return c.svc.ListHandshakesForOrganizationPages(input, wrappedFn)
 }
 
 // ListHandshakesForOrganizationPagesWithContext is a passthrough to the underlying ListHandshakesForOrganizationPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListHandshakesForOrganization when applied to the request.
 func (c *Organizations) ListHandshakesForOrganizationPagesWithContext(ctx aws.Context, input *organizations.ListHandshakesForOrganizationInput, fn func(*organizations.ListHandshakesForOrganizationOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListHandshakesForOrganization"))
-	return c.ListHandshakesForOrganizationPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListHandshakesForOrganizationPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListOrganizationalUnitsForParentRequest is a passthrough to the underlying ListOrganizationalUnitsForParentRequest.
@@ -761,14 +761,14 @@ func (c *Organizations) ListOrganizationalUnitsForParentPages(input *organizatio
 		c.inc("ListOrganizationalUnitsForParent")
 		return fn(page, lastPage)
 	}
-	return c.ListOrganizationalUnitsForParentPages(input, wrappedFn)
+	return c.svc.ListOrganizationalUnitsForParentPages(input, wrappedFn)
 }
 
 // ListOrganizationalUnitsForParentPagesWithContext is a passthrough to the underlying ListOrganizationalUnitsForParentPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListOrganizationalUnitsForParent when applied to the request.
 func (c *Organizations) ListOrganizationalUnitsForParentPagesWithContext(ctx aws.Context, input *organizations.ListOrganizationalUnitsForParentInput, fn func(*organizations.ListOrganizationalUnitsForParentOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListOrganizationalUnitsForParent"))
-	return c.ListOrganizationalUnitsForParentPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListOrganizationalUnitsForParentPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListParentsRequest is a passthrough to the underlying ListParentsRequest.
@@ -801,14 +801,14 @@ func (c *Organizations) ListParentsPages(input *organizations.ListParentsInput, 
 		c.inc("ListParents")
 		return fn(page, lastPage)
 	}
-	return c.ListParentsPages(input, wrappedFn)
+	return c.svc.ListParentsPages(input, wrappedFn)
 }
 
 // ListParentsPagesWithContext is a passthrough to the underlying ListParentsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListParents when applied to the request.
 func (c *Organizations) ListParentsPagesWithContext(ctx aws.Context, input *organizations.ListParentsInput, fn func(*organizations.ListParentsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListParents"))
-	return c.ListParentsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListParentsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListPoliciesRequest is a passthrough to the underlying ListPoliciesRequest.
@@ -841,14 +841,14 @@ func (c *Organizations) ListPoliciesPages(input *organizations.ListPoliciesInput
 		c.inc("ListPolicies")
 		return fn(page, lastPage)
 	}
-	return c.ListPoliciesPages(input, wrappedFn)
+	return c.svc.ListPoliciesPages(input, wrappedFn)
 }
 
 // ListPoliciesPagesWithContext is a passthrough to the underlying ListPoliciesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPolicies when applied to the request.
 func (c *Organizations) ListPoliciesPagesWithContext(ctx aws.Context, input *organizations.ListPoliciesInput, fn func(*organizations.ListPoliciesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPolicies"))
-	return c.ListPoliciesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListPoliciesForTargetRequest is a passthrough to the underlying ListPoliciesForTargetRequest.
@@ -881,14 +881,14 @@ func (c *Organizations) ListPoliciesForTargetPages(input *organizations.ListPoli
 		c.inc("ListPoliciesForTarget")
 		return fn(page, lastPage)
 	}
-	return c.ListPoliciesForTargetPages(input, wrappedFn)
+	return c.svc.ListPoliciesForTargetPages(input, wrappedFn)
 }
 
 // ListPoliciesForTargetPagesWithContext is a passthrough to the underlying ListPoliciesForTargetPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPoliciesForTarget when applied to the request.
 func (c *Organizations) ListPoliciesForTargetPagesWithContext(ctx aws.Context, input *organizations.ListPoliciesForTargetInput, fn func(*organizations.ListPoliciesForTargetOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPoliciesForTarget"))
-	return c.ListPoliciesForTargetPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPoliciesForTargetPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListRootsRequest is a passthrough to the underlying ListRootsRequest.
@@ -921,14 +921,14 @@ func (c *Organizations) ListRootsPages(input *organizations.ListRootsInput, fn f
 		c.inc("ListRoots")
 		return fn(page, lastPage)
 	}
-	return c.ListRootsPages(input, wrappedFn)
+	return c.svc.ListRootsPages(input, wrappedFn)
 }
 
 // ListRootsPagesWithContext is a passthrough to the underlying ListRootsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListRoots when applied to the request.
 func (c *Organizations) ListRootsPagesWithContext(ctx aws.Context, input *organizations.ListRootsInput, fn func(*organizations.ListRootsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListRoots"))
-	return c.ListRootsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListRootsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTargetsForPolicyRequest is a passthrough to the underlying ListTargetsForPolicyRequest.
@@ -961,14 +961,14 @@ func (c *Organizations) ListTargetsForPolicyPages(input *organizations.ListTarge
 		c.inc("ListTargetsForPolicy")
 		return fn(page, lastPage)
 	}
-	return c.ListTargetsForPolicyPages(input, wrappedFn)
+	return c.svc.ListTargetsForPolicyPages(input, wrappedFn)
 }
 
 // ListTargetsForPolicyPagesWithContext is a passthrough to the underlying ListTargetsForPolicyPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListTargetsForPolicy when applied to the request.
 func (c *Organizations) ListTargetsForPolicyPagesWithContext(ctx aws.Context, input *organizations.ListTargetsForPolicyInput, fn func(*organizations.ListTargetsForPolicyOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListTargetsForPolicy"))
-	return c.ListTargetsForPolicyPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListTargetsForPolicyPagesWithContext(ctx, input, fn, opts...)
 }
 
 // MoveAccountRequest is a passthrough to the underlying MoveAccountRequest.

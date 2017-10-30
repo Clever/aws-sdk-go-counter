@@ -332,14 +332,14 @@ func (c *LexModelBuildingService) GetBotAliasesPages(input *lexmodelbuildingserv
 		c.inc("GetBotAliases")
 		return fn(page, lastPage)
 	}
-	return c.GetBotAliasesPages(input, wrappedFn)
+	return c.svc.GetBotAliasesPages(input, wrappedFn)
 }
 
 // GetBotAliasesPagesWithContext is a passthrough to the underlying GetBotAliasesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetBotAliases when applied to the request.
 func (c *LexModelBuildingService) GetBotAliasesPagesWithContext(ctx aws.Context, input *lexmodelbuildingservice.GetBotAliasesInput, fn func(*lexmodelbuildingservice.GetBotAliasesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetBotAliases"))
-	return c.GetBotAliasesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetBotAliasesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetBotChannelAssociationRequest is a passthrough to the underlying GetBotChannelAssociationRequest.
@@ -393,14 +393,14 @@ func (c *LexModelBuildingService) GetBotChannelAssociationsPages(input *lexmodel
 		c.inc("GetBotChannelAssociations")
 		return fn(page, lastPage)
 	}
-	return c.GetBotChannelAssociationsPages(input, wrappedFn)
+	return c.svc.GetBotChannelAssociationsPages(input, wrappedFn)
 }
 
 // GetBotChannelAssociationsPagesWithContext is a passthrough to the underlying GetBotChannelAssociationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetBotChannelAssociations when applied to the request.
 func (c *LexModelBuildingService) GetBotChannelAssociationsPagesWithContext(ctx aws.Context, input *lexmodelbuildingservice.GetBotChannelAssociationsInput, fn func(*lexmodelbuildingservice.GetBotChannelAssociationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetBotChannelAssociations"))
-	return c.GetBotChannelAssociationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetBotChannelAssociationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetBotVersionsRequest is a passthrough to the underlying GetBotVersionsRequest.
@@ -433,14 +433,14 @@ func (c *LexModelBuildingService) GetBotVersionsPages(input *lexmodelbuildingser
 		c.inc("GetBotVersions")
 		return fn(page, lastPage)
 	}
-	return c.GetBotVersionsPages(input, wrappedFn)
+	return c.svc.GetBotVersionsPages(input, wrappedFn)
 }
 
 // GetBotVersionsPagesWithContext is a passthrough to the underlying GetBotVersionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetBotVersions when applied to the request.
 func (c *LexModelBuildingService) GetBotVersionsPagesWithContext(ctx aws.Context, input *lexmodelbuildingservice.GetBotVersionsInput, fn func(*lexmodelbuildingservice.GetBotVersionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetBotVersions"))
-	return c.GetBotVersionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetBotVersionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetBotsRequest is a passthrough to the underlying GetBotsRequest.
@@ -473,14 +473,14 @@ func (c *LexModelBuildingService) GetBotsPages(input *lexmodelbuildingservice.Ge
 		c.inc("GetBots")
 		return fn(page, lastPage)
 	}
-	return c.GetBotsPages(input, wrappedFn)
+	return c.svc.GetBotsPages(input, wrappedFn)
 }
 
 // GetBotsPagesWithContext is a passthrough to the underlying GetBotsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetBots when applied to the request.
 func (c *LexModelBuildingService) GetBotsPagesWithContext(ctx aws.Context, input *lexmodelbuildingservice.GetBotsInput, fn func(*lexmodelbuildingservice.GetBotsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetBots"))
-	return c.GetBotsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetBotsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetBuiltinIntentRequest is a passthrough to the underlying GetBuiltinIntentRequest.
@@ -534,14 +534,14 @@ func (c *LexModelBuildingService) GetBuiltinIntentsPages(input *lexmodelbuilding
 		c.inc("GetBuiltinIntents")
 		return fn(page, lastPage)
 	}
-	return c.GetBuiltinIntentsPages(input, wrappedFn)
+	return c.svc.GetBuiltinIntentsPages(input, wrappedFn)
 }
 
 // GetBuiltinIntentsPagesWithContext is a passthrough to the underlying GetBuiltinIntentsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetBuiltinIntents when applied to the request.
 func (c *LexModelBuildingService) GetBuiltinIntentsPagesWithContext(ctx aws.Context, input *lexmodelbuildingservice.GetBuiltinIntentsInput, fn func(*lexmodelbuildingservice.GetBuiltinIntentsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetBuiltinIntents"))
-	return c.GetBuiltinIntentsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetBuiltinIntentsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetBuiltinSlotTypesRequest is a passthrough to the underlying GetBuiltinSlotTypesRequest.
@@ -574,14 +574,14 @@ func (c *LexModelBuildingService) GetBuiltinSlotTypesPages(input *lexmodelbuildi
 		c.inc("GetBuiltinSlotTypes")
 		return fn(page, lastPage)
 	}
-	return c.GetBuiltinSlotTypesPages(input, wrappedFn)
+	return c.svc.GetBuiltinSlotTypesPages(input, wrappedFn)
 }
 
 // GetBuiltinSlotTypesPagesWithContext is a passthrough to the underlying GetBuiltinSlotTypesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetBuiltinSlotTypes when applied to the request.
 func (c *LexModelBuildingService) GetBuiltinSlotTypesPagesWithContext(ctx aws.Context, input *lexmodelbuildingservice.GetBuiltinSlotTypesInput, fn func(*lexmodelbuildingservice.GetBuiltinSlotTypesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetBuiltinSlotTypes"))
-	return c.GetBuiltinSlotTypesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetBuiltinSlotTypesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetExportRequest is a passthrough to the underlying GetExportRequest.
@@ -656,14 +656,14 @@ func (c *LexModelBuildingService) GetIntentVersionsPages(input *lexmodelbuilding
 		c.inc("GetIntentVersions")
 		return fn(page, lastPage)
 	}
-	return c.GetIntentVersionsPages(input, wrappedFn)
+	return c.svc.GetIntentVersionsPages(input, wrappedFn)
 }
 
 // GetIntentVersionsPagesWithContext is a passthrough to the underlying GetIntentVersionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetIntentVersions when applied to the request.
 func (c *LexModelBuildingService) GetIntentVersionsPagesWithContext(ctx aws.Context, input *lexmodelbuildingservice.GetIntentVersionsInput, fn func(*lexmodelbuildingservice.GetIntentVersionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetIntentVersions"))
-	return c.GetIntentVersionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetIntentVersionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetIntentsRequest is a passthrough to the underlying GetIntentsRequest.
@@ -696,14 +696,14 @@ func (c *LexModelBuildingService) GetIntentsPages(input *lexmodelbuildingservice
 		c.inc("GetIntents")
 		return fn(page, lastPage)
 	}
-	return c.GetIntentsPages(input, wrappedFn)
+	return c.svc.GetIntentsPages(input, wrappedFn)
 }
 
 // GetIntentsPagesWithContext is a passthrough to the underlying GetIntentsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetIntents when applied to the request.
 func (c *LexModelBuildingService) GetIntentsPagesWithContext(ctx aws.Context, input *lexmodelbuildingservice.GetIntentsInput, fn func(*lexmodelbuildingservice.GetIntentsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetIntents"))
-	return c.GetIntentsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetIntentsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetSlotTypeRequest is a passthrough to the underlying GetSlotTypeRequest.
@@ -757,14 +757,14 @@ func (c *LexModelBuildingService) GetSlotTypeVersionsPages(input *lexmodelbuildi
 		c.inc("GetSlotTypeVersions")
 		return fn(page, lastPage)
 	}
-	return c.GetSlotTypeVersionsPages(input, wrappedFn)
+	return c.svc.GetSlotTypeVersionsPages(input, wrappedFn)
 }
 
 // GetSlotTypeVersionsPagesWithContext is a passthrough to the underlying GetSlotTypeVersionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetSlotTypeVersions when applied to the request.
 func (c *LexModelBuildingService) GetSlotTypeVersionsPagesWithContext(ctx aws.Context, input *lexmodelbuildingservice.GetSlotTypeVersionsInput, fn func(*lexmodelbuildingservice.GetSlotTypeVersionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetSlotTypeVersions"))
-	return c.GetSlotTypeVersionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetSlotTypeVersionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetSlotTypesRequest is a passthrough to the underlying GetSlotTypesRequest.
@@ -797,14 +797,14 @@ func (c *LexModelBuildingService) GetSlotTypesPages(input *lexmodelbuildingservi
 		c.inc("GetSlotTypes")
 		return fn(page, lastPage)
 	}
-	return c.GetSlotTypesPages(input, wrappedFn)
+	return c.svc.GetSlotTypesPages(input, wrappedFn)
 }
 
 // GetSlotTypesPagesWithContext is a passthrough to the underlying GetSlotTypesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetSlotTypes when applied to the request.
 func (c *LexModelBuildingService) GetSlotTypesPagesWithContext(ctx aws.Context, input *lexmodelbuildingservice.GetSlotTypesInput, fn func(*lexmodelbuildingservice.GetSlotTypesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetSlotTypes"))
-	return c.GetSlotTypesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetSlotTypesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetUtterancesViewRequest is a passthrough to the underlying GetUtterancesViewRequest.

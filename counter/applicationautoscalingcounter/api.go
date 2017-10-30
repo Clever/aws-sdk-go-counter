@@ -80,14 +80,14 @@ func (c *ApplicationAutoScaling) DescribeScalableTargetsPages(input *application
 		c.inc("DescribeScalableTargets")
 		return fn(page, lastPage)
 	}
-	return c.DescribeScalableTargetsPages(input, wrappedFn)
+	return c.svc.DescribeScalableTargetsPages(input, wrappedFn)
 }
 
 // DescribeScalableTargetsPagesWithContext is a passthrough to the underlying DescribeScalableTargetsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeScalableTargets when applied to the request.
 func (c *ApplicationAutoScaling) DescribeScalableTargetsPagesWithContext(ctx aws.Context, input *applicationautoscaling.DescribeScalableTargetsInput, fn func(*applicationautoscaling.DescribeScalableTargetsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeScalableTargets"))
-	return c.DescribeScalableTargetsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeScalableTargetsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeScalingActivitiesRequest is a passthrough to the underlying DescribeScalingActivitiesRequest.
@@ -120,14 +120,14 @@ func (c *ApplicationAutoScaling) DescribeScalingActivitiesPages(input *applicati
 		c.inc("DescribeScalingActivities")
 		return fn(page, lastPage)
 	}
-	return c.DescribeScalingActivitiesPages(input, wrappedFn)
+	return c.svc.DescribeScalingActivitiesPages(input, wrappedFn)
 }
 
 // DescribeScalingActivitiesPagesWithContext is a passthrough to the underlying DescribeScalingActivitiesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeScalingActivities when applied to the request.
 func (c *ApplicationAutoScaling) DescribeScalingActivitiesPagesWithContext(ctx aws.Context, input *applicationautoscaling.DescribeScalingActivitiesInput, fn func(*applicationautoscaling.DescribeScalingActivitiesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeScalingActivities"))
-	return c.DescribeScalingActivitiesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeScalingActivitiesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeScalingPoliciesRequest is a passthrough to the underlying DescribeScalingPoliciesRequest.
@@ -160,14 +160,14 @@ func (c *ApplicationAutoScaling) DescribeScalingPoliciesPages(input *application
 		c.inc("DescribeScalingPolicies")
 		return fn(page, lastPage)
 	}
-	return c.DescribeScalingPoliciesPages(input, wrappedFn)
+	return c.svc.DescribeScalingPoliciesPages(input, wrappedFn)
 }
 
 // DescribeScalingPoliciesPagesWithContext is a passthrough to the underlying DescribeScalingPoliciesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeScalingPolicies when applied to the request.
 func (c *ApplicationAutoScaling) DescribeScalingPoliciesPagesWithContext(ctx aws.Context, input *applicationautoscaling.DescribeScalingPoliciesInput, fn func(*applicationautoscaling.DescribeScalingPoliciesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeScalingPolicies"))
-	return c.DescribeScalingPoliciesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeScalingPoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PutScalingPolicyRequest is a passthrough to the underlying PutScalingPolicyRequest.

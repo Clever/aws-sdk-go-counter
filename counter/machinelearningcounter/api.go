@@ -332,14 +332,14 @@ func (c *MachineLearning) DescribeBatchPredictionsPages(input *machinelearning.D
 		c.inc("DescribeBatchPredictions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeBatchPredictionsPages(input, wrappedFn)
+	return c.svc.DescribeBatchPredictionsPages(input, wrappedFn)
 }
 
 // DescribeBatchPredictionsPagesWithContext is a passthrough to the underlying DescribeBatchPredictionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeBatchPredictions when applied to the request.
 func (c *MachineLearning) DescribeBatchPredictionsPagesWithContext(ctx aws.Context, input *machinelearning.DescribeBatchPredictionsInput, fn func(*machinelearning.DescribeBatchPredictionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeBatchPredictions"))
-	return c.DescribeBatchPredictionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeBatchPredictionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeDataSourcesRequest is a passthrough to the underlying DescribeDataSourcesRequest.
@@ -372,14 +372,14 @@ func (c *MachineLearning) DescribeDataSourcesPages(input *machinelearning.Descri
 		c.inc("DescribeDataSources")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDataSourcesPages(input, wrappedFn)
+	return c.svc.DescribeDataSourcesPages(input, wrappedFn)
 }
 
 // DescribeDataSourcesPagesWithContext is a passthrough to the underlying DescribeDataSourcesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDataSources when applied to the request.
 func (c *MachineLearning) DescribeDataSourcesPagesWithContext(ctx aws.Context, input *machinelearning.DescribeDataSourcesInput, fn func(*machinelearning.DescribeDataSourcesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDataSources"))
-	return c.DescribeDataSourcesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDataSourcesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEvaluationsRequest is a passthrough to the underlying DescribeEvaluationsRequest.
@@ -412,14 +412,14 @@ func (c *MachineLearning) DescribeEvaluationsPages(input *machinelearning.Descri
 		c.inc("DescribeEvaluations")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEvaluationsPages(input, wrappedFn)
+	return c.svc.DescribeEvaluationsPages(input, wrappedFn)
 }
 
 // DescribeEvaluationsPagesWithContext is a passthrough to the underlying DescribeEvaluationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEvaluations when applied to the request.
 func (c *MachineLearning) DescribeEvaluationsPagesWithContext(ctx aws.Context, input *machinelearning.DescribeEvaluationsInput, fn func(*machinelearning.DescribeEvaluationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEvaluations"))
-	return c.DescribeEvaluationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEvaluationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeMLModelsRequest is a passthrough to the underlying DescribeMLModelsRequest.
@@ -452,14 +452,14 @@ func (c *MachineLearning) DescribeMLModelsPages(input *machinelearning.DescribeM
 		c.inc("DescribeMLModels")
 		return fn(page, lastPage)
 	}
-	return c.DescribeMLModelsPages(input, wrappedFn)
+	return c.svc.DescribeMLModelsPages(input, wrappedFn)
 }
 
 // DescribeMLModelsPagesWithContext is a passthrough to the underlying DescribeMLModelsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeMLModels when applied to the request.
 func (c *MachineLearning) DescribeMLModelsPagesWithContext(ctx aws.Context, input *machinelearning.DescribeMLModelsInput, fn func(*machinelearning.DescribeMLModelsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeMLModels"))
-	return c.DescribeMLModelsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeMLModelsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeTagsRequest is a passthrough to the underlying DescribeTagsRequest.

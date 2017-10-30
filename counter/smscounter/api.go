@@ -122,14 +122,14 @@ func (c *SMS) GetConnectorsPages(input *sms.GetConnectorsInput, fn func(*sms.Get
 		c.inc("GetConnectors")
 		return fn(page, lastPage)
 	}
-	return c.GetConnectorsPages(input, wrappedFn)
+	return c.svc.GetConnectorsPages(input, wrappedFn)
 }
 
 // GetConnectorsPagesWithContext is a passthrough to the underlying GetConnectorsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetConnectors when applied to the request.
 func (c *SMS) GetConnectorsPagesWithContext(ctx aws.Context, input *sms.GetConnectorsInput, fn func(*sms.GetConnectorsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetConnectors"))
-	return c.GetConnectorsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetConnectorsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetReplicationJobsRequest is a passthrough to the underlying GetReplicationJobsRequest.
@@ -162,14 +162,14 @@ func (c *SMS) GetReplicationJobsPages(input *sms.GetReplicationJobsInput, fn fun
 		c.inc("GetReplicationJobs")
 		return fn(page, lastPage)
 	}
-	return c.GetReplicationJobsPages(input, wrappedFn)
+	return c.svc.GetReplicationJobsPages(input, wrappedFn)
 }
 
 // GetReplicationJobsPagesWithContext is a passthrough to the underlying GetReplicationJobsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetReplicationJobs when applied to the request.
 func (c *SMS) GetReplicationJobsPagesWithContext(ctx aws.Context, input *sms.GetReplicationJobsInput, fn func(*sms.GetReplicationJobsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetReplicationJobs"))
-	return c.GetReplicationJobsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetReplicationJobsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetReplicationRunsRequest is a passthrough to the underlying GetReplicationRunsRequest.
@@ -202,14 +202,14 @@ func (c *SMS) GetReplicationRunsPages(input *sms.GetReplicationRunsInput, fn fun
 		c.inc("GetReplicationRuns")
 		return fn(page, lastPage)
 	}
-	return c.GetReplicationRunsPages(input, wrappedFn)
+	return c.svc.GetReplicationRunsPages(input, wrappedFn)
 }
 
 // GetReplicationRunsPagesWithContext is a passthrough to the underlying GetReplicationRunsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetReplicationRuns when applied to the request.
 func (c *SMS) GetReplicationRunsPagesWithContext(ctx aws.Context, input *sms.GetReplicationRunsInput, fn func(*sms.GetReplicationRunsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetReplicationRuns"))
-	return c.GetReplicationRunsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetReplicationRunsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetServersRequest is a passthrough to the underlying GetServersRequest.
@@ -242,14 +242,14 @@ func (c *SMS) GetServersPages(input *sms.GetServersInput, fn func(*sms.GetServer
 		c.inc("GetServers")
 		return fn(page, lastPage)
 	}
-	return c.GetServersPages(input, wrappedFn)
+	return c.svc.GetServersPages(input, wrappedFn)
 }
 
 // GetServersPagesWithContext is a passthrough to the underlying GetServersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetServers when applied to the request.
 func (c *SMS) GetServersPagesWithContext(ctx aws.Context, input *sms.GetServersInput, fn func(*sms.GetServersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetServers"))
-	return c.GetServersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetServersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ImportServerCatalogRequest is a passthrough to the underlying ImportServerCatalogRequest.

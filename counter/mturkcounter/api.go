@@ -437,14 +437,14 @@ func (c *MTurk) ListAssignmentsForHITPages(input *mturk.ListAssignmentsForHITInp
 		c.inc("ListAssignmentsForHIT")
 		return fn(page, lastPage)
 	}
-	return c.ListAssignmentsForHITPages(input, wrappedFn)
+	return c.svc.ListAssignmentsForHITPages(input, wrappedFn)
 }
 
 // ListAssignmentsForHITPagesWithContext is a passthrough to the underlying ListAssignmentsForHITPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListAssignmentsForHIT when applied to the request.
 func (c *MTurk) ListAssignmentsForHITPagesWithContext(ctx aws.Context, input *mturk.ListAssignmentsForHITInput, fn func(*mturk.ListAssignmentsForHITOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListAssignmentsForHIT"))
-	return c.ListAssignmentsForHITPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListAssignmentsForHITPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListBonusPaymentsRequest is a passthrough to the underlying ListBonusPaymentsRequest.
@@ -477,14 +477,14 @@ func (c *MTurk) ListBonusPaymentsPages(input *mturk.ListBonusPaymentsInput, fn f
 		c.inc("ListBonusPayments")
 		return fn(page, lastPage)
 	}
-	return c.ListBonusPaymentsPages(input, wrappedFn)
+	return c.svc.ListBonusPaymentsPages(input, wrappedFn)
 }
 
 // ListBonusPaymentsPagesWithContext is a passthrough to the underlying ListBonusPaymentsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListBonusPayments when applied to the request.
 func (c *MTurk) ListBonusPaymentsPagesWithContext(ctx aws.Context, input *mturk.ListBonusPaymentsInput, fn func(*mturk.ListBonusPaymentsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListBonusPayments"))
-	return c.ListBonusPaymentsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListBonusPaymentsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListHITsRequest is a passthrough to the underlying ListHITsRequest.
@@ -517,14 +517,14 @@ func (c *MTurk) ListHITsPages(input *mturk.ListHITsInput, fn func(*mturk.ListHIT
 		c.inc("ListHITs")
 		return fn(page, lastPage)
 	}
-	return c.ListHITsPages(input, wrappedFn)
+	return c.svc.ListHITsPages(input, wrappedFn)
 }
 
 // ListHITsPagesWithContext is a passthrough to the underlying ListHITsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListHITs when applied to the request.
 func (c *MTurk) ListHITsPagesWithContext(ctx aws.Context, input *mturk.ListHITsInput, fn func(*mturk.ListHITsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListHITs"))
-	return c.ListHITsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListHITsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListHITsForQualificationTypeRequest is a passthrough to the underlying ListHITsForQualificationTypeRequest.
@@ -557,14 +557,14 @@ func (c *MTurk) ListHITsForQualificationTypePages(input *mturk.ListHITsForQualif
 		c.inc("ListHITsForQualificationType")
 		return fn(page, lastPage)
 	}
-	return c.ListHITsForQualificationTypePages(input, wrappedFn)
+	return c.svc.ListHITsForQualificationTypePages(input, wrappedFn)
 }
 
 // ListHITsForQualificationTypePagesWithContext is a passthrough to the underlying ListHITsForQualificationTypePagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListHITsForQualificationType when applied to the request.
 func (c *MTurk) ListHITsForQualificationTypePagesWithContext(ctx aws.Context, input *mturk.ListHITsForQualificationTypeInput, fn func(*mturk.ListHITsForQualificationTypeOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListHITsForQualificationType"))
-	return c.ListHITsForQualificationTypePagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListHITsForQualificationTypePagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListQualificationRequestsRequest is a passthrough to the underlying ListQualificationRequestsRequest.
@@ -597,14 +597,14 @@ func (c *MTurk) ListQualificationRequestsPages(input *mturk.ListQualificationReq
 		c.inc("ListQualificationRequests")
 		return fn(page, lastPage)
 	}
-	return c.ListQualificationRequestsPages(input, wrappedFn)
+	return c.svc.ListQualificationRequestsPages(input, wrappedFn)
 }
 
 // ListQualificationRequestsPagesWithContext is a passthrough to the underlying ListQualificationRequestsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListQualificationRequests when applied to the request.
 func (c *MTurk) ListQualificationRequestsPagesWithContext(ctx aws.Context, input *mturk.ListQualificationRequestsInput, fn func(*mturk.ListQualificationRequestsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListQualificationRequests"))
-	return c.ListQualificationRequestsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListQualificationRequestsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListQualificationTypesRequest is a passthrough to the underlying ListQualificationTypesRequest.
@@ -637,14 +637,14 @@ func (c *MTurk) ListQualificationTypesPages(input *mturk.ListQualificationTypesI
 		c.inc("ListQualificationTypes")
 		return fn(page, lastPage)
 	}
-	return c.ListQualificationTypesPages(input, wrappedFn)
+	return c.svc.ListQualificationTypesPages(input, wrappedFn)
 }
 
 // ListQualificationTypesPagesWithContext is a passthrough to the underlying ListQualificationTypesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListQualificationTypes when applied to the request.
 func (c *MTurk) ListQualificationTypesPagesWithContext(ctx aws.Context, input *mturk.ListQualificationTypesInput, fn func(*mturk.ListQualificationTypesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListQualificationTypes"))
-	return c.ListQualificationTypesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListQualificationTypesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListReviewPolicyResultsForHITRequest is a passthrough to the underlying ListReviewPolicyResultsForHITRequest.
@@ -677,14 +677,14 @@ func (c *MTurk) ListReviewPolicyResultsForHITPages(input *mturk.ListReviewPolicy
 		c.inc("ListReviewPolicyResultsForHIT")
 		return fn(page, lastPage)
 	}
-	return c.ListReviewPolicyResultsForHITPages(input, wrappedFn)
+	return c.svc.ListReviewPolicyResultsForHITPages(input, wrappedFn)
 }
 
 // ListReviewPolicyResultsForHITPagesWithContext is a passthrough to the underlying ListReviewPolicyResultsForHITPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListReviewPolicyResultsForHIT when applied to the request.
 func (c *MTurk) ListReviewPolicyResultsForHITPagesWithContext(ctx aws.Context, input *mturk.ListReviewPolicyResultsForHITInput, fn func(*mturk.ListReviewPolicyResultsForHITOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListReviewPolicyResultsForHIT"))
-	return c.ListReviewPolicyResultsForHITPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListReviewPolicyResultsForHITPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListReviewableHITsRequest is a passthrough to the underlying ListReviewableHITsRequest.
@@ -717,14 +717,14 @@ func (c *MTurk) ListReviewableHITsPages(input *mturk.ListReviewableHITsInput, fn
 		c.inc("ListReviewableHITs")
 		return fn(page, lastPage)
 	}
-	return c.ListReviewableHITsPages(input, wrappedFn)
+	return c.svc.ListReviewableHITsPages(input, wrappedFn)
 }
 
 // ListReviewableHITsPagesWithContext is a passthrough to the underlying ListReviewableHITsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListReviewableHITs when applied to the request.
 func (c *MTurk) ListReviewableHITsPagesWithContext(ctx aws.Context, input *mturk.ListReviewableHITsInput, fn func(*mturk.ListReviewableHITsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListReviewableHITs"))
-	return c.ListReviewableHITsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListReviewableHITsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListWorkerBlocksRequest is a passthrough to the underlying ListWorkerBlocksRequest.
@@ -757,14 +757,14 @@ func (c *MTurk) ListWorkerBlocksPages(input *mturk.ListWorkerBlocksInput, fn fun
 		c.inc("ListWorkerBlocks")
 		return fn(page, lastPage)
 	}
-	return c.ListWorkerBlocksPages(input, wrappedFn)
+	return c.svc.ListWorkerBlocksPages(input, wrappedFn)
 }
 
 // ListWorkerBlocksPagesWithContext is a passthrough to the underlying ListWorkerBlocksPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListWorkerBlocks when applied to the request.
 func (c *MTurk) ListWorkerBlocksPagesWithContext(ctx aws.Context, input *mturk.ListWorkerBlocksInput, fn func(*mturk.ListWorkerBlocksOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListWorkerBlocks"))
-	return c.ListWorkerBlocksPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListWorkerBlocksPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListWorkersWithQualificationTypeRequest is a passthrough to the underlying ListWorkersWithQualificationTypeRequest.
@@ -797,14 +797,14 @@ func (c *MTurk) ListWorkersWithQualificationTypePages(input *mturk.ListWorkersWi
 		c.inc("ListWorkersWithQualificationType")
 		return fn(page, lastPage)
 	}
-	return c.ListWorkersWithQualificationTypePages(input, wrappedFn)
+	return c.svc.ListWorkersWithQualificationTypePages(input, wrappedFn)
 }
 
 // ListWorkersWithQualificationTypePagesWithContext is a passthrough to the underlying ListWorkersWithQualificationTypePagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListWorkersWithQualificationType when applied to the request.
 func (c *MTurk) ListWorkersWithQualificationTypePagesWithContext(ctx aws.Context, input *mturk.ListWorkersWithQualificationTypeInput, fn func(*mturk.ListWorkersWithQualificationTypeOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListWorkersWithQualificationType"))
-	return c.ListWorkersWithQualificationTypePagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListWorkersWithQualificationTypePagesWithContext(ctx, input, fn, opts...)
 }
 
 // NotifyWorkersRequest is a passthrough to the underlying NotifyWorkersRequest.

@@ -269,14 +269,14 @@ func (c *EMR) ListBootstrapActionsPages(input *emr.ListBootstrapActionsInput, fn
 		c.inc("ListBootstrapActions")
 		return fn(page, lastPage)
 	}
-	return c.ListBootstrapActionsPages(input, wrappedFn)
+	return c.svc.ListBootstrapActionsPages(input, wrappedFn)
 }
 
 // ListBootstrapActionsPagesWithContext is a passthrough to the underlying ListBootstrapActionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListBootstrapActions when applied to the request.
 func (c *EMR) ListBootstrapActionsPagesWithContext(ctx aws.Context, input *emr.ListBootstrapActionsInput, fn func(*emr.ListBootstrapActionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListBootstrapActions"))
-	return c.ListBootstrapActionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListBootstrapActionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListClustersRequest is a passthrough to the underlying ListClustersRequest.
@@ -309,14 +309,14 @@ func (c *EMR) ListClustersPages(input *emr.ListClustersInput, fn func(*emr.ListC
 		c.inc("ListClusters")
 		return fn(page, lastPage)
 	}
-	return c.ListClustersPages(input, wrappedFn)
+	return c.svc.ListClustersPages(input, wrappedFn)
 }
 
 // ListClustersPagesWithContext is a passthrough to the underlying ListClustersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListClusters when applied to the request.
 func (c *EMR) ListClustersPagesWithContext(ctx aws.Context, input *emr.ListClustersInput, fn func(*emr.ListClustersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListClusters"))
-	return c.ListClustersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListClustersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListInstanceFleetsRequest is a passthrough to the underlying ListInstanceFleetsRequest.
@@ -349,14 +349,14 @@ func (c *EMR) ListInstanceFleetsPages(input *emr.ListInstanceFleetsInput, fn fun
 		c.inc("ListInstanceFleets")
 		return fn(page, lastPage)
 	}
-	return c.ListInstanceFleetsPages(input, wrappedFn)
+	return c.svc.ListInstanceFleetsPages(input, wrappedFn)
 }
 
 // ListInstanceFleetsPagesWithContext is a passthrough to the underlying ListInstanceFleetsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListInstanceFleets when applied to the request.
 func (c *EMR) ListInstanceFleetsPagesWithContext(ctx aws.Context, input *emr.ListInstanceFleetsInput, fn func(*emr.ListInstanceFleetsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListInstanceFleets"))
-	return c.ListInstanceFleetsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListInstanceFleetsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListInstanceGroupsRequest is a passthrough to the underlying ListInstanceGroupsRequest.
@@ -389,14 +389,14 @@ func (c *EMR) ListInstanceGroupsPages(input *emr.ListInstanceGroupsInput, fn fun
 		c.inc("ListInstanceGroups")
 		return fn(page, lastPage)
 	}
-	return c.ListInstanceGroupsPages(input, wrappedFn)
+	return c.svc.ListInstanceGroupsPages(input, wrappedFn)
 }
 
 // ListInstanceGroupsPagesWithContext is a passthrough to the underlying ListInstanceGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListInstanceGroups when applied to the request.
 func (c *EMR) ListInstanceGroupsPagesWithContext(ctx aws.Context, input *emr.ListInstanceGroupsInput, fn func(*emr.ListInstanceGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListInstanceGroups"))
-	return c.ListInstanceGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListInstanceGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListInstancesRequest is a passthrough to the underlying ListInstancesRequest.
@@ -429,14 +429,14 @@ func (c *EMR) ListInstancesPages(input *emr.ListInstancesInput, fn func(*emr.Lis
 		c.inc("ListInstances")
 		return fn(page, lastPage)
 	}
-	return c.ListInstancesPages(input, wrappedFn)
+	return c.svc.ListInstancesPages(input, wrappedFn)
 }
 
 // ListInstancesPagesWithContext is a passthrough to the underlying ListInstancesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListInstances when applied to the request.
 func (c *EMR) ListInstancesPagesWithContext(ctx aws.Context, input *emr.ListInstancesInput, fn func(*emr.ListInstancesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListInstances"))
-	return c.ListInstancesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListInstancesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListSecurityConfigurationsRequest is a passthrough to the underlying ListSecurityConfigurationsRequest.
@@ -490,14 +490,14 @@ func (c *EMR) ListStepsPages(input *emr.ListStepsInput, fn func(*emr.ListStepsOu
 		c.inc("ListSteps")
 		return fn(page, lastPage)
 	}
-	return c.ListStepsPages(input, wrappedFn)
+	return c.svc.ListStepsPages(input, wrappedFn)
 }
 
 // ListStepsPagesWithContext is a passthrough to the underlying ListStepsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListSteps when applied to the request.
 func (c *EMR) ListStepsPagesWithContext(ctx aws.Context, input *emr.ListStepsInput, fn func(*emr.ListStepsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListSteps"))
-	return c.ListStepsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListStepsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ModifyInstanceFleetRequest is a passthrough to the underlying ModifyInstanceFleetRequest.

@@ -185,14 +185,14 @@ func (c *SimpleDB) ListDomainsPages(input *simpledb.ListDomainsInput, fn func(*s
 		c.inc("ListDomains")
 		return fn(page, lastPage)
 	}
-	return c.ListDomainsPages(input, wrappedFn)
+	return c.svc.ListDomainsPages(input, wrappedFn)
 }
 
 // ListDomainsPagesWithContext is a passthrough to the underlying ListDomainsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDomains when applied to the request.
 func (c *SimpleDB) ListDomainsPagesWithContext(ctx aws.Context, input *simpledb.ListDomainsInput, fn func(*simpledb.ListDomainsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDomains"))
-	return c.ListDomainsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDomainsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PutAttributesRequest is a passthrough to the underlying PutAttributesRequest.
@@ -246,12 +246,12 @@ func (c *SimpleDB) SelectPages(input *simpledb.SelectInput, fn func(*simpledb.Se
 		c.inc("Select")
 		return fn(page, lastPage)
 	}
-	return c.SelectPages(input, wrappedFn)
+	return c.svc.SelectPages(input, wrappedFn)
 }
 
 // SelectPagesWithContext is a passthrough to the underlying SelectPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to Select when applied to the request.
 func (c *SimpleDB) SelectPagesWithContext(ctx aws.Context, input *simpledb.SelectInput, fn func(*simpledb.SelectOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("Select"))
-	return c.SelectPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.SelectPagesWithContext(ctx, input, fn, opts...)
 }

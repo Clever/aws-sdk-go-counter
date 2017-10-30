@@ -395,14 +395,14 @@ func (c *CloudFront) ListCloudFrontOriginAccessIdentitiesPages(input *cloudfront
 		c.inc("ListCloudFrontOriginAccessIdentities")
 		return fn(page, lastPage)
 	}
-	return c.ListCloudFrontOriginAccessIdentitiesPages(input, wrappedFn)
+	return c.svc.ListCloudFrontOriginAccessIdentitiesPages(input, wrappedFn)
 }
 
 // ListCloudFrontOriginAccessIdentitiesPagesWithContext is a passthrough to the underlying ListCloudFrontOriginAccessIdentitiesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListCloudFrontOriginAccessIdentities when applied to the request.
 func (c *CloudFront) ListCloudFrontOriginAccessIdentitiesPagesWithContext(ctx aws.Context, input *cloudfront.ListCloudFrontOriginAccessIdentitiesInput, fn func(*cloudfront.ListCloudFrontOriginAccessIdentitiesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListCloudFrontOriginAccessIdentities"))
-	return c.ListCloudFrontOriginAccessIdentitiesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListCloudFrontOriginAccessIdentitiesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListDistributionsRequest is a passthrough to the underlying ListDistributionsRequest.
@@ -435,14 +435,14 @@ func (c *CloudFront) ListDistributionsPages(input *cloudfront.ListDistributionsI
 		c.inc("ListDistributions")
 		return fn(page, lastPage)
 	}
-	return c.ListDistributionsPages(input, wrappedFn)
+	return c.svc.ListDistributionsPages(input, wrappedFn)
 }
 
 // ListDistributionsPagesWithContext is a passthrough to the underlying ListDistributionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDistributions when applied to the request.
 func (c *CloudFront) ListDistributionsPagesWithContext(ctx aws.Context, input *cloudfront.ListDistributionsInput, fn func(*cloudfront.ListDistributionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDistributions"))
-	return c.ListDistributionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDistributionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListDistributionsByWebACLIdRequest is a passthrough to the underlying ListDistributionsByWebACLIdRequest.
@@ -496,14 +496,14 @@ func (c *CloudFront) ListInvalidationsPages(input *cloudfront.ListInvalidationsI
 		c.inc("ListInvalidations")
 		return fn(page, lastPage)
 	}
-	return c.ListInvalidationsPages(input, wrappedFn)
+	return c.svc.ListInvalidationsPages(input, wrappedFn)
 }
 
 // ListInvalidationsPagesWithContext is a passthrough to the underlying ListInvalidationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListInvalidations when applied to the request.
 func (c *CloudFront) ListInvalidationsPagesWithContext(ctx aws.Context, input *cloudfront.ListInvalidationsInput, fn func(*cloudfront.ListInvalidationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListInvalidations"))
-	return c.ListInvalidationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListInvalidationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListStreamingDistributionsRequest is a passthrough to the underlying ListStreamingDistributionsRequest.
@@ -536,14 +536,14 @@ func (c *CloudFront) ListStreamingDistributionsPages(input *cloudfront.ListStrea
 		c.inc("ListStreamingDistributions")
 		return fn(page, lastPage)
 	}
-	return c.ListStreamingDistributionsPages(input, wrappedFn)
+	return c.svc.ListStreamingDistributionsPages(input, wrappedFn)
 }
 
 // ListStreamingDistributionsPagesWithContext is a passthrough to the underlying ListStreamingDistributionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListStreamingDistributions when applied to the request.
 func (c *CloudFront) ListStreamingDistributionsPagesWithContext(ctx aws.Context, input *cloudfront.ListStreamingDistributionsInput, fn func(*cloudfront.ListStreamingDistributionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListStreamingDistributions"))
-	return c.ListStreamingDistributionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListStreamingDistributionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTagsForResourceRequest is a passthrough to the underlying ListTagsForResourceRequest.

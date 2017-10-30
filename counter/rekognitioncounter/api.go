@@ -227,14 +227,14 @@ func (c *Rekognition) ListCollectionsPages(input *rekognition.ListCollectionsInp
 		c.inc("ListCollections")
 		return fn(page, lastPage)
 	}
-	return c.ListCollectionsPages(input, wrappedFn)
+	return c.svc.ListCollectionsPages(input, wrappedFn)
 }
 
 // ListCollectionsPagesWithContext is a passthrough to the underlying ListCollectionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListCollections when applied to the request.
 func (c *Rekognition) ListCollectionsPagesWithContext(ctx aws.Context, input *rekognition.ListCollectionsInput, fn func(*rekognition.ListCollectionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListCollections"))
-	return c.ListCollectionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListCollectionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListFacesRequest is a passthrough to the underlying ListFacesRequest.
@@ -267,14 +267,14 @@ func (c *Rekognition) ListFacesPages(input *rekognition.ListFacesInput, fn func(
 		c.inc("ListFaces")
 		return fn(page, lastPage)
 	}
-	return c.ListFacesPages(input, wrappedFn)
+	return c.svc.ListFacesPages(input, wrappedFn)
 }
 
 // ListFacesPagesWithContext is a passthrough to the underlying ListFacesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListFaces when applied to the request.
 func (c *Rekognition) ListFacesPagesWithContext(ctx aws.Context, input *rekognition.ListFacesInput, fn func(*rekognition.ListFacesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListFaces"))
-	return c.ListFacesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListFacesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // RecognizeCelebritiesRequest is a passthrough to the underlying RecognizeCelebritiesRequest.

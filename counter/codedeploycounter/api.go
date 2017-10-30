@@ -521,14 +521,14 @@ func (c *CodeDeploy) ListApplicationRevisionsPages(input *codedeploy.ListApplica
 		c.inc("ListApplicationRevisions")
 		return fn(page, lastPage)
 	}
-	return c.ListApplicationRevisionsPages(input, wrappedFn)
+	return c.svc.ListApplicationRevisionsPages(input, wrappedFn)
 }
 
 // ListApplicationRevisionsPagesWithContext is a passthrough to the underlying ListApplicationRevisionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListApplicationRevisions when applied to the request.
 func (c *CodeDeploy) ListApplicationRevisionsPagesWithContext(ctx aws.Context, input *codedeploy.ListApplicationRevisionsInput, fn func(*codedeploy.ListApplicationRevisionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListApplicationRevisions"))
-	return c.ListApplicationRevisionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListApplicationRevisionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListApplicationsRequest is a passthrough to the underlying ListApplicationsRequest.
@@ -561,14 +561,14 @@ func (c *CodeDeploy) ListApplicationsPages(input *codedeploy.ListApplicationsInp
 		c.inc("ListApplications")
 		return fn(page, lastPage)
 	}
-	return c.ListApplicationsPages(input, wrappedFn)
+	return c.svc.ListApplicationsPages(input, wrappedFn)
 }
 
 // ListApplicationsPagesWithContext is a passthrough to the underlying ListApplicationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListApplications when applied to the request.
 func (c *CodeDeploy) ListApplicationsPagesWithContext(ctx aws.Context, input *codedeploy.ListApplicationsInput, fn func(*codedeploy.ListApplicationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListApplications"))
-	return c.ListApplicationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListApplicationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListDeploymentConfigsRequest is a passthrough to the underlying ListDeploymentConfigsRequest.
@@ -601,14 +601,14 @@ func (c *CodeDeploy) ListDeploymentConfigsPages(input *codedeploy.ListDeployment
 		c.inc("ListDeploymentConfigs")
 		return fn(page, lastPage)
 	}
-	return c.ListDeploymentConfigsPages(input, wrappedFn)
+	return c.svc.ListDeploymentConfigsPages(input, wrappedFn)
 }
 
 // ListDeploymentConfigsPagesWithContext is a passthrough to the underlying ListDeploymentConfigsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDeploymentConfigs when applied to the request.
 func (c *CodeDeploy) ListDeploymentConfigsPagesWithContext(ctx aws.Context, input *codedeploy.ListDeploymentConfigsInput, fn func(*codedeploy.ListDeploymentConfigsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDeploymentConfigs"))
-	return c.ListDeploymentConfigsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDeploymentConfigsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListDeploymentGroupsRequest is a passthrough to the underlying ListDeploymentGroupsRequest.
@@ -641,14 +641,14 @@ func (c *CodeDeploy) ListDeploymentGroupsPages(input *codedeploy.ListDeploymentG
 		c.inc("ListDeploymentGroups")
 		return fn(page, lastPage)
 	}
-	return c.ListDeploymentGroupsPages(input, wrappedFn)
+	return c.svc.ListDeploymentGroupsPages(input, wrappedFn)
 }
 
 // ListDeploymentGroupsPagesWithContext is a passthrough to the underlying ListDeploymentGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDeploymentGroups when applied to the request.
 func (c *CodeDeploy) ListDeploymentGroupsPagesWithContext(ctx aws.Context, input *codedeploy.ListDeploymentGroupsInput, fn func(*codedeploy.ListDeploymentGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDeploymentGroups"))
-	return c.ListDeploymentGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDeploymentGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListDeploymentInstancesRequest is a passthrough to the underlying ListDeploymentInstancesRequest.
@@ -681,14 +681,14 @@ func (c *CodeDeploy) ListDeploymentInstancesPages(input *codedeploy.ListDeployme
 		c.inc("ListDeploymentInstances")
 		return fn(page, lastPage)
 	}
-	return c.ListDeploymentInstancesPages(input, wrappedFn)
+	return c.svc.ListDeploymentInstancesPages(input, wrappedFn)
 }
 
 // ListDeploymentInstancesPagesWithContext is a passthrough to the underlying ListDeploymentInstancesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDeploymentInstances when applied to the request.
 func (c *CodeDeploy) ListDeploymentInstancesPagesWithContext(ctx aws.Context, input *codedeploy.ListDeploymentInstancesInput, fn func(*codedeploy.ListDeploymentInstancesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDeploymentInstances"))
-	return c.ListDeploymentInstancesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDeploymentInstancesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListDeploymentsRequest is a passthrough to the underlying ListDeploymentsRequest.
@@ -721,14 +721,14 @@ func (c *CodeDeploy) ListDeploymentsPages(input *codedeploy.ListDeploymentsInput
 		c.inc("ListDeployments")
 		return fn(page, lastPage)
 	}
-	return c.ListDeploymentsPages(input, wrappedFn)
+	return c.svc.ListDeploymentsPages(input, wrappedFn)
 }
 
 // ListDeploymentsPagesWithContext is a passthrough to the underlying ListDeploymentsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListDeployments when applied to the request.
 func (c *CodeDeploy) ListDeploymentsPagesWithContext(ctx aws.Context, input *codedeploy.ListDeploymentsInput, fn func(*codedeploy.ListDeploymentsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListDeployments"))
-	return c.ListDeploymentsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListDeploymentsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListGitHubAccountTokenNamesRequest is a passthrough to the underlying ListGitHubAccountTokenNamesRequest.

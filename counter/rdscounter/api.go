@@ -836,14 +836,14 @@ func (c *RDS) DescribeDBEngineVersionsPages(input *rds.DescribeDBEngineVersionsI
 		c.inc("DescribeDBEngineVersions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDBEngineVersionsPages(input, wrappedFn)
+	return c.svc.DescribeDBEngineVersionsPages(input, wrappedFn)
 }
 
 // DescribeDBEngineVersionsPagesWithContext is a passthrough to the underlying DescribeDBEngineVersionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDBEngineVersions when applied to the request.
 func (c *RDS) DescribeDBEngineVersionsPagesWithContext(ctx aws.Context, input *rds.DescribeDBEngineVersionsInput, fn func(*rds.DescribeDBEngineVersionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDBEngineVersions"))
-	return c.DescribeDBEngineVersionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDBEngineVersionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeDBInstancesRequest is a passthrough to the underlying DescribeDBInstancesRequest.
@@ -876,14 +876,14 @@ func (c *RDS) DescribeDBInstancesPages(input *rds.DescribeDBInstancesInput, fn f
 		c.inc("DescribeDBInstances")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDBInstancesPages(input, wrappedFn)
+	return c.svc.DescribeDBInstancesPages(input, wrappedFn)
 }
 
 // DescribeDBInstancesPagesWithContext is a passthrough to the underlying DescribeDBInstancesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDBInstances when applied to the request.
 func (c *RDS) DescribeDBInstancesPagesWithContext(ctx aws.Context, input *rds.DescribeDBInstancesInput, fn func(*rds.DescribeDBInstancesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDBInstances"))
-	return c.DescribeDBInstancesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDBInstancesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeDBLogFilesRequest is a passthrough to the underlying DescribeDBLogFilesRequest.
@@ -916,14 +916,14 @@ func (c *RDS) DescribeDBLogFilesPages(input *rds.DescribeDBLogFilesInput, fn fun
 		c.inc("DescribeDBLogFiles")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDBLogFilesPages(input, wrappedFn)
+	return c.svc.DescribeDBLogFilesPages(input, wrappedFn)
 }
 
 // DescribeDBLogFilesPagesWithContext is a passthrough to the underlying DescribeDBLogFilesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDBLogFiles when applied to the request.
 func (c *RDS) DescribeDBLogFilesPagesWithContext(ctx aws.Context, input *rds.DescribeDBLogFilesInput, fn func(*rds.DescribeDBLogFilesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDBLogFiles"))
-	return c.DescribeDBLogFilesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDBLogFilesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeDBParameterGroupsRequest is a passthrough to the underlying DescribeDBParameterGroupsRequest.
@@ -956,14 +956,14 @@ func (c *RDS) DescribeDBParameterGroupsPages(input *rds.DescribeDBParameterGroup
 		c.inc("DescribeDBParameterGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDBParameterGroupsPages(input, wrappedFn)
+	return c.svc.DescribeDBParameterGroupsPages(input, wrappedFn)
 }
 
 // DescribeDBParameterGroupsPagesWithContext is a passthrough to the underlying DescribeDBParameterGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDBParameterGroups when applied to the request.
 func (c *RDS) DescribeDBParameterGroupsPagesWithContext(ctx aws.Context, input *rds.DescribeDBParameterGroupsInput, fn func(*rds.DescribeDBParameterGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDBParameterGroups"))
-	return c.DescribeDBParameterGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDBParameterGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeDBParametersRequest is a passthrough to the underlying DescribeDBParametersRequest.
@@ -996,14 +996,14 @@ func (c *RDS) DescribeDBParametersPages(input *rds.DescribeDBParametersInput, fn
 		c.inc("DescribeDBParameters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDBParametersPages(input, wrappedFn)
+	return c.svc.DescribeDBParametersPages(input, wrappedFn)
 }
 
 // DescribeDBParametersPagesWithContext is a passthrough to the underlying DescribeDBParametersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDBParameters when applied to the request.
 func (c *RDS) DescribeDBParametersPagesWithContext(ctx aws.Context, input *rds.DescribeDBParametersInput, fn func(*rds.DescribeDBParametersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDBParameters"))
-	return c.DescribeDBParametersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDBParametersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeDBSecurityGroupsRequest is a passthrough to the underlying DescribeDBSecurityGroupsRequest.
@@ -1036,14 +1036,14 @@ func (c *RDS) DescribeDBSecurityGroupsPages(input *rds.DescribeDBSecurityGroupsI
 		c.inc("DescribeDBSecurityGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDBSecurityGroupsPages(input, wrappedFn)
+	return c.svc.DescribeDBSecurityGroupsPages(input, wrappedFn)
 }
 
 // DescribeDBSecurityGroupsPagesWithContext is a passthrough to the underlying DescribeDBSecurityGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDBSecurityGroups when applied to the request.
 func (c *RDS) DescribeDBSecurityGroupsPagesWithContext(ctx aws.Context, input *rds.DescribeDBSecurityGroupsInput, fn func(*rds.DescribeDBSecurityGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDBSecurityGroups"))
-	return c.DescribeDBSecurityGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDBSecurityGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeDBSnapshotAttributesRequest is a passthrough to the underlying DescribeDBSnapshotAttributesRequest.
@@ -1097,14 +1097,14 @@ func (c *RDS) DescribeDBSnapshotsPages(input *rds.DescribeDBSnapshotsInput, fn f
 		c.inc("DescribeDBSnapshots")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDBSnapshotsPages(input, wrappedFn)
+	return c.svc.DescribeDBSnapshotsPages(input, wrappedFn)
 }
 
 // DescribeDBSnapshotsPagesWithContext is a passthrough to the underlying DescribeDBSnapshotsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDBSnapshots when applied to the request.
 func (c *RDS) DescribeDBSnapshotsPagesWithContext(ctx aws.Context, input *rds.DescribeDBSnapshotsInput, fn func(*rds.DescribeDBSnapshotsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDBSnapshots"))
-	return c.DescribeDBSnapshotsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDBSnapshotsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeDBSubnetGroupsRequest is a passthrough to the underlying DescribeDBSubnetGroupsRequest.
@@ -1137,14 +1137,14 @@ func (c *RDS) DescribeDBSubnetGroupsPages(input *rds.DescribeDBSubnetGroupsInput
 		c.inc("DescribeDBSubnetGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeDBSubnetGroupsPages(input, wrappedFn)
+	return c.svc.DescribeDBSubnetGroupsPages(input, wrappedFn)
 }
 
 // DescribeDBSubnetGroupsPagesWithContext is a passthrough to the underlying DescribeDBSubnetGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeDBSubnetGroups when applied to the request.
 func (c *RDS) DescribeDBSubnetGroupsPagesWithContext(ctx aws.Context, input *rds.DescribeDBSubnetGroupsInput, fn func(*rds.DescribeDBSubnetGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeDBSubnetGroups"))
-	return c.DescribeDBSubnetGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeDBSubnetGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEngineDefaultClusterParametersRequest is a passthrough to the underlying DescribeEngineDefaultClusterParametersRequest.
@@ -1198,14 +1198,14 @@ func (c *RDS) DescribeEngineDefaultParametersPages(input *rds.DescribeEngineDefa
 		c.inc("DescribeEngineDefaultParameters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEngineDefaultParametersPages(input, wrappedFn)
+	return c.svc.DescribeEngineDefaultParametersPages(input, wrappedFn)
 }
 
 // DescribeEngineDefaultParametersPagesWithContext is a passthrough to the underlying DescribeEngineDefaultParametersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEngineDefaultParameters when applied to the request.
 func (c *RDS) DescribeEngineDefaultParametersPagesWithContext(ctx aws.Context, input *rds.DescribeEngineDefaultParametersInput, fn func(*rds.DescribeEngineDefaultParametersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEngineDefaultParameters"))
-	return c.DescribeEngineDefaultParametersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEngineDefaultParametersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEventCategoriesRequest is a passthrough to the underlying DescribeEventCategoriesRequest.
@@ -1259,14 +1259,14 @@ func (c *RDS) DescribeEventSubscriptionsPages(input *rds.DescribeEventSubscripti
 		c.inc("DescribeEventSubscriptions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEventSubscriptionsPages(input, wrappedFn)
+	return c.svc.DescribeEventSubscriptionsPages(input, wrappedFn)
 }
 
 // DescribeEventSubscriptionsPagesWithContext is a passthrough to the underlying DescribeEventSubscriptionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEventSubscriptions when applied to the request.
 func (c *RDS) DescribeEventSubscriptionsPagesWithContext(ctx aws.Context, input *rds.DescribeEventSubscriptionsInput, fn func(*rds.DescribeEventSubscriptionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEventSubscriptions"))
-	return c.DescribeEventSubscriptionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEventSubscriptionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEventsRequest is a passthrough to the underlying DescribeEventsRequest.
@@ -1299,14 +1299,14 @@ func (c *RDS) DescribeEventsPages(input *rds.DescribeEventsInput, fn func(*rds.D
 		c.inc("DescribeEvents")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEventsPages(input, wrappedFn)
+	return c.svc.DescribeEventsPages(input, wrappedFn)
 }
 
 // DescribeEventsPagesWithContext is a passthrough to the underlying DescribeEventsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEvents when applied to the request.
 func (c *RDS) DescribeEventsPagesWithContext(ctx aws.Context, input *rds.DescribeEventsInput, fn func(*rds.DescribeEventsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEvents"))
-	return c.DescribeEventsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEventsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeOptionGroupOptionsRequest is a passthrough to the underlying DescribeOptionGroupOptionsRequest.
@@ -1339,14 +1339,14 @@ func (c *RDS) DescribeOptionGroupOptionsPages(input *rds.DescribeOptionGroupOpti
 		c.inc("DescribeOptionGroupOptions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeOptionGroupOptionsPages(input, wrappedFn)
+	return c.svc.DescribeOptionGroupOptionsPages(input, wrappedFn)
 }
 
 // DescribeOptionGroupOptionsPagesWithContext is a passthrough to the underlying DescribeOptionGroupOptionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeOptionGroupOptions when applied to the request.
 func (c *RDS) DescribeOptionGroupOptionsPagesWithContext(ctx aws.Context, input *rds.DescribeOptionGroupOptionsInput, fn func(*rds.DescribeOptionGroupOptionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeOptionGroupOptions"))
-	return c.DescribeOptionGroupOptionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeOptionGroupOptionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeOptionGroupsRequest is a passthrough to the underlying DescribeOptionGroupsRequest.
@@ -1379,14 +1379,14 @@ func (c *RDS) DescribeOptionGroupsPages(input *rds.DescribeOptionGroupsInput, fn
 		c.inc("DescribeOptionGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeOptionGroupsPages(input, wrappedFn)
+	return c.svc.DescribeOptionGroupsPages(input, wrappedFn)
 }
 
 // DescribeOptionGroupsPagesWithContext is a passthrough to the underlying DescribeOptionGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeOptionGroups when applied to the request.
 func (c *RDS) DescribeOptionGroupsPagesWithContext(ctx aws.Context, input *rds.DescribeOptionGroupsInput, fn func(*rds.DescribeOptionGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeOptionGroups"))
-	return c.DescribeOptionGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeOptionGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeOrderableDBInstanceOptionsRequest is a passthrough to the underlying DescribeOrderableDBInstanceOptionsRequest.
@@ -1419,14 +1419,14 @@ func (c *RDS) DescribeOrderableDBInstanceOptionsPages(input *rds.DescribeOrderab
 		c.inc("DescribeOrderableDBInstanceOptions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeOrderableDBInstanceOptionsPages(input, wrappedFn)
+	return c.svc.DescribeOrderableDBInstanceOptionsPages(input, wrappedFn)
 }
 
 // DescribeOrderableDBInstanceOptionsPagesWithContext is a passthrough to the underlying DescribeOrderableDBInstanceOptionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeOrderableDBInstanceOptions when applied to the request.
 func (c *RDS) DescribeOrderableDBInstanceOptionsPagesWithContext(ctx aws.Context, input *rds.DescribeOrderableDBInstanceOptionsInput, fn func(*rds.DescribeOrderableDBInstanceOptionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeOrderableDBInstanceOptions"))
-	return c.DescribeOrderableDBInstanceOptionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeOrderableDBInstanceOptionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribePendingMaintenanceActionsRequest is a passthrough to the underlying DescribePendingMaintenanceActionsRequest.
@@ -1480,14 +1480,14 @@ func (c *RDS) DescribeReservedDBInstancesPages(input *rds.DescribeReservedDBInst
 		c.inc("DescribeReservedDBInstances")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReservedDBInstancesPages(input, wrappedFn)
+	return c.svc.DescribeReservedDBInstancesPages(input, wrappedFn)
 }
 
 // DescribeReservedDBInstancesPagesWithContext is a passthrough to the underlying DescribeReservedDBInstancesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReservedDBInstances when applied to the request.
 func (c *RDS) DescribeReservedDBInstancesPagesWithContext(ctx aws.Context, input *rds.DescribeReservedDBInstancesInput, fn func(*rds.DescribeReservedDBInstancesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReservedDBInstances"))
-	return c.DescribeReservedDBInstancesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReservedDBInstancesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeReservedDBInstancesOfferingsRequest is a passthrough to the underlying DescribeReservedDBInstancesOfferingsRequest.
@@ -1520,14 +1520,14 @@ func (c *RDS) DescribeReservedDBInstancesOfferingsPages(input *rds.DescribeReser
 		c.inc("DescribeReservedDBInstancesOfferings")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReservedDBInstancesOfferingsPages(input, wrappedFn)
+	return c.svc.DescribeReservedDBInstancesOfferingsPages(input, wrappedFn)
 }
 
 // DescribeReservedDBInstancesOfferingsPagesWithContext is a passthrough to the underlying DescribeReservedDBInstancesOfferingsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReservedDBInstancesOfferings when applied to the request.
 func (c *RDS) DescribeReservedDBInstancesOfferingsPagesWithContext(ctx aws.Context, input *rds.DescribeReservedDBInstancesOfferingsInput, fn func(*rds.DescribeReservedDBInstancesOfferingsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReservedDBInstancesOfferings"))
-	return c.DescribeReservedDBInstancesOfferingsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReservedDBInstancesOfferingsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeSourceRegionsRequest is a passthrough to the underlying DescribeSourceRegionsRequest.
@@ -1602,14 +1602,14 @@ func (c *RDS) DownloadDBLogFilePortionPages(input *rds.DownloadDBLogFilePortionI
 		c.inc("DownloadDBLogFilePortion")
 		return fn(page, lastPage)
 	}
-	return c.DownloadDBLogFilePortionPages(input, wrappedFn)
+	return c.svc.DownloadDBLogFilePortionPages(input, wrappedFn)
 }
 
 // DownloadDBLogFilePortionPagesWithContext is a passthrough to the underlying DownloadDBLogFilePortionPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DownloadDBLogFilePortion when applied to the request.
 func (c *RDS) DownloadDBLogFilePortionPagesWithContext(ctx aws.Context, input *rds.DownloadDBLogFilePortionInput, fn func(*rds.DownloadDBLogFilePortionOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DownloadDBLogFilePortion"))
-	return c.DownloadDBLogFilePortionPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DownloadDBLogFilePortionPagesWithContext(ctx, input, fn, opts...)
 }
 
 // FailoverDBClusterRequest is a passthrough to the underlying FailoverDBClusterRequest.

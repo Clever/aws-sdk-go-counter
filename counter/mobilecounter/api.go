@@ -164,14 +164,14 @@ func (c *Mobile) ListBundlesPages(input *mobile.ListBundlesInput, fn func(*mobil
 		c.inc("ListBundles")
 		return fn(page, lastPage)
 	}
-	return c.ListBundlesPages(input, wrappedFn)
+	return c.svc.ListBundlesPages(input, wrappedFn)
 }
 
 // ListBundlesPagesWithContext is a passthrough to the underlying ListBundlesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListBundles when applied to the request.
 func (c *Mobile) ListBundlesPagesWithContext(ctx aws.Context, input *mobile.ListBundlesInput, fn func(*mobile.ListBundlesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListBundles"))
-	return c.ListBundlesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListBundlesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListProjectsRequest is a passthrough to the underlying ListProjectsRequest.
@@ -204,14 +204,14 @@ func (c *Mobile) ListProjectsPages(input *mobile.ListProjectsInput, fn func(*mob
 		c.inc("ListProjects")
 		return fn(page, lastPage)
 	}
-	return c.ListProjectsPages(input, wrappedFn)
+	return c.svc.ListProjectsPages(input, wrappedFn)
 }
 
 // ListProjectsPagesWithContext is a passthrough to the underlying ListProjectsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListProjects when applied to the request.
 func (c *Mobile) ListProjectsPagesWithContext(ctx aws.Context, input *mobile.ListProjectsInput, fn func(*mobile.ListProjectsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListProjects"))
-	return c.ListProjectsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListProjectsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // UpdateProjectRequest is a passthrough to the underlying UpdateProjectRequest.

@@ -353,14 +353,14 @@ func (c *ElastiCache) DescribeCacheClustersPages(input *elasticache.DescribeCach
 		c.inc("DescribeCacheClusters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeCacheClustersPages(input, wrappedFn)
+	return c.svc.DescribeCacheClustersPages(input, wrappedFn)
 }
 
 // DescribeCacheClustersPagesWithContext is a passthrough to the underlying DescribeCacheClustersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeCacheClusters when applied to the request.
 func (c *ElastiCache) DescribeCacheClustersPagesWithContext(ctx aws.Context, input *elasticache.DescribeCacheClustersInput, fn func(*elasticache.DescribeCacheClustersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeCacheClusters"))
-	return c.DescribeCacheClustersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeCacheClustersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeCacheEngineVersionsRequest is a passthrough to the underlying DescribeCacheEngineVersionsRequest.
@@ -393,14 +393,14 @@ func (c *ElastiCache) DescribeCacheEngineVersionsPages(input *elasticache.Descri
 		c.inc("DescribeCacheEngineVersions")
 		return fn(page, lastPage)
 	}
-	return c.DescribeCacheEngineVersionsPages(input, wrappedFn)
+	return c.svc.DescribeCacheEngineVersionsPages(input, wrappedFn)
 }
 
 // DescribeCacheEngineVersionsPagesWithContext is a passthrough to the underlying DescribeCacheEngineVersionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeCacheEngineVersions when applied to the request.
 func (c *ElastiCache) DescribeCacheEngineVersionsPagesWithContext(ctx aws.Context, input *elasticache.DescribeCacheEngineVersionsInput, fn func(*elasticache.DescribeCacheEngineVersionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeCacheEngineVersions"))
-	return c.DescribeCacheEngineVersionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeCacheEngineVersionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeCacheParameterGroupsRequest is a passthrough to the underlying DescribeCacheParameterGroupsRequest.
@@ -433,14 +433,14 @@ func (c *ElastiCache) DescribeCacheParameterGroupsPages(input *elasticache.Descr
 		c.inc("DescribeCacheParameterGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeCacheParameterGroupsPages(input, wrappedFn)
+	return c.svc.DescribeCacheParameterGroupsPages(input, wrappedFn)
 }
 
 // DescribeCacheParameterGroupsPagesWithContext is a passthrough to the underlying DescribeCacheParameterGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeCacheParameterGroups when applied to the request.
 func (c *ElastiCache) DescribeCacheParameterGroupsPagesWithContext(ctx aws.Context, input *elasticache.DescribeCacheParameterGroupsInput, fn func(*elasticache.DescribeCacheParameterGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeCacheParameterGroups"))
-	return c.DescribeCacheParameterGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeCacheParameterGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeCacheParametersRequest is a passthrough to the underlying DescribeCacheParametersRequest.
@@ -473,14 +473,14 @@ func (c *ElastiCache) DescribeCacheParametersPages(input *elasticache.DescribeCa
 		c.inc("DescribeCacheParameters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeCacheParametersPages(input, wrappedFn)
+	return c.svc.DescribeCacheParametersPages(input, wrappedFn)
 }
 
 // DescribeCacheParametersPagesWithContext is a passthrough to the underlying DescribeCacheParametersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeCacheParameters when applied to the request.
 func (c *ElastiCache) DescribeCacheParametersPagesWithContext(ctx aws.Context, input *elasticache.DescribeCacheParametersInput, fn func(*elasticache.DescribeCacheParametersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeCacheParameters"))
-	return c.DescribeCacheParametersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeCacheParametersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeCacheSecurityGroupsRequest is a passthrough to the underlying DescribeCacheSecurityGroupsRequest.
@@ -513,14 +513,14 @@ func (c *ElastiCache) DescribeCacheSecurityGroupsPages(input *elasticache.Descri
 		c.inc("DescribeCacheSecurityGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeCacheSecurityGroupsPages(input, wrappedFn)
+	return c.svc.DescribeCacheSecurityGroupsPages(input, wrappedFn)
 }
 
 // DescribeCacheSecurityGroupsPagesWithContext is a passthrough to the underlying DescribeCacheSecurityGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeCacheSecurityGroups when applied to the request.
 func (c *ElastiCache) DescribeCacheSecurityGroupsPagesWithContext(ctx aws.Context, input *elasticache.DescribeCacheSecurityGroupsInput, fn func(*elasticache.DescribeCacheSecurityGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeCacheSecurityGroups"))
-	return c.DescribeCacheSecurityGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeCacheSecurityGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeCacheSubnetGroupsRequest is a passthrough to the underlying DescribeCacheSubnetGroupsRequest.
@@ -553,14 +553,14 @@ func (c *ElastiCache) DescribeCacheSubnetGroupsPages(input *elasticache.Describe
 		c.inc("DescribeCacheSubnetGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeCacheSubnetGroupsPages(input, wrappedFn)
+	return c.svc.DescribeCacheSubnetGroupsPages(input, wrappedFn)
 }
 
 // DescribeCacheSubnetGroupsPagesWithContext is a passthrough to the underlying DescribeCacheSubnetGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeCacheSubnetGroups when applied to the request.
 func (c *ElastiCache) DescribeCacheSubnetGroupsPagesWithContext(ctx aws.Context, input *elasticache.DescribeCacheSubnetGroupsInput, fn func(*elasticache.DescribeCacheSubnetGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeCacheSubnetGroups"))
-	return c.DescribeCacheSubnetGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeCacheSubnetGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEngineDefaultParametersRequest is a passthrough to the underlying DescribeEngineDefaultParametersRequest.
@@ -593,14 +593,14 @@ func (c *ElastiCache) DescribeEngineDefaultParametersPages(input *elasticache.De
 		c.inc("DescribeEngineDefaultParameters")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEngineDefaultParametersPages(input, wrappedFn)
+	return c.svc.DescribeEngineDefaultParametersPages(input, wrappedFn)
 }
 
 // DescribeEngineDefaultParametersPagesWithContext is a passthrough to the underlying DescribeEngineDefaultParametersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEngineDefaultParameters when applied to the request.
 func (c *ElastiCache) DescribeEngineDefaultParametersPagesWithContext(ctx aws.Context, input *elasticache.DescribeEngineDefaultParametersInput, fn func(*elasticache.DescribeEngineDefaultParametersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEngineDefaultParameters"))
-	return c.DescribeEngineDefaultParametersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEngineDefaultParametersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeEventsRequest is a passthrough to the underlying DescribeEventsRequest.
@@ -633,14 +633,14 @@ func (c *ElastiCache) DescribeEventsPages(input *elasticache.DescribeEventsInput
 		c.inc("DescribeEvents")
 		return fn(page, lastPage)
 	}
-	return c.DescribeEventsPages(input, wrappedFn)
+	return c.svc.DescribeEventsPages(input, wrappedFn)
 }
 
 // DescribeEventsPagesWithContext is a passthrough to the underlying DescribeEventsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeEvents when applied to the request.
 func (c *ElastiCache) DescribeEventsPagesWithContext(ctx aws.Context, input *elasticache.DescribeEventsInput, fn func(*elasticache.DescribeEventsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeEvents"))
-	return c.DescribeEventsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeEventsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeReplicationGroupsRequest is a passthrough to the underlying DescribeReplicationGroupsRequest.
@@ -673,14 +673,14 @@ func (c *ElastiCache) DescribeReplicationGroupsPages(input *elasticache.Describe
 		c.inc("DescribeReplicationGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReplicationGroupsPages(input, wrappedFn)
+	return c.svc.DescribeReplicationGroupsPages(input, wrappedFn)
 }
 
 // DescribeReplicationGroupsPagesWithContext is a passthrough to the underlying DescribeReplicationGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReplicationGroups when applied to the request.
 func (c *ElastiCache) DescribeReplicationGroupsPagesWithContext(ctx aws.Context, input *elasticache.DescribeReplicationGroupsInput, fn func(*elasticache.DescribeReplicationGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReplicationGroups"))
-	return c.DescribeReplicationGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReplicationGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeReservedCacheNodesRequest is a passthrough to the underlying DescribeReservedCacheNodesRequest.
@@ -713,14 +713,14 @@ func (c *ElastiCache) DescribeReservedCacheNodesPages(input *elasticache.Describ
 		c.inc("DescribeReservedCacheNodes")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReservedCacheNodesPages(input, wrappedFn)
+	return c.svc.DescribeReservedCacheNodesPages(input, wrappedFn)
 }
 
 // DescribeReservedCacheNodesPagesWithContext is a passthrough to the underlying DescribeReservedCacheNodesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReservedCacheNodes when applied to the request.
 func (c *ElastiCache) DescribeReservedCacheNodesPagesWithContext(ctx aws.Context, input *elasticache.DescribeReservedCacheNodesInput, fn func(*elasticache.DescribeReservedCacheNodesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReservedCacheNodes"))
-	return c.DescribeReservedCacheNodesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReservedCacheNodesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeReservedCacheNodesOfferingsRequest is a passthrough to the underlying DescribeReservedCacheNodesOfferingsRequest.
@@ -753,14 +753,14 @@ func (c *ElastiCache) DescribeReservedCacheNodesOfferingsPages(input *elasticach
 		c.inc("DescribeReservedCacheNodesOfferings")
 		return fn(page, lastPage)
 	}
-	return c.DescribeReservedCacheNodesOfferingsPages(input, wrappedFn)
+	return c.svc.DescribeReservedCacheNodesOfferingsPages(input, wrappedFn)
 }
 
 // DescribeReservedCacheNodesOfferingsPagesWithContext is a passthrough to the underlying DescribeReservedCacheNodesOfferingsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeReservedCacheNodesOfferings when applied to the request.
 func (c *ElastiCache) DescribeReservedCacheNodesOfferingsPagesWithContext(ctx aws.Context, input *elasticache.DescribeReservedCacheNodesOfferingsInput, fn func(*elasticache.DescribeReservedCacheNodesOfferingsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeReservedCacheNodesOfferings"))
-	return c.DescribeReservedCacheNodesOfferingsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeReservedCacheNodesOfferingsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeSnapshotsRequest is a passthrough to the underlying DescribeSnapshotsRequest.
@@ -793,14 +793,14 @@ func (c *ElastiCache) DescribeSnapshotsPages(input *elasticache.DescribeSnapshot
 		c.inc("DescribeSnapshots")
 		return fn(page, lastPage)
 	}
-	return c.DescribeSnapshotsPages(input, wrappedFn)
+	return c.svc.DescribeSnapshotsPages(input, wrappedFn)
 }
 
 // DescribeSnapshotsPagesWithContext is a passthrough to the underlying DescribeSnapshotsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeSnapshots when applied to the request.
 func (c *ElastiCache) DescribeSnapshotsPagesWithContext(ctx aws.Context, input *elasticache.DescribeSnapshotsInput, fn func(*elasticache.DescribeSnapshotsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeSnapshots"))
-	return c.DescribeSnapshotsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeSnapshotsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListAllowedNodeTypeModificationsRequest is a passthrough to the underlying ListAllowedNodeTypeModificationsRequest.

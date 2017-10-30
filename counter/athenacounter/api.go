@@ -164,14 +164,14 @@ func (c *Athena) GetQueryResultsPages(input *athena.GetQueryResultsInput, fn fun
 		c.inc("GetQueryResults")
 		return fn(page, lastPage)
 	}
-	return c.GetQueryResultsPages(input, wrappedFn)
+	return c.svc.GetQueryResultsPages(input, wrappedFn)
 }
 
 // GetQueryResultsPagesWithContext is a passthrough to the underlying GetQueryResultsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to GetQueryResults when applied to the request.
 func (c *Athena) GetQueryResultsPagesWithContext(ctx aws.Context, input *athena.GetQueryResultsInput, fn func(*athena.GetQueryResultsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetQueryResults"))
-	return c.GetQueryResultsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.GetQueryResultsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListNamedQueriesRequest is a passthrough to the underlying ListNamedQueriesRequest.
@@ -204,14 +204,14 @@ func (c *Athena) ListNamedQueriesPages(input *athena.ListNamedQueriesInput, fn f
 		c.inc("ListNamedQueries")
 		return fn(page, lastPage)
 	}
-	return c.ListNamedQueriesPages(input, wrappedFn)
+	return c.svc.ListNamedQueriesPages(input, wrappedFn)
 }
 
 // ListNamedQueriesPagesWithContext is a passthrough to the underlying ListNamedQueriesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListNamedQueries when applied to the request.
 func (c *Athena) ListNamedQueriesPagesWithContext(ctx aws.Context, input *athena.ListNamedQueriesInput, fn func(*athena.ListNamedQueriesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListNamedQueries"))
-	return c.ListNamedQueriesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListNamedQueriesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListQueryExecutionsRequest is a passthrough to the underlying ListQueryExecutionsRequest.
@@ -244,14 +244,14 @@ func (c *Athena) ListQueryExecutionsPages(input *athena.ListQueryExecutionsInput
 		c.inc("ListQueryExecutions")
 		return fn(page, lastPage)
 	}
-	return c.ListQueryExecutionsPages(input, wrappedFn)
+	return c.svc.ListQueryExecutionsPages(input, wrappedFn)
 }
 
 // ListQueryExecutionsPagesWithContext is a passthrough to the underlying ListQueryExecutionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListQueryExecutions when applied to the request.
 func (c *Athena) ListQueryExecutionsPagesWithContext(ctx aws.Context, input *athena.ListQueryExecutionsInput, fn func(*athena.ListQueryExecutionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListQueryExecutions"))
-	return c.ListQueryExecutionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListQueryExecutionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // StartQueryExecutionRequest is a passthrough to the underlying StartQueryExecutionRequest.

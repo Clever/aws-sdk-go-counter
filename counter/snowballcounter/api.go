@@ -164,14 +164,14 @@ func (c *Snowball) DescribeAddressesPages(input *snowball.DescribeAddressesInput
 		c.inc("DescribeAddresses")
 		return fn(page, lastPage)
 	}
-	return c.DescribeAddressesPages(input, wrappedFn)
+	return c.svc.DescribeAddressesPages(input, wrappedFn)
 }
 
 // DescribeAddressesPagesWithContext is a passthrough to the underlying DescribeAddressesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeAddresses when applied to the request.
 func (c *Snowball) DescribeAddressesPagesWithContext(ctx aws.Context, input *snowball.DescribeAddressesInput, fn func(*snowball.DescribeAddressesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeAddresses"))
-	return c.DescribeAddressesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeAddressesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeClusterRequest is a passthrough to the underlying DescribeClusterRequest.
@@ -351,14 +351,14 @@ func (c *Snowball) ListJobsPages(input *snowball.ListJobsInput, fn func(*snowbal
 		c.inc("ListJobs")
 		return fn(page, lastPage)
 	}
-	return c.ListJobsPages(input, wrappedFn)
+	return c.svc.ListJobsPages(input, wrappedFn)
 }
 
 // ListJobsPagesWithContext is a passthrough to the underlying ListJobsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListJobs when applied to the request.
 func (c *Snowball) ListJobsPagesWithContext(ctx aws.Context, input *snowball.ListJobsInput, fn func(*snowball.ListJobsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListJobs"))
-	return c.ListJobsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListJobsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // UpdateClusterRequest is a passthrough to the underlying UpdateClusterRequest.

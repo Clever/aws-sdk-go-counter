@@ -290,14 +290,14 @@ func (c *CloudFormation) DescribeStackEventsPages(input *cloudformation.Describe
 		c.inc("DescribeStackEvents")
 		return fn(page, lastPage)
 	}
-	return c.DescribeStackEventsPages(input, wrappedFn)
+	return c.svc.DescribeStackEventsPages(input, wrappedFn)
 }
 
 // DescribeStackEventsPagesWithContext is a passthrough to the underlying DescribeStackEventsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeStackEvents when applied to the request.
 func (c *CloudFormation) DescribeStackEventsPagesWithContext(ctx aws.Context, input *cloudformation.DescribeStackEventsInput, fn func(*cloudformation.DescribeStackEventsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeStackEvents"))
-	return c.DescribeStackEventsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeStackEventsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeStackInstanceRequest is a passthrough to the underlying DescribeStackInstanceRequest.
@@ -435,14 +435,14 @@ func (c *CloudFormation) DescribeStacksPages(input *cloudformation.DescribeStack
 		c.inc("DescribeStacks")
 		return fn(page, lastPage)
 	}
-	return c.DescribeStacksPages(input, wrappedFn)
+	return c.svc.DescribeStacksPages(input, wrappedFn)
 }
 
 // DescribeStacksPagesWithContext is a passthrough to the underlying DescribeStacksPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeStacks when applied to the request.
 func (c *CloudFormation) DescribeStacksPagesWithContext(ctx aws.Context, input *cloudformation.DescribeStacksInput, fn func(*cloudformation.DescribeStacksOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeStacks"))
-	return c.DescribeStacksPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeStacksPagesWithContext(ctx, input, fn, opts...)
 }
 
 // EstimateTemplateCostRequest is a passthrough to the underlying EstimateTemplateCostRequest.
@@ -601,14 +601,14 @@ func (c *CloudFormation) ListExportsPages(input *cloudformation.ListExportsInput
 		c.inc("ListExports")
 		return fn(page, lastPage)
 	}
-	return c.ListExportsPages(input, wrappedFn)
+	return c.svc.ListExportsPages(input, wrappedFn)
 }
 
 // ListExportsPagesWithContext is a passthrough to the underlying ListExportsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListExports when applied to the request.
 func (c *CloudFormation) ListExportsPagesWithContext(ctx aws.Context, input *cloudformation.ListExportsInput, fn func(*cloudformation.ListExportsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListExports"))
-	return c.ListExportsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListExportsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListImportsRequest is a passthrough to the underlying ListImportsRequest.
@@ -641,14 +641,14 @@ func (c *CloudFormation) ListImportsPages(input *cloudformation.ListImportsInput
 		c.inc("ListImports")
 		return fn(page, lastPage)
 	}
-	return c.ListImportsPages(input, wrappedFn)
+	return c.svc.ListImportsPages(input, wrappedFn)
 }
 
 // ListImportsPagesWithContext is a passthrough to the underlying ListImportsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListImports when applied to the request.
 func (c *CloudFormation) ListImportsPagesWithContext(ctx aws.Context, input *cloudformation.ListImportsInput, fn func(*cloudformation.ListImportsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListImports"))
-	return c.ListImportsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListImportsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListStackInstancesRequest is a passthrough to the underlying ListStackInstancesRequest.
@@ -702,14 +702,14 @@ func (c *CloudFormation) ListStackResourcesPages(input *cloudformation.ListStack
 		c.inc("ListStackResources")
 		return fn(page, lastPage)
 	}
-	return c.ListStackResourcesPages(input, wrappedFn)
+	return c.svc.ListStackResourcesPages(input, wrappedFn)
 }
 
 // ListStackResourcesPagesWithContext is a passthrough to the underlying ListStackResourcesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListStackResources when applied to the request.
 func (c *CloudFormation) ListStackResourcesPagesWithContext(ctx aws.Context, input *cloudformation.ListStackResourcesInput, fn func(*cloudformation.ListStackResourcesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListStackResources"))
-	return c.ListStackResourcesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListStackResourcesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListStackSetOperationResultsRequest is a passthrough to the underlying ListStackSetOperationResultsRequest.
@@ -805,14 +805,14 @@ func (c *CloudFormation) ListStacksPages(input *cloudformation.ListStacksInput, 
 		c.inc("ListStacks")
 		return fn(page, lastPage)
 	}
-	return c.ListStacksPages(input, wrappedFn)
+	return c.svc.ListStacksPages(input, wrappedFn)
 }
 
 // ListStacksPagesWithContext is a passthrough to the underlying ListStacksPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListStacks when applied to the request.
 func (c *CloudFormation) ListStacksPagesWithContext(ctx aws.Context, input *cloudformation.ListStacksInput, fn func(*cloudformation.ListStacksOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListStacks"))
-	return c.ListStacksPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListStacksPagesWithContext(ctx, input, fn, opts...)
 }
 
 // SetStackPolicyRequest is a passthrough to the underlying SetStackPolicyRequest.

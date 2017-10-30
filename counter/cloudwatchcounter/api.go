@@ -80,14 +80,14 @@ func (c *CloudWatch) DescribeAlarmHistoryPages(input *cloudwatch.DescribeAlarmHi
 		c.inc("DescribeAlarmHistory")
 		return fn(page, lastPage)
 	}
-	return c.DescribeAlarmHistoryPages(input, wrappedFn)
+	return c.svc.DescribeAlarmHistoryPages(input, wrappedFn)
 }
 
 // DescribeAlarmHistoryPagesWithContext is a passthrough to the underlying DescribeAlarmHistoryPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeAlarmHistory when applied to the request.
 func (c *CloudWatch) DescribeAlarmHistoryPagesWithContext(ctx aws.Context, input *cloudwatch.DescribeAlarmHistoryInput, fn func(*cloudwatch.DescribeAlarmHistoryOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeAlarmHistory"))
-	return c.DescribeAlarmHistoryPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeAlarmHistoryPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeAlarmsRequest is a passthrough to the underlying DescribeAlarmsRequest.
@@ -120,14 +120,14 @@ func (c *CloudWatch) DescribeAlarmsPages(input *cloudwatch.DescribeAlarmsInput, 
 		c.inc("DescribeAlarms")
 		return fn(page, lastPage)
 	}
-	return c.DescribeAlarmsPages(input, wrappedFn)
+	return c.svc.DescribeAlarmsPages(input, wrappedFn)
 }
 
 // DescribeAlarmsPagesWithContext is a passthrough to the underlying DescribeAlarmsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeAlarms when applied to the request.
 func (c *CloudWatch) DescribeAlarmsPagesWithContext(ctx aws.Context, input *cloudwatch.DescribeAlarmsInput, fn func(*cloudwatch.DescribeAlarmsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeAlarms"))
-	return c.DescribeAlarmsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeAlarmsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeAlarmsForMetricRequest is a passthrough to the underlying DescribeAlarmsForMetricRequest.
@@ -286,14 +286,14 @@ func (c *CloudWatch) ListMetricsPages(input *cloudwatch.ListMetricsInput, fn fun
 		c.inc("ListMetrics")
 		return fn(page, lastPage)
 	}
-	return c.ListMetricsPages(input, wrappedFn)
+	return c.svc.ListMetricsPages(input, wrappedFn)
 }
 
 // ListMetricsPagesWithContext is a passthrough to the underlying ListMetricsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListMetrics when applied to the request.
 func (c *CloudWatch) ListMetricsPagesWithContext(ctx aws.Context, input *cloudwatch.ListMetricsInput, fn func(*cloudwatch.ListMetricsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListMetrics"))
-	return c.ListMetricsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListMetricsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PutDashboardRequest is a passthrough to the underlying PutDashboardRequest.

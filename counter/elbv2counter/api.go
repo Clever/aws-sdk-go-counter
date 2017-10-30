@@ -311,14 +311,14 @@ func (c *ELBV2) DescribeListenersPages(input *elbv2.DescribeListenersInput, fn f
 		c.inc("DescribeListeners")
 		return fn(page, lastPage)
 	}
-	return c.DescribeListenersPages(input, wrappedFn)
+	return c.svc.DescribeListenersPages(input, wrappedFn)
 }
 
 // DescribeListenersPagesWithContext is a passthrough to the underlying DescribeListenersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeListeners when applied to the request.
 func (c *ELBV2) DescribeListenersPagesWithContext(ctx aws.Context, input *elbv2.DescribeListenersInput, fn func(*elbv2.DescribeListenersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeListeners"))
-	return c.DescribeListenersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeListenersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeLoadBalancerAttributesRequest is a passthrough to the underlying DescribeLoadBalancerAttributesRequest.
@@ -372,14 +372,14 @@ func (c *ELBV2) DescribeLoadBalancersPages(input *elbv2.DescribeLoadBalancersInp
 		c.inc("DescribeLoadBalancers")
 		return fn(page, lastPage)
 	}
-	return c.DescribeLoadBalancersPages(input, wrappedFn)
+	return c.svc.DescribeLoadBalancersPages(input, wrappedFn)
 }
 
 // DescribeLoadBalancersPagesWithContext is a passthrough to the underlying DescribeLoadBalancersPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeLoadBalancers when applied to the request.
 func (c *ELBV2) DescribeLoadBalancersPagesWithContext(ctx aws.Context, input *elbv2.DescribeLoadBalancersInput, fn func(*elbv2.DescribeLoadBalancersOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeLoadBalancers"))
-	return c.DescribeLoadBalancersPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeLoadBalancersPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeRulesRequest is a passthrough to the underlying DescribeRulesRequest.
@@ -496,14 +496,14 @@ func (c *ELBV2) DescribeTargetGroupsPages(input *elbv2.DescribeTargetGroupsInput
 		c.inc("DescribeTargetGroups")
 		return fn(page, lastPage)
 	}
-	return c.DescribeTargetGroupsPages(input, wrappedFn)
+	return c.svc.DescribeTargetGroupsPages(input, wrappedFn)
 }
 
 // DescribeTargetGroupsPagesWithContext is a passthrough to the underlying DescribeTargetGroupsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeTargetGroups when applied to the request.
 func (c *ELBV2) DescribeTargetGroupsPagesWithContext(ctx aws.Context, input *elbv2.DescribeTargetGroupsInput, fn func(*elbv2.DescribeTargetGroupsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeTargetGroups"))
-	return c.DescribeTargetGroupsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeTargetGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeTargetHealthRequest is a passthrough to the underlying DescribeTargetHealthRequest.

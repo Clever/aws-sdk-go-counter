@@ -689,14 +689,14 @@ func (c *StorageGateway) DescribeTapeArchivesPages(input *storagegateway.Describ
 		c.inc("DescribeTapeArchives")
 		return fn(page, lastPage)
 	}
-	return c.DescribeTapeArchivesPages(input, wrappedFn)
+	return c.svc.DescribeTapeArchivesPages(input, wrappedFn)
 }
 
 // DescribeTapeArchivesPagesWithContext is a passthrough to the underlying DescribeTapeArchivesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeTapeArchives when applied to the request.
 func (c *StorageGateway) DescribeTapeArchivesPagesWithContext(ctx aws.Context, input *storagegateway.DescribeTapeArchivesInput, fn func(*storagegateway.DescribeTapeArchivesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeTapeArchives"))
-	return c.DescribeTapeArchivesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeTapeArchivesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeTapeRecoveryPointsRequest is a passthrough to the underlying DescribeTapeRecoveryPointsRequest.
@@ -729,14 +729,14 @@ func (c *StorageGateway) DescribeTapeRecoveryPointsPages(input *storagegateway.D
 		c.inc("DescribeTapeRecoveryPoints")
 		return fn(page, lastPage)
 	}
-	return c.DescribeTapeRecoveryPointsPages(input, wrappedFn)
+	return c.svc.DescribeTapeRecoveryPointsPages(input, wrappedFn)
 }
 
 // DescribeTapeRecoveryPointsPagesWithContext is a passthrough to the underlying DescribeTapeRecoveryPointsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeTapeRecoveryPoints when applied to the request.
 func (c *StorageGateway) DescribeTapeRecoveryPointsPagesWithContext(ctx aws.Context, input *storagegateway.DescribeTapeRecoveryPointsInput, fn func(*storagegateway.DescribeTapeRecoveryPointsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeTapeRecoveryPoints"))
-	return c.DescribeTapeRecoveryPointsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeTapeRecoveryPointsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeTapesRequest is a passthrough to the underlying DescribeTapesRequest.
@@ -769,14 +769,14 @@ func (c *StorageGateway) DescribeTapesPages(input *storagegateway.DescribeTapesI
 		c.inc("DescribeTapes")
 		return fn(page, lastPage)
 	}
-	return c.DescribeTapesPages(input, wrappedFn)
+	return c.svc.DescribeTapesPages(input, wrappedFn)
 }
 
 // DescribeTapesPagesWithContext is a passthrough to the underlying DescribeTapesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeTapes when applied to the request.
 func (c *StorageGateway) DescribeTapesPagesWithContext(ctx aws.Context, input *storagegateway.DescribeTapesInput, fn func(*storagegateway.DescribeTapesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeTapes"))
-	return c.DescribeTapesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeTapesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeUploadBufferRequest is a passthrough to the underlying DescribeUploadBufferRequest.
@@ -830,14 +830,14 @@ func (c *StorageGateway) DescribeVTLDevicesPages(input *storagegateway.DescribeV
 		c.inc("DescribeVTLDevices")
 		return fn(page, lastPage)
 	}
-	return c.DescribeVTLDevicesPages(input, wrappedFn)
+	return c.svc.DescribeVTLDevicesPages(input, wrappedFn)
 }
 
 // DescribeVTLDevicesPagesWithContext is a passthrough to the underlying DescribeVTLDevicesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to DescribeVTLDevices when applied to the request.
 func (c *StorageGateway) DescribeVTLDevicesPagesWithContext(ctx aws.Context, input *storagegateway.DescribeVTLDevicesInput, fn func(*storagegateway.DescribeVTLDevicesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("DescribeVTLDevices"))
-	return c.DescribeVTLDevicesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.DescribeVTLDevicesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // DescribeWorkingStorageRequest is a passthrough to the underlying DescribeWorkingStorageRequest.
@@ -933,14 +933,14 @@ func (c *StorageGateway) ListGatewaysPages(input *storagegateway.ListGatewaysInp
 		c.inc("ListGateways")
 		return fn(page, lastPage)
 	}
-	return c.ListGatewaysPages(input, wrappedFn)
+	return c.svc.ListGatewaysPages(input, wrappedFn)
 }
 
 // ListGatewaysPagesWithContext is a passthrough to the underlying ListGatewaysPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListGateways when applied to the request.
 func (c *StorageGateway) ListGatewaysPagesWithContext(ctx aws.Context, input *storagegateway.ListGatewaysInput, fn func(*storagegateway.ListGatewaysOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListGateways"))
-	return c.ListGatewaysPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListGatewaysPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListLocalDisksRequest is a passthrough to the underlying ListLocalDisksRequest.
@@ -1078,14 +1078,14 @@ func (c *StorageGateway) ListVolumesPages(input *storagegateway.ListVolumesInput
 		c.inc("ListVolumes")
 		return fn(page, lastPage)
 	}
-	return c.ListVolumesPages(input, wrappedFn)
+	return c.svc.ListVolumesPages(input, wrappedFn)
 }
 
 // ListVolumesPagesWithContext is a passthrough to the underlying ListVolumesPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListVolumes when applied to the request.
 func (c *StorageGateway) ListVolumesPagesWithContext(ctx aws.Context, input *storagegateway.ListVolumesInput, fn func(*storagegateway.ListVolumesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListVolumes"))
-	return c.ListVolumesPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListVolumesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // RefreshCacheRequest is a passthrough to the underlying RefreshCacheRequest.

@@ -332,14 +332,14 @@ func (c *SNS) ListEndpointsByPlatformApplicationPages(input *sns.ListEndpointsBy
 		c.inc("ListEndpointsByPlatformApplication")
 		return fn(page, lastPage)
 	}
-	return c.ListEndpointsByPlatformApplicationPages(input, wrappedFn)
+	return c.svc.ListEndpointsByPlatformApplicationPages(input, wrappedFn)
 }
 
 // ListEndpointsByPlatformApplicationPagesWithContext is a passthrough to the underlying ListEndpointsByPlatformApplicationPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListEndpointsByPlatformApplication when applied to the request.
 func (c *SNS) ListEndpointsByPlatformApplicationPagesWithContext(ctx aws.Context, input *sns.ListEndpointsByPlatformApplicationInput, fn func(*sns.ListEndpointsByPlatformApplicationOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListEndpointsByPlatformApplication"))
-	return c.ListEndpointsByPlatformApplicationPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListEndpointsByPlatformApplicationPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListPhoneNumbersOptedOutRequest is a passthrough to the underlying ListPhoneNumbersOptedOutRequest.
@@ -393,14 +393,14 @@ func (c *SNS) ListPlatformApplicationsPages(input *sns.ListPlatformApplicationsI
 		c.inc("ListPlatformApplications")
 		return fn(page, lastPage)
 	}
-	return c.ListPlatformApplicationsPages(input, wrappedFn)
+	return c.svc.ListPlatformApplicationsPages(input, wrappedFn)
 }
 
 // ListPlatformApplicationsPagesWithContext is a passthrough to the underlying ListPlatformApplicationsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListPlatformApplications when applied to the request.
 func (c *SNS) ListPlatformApplicationsPagesWithContext(ctx aws.Context, input *sns.ListPlatformApplicationsInput, fn func(*sns.ListPlatformApplicationsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPlatformApplications"))
-	return c.ListPlatformApplicationsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListPlatformApplicationsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListSubscriptionsRequest is a passthrough to the underlying ListSubscriptionsRequest.
@@ -433,14 +433,14 @@ func (c *SNS) ListSubscriptionsPages(input *sns.ListSubscriptionsInput, fn func(
 		c.inc("ListSubscriptions")
 		return fn(page, lastPage)
 	}
-	return c.ListSubscriptionsPages(input, wrappedFn)
+	return c.svc.ListSubscriptionsPages(input, wrappedFn)
 }
 
 // ListSubscriptionsPagesWithContext is a passthrough to the underlying ListSubscriptionsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListSubscriptions when applied to the request.
 func (c *SNS) ListSubscriptionsPagesWithContext(ctx aws.Context, input *sns.ListSubscriptionsInput, fn func(*sns.ListSubscriptionsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListSubscriptions"))
-	return c.ListSubscriptionsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListSubscriptionsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListSubscriptionsByTopicRequest is a passthrough to the underlying ListSubscriptionsByTopicRequest.
@@ -473,14 +473,14 @@ func (c *SNS) ListSubscriptionsByTopicPages(input *sns.ListSubscriptionsByTopicI
 		c.inc("ListSubscriptionsByTopic")
 		return fn(page, lastPage)
 	}
-	return c.ListSubscriptionsByTopicPages(input, wrappedFn)
+	return c.svc.ListSubscriptionsByTopicPages(input, wrappedFn)
 }
 
 // ListSubscriptionsByTopicPagesWithContext is a passthrough to the underlying ListSubscriptionsByTopicPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListSubscriptionsByTopic when applied to the request.
 func (c *SNS) ListSubscriptionsByTopicPagesWithContext(ctx aws.Context, input *sns.ListSubscriptionsByTopicInput, fn func(*sns.ListSubscriptionsByTopicOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListSubscriptionsByTopic"))
-	return c.ListSubscriptionsByTopicPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListSubscriptionsByTopicPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListTopicsRequest is a passthrough to the underlying ListTopicsRequest.
@@ -513,14 +513,14 @@ func (c *SNS) ListTopicsPages(input *sns.ListTopicsInput, fn func(*sns.ListTopic
 		c.inc("ListTopics")
 		return fn(page, lastPage)
 	}
-	return c.ListTopicsPages(input, wrappedFn)
+	return c.svc.ListTopicsPages(input, wrappedFn)
 }
 
 // ListTopicsPagesWithContext is a passthrough to the underlying ListTopicsPagesWithContext method.
 // It will add a request.Option that will increment the count of requests made to ListTopics when applied to the request.
 func (c *SNS) ListTopicsPagesWithContext(ctx aws.Context, input *sns.ListTopicsInput, fn func(*sns.ListTopicsOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListTopics"))
-	return c.ListTopicsPagesWithContext(ctx, input, fn, opts...)
+	return c.svc.ListTopicsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // OptInPhoneNumberRequest is a passthrough to the underlying OptInPhoneNumberRequest.
