@@ -45,9 +45,9 @@ type Waiter struct {
 // this API.
 func (a *API) WaitersGoCode() string {
 	var buf bytes.Buffer
-	fmt.Fprintf(&buf, "import (\n%q\n\n%q\n%q\n)",
-		"time",
+	fmt.Fprintf(&buf, "import (\n%q\n%q\n%q\n)",
 		"github.com/aws/aws-sdk-go/aws",
+		"github.com/aws/aws-sdk-go/service/"+a.PackageName(),
 		"github.com/aws/aws-sdk-go/aws/request",
 	)
 
@@ -111,53 +111,17 @@ var waiterTmpls = template.Must(template.New("waiterTmpls").Funcs(
 	},
 ).Parse(`
 {{ define "waiter"}}
-// WaitUntil{{ .Name }} uses the {{ .Operation.API.NiceName }} API operation
-// {{ .OperationName }} to wait for a condition to be met before returning.
-// If the condition is not met within the max attempt window, an error will
-// be returned.
-func (c *{{ .Operation.API.StructName }}) WaitUntil{{ .Name }}(input {{ .Operation.InputRef.GoType }}) error {
+// WaitUntil{{ .Name }} calls WaitUntil{{ .Name }}WithContext with aws.BackgroundContext().
+func (c *{{ .Operation.API.StructName }}) WaitUntil{{ .Name }}(input {{ .Operation.InputRef.GoTypeWithPkgName }}) error {
 	return c.WaitUntil{{ .Name }}WithContext(aws.BackgroundContext(), input)
 }
 
-// WaitUntil{{ .Name }}WithContext is an extended version of WaitUntil{{ .Name }}.
-// With the support for passing in a context and options to configure the
-// Waiter and the underlying request options.
-//
-// The context must be non-nil and will be used for request cancellation. If
-// the context is nil a panic will occur. In the future the SDK may create
-// sub-contexts for http.Requests. See https://golang.org/pkg/context/
-// for more information on using Contexts.
+// WaitUntil{{ .Name }}WithContext calls the underlying client method with a request option that 
+// will count {{ .OperationName }} requests.
 func (c *{{ .Operation.API.StructName }}) WaitUntil{{ .Name }}WithContext(` +
-	`ctx aws.Context, input {{ .Operation.InputRef.GoType }}, opts ...request.WaiterOption) error {
-	w := request.Waiter{
-		Name:    "WaitUntil{{ .Name }}",
-		MaxAttempts: {{ .MaxAttempts }},
-		Delay: request.ConstantWaiterDelay({{ .Delay }} * time.Second),
-		Acceptors: []request.WaiterAcceptor{
-			{{ range $_, $a := .Acceptors }}{
-				State:    request.{{ titleCase .State }}WaiterState,
-				Matcher:  request.{{ titleCase .Matcher }}WaiterMatch,
-				{{- if .Argument }}Argument: "{{ .Argument }}",{{ end }}
-				Expected: {{ .ExpectedString }},
-			},
-			{{ end }}
-		},
-		Logger: c.Config.Logger,
-		NewRequest: func(opts []request.Option) (*request.Request, error) {
-			var inCpy {{ .Operation.InputRef.GoType }}
-			if input != nil  {
-				tmp := *input
-				inCpy = &tmp
-			}
-			req, _ := c.{{ .OperationName }}Request(inCpy)
-			req.SetContext(ctx)
-			req.ApplyOptions(opts...)
-			return req, nil
-		},
-	}
-	w.ApplyOptions(opts...)
-
-	return w.WaitWithContext(ctx)
+	`ctx aws.Context, input {{ .Operation.InputRef.GoTypeWithPkgName }}, opts ...request.WaiterOption) error {
+	opts = append(opts, request.WithWaiterRequestOptions(c.incViaRequestOption("{{ .OperationName }}")))
+	return c.svc.WaitUntil{{ .Name }}WithContext(ctx, input, opts...)
 }
 {{- end }}
 

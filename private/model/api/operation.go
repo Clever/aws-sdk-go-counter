@@ -65,173 +65,55 @@ func (o *Operation) GetSigner() string {
 }
 
 // tplOperation defines a template for rendering an API Operation
-var tplOperation = template.Must(template.New("operation").Funcs(template.FuncMap{
-	"GetCrosslinkURL": GetCrosslinkURL,
-}).Parse(`
-const op{{ .ExportedName }} = "{{ .Name }}"
-
-// {{ .ExportedName }}Request generates a "aws/request.Request" representing the
-// client's request for the {{ .ExportedName }} operation. The "output" return
-// value will be populated with the request's response once the request complets
-// successfuly.
-//
-// Use "Send" method on the returned Request to send the API call to the service.
-// the "output" return value is not valid until after Send returns without error.
-//
-// See {{ .ExportedName }} for more information on using the {{ .ExportedName }}
-// API call, and error handling.
-//
-// This method is useful when you want to inject custom logic or configuration
-// into the SDK's request lifecycle. Such as custom headers, or retry logic.
-//
-//
-//    // Example sending a request using the {{ .ExportedName }}Request method.
-//    req, resp := client.{{ .ExportedName }}Request(params)
-//
-//    err := req.Send()
-//    if err == nil { // resp is now filled
-//        fmt.Println(resp)
-//    }
-{{ $crosslinkURL := GetCrosslinkURL $.API.BaseCrosslinkURL $.API.Metadata.UID $.ExportedName -}}
-{{ if ne $crosslinkURL "" -}} 
-//
-// Please also see {{ $crosslinkURL }}
-{{ end -}}
+var tplOperation = template.Must(template.New("operation").Parse(`
+// {{ .ExportedName }}Request is a passthrough to the underlying {{ .ExportedName }}Request.
+// It will increment the count of requests made to {{ .ExportedName }}.
 func (c *{{ .API.StructName }}) {{ .ExportedName }}Request(` +
-	`input {{ .InputRef.GoType }}) (req *request.Request, output {{ .OutputRef.GoType }}) {
-	{{ if (or .Deprecated (or .InputRef.Deprecated .OutputRef.Deprecated)) }}if c.Client.Config.Logger != nil {
-		c.Client.Config.Logger.Log("This operation, {{ .ExportedName }}, has been deprecated")
-	}
-	op := &request.Operation{ {{ else }} op := &request.Operation{ {{ end }}	
-		Name:       op{{ .ExportedName }},
-		{{ if ne .HTTP.Method "" }}HTTPMethod: "{{ .HTTP.Method }}",
-		{{ end }}HTTPPath: {{ if ne .HTTP.RequestURI "" }}"{{ .HTTP.RequestURI }}"{{ else }}"/"{{ end }},
-		{{ if .Paginator }}Paginator: &request.Paginator{
-				InputTokens: {{ .Paginator.InputTokensString }},
-				OutputTokens: {{ .Paginator.OutputTokensString }},
-				LimitToken: "{{ .Paginator.LimitKey }}",
-				TruncationToken: "{{ .Paginator.MoreResults }}",
-		},
-		{{ end }}
-	}
-
-	if input == nil {
-		input = &{{ .InputRef.GoTypeElem }}{}
-	}
-
-	output = &{{ .OutputRef.GoTypeElem }}{}
-	req = c.newRequest(op, input, output){{ if eq .OutputRef.Shape.Placeholder true }}
-	req.Handlers.Unmarshal.Remove({{ .API.ProtocolPackage }}.UnmarshalHandler)
-	req.Handlers.Unmarshal.PushBackNamed(protocol.UnmarshalDiscardBodyHandler){{ end }}
-	{{ if ne .AuthType "" }}{{ .GetSigner }}{{ end -}}
-	return
+	`input {{ .InputRef.GoTypeWithPkgName }}) (req *request.Request, output {{ .OutputRef.GoTypeWithPkgName }}) {
+	c.inc("{{ .ExportedName }}")
+	return c.svc.{{ .ExportedName }}Request(input)
 }
 
-// {{ .ExportedName }} API operation for {{ .API.Metadata.ServiceFullName }}.
-{{ if .Documentation -}}
-//
-{{ .Documentation }}
-{{ end -}}
-//
-// Returns awserr.Error for service API and SDK errors. Use runtime type assertions
-// with awserr.Error's Code and Message methods to get detailed information about
-// the error.
-//
-// See the AWS API reference guide for {{ .API.Metadata.ServiceFullName }}'s
-// API operation {{ .ExportedName }} for usage and error information.
-{{ if .ErrorRefs -}}
-//
-// Returned Error Codes:
-{{ range $_, $err := .ErrorRefs -}}
-//   * {{ $err.Shape.ErrorCodeName }} "{{ $err.Shape.ErrorName}}"
-{{ if $err.Docstring -}}
-{{ $err.IndentedDocstring }}
-{{ end -}}
-//
-{{ end -}}
-{{ end -}}
-{{ $crosslinkURL := GetCrosslinkURL $.API.BaseCrosslinkURL $.API.Metadata.UID $.ExportedName -}}
-{{ if ne $crosslinkURL "" -}} 
-// Please also see {{ $crosslinkURL }}
-{{ end -}}
+// {{ .ExportedName }} is a passthrough to the underlying {{ .ExportedName }} method.
+// It will increment the count of requests made to {{ .ExportedName }}.
 func (c *{{ .API.StructName }}) {{ .ExportedName }}(` +
-	`input {{ .InputRef.GoType }}) ({{ .OutputRef.GoType }}, error) {
-	req, out := c.{{ .ExportedName }}Request(input)
-	return out, req.Send()
+	`input {{ .InputRef.GoTypeWithPkgName }}) ({{ .OutputRef.GoTypeWithPkgName }}, error) {
+	c.inc("{{ .ExportedName }}")
+	return c.svc.{{ .ExportedName }}(input)
 }
 
-// {{ .ExportedName }}WithContext is the same as {{ .ExportedName }} with the addition of
-// the ability to pass a context and additional request options.
-//
-// See {{ .ExportedName }} for details on how to use this API operation.
-//
-// The context must be non-nil and will be used for request cancellation. If
-// the context is nil a panic will occur. In the future the SDK may create
-// sub-contexts for http.Requests. See https://golang.org/pkg/context/
-// for more information on using Contexts.
+// {{ .ExportedName }}WithContext is a passthrough to the underlying {{ .ExportedName }}WithContext method.
+// It will increment the count of requests made to {{ .ExportedName }}.
 func (c *{{ .API.StructName }}) {{ .ExportedName }}WithContext(` +
-	`ctx aws.Context, input {{ .InputRef.GoType }}, opts ...request.Option) ` +
-	`({{ .OutputRef.GoType }}, error) {
-	req, out := c.{{ .ExportedName }}Request(input)
-	req.SetContext(ctx)
-	req.ApplyOptions(opts...)
-	return out, req.Send()
+	`ctx aws.Context, input {{ .InputRef.GoTypeWithPkgName }}, opts ...request.Option) ` +
+	`({{ .OutputRef.GoTypeWithPkgName }}, error) {
+	c.inc("{{ .ExportedName }}")
+    return c.svc.{{ .ExportedName }}WithContext(ctx, input, opts...)
 }
 
 {{ if .Paginator }}
-// {{ .ExportedName }}Pages iterates over the pages of a {{ .ExportedName }} operation,
-// calling the "fn" function with the response data for each page. To stop
-// iterating, return false from the fn function.
-//
-// See {{ .ExportedName }} method for more information on how to use this operation.
-//
-// Note: This operation can generate multiple requests to a service.
-//
-//    // Example iterating over at most 3 pages of a {{ .ExportedName }} operation.
-//    pageNum := 0
-//    err := client.{{ .ExportedName }}Pages(params,
-//        func(page {{ .OutputRef.GoType }}, lastPage bool) bool {
-//            pageNum++
-//            fmt.Println(page)
-//            return pageNum <= 3
-//        })
-//
+// {{ .ExportedName }}Pages is a passthrough to the underlying {{ .ExportedName }}Pages method.
+// It will increment the count of requests made to {{ .ExportedName }} on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use {{ .ExportedName }}PagesWithContext to avoid this.
 func (c *{{ .API.StructName }}) {{ .ExportedName }}Pages(` +
-	`input {{ .InputRef.GoType }}, fn func({{ .OutputRef.GoType }}, bool) bool) error {
-	return c.{{ .ExportedName }}PagesWithContext(aws.BackgroundContext(), input, fn)
+	`input {{ .InputRef.GoTypeWithPkgName }}, fn func({{ .OutputRef.GoTypeWithPkgName }}, bool) bool) error {
+	wrappedFn := func(page {{ .OutputRef.GoTypeWithPkgName }}, lastPage bool) bool {
+		c.inc("{{ .ExportedName }}")
+		return fn(page, lastPage)
+	}
+	return c.{{ .ExportedName }}Pages(input, wrappedFn)
 }
 
-// {{ .ExportedName }}PagesWithContext same as {{ .ExportedName }}Pages except
-// it takes a Context and allows setting request options on the pages.
-//
-// The context must be non-nil and will be used for request cancellation. If
-// the context is nil a panic will occur. In the future the SDK may create
-// sub-contexts for http.Requests. See https://golang.org/pkg/context/
-// for more information on using Contexts.
+// {{ .ExportedName }}PagesWithContext is a passthrough to the underlying {{ .ExportedName }}PagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to {{ .ExportedName }} when applied to the request.
 func (c *{{ .API.StructName }}) {{ .ExportedName }}PagesWithContext(` +
 	`ctx aws.Context, ` +
-	`input {{ .InputRef.GoType }}, ` +
-	`fn func({{ .OutputRef.GoType }}, bool) bool, ` +
+	`input {{ .InputRef.GoTypeWithPkgName }}, ` +
+	`fn func({{ .OutputRef.GoTypeWithPkgName }}, bool) bool, ` +
 	`opts ...request.Option) error {
-	p := request.Pagination {
-		NewRequest: func() (*request.Request, error) {
-			var inCpy {{ .InputRef.GoType }}
-			if input != nil  {
-				tmp := *input
-				inCpy = &tmp
-			}
-			req, _ := c.{{ .ExportedName }}Request(inCpy)
-			req.SetContext(ctx)
-			req.ApplyOptions(opts...)
-			return req, nil
-		},
-	}
-
-	cont := true
-	for p.Next() && cont {
-		cont = fn(p.Page().({{ .OutputRef.GoType }}), !p.HasNextPage())
-	}
-	return p.Err()
+	opts = append(opts, c.incViaRequestOption("{{ .ExportedName }}"))
+	return c.{{ .ExportedName }}PagesWithContext(ctx, input, fn, opts...)
 }
 {{ end }}
 `))

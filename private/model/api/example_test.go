@@ -124,10 +124,10 @@ import (
 	"bytes"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/fooservice"
+	"github.com/Clever/aws-sdk-go-counter/aws"
+	"github.com/Clever/aws-sdk-go-counter/aws/awserr"
+	"github.com/Clever/aws-sdk-go-counter/aws/session"
+	"github.com/Clever/aws-sdk-go-counter/service/fooservice"
 )
 
 var _ time.Duration
