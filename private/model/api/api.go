@@ -209,9 +209,7 @@ func (a *API) ShapeListErrors() []*Shape {
 
 // resetImports resets the import map to default values.
 func (a *API) resetImports() {
-	a.imports = map[string]bool{
-		"github.com/aws/aws-sdk-go/aws": true,
-	}
+	a.imports = map[string]bool{}
 }
 
 // importsGoCode returns the generated Go import code.
@@ -249,36 +247,15 @@ func (a *API) importsGoCode() string {
 var tplAPI = template.Must(template.New("api").Parse(`
 {{ range $_, $o := .OperationList }}
 {{ $o.GoCode }}
-
-{{ end }}
-
-{{ range $_, $s := .ShapeList }}
-{{ if and $s.IsInternal (eq $s.Type "structure") }}{{ $s.GoCode }}{{ end }}
-
-{{ end }}
-
-{{ range $_, $s := .ShapeList }}
-{{ if $s.IsEnum }}{{ $s.GoCode }}{{ end }}
-
 {{ end }}
 `))
 
 // APIGoCode renders the API in Go code. Returning it as a string
 func (a *API) APIGoCode() string {
 	a.resetImports()
-	a.imports["github.com/aws/aws-sdk-go/aws/awsutil"] = true
+	a.imports["github.com/aws/aws-sdk-go/service/"+a.PackageName()] = true
+	a.imports["github.com/aws/aws-sdk-go/aws"] = true
 	a.imports["github.com/aws/aws-sdk-go/aws/request"] = true
-	if a.OperationHasOutputPlaceholder() {
-		a.imports["github.com/aws/aws-sdk-go/private/protocol/"+a.ProtocolPackage()] = true
-		a.imports["github.com/aws/aws-sdk-go/private/protocol"] = true
-	}
-
-	for _, op := range a.Operations {
-		if op.AuthType == "none" {
-			a.imports["github.com/aws/aws-sdk-go/aws/credentials"] = true
-			break
-		}
-	}
 
 	var buf bytes.Buffer
 	err := tplAPI.Execute(&buf, a)
@@ -387,138 +364,62 @@ var tplServiceDoc = template.Must(template.New("service docs").Funcs(template.Fu
 `))
 
 // A tplService defines the template for the service generated code.
-var tplService = template.Must(template.New("service").Funcs(template.FuncMap{
-	"ServiceNameValue": func(a *API) string {
-		if a.NoConstServiceNames {
-			return fmt.Sprintf("%q", a.Metadata.EndpointPrefix)
-		}
-		return "ServiceName"
-	},
-	"EndpointsIDConstValue": func(a *API) string {
-		if a.NoConstServiceNames {
-			return fmt.Sprintf("%q", a.Metadata.EndpointPrefix)
-		}
-		if a.Metadata.EndpointPrefix == a.Metadata.EndpointsID {
-			return "ServiceName"
-		}
-		return fmt.Sprintf("%q", a.Metadata.EndpointsID)
-	},
-	"EndpointsIDValue": func(a *API) string {
-		if a.NoConstServiceNames {
-			return fmt.Sprintf("%q", a.Metadata.EndpointPrefix)
-		}
-
-		return "EndpointsID"
-	},
-}).Parse(`
-// {{ .StructName }} provides the API operation methods for making requests to
-// {{ .Metadata.ServiceFullName }}. See this package's package overview docs
-// for details on the service.
-//
-// {{ .StructName }} methods are safe to use concurrently. It is not safe to
-// modify mutate any of the struct's properties though.
+var tplService = template.Must(template.New("service").Parse(`
+// {{ .StructName }} counts the API operations made to {{ .Metadata.ServiceFullName }}.
 type {{ .StructName }} struct {
-	*client.Client
+	svc {{ .InterfacePackageName }}.{{ .StructName }}API
+	counts sync.Map
 }
 
-{{ if .UseInitMethods }}// Used for custom client initialization logic
-var initClient func(*client.Client)
+var _ {{ .InterfacePackageName }}.{{ .StructName }}API = &{{ .StructName }}{} 
 
-// Used for custom request initialization logic
-var initRequest func(*request.Request)
-{{ end }}
-
-
-{{ if not .NoConstServiceNames -}}
-// Service information constants
-const (
-	ServiceName = "{{ .Metadata.EndpointPrefix }}" // Service endpoint prefix API calls made to.
-	EndpointsID = {{ EndpointsIDConstValue . }} // Service ID for Regions and Endpoints metadata.
-)
-{{- end }}
-
-// New creates a new instance of the {{ .StructName }} client with a session.
-// If additional configuration is needed for the client instance use the optional
-// aws.Config parameter to add your extra config.
-//
-// Example:
-//     // Create a {{ .StructName }} client from just a session.
-//     svc := {{ .PackageName }}.New(mySession)
-//
-//     // Create a {{ .StructName }} client with additional configuration
-//     svc := {{ .PackageName }}.New(mySession, aws.NewConfig().WithRegion("us-west-2"))
-func New(p client.ConfigProvider, cfgs ...*aws.Config) *{{ .StructName }} {
-	{{ if .Metadata.NoResolveEndpoint -}}
-		var c client.Config
-		if v, ok := p.(client.ConfigNoResolveEndpointProvider); ok {
-			c = v.ClientConfigNoResolveEndpoint(cfgs...)
-		} else {
-			c = p.ClientConfig({{ EndpointsIDValue . }}, cfgs...)
-		}
-	{{- else -}}
-		c := p.ClientConfig({{ EndpointsIDValue . }}, cfgs...)
-	{{- end }}
-	return newClient(*c.Config, c.Handlers, c.Endpoint, c.SigningRegion, c.SigningName)
+// New creates a new instance of the {{ .StructName }} counter.
+func New(svc {{ .InterfacePackageName }}.{{ .StructName }}API) *{{ .StructName }} {
+	return &{{ .StructName }}{svc: svc}
 }
 
-// newClient creates, initializes and returns a new service client instance.
-func newClient(cfg aws.Config, handlers request.Handlers, endpoint, signingRegion, signingName string) *{{ .StructName }} {
-	{{- if .Metadata.SigningName }}
-		if len(signingName) == 0 {
-			signingName = "{{ .Metadata.SigningName }}"
-		}
-	{{- end }}
-    svc := &{{ .StructName }}{
-    	Client: client.New(
-    		cfg,
-    		metadata.ClientInfo{
-			ServiceName: {{ ServiceNameValue . }},
-			SigningName: signingName,
-			SigningRegion: signingRegion,
-			Endpoint:     endpoint,
-			APIVersion:   "{{ .Metadata.APIVersion }}",
-			{{ if .Metadata.JSONVersion -}}
-				JSONVersion:  "{{ .Metadata.JSONVersion }}",
-			{{- end }}
-			{{ if .Metadata.TargetPrefix -}}
-				TargetPrefix: "{{ .Metadata.TargetPrefix }}",
-			{{- end }}
-    		},
-    		handlers,
-    	),
-    }
+// Counters returns a snapshot of current counter values for each API operation.
+func (c *{{ .StructName }}) Counters() map[string]int64 {
+	counters := map[string]int64{}
+	c.counts.Range(func(key, value interface{}) bool {
+		counters[key.(string)] = value.(*counter).count()
+		return true
+	})
+	return counters
+}
 
-	// Handlers
-	svc.Handlers.Sign.PushBackNamed({{if eq .Metadata.SignatureVersion "v2"}}v2{{else}}v4{{end}}.SignRequestHandler)
-	{{- if eq .Metadata.SignatureVersion "v2" }}
-		svc.Handlers.Sign.PushBackNamed(corehandlers.BuildContentLengthHandler)
-	{{- end }}
-	svc.Handlers.Build.PushBackNamed({{ .ProtocolPackage }}.BuildHandler)
-	svc.Handlers.Unmarshal.PushBackNamed({{ .ProtocolPackage }}.UnmarshalHandler)
-	svc.Handlers.UnmarshalMeta.PushBackNamed({{ .ProtocolPackage }}.UnmarshalMetaHandler)
-	svc.Handlers.UnmarshalError.PushBackNamed({{ .ProtocolPackage }}.UnmarshalErrorHandler)
-
-	{{ if .UseInitMethods }}// Run custom client initialization if present
-	if initClient != nil {
-		initClient(svc.Client)
+// incViaRequestOption returns a request.Option that increments the given op.
+func (c *{{ .StructName }}) incViaRequestOption(op string) request.Option {
+	return func(*request.Request) {
+		c.inc(op)
 	}
-	{{ end  }}
-
-	return svc
 }
 
-// newRequest creates a new request for a {{ .StructName }} operation and runs any
-// custom request initialization.
-func (c *{{ .StructName }}) newRequest(op *request.Operation, params, data interface{}) *request.Request {
-	req := c.NewRequest(op, params, data)
+// inc increments the counter for the operation by 1.
+func (c *{{ .StructName }}) inc(op string) {
+	cnt, _ := c.counts.LoadOrStore(op, &counter{})
+	cnt.(*counter).inc()
+}
 
-	{{ if .UseInitMethods }}// Run custom request initialization if present
-	if initRequest != nil {
-		initRequest(req)
-	}
-	{{ end }}
+// count returns the current counter value for the operation.
+func (c *{{ .StructName }}) count(op string) int64 {
+	cnt, _ := c.counts.LoadOrStore(op, &counter{})
+	return cnt.(*counter).count()
+}
 
-	return req
+// counter is a threadsafe cumulative counter.
+type counter struct {
+	c int64
+}
+
+// count returns the current count.
+func (c *counter) count() int64 {
+	return atomic.LoadInt64(&c.c)
+}
+
+// inc increments the counter by one.
+func (c *counter) inc() {
+	atomic.AddInt64(&c.c, 1)
 }
 `))
 
@@ -539,16 +440,10 @@ func (a *API) ServicePackageDoc() string {
 // ServiceGoCode renders service go code. Returning it as a string.
 func (a *API) ServiceGoCode() string {
 	a.resetImports()
-	a.imports["github.com/aws/aws-sdk-go/aws/client"] = true
-	a.imports["github.com/aws/aws-sdk-go/aws/client/metadata"] = true
+	a.imports["sync"] = true
+	a.imports["sync/atomic"] = true
 	a.imports["github.com/aws/aws-sdk-go/aws/request"] = true
-	if a.Metadata.SignatureVersion == "v2" {
-		a.imports["github.com/aws/aws-sdk-go/private/signer/v2"] = true
-		a.imports["github.com/aws/aws-sdk-go/aws/corehandlers"] = true
-	} else {
-		a.imports["github.com/aws/aws-sdk-go/aws/signer/v4"] = true
-	}
-	a.imports["github.com/aws/aws-sdk-go/private/protocol/"+a.ProtocolPackage()] = true
+	a.imports["github.com/aws/aws-sdk-go/service/"+a.PackageName()+"/"+a.InterfacePackageName()] = true
 
 	var buf bytes.Buffer
 	err := tplService.Execute(&buf, a)
@@ -586,87 +481,6 @@ func (a *API) ExampleGoCode() string {
 	code += ")\n\n"
 	code += "var _ time.Duration\nvar _ bytes.Buffer\n\n"
 	code += strings.Join(exs, "\n\n")
-	return code
-}
-
-// A tplInterface defines the template for the service interface type.
-var tplInterface = template.Must(template.New("interface").Parse(`
-// {{ .StructName }}API provides an interface to enable mocking the
-// {{ .PackageName }}.{{ .StructName }} service client's API operation,
-// paginators, and waiters. This make unit testing your code that calls out
-// to the SDK's service client's calls easier.
-//
-// The best way to use this interface is so the SDK's service client's calls
-// can be stubbed out for unit testing your code with the SDK without needing
-// to inject custom request handlers into the SDK's request pipeline.
-//
-//    // myFunc uses an SDK service client to make a request to
-//    // {{.Metadata.ServiceFullName}}. {{ $opts := .OperationList }}{{ $opt := index $opts 0 }}
-//    func myFunc(svc {{ .InterfacePackageName }}.{{ .StructName }}API) bool {
-//        // Make svc.{{ $opt.ExportedName }} request
-//    }
-//
-//    func main() {
-//        sess := session.New()
-//        svc := {{ .PackageName }}.New(sess)
-//
-//        myFunc(svc)
-//    }
-//
-// In your _test.go file:
-//
-//    // Define a mock struct to be used in your unit tests of myFunc.
-//    type mock{{ .StructName }}Client struct {
-//        {{ .InterfacePackageName }}.{{ .StructName }}API
-//    }
-//    func (m *mock{{ .StructName }}Client) {{ $opt.ExportedName }}(input {{ $opt.InputRef.GoTypeWithPkgName }}) ({{ $opt.OutputRef.GoTypeWithPkgName }}, error) {
-//        // mock response/functionality
-//    }
-//
-//    func TestMyFunc(t *testing.T) {
-//        // Setup Test
-//        mockSvc := &mock{{ .StructName }}Client{}
-//
-//        myfunc(mockSvc)
-//
-//        // Verify myFunc's functionality
-//    }
-//
-// It is important to note that this interface will have breaking changes
-// when the service model is updated and adds new API operations, paginators,
-// and waiters. Its suggested to use the pattern above for testing, or using 
-// tooling to generate mocks to satisfy the interfaces.
-type {{ .StructName }}API interface {
-    {{ range $_, $o := .OperationList }}
-        {{ $o.InterfaceSignature }}
-    {{ end }}
-    {{ range $_, $w := .Waiters }}
-        {{ $w.InterfaceSignature }}
-    {{ end }}
-}
-
-var _ {{ .StructName }}API = (*{{ .PackageName }}.{{ .StructName }})(nil)
-`))
-
-// InterfaceGoCode returns the go code for the service's API operations as an
-// interface{}. Assumes that the interface is being created in a different
-// package than the service API's package.
-func (a *API) InterfaceGoCode() string {
-	a.resetImports()
-	a.imports = map[string]bool{
-		"github.com/aws/aws-sdk-go/aws":                   true,
-		"github.com/aws/aws-sdk-go/aws/request":           true,
-		path.Join(a.SvcClientImportPath, a.PackageName()): true,
-	}
-
-	var buf bytes.Buffer
-	err := tplInterface.Execute(&buf, a)
-
-	if err != nil {
-		panic(err)
-	}
-
-	code := a.importsGoCode() + strings.TrimSpace(buf.String())
 	return code
 }
 
@@ -744,30 +558,4 @@ func resolveShapeValidations(s *Shape, ancestry ...*Shape) {
 		}
 	}
 	ancestry = ancestry[:len(ancestry)-1]
-}
-
-// A tplAPIErrors is the top level template for the API
-var tplAPIErrors = template.Must(template.New("api").Parse(`
-const (
-{{ range $_, $s := $.ShapeListErrors }}
-	// {{ $s.ErrorCodeName }} for service response error code
-	// {{ printf "%q" $s.ErrorName }}.
-	{{ if $s.Docstring -}}
-	//
-	{{ $s.Docstring }}
-	{{ end -}}
-	{{ $s.ErrorCodeName }} = {{ printf "%q" $s.ErrorName }}
-{{ end }}
-)
-`))
-
-func (a *API) APIErrorsGoCode() string {
-	var buf bytes.Buffer
-	err := tplAPIErrors.Execute(&buf, a)
-
-	if err != nil {
-		panic(err)
-	}
-
-	return strings.TrimSpace(buf.String())
 }
