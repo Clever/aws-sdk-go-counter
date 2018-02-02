@@ -155,6 +155,27 @@ func (c *CodeBuild) DeleteWebhookWithContext(ctx aws.Context, input *codebuild.D
 	return c.svc.DeleteWebhookWithContext(ctx, input, opts...)
 }
 
+// InvalidateProjectCacheRequest is a passthrough to the underlying InvalidateProjectCacheRequest.
+// It will increment the count of requests made to InvalidateProjectCache.
+func (c *CodeBuild) InvalidateProjectCacheRequest(input *codebuild.InvalidateProjectCacheInput) (req *request.Request, output *codebuild.InvalidateProjectCacheOutput) {
+	c.inc("InvalidateProjectCache")
+	return c.svc.InvalidateProjectCacheRequest(input)
+}
+
+// InvalidateProjectCache is a passthrough to the underlying InvalidateProjectCache method.
+// It will increment the count of requests made to InvalidateProjectCache.
+func (c *CodeBuild) InvalidateProjectCache(input *codebuild.InvalidateProjectCacheInput) (*codebuild.InvalidateProjectCacheOutput, error) {
+	c.inc("InvalidateProjectCache")
+	return c.svc.InvalidateProjectCache(input)
+}
+
+// InvalidateProjectCacheWithContext is a passthrough to the underlying InvalidateProjectCacheWithContext method.
+// It will increment the count of requests made to InvalidateProjectCache.
+func (c *CodeBuild) InvalidateProjectCacheWithContext(ctx aws.Context, input *codebuild.InvalidateProjectCacheInput, opts ...request.Option) (*codebuild.InvalidateProjectCacheOutput, error) {
+	c.inc("InvalidateProjectCache")
+	return c.svc.InvalidateProjectCacheWithContext(ctx, input, opts...)
+}
+
 // ListBuildsRequest is a passthrough to the underlying ListBuildsRequest.
 // It will increment the count of requests made to ListBuilds.
 func (c *CodeBuild) ListBuildsRequest(input *codebuild.ListBuildsInput) (req *request.Request, output *codebuild.ListBuildsOutput) {

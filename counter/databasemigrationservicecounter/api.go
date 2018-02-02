@@ -683,6 +683,46 @@ func (c *DatabaseMigrationService) DescribeReplicationSubnetGroupsPagesWithConte
 	return c.svc.DescribeReplicationSubnetGroupsPagesWithContext(ctx, input, fn, opts...)
 }
 
+// DescribeReplicationTaskAssessmentResultsRequest is a passthrough to the underlying DescribeReplicationTaskAssessmentResultsRequest.
+// It will increment the count of requests made to DescribeReplicationTaskAssessmentResults.
+func (c *DatabaseMigrationService) DescribeReplicationTaskAssessmentResultsRequest(input *databasemigrationservice.DescribeReplicationTaskAssessmentResultsInput) (req *request.Request, output *databasemigrationservice.DescribeReplicationTaskAssessmentResultsOutput) {
+	c.inc("DescribeReplicationTaskAssessmentResults")
+	return c.svc.DescribeReplicationTaskAssessmentResultsRequest(input)
+}
+
+// DescribeReplicationTaskAssessmentResults is a passthrough to the underlying DescribeReplicationTaskAssessmentResults method.
+// It will increment the count of requests made to DescribeReplicationTaskAssessmentResults.
+func (c *DatabaseMigrationService) DescribeReplicationTaskAssessmentResults(input *databasemigrationservice.DescribeReplicationTaskAssessmentResultsInput) (*databasemigrationservice.DescribeReplicationTaskAssessmentResultsOutput, error) {
+	c.inc("DescribeReplicationTaskAssessmentResults")
+	return c.svc.DescribeReplicationTaskAssessmentResults(input)
+}
+
+// DescribeReplicationTaskAssessmentResultsWithContext is a passthrough to the underlying DescribeReplicationTaskAssessmentResultsWithContext method.
+// It will increment the count of requests made to DescribeReplicationTaskAssessmentResults.
+func (c *DatabaseMigrationService) DescribeReplicationTaskAssessmentResultsWithContext(ctx aws.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentResultsInput, opts ...request.Option) (*databasemigrationservice.DescribeReplicationTaskAssessmentResultsOutput, error) {
+	c.inc("DescribeReplicationTaskAssessmentResults")
+	return c.svc.DescribeReplicationTaskAssessmentResultsWithContext(ctx, input, opts...)
+}
+
+// DescribeReplicationTaskAssessmentResultsPages is a passthrough to the underlying DescribeReplicationTaskAssessmentResultsPages method.
+// It will increment the count of requests made to DescribeReplicationTaskAssessmentResults on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use DescribeReplicationTaskAssessmentResultsPagesWithContext to avoid this.
+func (c *DatabaseMigrationService) DescribeReplicationTaskAssessmentResultsPages(input *databasemigrationservice.DescribeReplicationTaskAssessmentResultsInput, fn func(*databasemigrationservice.DescribeReplicationTaskAssessmentResultsOutput, bool) bool) error {
+	wrappedFn := func(page *databasemigrationservice.DescribeReplicationTaskAssessmentResultsOutput, lastPage bool) bool {
+		c.inc("DescribeReplicationTaskAssessmentResults")
+		return fn(page, lastPage)
+	}
+	return c.svc.DescribeReplicationTaskAssessmentResultsPages(input, wrappedFn)
+}
+
+// DescribeReplicationTaskAssessmentResultsPagesWithContext is a passthrough to the underlying DescribeReplicationTaskAssessmentResultsPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to DescribeReplicationTaskAssessmentResults when applied to the request.
+func (c *DatabaseMigrationService) DescribeReplicationTaskAssessmentResultsPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentResultsInput, fn func(*databasemigrationservice.DescribeReplicationTaskAssessmentResultsOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("DescribeReplicationTaskAssessmentResults"))
+	return c.svc.DescribeReplicationTaskAssessmentResultsPagesWithContext(ctx, input, fn, opts...)
+}
+
 // DescribeReplicationTasksRequest is a passthrough to the underlying DescribeReplicationTasksRequest.
 // It will increment the count of requests made to DescribeReplicationTasks.
 func (c *DatabaseMigrationService) DescribeReplicationTasksRequest(input *databasemigrationservice.DescribeReplicationTasksInput) (req *request.Request, output *databasemigrationservice.DescribeReplicationTasksOutput) {
@@ -1032,6 +1072,27 @@ func (c *DatabaseMigrationService) StartReplicationTask(input *databasemigration
 func (c *DatabaseMigrationService) StartReplicationTaskWithContext(ctx aws.Context, input *databasemigrationservice.StartReplicationTaskInput, opts ...request.Option) (*databasemigrationservice.StartReplicationTaskOutput, error) {
 	c.inc("StartReplicationTask")
 	return c.svc.StartReplicationTaskWithContext(ctx, input, opts...)
+}
+
+// StartReplicationTaskAssessmentRequest is a passthrough to the underlying StartReplicationTaskAssessmentRequest.
+// It will increment the count of requests made to StartReplicationTaskAssessment.
+func (c *DatabaseMigrationService) StartReplicationTaskAssessmentRequest(input *databasemigrationservice.StartReplicationTaskAssessmentInput) (req *request.Request, output *databasemigrationservice.StartReplicationTaskAssessmentOutput) {
+	c.inc("StartReplicationTaskAssessment")
+	return c.svc.StartReplicationTaskAssessmentRequest(input)
+}
+
+// StartReplicationTaskAssessment is a passthrough to the underlying StartReplicationTaskAssessment method.
+// It will increment the count of requests made to StartReplicationTaskAssessment.
+func (c *DatabaseMigrationService) StartReplicationTaskAssessment(input *databasemigrationservice.StartReplicationTaskAssessmentInput) (*databasemigrationservice.StartReplicationTaskAssessmentOutput, error) {
+	c.inc("StartReplicationTaskAssessment")
+	return c.svc.StartReplicationTaskAssessment(input)
+}
+
+// StartReplicationTaskAssessmentWithContext is a passthrough to the underlying StartReplicationTaskAssessmentWithContext method.
+// It will increment the count of requests made to StartReplicationTaskAssessment.
+func (c *DatabaseMigrationService) StartReplicationTaskAssessmentWithContext(ctx aws.Context, input *databasemigrationservice.StartReplicationTaskAssessmentInput, opts ...request.Option) (*databasemigrationservice.StartReplicationTaskAssessmentOutput, error) {
+	c.inc("StartReplicationTaskAssessment")
+	return c.svc.StartReplicationTaskAssessmentWithContext(ctx, input, opts...)
 }
 
 // StopReplicationTaskRequest is a passthrough to the underlying StopReplicationTaskRequest.

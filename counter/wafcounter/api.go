@@ -155,6 +155,27 @@ func (c *WAF) CreateRuleWithContext(ctx aws.Context, input *waf.CreateRuleInput,
 	return c.svc.CreateRuleWithContext(ctx, input, opts...)
 }
 
+// CreateRuleGroupRequest is a passthrough to the underlying CreateRuleGroupRequest.
+// It will increment the count of requests made to CreateRuleGroup.
+func (c *WAF) CreateRuleGroupRequest(input *waf.CreateRuleGroupInput) (req *request.Request, output *waf.CreateRuleGroupOutput) {
+	c.inc("CreateRuleGroup")
+	return c.svc.CreateRuleGroupRequest(input)
+}
+
+// CreateRuleGroup is a passthrough to the underlying CreateRuleGroup method.
+// It will increment the count of requests made to CreateRuleGroup.
+func (c *WAF) CreateRuleGroup(input *waf.CreateRuleGroupInput) (*waf.CreateRuleGroupOutput, error) {
+	c.inc("CreateRuleGroup")
+	return c.svc.CreateRuleGroup(input)
+}
+
+// CreateRuleGroupWithContext is a passthrough to the underlying CreateRuleGroupWithContext method.
+// It will increment the count of requests made to CreateRuleGroup.
+func (c *WAF) CreateRuleGroupWithContext(ctx aws.Context, input *waf.CreateRuleGroupInput, opts ...request.Option) (*waf.CreateRuleGroupOutput, error) {
+	c.inc("CreateRuleGroup")
+	return c.svc.CreateRuleGroupWithContext(ctx, input, opts...)
+}
+
 // CreateSizeConstraintSetRequest is a passthrough to the underlying CreateSizeConstraintSetRequest.
 // It will increment the count of requests made to CreateSizeConstraintSet.
 func (c *WAF) CreateSizeConstraintSetRequest(input *waf.CreateSizeConstraintSetInput) (req *request.Request, output *waf.CreateSizeConstraintSetOutput) {
@@ -384,6 +405,27 @@ func (c *WAF) DeleteRule(input *waf.DeleteRuleInput) (*waf.DeleteRuleOutput, err
 func (c *WAF) DeleteRuleWithContext(ctx aws.Context, input *waf.DeleteRuleInput, opts ...request.Option) (*waf.DeleteRuleOutput, error) {
 	c.inc("DeleteRule")
 	return c.svc.DeleteRuleWithContext(ctx, input, opts...)
+}
+
+// DeleteRuleGroupRequest is a passthrough to the underlying DeleteRuleGroupRequest.
+// It will increment the count of requests made to DeleteRuleGroup.
+func (c *WAF) DeleteRuleGroupRequest(input *waf.DeleteRuleGroupInput) (req *request.Request, output *waf.DeleteRuleGroupOutput) {
+	c.inc("DeleteRuleGroup")
+	return c.svc.DeleteRuleGroupRequest(input)
+}
+
+// DeleteRuleGroup is a passthrough to the underlying DeleteRuleGroup method.
+// It will increment the count of requests made to DeleteRuleGroup.
+func (c *WAF) DeleteRuleGroup(input *waf.DeleteRuleGroupInput) (*waf.DeleteRuleGroupOutput, error) {
+	c.inc("DeleteRuleGroup")
+	return c.svc.DeleteRuleGroup(input)
+}
+
+// DeleteRuleGroupWithContext is a passthrough to the underlying DeleteRuleGroupWithContext method.
+// It will increment the count of requests made to DeleteRuleGroup.
+func (c *WAF) DeleteRuleGroupWithContext(ctx aws.Context, input *waf.DeleteRuleGroupInput, opts ...request.Option) (*waf.DeleteRuleGroupOutput, error) {
+	c.inc("DeleteRuleGroup")
+	return c.svc.DeleteRuleGroupWithContext(ctx, input, opts...)
 }
 
 // DeleteSizeConstraintSetRequest is a passthrough to the underlying DeleteSizeConstraintSetRequest.
@@ -680,6 +722,27 @@ func (c *WAF) GetRuleWithContext(ctx aws.Context, input *waf.GetRuleInput, opts 
 	return c.svc.GetRuleWithContext(ctx, input, opts...)
 }
 
+// GetRuleGroupRequest is a passthrough to the underlying GetRuleGroupRequest.
+// It will increment the count of requests made to GetRuleGroup.
+func (c *WAF) GetRuleGroupRequest(input *waf.GetRuleGroupInput) (req *request.Request, output *waf.GetRuleGroupOutput) {
+	c.inc("GetRuleGroup")
+	return c.svc.GetRuleGroupRequest(input)
+}
+
+// GetRuleGroup is a passthrough to the underlying GetRuleGroup method.
+// It will increment the count of requests made to GetRuleGroup.
+func (c *WAF) GetRuleGroup(input *waf.GetRuleGroupInput) (*waf.GetRuleGroupOutput, error) {
+	c.inc("GetRuleGroup")
+	return c.svc.GetRuleGroup(input)
+}
+
+// GetRuleGroupWithContext is a passthrough to the underlying GetRuleGroupWithContext method.
+// It will increment the count of requests made to GetRuleGroup.
+func (c *WAF) GetRuleGroupWithContext(ctx aws.Context, input *waf.GetRuleGroupInput, opts ...request.Option) (*waf.GetRuleGroupOutput, error) {
+	c.inc("GetRuleGroup")
+	return c.svc.GetRuleGroupWithContext(ctx, input, opts...)
+}
+
 // GetSampledRequestsRequest is a passthrough to the underlying GetSampledRequestsRequest.
 // It will increment the count of requests made to GetSampledRequests.
 func (c *WAF) GetSampledRequestsRequest(input *waf.GetSampledRequestsInput) (req *request.Request, output *waf.GetSampledRequestsOutput) {
@@ -783,6 +846,27 @@ func (c *WAF) GetXssMatchSet(input *waf.GetXssMatchSetInput) (*waf.GetXssMatchSe
 func (c *WAF) GetXssMatchSetWithContext(ctx aws.Context, input *waf.GetXssMatchSetInput, opts ...request.Option) (*waf.GetXssMatchSetOutput, error) {
 	c.inc("GetXssMatchSet")
 	return c.svc.GetXssMatchSetWithContext(ctx, input, opts...)
+}
+
+// ListActivatedRulesInRuleGroupRequest is a passthrough to the underlying ListActivatedRulesInRuleGroupRequest.
+// It will increment the count of requests made to ListActivatedRulesInRuleGroup.
+func (c *WAF) ListActivatedRulesInRuleGroupRequest(input *waf.ListActivatedRulesInRuleGroupInput) (req *request.Request, output *waf.ListActivatedRulesInRuleGroupOutput) {
+	c.inc("ListActivatedRulesInRuleGroup")
+	return c.svc.ListActivatedRulesInRuleGroupRequest(input)
+}
+
+// ListActivatedRulesInRuleGroup is a passthrough to the underlying ListActivatedRulesInRuleGroup method.
+// It will increment the count of requests made to ListActivatedRulesInRuleGroup.
+func (c *WAF) ListActivatedRulesInRuleGroup(input *waf.ListActivatedRulesInRuleGroupInput) (*waf.ListActivatedRulesInRuleGroupOutput, error) {
+	c.inc("ListActivatedRulesInRuleGroup")
+	return c.svc.ListActivatedRulesInRuleGroup(input)
+}
+
+// ListActivatedRulesInRuleGroupWithContext is a passthrough to the underlying ListActivatedRulesInRuleGroupWithContext method.
+// It will increment the count of requests made to ListActivatedRulesInRuleGroup.
+func (c *WAF) ListActivatedRulesInRuleGroupWithContext(ctx aws.Context, input *waf.ListActivatedRulesInRuleGroupInput, opts ...request.Option) (*waf.ListActivatedRulesInRuleGroupOutput, error) {
+	c.inc("ListActivatedRulesInRuleGroup")
+	return c.svc.ListActivatedRulesInRuleGroupWithContext(ctx, input, opts...)
 }
 
 // ListByteMatchSetsRequest is a passthrough to the underlying ListByteMatchSetsRequest.
@@ -911,6 +995,27 @@ func (c *WAF) ListRegexPatternSetsWithContext(ctx aws.Context, input *waf.ListRe
 	return c.svc.ListRegexPatternSetsWithContext(ctx, input, opts...)
 }
 
+// ListRuleGroupsRequest is a passthrough to the underlying ListRuleGroupsRequest.
+// It will increment the count of requests made to ListRuleGroups.
+func (c *WAF) ListRuleGroupsRequest(input *waf.ListRuleGroupsInput) (req *request.Request, output *waf.ListRuleGroupsOutput) {
+	c.inc("ListRuleGroups")
+	return c.svc.ListRuleGroupsRequest(input)
+}
+
+// ListRuleGroups is a passthrough to the underlying ListRuleGroups method.
+// It will increment the count of requests made to ListRuleGroups.
+func (c *WAF) ListRuleGroups(input *waf.ListRuleGroupsInput) (*waf.ListRuleGroupsOutput, error) {
+	c.inc("ListRuleGroups")
+	return c.svc.ListRuleGroups(input)
+}
+
+// ListRuleGroupsWithContext is a passthrough to the underlying ListRuleGroupsWithContext method.
+// It will increment the count of requests made to ListRuleGroups.
+func (c *WAF) ListRuleGroupsWithContext(ctx aws.Context, input *waf.ListRuleGroupsInput, opts ...request.Option) (*waf.ListRuleGroupsOutput, error) {
+	c.inc("ListRuleGroups")
+	return c.svc.ListRuleGroupsWithContext(ctx, input, opts...)
+}
+
 // ListRulesRequest is a passthrough to the underlying ListRulesRequest.
 // It will increment the count of requests made to ListRules.
 func (c *WAF) ListRulesRequest(input *waf.ListRulesInput) (req *request.Request, output *waf.ListRulesOutput) {
@@ -972,6 +1077,27 @@ func (c *WAF) ListSqlInjectionMatchSets(input *waf.ListSqlInjectionMatchSetsInpu
 func (c *WAF) ListSqlInjectionMatchSetsWithContext(ctx aws.Context, input *waf.ListSqlInjectionMatchSetsInput, opts ...request.Option) (*waf.ListSqlInjectionMatchSetsOutput, error) {
 	c.inc("ListSqlInjectionMatchSets")
 	return c.svc.ListSqlInjectionMatchSetsWithContext(ctx, input, opts...)
+}
+
+// ListSubscribedRuleGroupsRequest is a passthrough to the underlying ListSubscribedRuleGroupsRequest.
+// It will increment the count of requests made to ListSubscribedRuleGroups.
+func (c *WAF) ListSubscribedRuleGroupsRequest(input *waf.ListSubscribedRuleGroupsInput) (req *request.Request, output *waf.ListSubscribedRuleGroupsOutput) {
+	c.inc("ListSubscribedRuleGroups")
+	return c.svc.ListSubscribedRuleGroupsRequest(input)
+}
+
+// ListSubscribedRuleGroups is a passthrough to the underlying ListSubscribedRuleGroups method.
+// It will increment the count of requests made to ListSubscribedRuleGroups.
+func (c *WAF) ListSubscribedRuleGroups(input *waf.ListSubscribedRuleGroupsInput) (*waf.ListSubscribedRuleGroupsOutput, error) {
+	c.inc("ListSubscribedRuleGroups")
+	return c.svc.ListSubscribedRuleGroups(input)
+}
+
+// ListSubscribedRuleGroupsWithContext is a passthrough to the underlying ListSubscribedRuleGroupsWithContext method.
+// It will increment the count of requests made to ListSubscribedRuleGroups.
+func (c *WAF) ListSubscribedRuleGroupsWithContext(ctx aws.Context, input *waf.ListSubscribedRuleGroupsInput, opts ...request.Option) (*waf.ListSubscribedRuleGroupsOutput, error) {
+	c.inc("ListSubscribedRuleGroups")
+	return c.svc.ListSubscribedRuleGroupsWithContext(ctx, input, opts...)
 }
 
 // ListWebACLsRequest is a passthrough to the underlying ListWebACLsRequest.
@@ -1161,6 +1287,27 @@ func (c *WAF) UpdateRule(input *waf.UpdateRuleInput) (*waf.UpdateRuleOutput, err
 func (c *WAF) UpdateRuleWithContext(ctx aws.Context, input *waf.UpdateRuleInput, opts ...request.Option) (*waf.UpdateRuleOutput, error) {
 	c.inc("UpdateRule")
 	return c.svc.UpdateRuleWithContext(ctx, input, opts...)
+}
+
+// UpdateRuleGroupRequest is a passthrough to the underlying UpdateRuleGroupRequest.
+// It will increment the count of requests made to UpdateRuleGroup.
+func (c *WAF) UpdateRuleGroupRequest(input *waf.UpdateRuleGroupInput) (req *request.Request, output *waf.UpdateRuleGroupOutput) {
+	c.inc("UpdateRuleGroup")
+	return c.svc.UpdateRuleGroupRequest(input)
+}
+
+// UpdateRuleGroup is a passthrough to the underlying UpdateRuleGroup method.
+// It will increment the count of requests made to UpdateRuleGroup.
+func (c *WAF) UpdateRuleGroup(input *waf.UpdateRuleGroupInput) (*waf.UpdateRuleGroupOutput, error) {
+	c.inc("UpdateRuleGroup")
+	return c.svc.UpdateRuleGroup(input)
+}
+
+// UpdateRuleGroupWithContext is a passthrough to the underlying UpdateRuleGroupWithContext method.
+// It will increment the count of requests made to UpdateRuleGroup.
+func (c *WAF) UpdateRuleGroupWithContext(ctx aws.Context, input *waf.UpdateRuleGroupInput, opts ...request.Option) (*waf.UpdateRuleGroupOutput, error) {
+	c.inc("UpdateRuleGroup")
+	return c.svc.UpdateRuleGroupWithContext(ctx, input, opts...)
 }
 
 // UpdateSizeConstraintSetRequest is a passthrough to the underlying UpdateSizeConstraintSetRequest.

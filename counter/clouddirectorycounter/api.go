@@ -533,6 +533,27 @@ func (c *CloudDirectory) EnableDirectoryWithContext(ctx aws.Context, input *clou
 	return c.svc.EnableDirectoryWithContext(ctx, input, opts...)
 }
 
+// GetAppliedSchemaVersionRequest is a passthrough to the underlying GetAppliedSchemaVersionRequest.
+// It will increment the count of requests made to GetAppliedSchemaVersion.
+func (c *CloudDirectory) GetAppliedSchemaVersionRequest(input *clouddirectory.GetAppliedSchemaVersionInput) (req *request.Request, output *clouddirectory.GetAppliedSchemaVersionOutput) {
+	c.inc("GetAppliedSchemaVersion")
+	return c.svc.GetAppliedSchemaVersionRequest(input)
+}
+
+// GetAppliedSchemaVersion is a passthrough to the underlying GetAppliedSchemaVersion method.
+// It will increment the count of requests made to GetAppliedSchemaVersion.
+func (c *CloudDirectory) GetAppliedSchemaVersion(input *clouddirectory.GetAppliedSchemaVersionInput) (*clouddirectory.GetAppliedSchemaVersionOutput, error) {
+	c.inc("GetAppliedSchemaVersion")
+	return c.svc.GetAppliedSchemaVersion(input)
+}
+
+// GetAppliedSchemaVersionWithContext is a passthrough to the underlying GetAppliedSchemaVersionWithContext method.
+// It will increment the count of requests made to GetAppliedSchemaVersion.
+func (c *CloudDirectory) GetAppliedSchemaVersionWithContext(ctx aws.Context, input *clouddirectory.GetAppliedSchemaVersionInput, opts ...request.Option) (*clouddirectory.GetAppliedSchemaVersionOutput, error) {
+	c.inc("GetAppliedSchemaVersion")
+	return c.svc.GetAppliedSchemaVersionWithContext(ctx, input, opts...)
+}
+
 // GetDirectoryRequest is a passthrough to the underlying GetDirectoryRequest.
 // It will increment the count of requests made to GetDirectory.
 func (c *CloudDirectory) GetDirectoryRequest(input *clouddirectory.GetDirectoryInput) (req *request.Request, output *clouddirectory.GetDirectoryOutput) {
@@ -1587,4 +1608,46 @@ func (c *CloudDirectory) UpdateTypedLinkFacet(input *clouddirectory.UpdateTypedL
 func (c *CloudDirectory) UpdateTypedLinkFacetWithContext(ctx aws.Context, input *clouddirectory.UpdateTypedLinkFacetInput, opts ...request.Option) (*clouddirectory.UpdateTypedLinkFacetOutput, error) {
 	c.inc("UpdateTypedLinkFacet")
 	return c.svc.UpdateTypedLinkFacetWithContext(ctx, input, opts...)
+}
+
+// UpgradeAppliedSchemaRequest is a passthrough to the underlying UpgradeAppliedSchemaRequest.
+// It will increment the count of requests made to UpgradeAppliedSchema.
+func (c *CloudDirectory) UpgradeAppliedSchemaRequest(input *clouddirectory.UpgradeAppliedSchemaInput) (req *request.Request, output *clouddirectory.UpgradeAppliedSchemaOutput) {
+	c.inc("UpgradeAppliedSchema")
+	return c.svc.UpgradeAppliedSchemaRequest(input)
+}
+
+// UpgradeAppliedSchema is a passthrough to the underlying UpgradeAppliedSchema method.
+// It will increment the count of requests made to UpgradeAppliedSchema.
+func (c *CloudDirectory) UpgradeAppliedSchema(input *clouddirectory.UpgradeAppliedSchemaInput) (*clouddirectory.UpgradeAppliedSchemaOutput, error) {
+	c.inc("UpgradeAppliedSchema")
+	return c.svc.UpgradeAppliedSchema(input)
+}
+
+// UpgradeAppliedSchemaWithContext is a passthrough to the underlying UpgradeAppliedSchemaWithContext method.
+// It will increment the count of requests made to UpgradeAppliedSchema.
+func (c *CloudDirectory) UpgradeAppliedSchemaWithContext(ctx aws.Context, input *clouddirectory.UpgradeAppliedSchemaInput, opts ...request.Option) (*clouddirectory.UpgradeAppliedSchemaOutput, error) {
+	c.inc("UpgradeAppliedSchema")
+	return c.svc.UpgradeAppliedSchemaWithContext(ctx, input, opts...)
+}
+
+// UpgradePublishedSchemaRequest is a passthrough to the underlying UpgradePublishedSchemaRequest.
+// It will increment the count of requests made to UpgradePublishedSchema.
+func (c *CloudDirectory) UpgradePublishedSchemaRequest(input *clouddirectory.UpgradePublishedSchemaInput) (req *request.Request, output *clouddirectory.UpgradePublishedSchemaOutput) {
+	c.inc("UpgradePublishedSchema")
+	return c.svc.UpgradePublishedSchemaRequest(input)
+}
+
+// UpgradePublishedSchema is a passthrough to the underlying UpgradePublishedSchema method.
+// It will increment the count of requests made to UpgradePublishedSchema.
+func (c *CloudDirectory) UpgradePublishedSchema(input *clouddirectory.UpgradePublishedSchemaInput) (*clouddirectory.UpgradePublishedSchemaOutput, error) {
+	c.inc("UpgradePublishedSchema")
+	return c.svc.UpgradePublishedSchema(input)
+}
+
+// UpgradePublishedSchemaWithContext is a passthrough to the underlying UpgradePublishedSchemaWithContext method.
+// It will increment the count of requests made to UpgradePublishedSchema.
+func (c *CloudDirectory) UpgradePublishedSchemaWithContext(ctx aws.Context, input *clouddirectory.UpgradePublishedSchemaInput, opts ...request.Option) (*clouddirectory.UpgradePublishedSchemaOutput, error) {
+	c.inc("UpgradePublishedSchema")
+	return c.svc.UpgradePublishedSchemaWithContext(ctx, input, opts...)
 }

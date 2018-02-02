@@ -470,6 +470,27 @@ func (c *AppStream) ListAssociatedStacksWithContext(ctx aws.Context, input *apps
 	return c.svc.ListAssociatedStacksWithContext(ctx, input, opts...)
 }
 
+// ListTagsForResourceRequest is a passthrough to the underlying ListTagsForResourceRequest.
+// It will increment the count of requests made to ListTagsForResource.
+func (c *AppStream) ListTagsForResourceRequest(input *appstream.ListTagsForResourceInput) (req *request.Request, output *appstream.ListTagsForResourceOutput) {
+	c.inc("ListTagsForResource")
+	return c.svc.ListTagsForResourceRequest(input)
+}
+
+// ListTagsForResource is a passthrough to the underlying ListTagsForResource method.
+// It will increment the count of requests made to ListTagsForResource.
+func (c *AppStream) ListTagsForResource(input *appstream.ListTagsForResourceInput) (*appstream.ListTagsForResourceOutput, error) {
+	c.inc("ListTagsForResource")
+	return c.svc.ListTagsForResource(input)
+}
+
+// ListTagsForResourceWithContext is a passthrough to the underlying ListTagsForResourceWithContext method.
+// It will increment the count of requests made to ListTagsForResource.
+func (c *AppStream) ListTagsForResourceWithContext(ctx aws.Context, input *appstream.ListTagsForResourceInput, opts ...request.Option) (*appstream.ListTagsForResourceOutput, error) {
+	c.inc("ListTagsForResource")
+	return c.svc.ListTagsForResourceWithContext(ctx, input, opts...)
+}
+
 // StartFleetRequest is a passthrough to the underlying StartFleetRequest.
 // It will increment the count of requests made to StartFleet.
 func (c *AppStream) StartFleetRequest(input *appstream.StartFleetInput) (req *request.Request, output *appstream.StartFleetOutput) {
@@ -552,6 +573,48 @@ func (c *AppStream) StopImageBuilder(input *appstream.StopImageBuilderInput) (*a
 func (c *AppStream) StopImageBuilderWithContext(ctx aws.Context, input *appstream.StopImageBuilderInput, opts ...request.Option) (*appstream.StopImageBuilderOutput, error) {
 	c.inc("StopImageBuilder")
 	return c.svc.StopImageBuilderWithContext(ctx, input, opts...)
+}
+
+// TagResourceRequest is a passthrough to the underlying TagResourceRequest.
+// It will increment the count of requests made to TagResource.
+func (c *AppStream) TagResourceRequest(input *appstream.TagResourceInput) (req *request.Request, output *appstream.TagResourceOutput) {
+	c.inc("TagResource")
+	return c.svc.TagResourceRequest(input)
+}
+
+// TagResource is a passthrough to the underlying TagResource method.
+// It will increment the count of requests made to TagResource.
+func (c *AppStream) TagResource(input *appstream.TagResourceInput) (*appstream.TagResourceOutput, error) {
+	c.inc("TagResource")
+	return c.svc.TagResource(input)
+}
+
+// TagResourceWithContext is a passthrough to the underlying TagResourceWithContext method.
+// It will increment the count of requests made to TagResource.
+func (c *AppStream) TagResourceWithContext(ctx aws.Context, input *appstream.TagResourceInput, opts ...request.Option) (*appstream.TagResourceOutput, error) {
+	c.inc("TagResource")
+	return c.svc.TagResourceWithContext(ctx, input, opts...)
+}
+
+// UntagResourceRequest is a passthrough to the underlying UntagResourceRequest.
+// It will increment the count of requests made to UntagResource.
+func (c *AppStream) UntagResourceRequest(input *appstream.UntagResourceInput) (req *request.Request, output *appstream.UntagResourceOutput) {
+	c.inc("UntagResource")
+	return c.svc.UntagResourceRequest(input)
+}
+
+// UntagResource is a passthrough to the underlying UntagResource method.
+// It will increment the count of requests made to UntagResource.
+func (c *AppStream) UntagResource(input *appstream.UntagResourceInput) (*appstream.UntagResourceOutput, error) {
+	c.inc("UntagResource")
+	return c.svc.UntagResource(input)
+}
+
+// UntagResourceWithContext is a passthrough to the underlying UntagResourceWithContext method.
+// It will increment the count of requests made to UntagResource.
+func (c *AppStream) UntagResourceWithContext(ctx aws.Context, input *appstream.UntagResourceInput, opts ...request.Option) (*appstream.UntagResourceOutput, error) {
+	c.inc("UntagResource")
+	return c.svc.UntagResourceWithContext(ctx, input, opts...)
 }
 
 // UpdateDirectoryConfigRequest is a passthrough to the underlying UpdateDirectoryConfigRequest.

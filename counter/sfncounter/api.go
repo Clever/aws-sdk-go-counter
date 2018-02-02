@@ -155,6 +155,27 @@ func (c *SFN) DescribeStateMachineWithContext(ctx aws.Context, input *sfn.Descri
 	return c.svc.DescribeStateMachineWithContext(ctx, input, opts...)
 }
 
+// DescribeStateMachineForExecutionRequest is a passthrough to the underlying DescribeStateMachineForExecutionRequest.
+// It will increment the count of requests made to DescribeStateMachineForExecution.
+func (c *SFN) DescribeStateMachineForExecutionRequest(input *sfn.DescribeStateMachineForExecutionInput) (req *request.Request, output *sfn.DescribeStateMachineForExecutionOutput) {
+	c.inc("DescribeStateMachineForExecution")
+	return c.svc.DescribeStateMachineForExecutionRequest(input)
+}
+
+// DescribeStateMachineForExecution is a passthrough to the underlying DescribeStateMachineForExecution method.
+// It will increment the count of requests made to DescribeStateMachineForExecution.
+func (c *SFN) DescribeStateMachineForExecution(input *sfn.DescribeStateMachineForExecutionInput) (*sfn.DescribeStateMachineForExecutionOutput, error) {
+	c.inc("DescribeStateMachineForExecution")
+	return c.svc.DescribeStateMachineForExecution(input)
+}
+
+// DescribeStateMachineForExecutionWithContext is a passthrough to the underlying DescribeStateMachineForExecutionWithContext method.
+// It will increment the count of requests made to DescribeStateMachineForExecution.
+func (c *SFN) DescribeStateMachineForExecutionWithContext(ctx aws.Context, input *sfn.DescribeStateMachineForExecutionInput, opts ...request.Option) (*sfn.DescribeStateMachineForExecutionOutput, error) {
+	c.inc("DescribeStateMachineForExecution")
+	return c.svc.DescribeStateMachineForExecutionWithContext(ctx, input, opts...)
+}
+
 // GetActivityTaskRequest is a passthrough to the underlying GetActivityTaskRequest.
 // It will increment the count of requests made to GetActivityTask.
 func (c *SFN) GetActivityTaskRequest(input *sfn.GetActivityTaskInput) (req *request.Request, output *sfn.GetActivityTaskOutput) {
@@ -439,4 +460,25 @@ func (c *SFN) StopExecution(input *sfn.StopExecutionInput) (*sfn.StopExecutionOu
 func (c *SFN) StopExecutionWithContext(ctx aws.Context, input *sfn.StopExecutionInput, opts ...request.Option) (*sfn.StopExecutionOutput, error) {
 	c.inc("StopExecution")
 	return c.svc.StopExecutionWithContext(ctx, input, opts...)
+}
+
+// UpdateStateMachineRequest is a passthrough to the underlying UpdateStateMachineRequest.
+// It will increment the count of requests made to UpdateStateMachine.
+func (c *SFN) UpdateStateMachineRequest(input *sfn.UpdateStateMachineInput) (req *request.Request, output *sfn.UpdateStateMachineOutput) {
+	c.inc("UpdateStateMachine")
+	return c.svc.UpdateStateMachineRequest(input)
+}
+
+// UpdateStateMachine is a passthrough to the underlying UpdateStateMachine method.
+// It will increment the count of requests made to UpdateStateMachine.
+func (c *SFN) UpdateStateMachine(input *sfn.UpdateStateMachineInput) (*sfn.UpdateStateMachineOutput, error) {
+	c.inc("UpdateStateMachine")
+	return c.svc.UpdateStateMachine(input)
+}
+
+// UpdateStateMachineWithContext is a passthrough to the underlying UpdateStateMachineWithContext method.
+// It will increment the count of requests made to UpdateStateMachine.
+func (c *SFN) UpdateStateMachineWithContext(ctx aws.Context, input *sfn.UpdateStateMachineInput, opts ...request.Option) (*sfn.UpdateStateMachineOutput, error) {
+	c.inc("UpdateStateMachine")
+	return c.svc.UpdateStateMachineWithContext(ctx, input, opts...)
 }

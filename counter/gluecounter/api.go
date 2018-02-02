@@ -92,6 +92,27 @@ func (c *Glue) BatchDeleteTableWithContext(ctx aws.Context, input *glue.BatchDel
 	return c.svc.BatchDeleteTableWithContext(ctx, input, opts...)
 }
 
+// BatchDeleteTableVersionRequest is a passthrough to the underlying BatchDeleteTableVersionRequest.
+// It will increment the count of requests made to BatchDeleteTableVersion.
+func (c *Glue) BatchDeleteTableVersionRequest(input *glue.BatchDeleteTableVersionInput) (req *request.Request, output *glue.BatchDeleteTableVersionOutput) {
+	c.inc("BatchDeleteTableVersion")
+	return c.svc.BatchDeleteTableVersionRequest(input)
+}
+
+// BatchDeleteTableVersion is a passthrough to the underlying BatchDeleteTableVersion method.
+// It will increment the count of requests made to BatchDeleteTableVersion.
+func (c *Glue) BatchDeleteTableVersion(input *glue.BatchDeleteTableVersionInput) (*glue.BatchDeleteTableVersionOutput, error) {
+	c.inc("BatchDeleteTableVersion")
+	return c.svc.BatchDeleteTableVersion(input)
+}
+
+// BatchDeleteTableVersionWithContext is a passthrough to the underlying BatchDeleteTableVersionWithContext method.
+// It will increment the count of requests made to BatchDeleteTableVersion.
+func (c *Glue) BatchDeleteTableVersionWithContext(ctx aws.Context, input *glue.BatchDeleteTableVersionInput, opts ...request.Option) (*glue.BatchDeleteTableVersionOutput, error) {
+	c.inc("BatchDeleteTableVersion")
+	return c.svc.BatchDeleteTableVersionWithContext(ctx, input, opts...)
+}
+
 // BatchGetPartitionRequest is a passthrough to the underlying BatchGetPartitionRequest.
 // It will increment the count of requests made to BatchGetPartition.
 func (c *Glue) BatchGetPartitionRequest(input *glue.BatchGetPartitionInput) (req *request.Request, output *glue.BatchGetPartitionOutput) {
@@ -531,6 +552,27 @@ func (c *Glue) DeleteTable(input *glue.DeleteTableInput) (*glue.DeleteTableOutpu
 func (c *Glue) DeleteTableWithContext(ctx aws.Context, input *glue.DeleteTableInput, opts ...request.Option) (*glue.DeleteTableOutput, error) {
 	c.inc("DeleteTable")
 	return c.svc.DeleteTableWithContext(ctx, input, opts...)
+}
+
+// DeleteTableVersionRequest is a passthrough to the underlying DeleteTableVersionRequest.
+// It will increment the count of requests made to DeleteTableVersion.
+func (c *Glue) DeleteTableVersionRequest(input *glue.DeleteTableVersionInput) (req *request.Request, output *glue.DeleteTableVersionOutput) {
+	c.inc("DeleteTableVersion")
+	return c.svc.DeleteTableVersionRequest(input)
+}
+
+// DeleteTableVersion is a passthrough to the underlying DeleteTableVersion method.
+// It will increment the count of requests made to DeleteTableVersion.
+func (c *Glue) DeleteTableVersion(input *glue.DeleteTableVersionInput) (*glue.DeleteTableVersionOutput, error) {
+	c.inc("DeleteTableVersion")
+	return c.svc.DeleteTableVersion(input)
+}
+
+// DeleteTableVersionWithContext is a passthrough to the underlying DeleteTableVersionWithContext method.
+// It will increment the count of requests made to DeleteTableVersion.
+func (c *Glue) DeleteTableVersionWithContext(ctx aws.Context, input *glue.DeleteTableVersionInput, opts ...request.Option) (*glue.DeleteTableVersionOutput, error) {
+	c.inc("DeleteTableVersion")
+	return c.svc.DeleteTableVersionWithContext(ctx, input, opts...)
 }
 
 // DeleteTriggerRequest is a passthrough to the underlying DeleteTriggerRequest.
@@ -1206,6 +1248,27 @@ func (c *Glue) GetTable(input *glue.GetTableInput) (*glue.GetTableOutput, error)
 func (c *Glue) GetTableWithContext(ctx aws.Context, input *glue.GetTableInput, opts ...request.Option) (*glue.GetTableOutput, error) {
 	c.inc("GetTable")
 	return c.svc.GetTableWithContext(ctx, input, opts...)
+}
+
+// GetTableVersionRequest is a passthrough to the underlying GetTableVersionRequest.
+// It will increment the count of requests made to GetTableVersion.
+func (c *Glue) GetTableVersionRequest(input *glue.GetTableVersionInput) (req *request.Request, output *glue.GetTableVersionOutput) {
+	c.inc("GetTableVersion")
+	return c.svc.GetTableVersionRequest(input)
+}
+
+// GetTableVersion is a passthrough to the underlying GetTableVersion method.
+// It will increment the count of requests made to GetTableVersion.
+func (c *Glue) GetTableVersion(input *glue.GetTableVersionInput) (*glue.GetTableVersionOutput, error) {
+	c.inc("GetTableVersion")
+	return c.svc.GetTableVersion(input)
+}
+
+// GetTableVersionWithContext is a passthrough to the underlying GetTableVersionWithContext method.
+// It will increment the count of requests made to GetTableVersion.
+func (c *Glue) GetTableVersionWithContext(ctx aws.Context, input *glue.GetTableVersionInput, opts ...request.Option) (*glue.GetTableVersionOutput, error) {
+	c.inc("GetTableVersion")
+	return c.svc.GetTableVersionWithContext(ctx, input, opts...)
 }
 
 // GetTableVersionsRequest is a passthrough to the underlying GetTableVersionsRequest.

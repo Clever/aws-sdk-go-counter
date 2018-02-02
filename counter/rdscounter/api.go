@@ -2137,6 +2137,27 @@ func (c *RDS) RestoreDBInstanceFromDBSnapshotWithContext(ctx aws.Context, input 
 	return c.svc.RestoreDBInstanceFromDBSnapshotWithContext(ctx, input, opts...)
 }
 
+// RestoreDBInstanceFromS3Request is a passthrough to the underlying RestoreDBInstanceFromS3Request.
+// It will increment the count of requests made to RestoreDBInstanceFromS3.
+func (c *RDS) RestoreDBInstanceFromS3Request(input *rds.RestoreDBInstanceFromS3Input) (req *request.Request, output *rds.RestoreDBInstanceFromS3Output) {
+	c.inc("RestoreDBInstanceFromS3")
+	return c.svc.RestoreDBInstanceFromS3Request(input)
+}
+
+// RestoreDBInstanceFromS3 is a passthrough to the underlying RestoreDBInstanceFromS3 method.
+// It will increment the count of requests made to RestoreDBInstanceFromS3.
+func (c *RDS) RestoreDBInstanceFromS3(input *rds.RestoreDBInstanceFromS3Input) (*rds.RestoreDBInstanceFromS3Output, error) {
+	c.inc("RestoreDBInstanceFromS3")
+	return c.svc.RestoreDBInstanceFromS3(input)
+}
+
+// RestoreDBInstanceFromS3WithContext is a passthrough to the underlying RestoreDBInstanceFromS3WithContext method.
+// It will increment the count of requests made to RestoreDBInstanceFromS3.
+func (c *RDS) RestoreDBInstanceFromS3WithContext(ctx aws.Context, input *rds.RestoreDBInstanceFromS3Input, opts ...request.Option) (*rds.RestoreDBInstanceFromS3Output, error) {
+	c.inc("RestoreDBInstanceFromS3")
+	return c.svc.RestoreDBInstanceFromS3WithContext(ctx, input, opts...)
+}
+
 // RestoreDBInstanceToPointInTimeRequest is a passthrough to the underlying RestoreDBInstanceToPointInTimeRequest.
 // It will increment the count of requests made to RestoreDBInstanceToPointInTime.
 func (c *RDS) RestoreDBInstanceToPointInTimeRequest(input *rds.RestoreDBInstanceToPointInTimeInput) (req *request.Request, output *rds.RestoreDBInstanceToPointInTimeOutput) {

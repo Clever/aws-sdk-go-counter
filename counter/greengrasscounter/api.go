@@ -302,6 +302,69 @@ func (c *Greengrass) CreateLoggerDefinitionVersionWithContext(ctx aws.Context, i
 	return c.svc.CreateLoggerDefinitionVersionWithContext(ctx, input, opts...)
 }
 
+// CreateResourceDefinitionRequest is a passthrough to the underlying CreateResourceDefinitionRequest.
+// It will increment the count of requests made to CreateResourceDefinition.
+func (c *Greengrass) CreateResourceDefinitionRequest(input *greengrass.CreateResourceDefinitionInput) (req *request.Request, output *greengrass.CreateResourceDefinitionOutput) {
+	c.inc("CreateResourceDefinition")
+	return c.svc.CreateResourceDefinitionRequest(input)
+}
+
+// CreateResourceDefinition is a passthrough to the underlying CreateResourceDefinition method.
+// It will increment the count of requests made to CreateResourceDefinition.
+func (c *Greengrass) CreateResourceDefinition(input *greengrass.CreateResourceDefinitionInput) (*greengrass.CreateResourceDefinitionOutput, error) {
+	c.inc("CreateResourceDefinition")
+	return c.svc.CreateResourceDefinition(input)
+}
+
+// CreateResourceDefinitionWithContext is a passthrough to the underlying CreateResourceDefinitionWithContext method.
+// It will increment the count of requests made to CreateResourceDefinition.
+func (c *Greengrass) CreateResourceDefinitionWithContext(ctx aws.Context, input *greengrass.CreateResourceDefinitionInput, opts ...request.Option) (*greengrass.CreateResourceDefinitionOutput, error) {
+	c.inc("CreateResourceDefinition")
+	return c.svc.CreateResourceDefinitionWithContext(ctx, input, opts...)
+}
+
+// CreateResourceDefinitionVersionRequest is a passthrough to the underlying CreateResourceDefinitionVersionRequest.
+// It will increment the count of requests made to CreateResourceDefinitionVersion.
+func (c *Greengrass) CreateResourceDefinitionVersionRequest(input *greengrass.CreateResourceDefinitionVersionInput) (req *request.Request, output *greengrass.CreateResourceDefinitionVersionOutput) {
+	c.inc("CreateResourceDefinitionVersion")
+	return c.svc.CreateResourceDefinitionVersionRequest(input)
+}
+
+// CreateResourceDefinitionVersion is a passthrough to the underlying CreateResourceDefinitionVersion method.
+// It will increment the count of requests made to CreateResourceDefinitionVersion.
+func (c *Greengrass) CreateResourceDefinitionVersion(input *greengrass.CreateResourceDefinitionVersionInput) (*greengrass.CreateResourceDefinitionVersionOutput, error) {
+	c.inc("CreateResourceDefinitionVersion")
+	return c.svc.CreateResourceDefinitionVersion(input)
+}
+
+// CreateResourceDefinitionVersionWithContext is a passthrough to the underlying CreateResourceDefinitionVersionWithContext method.
+// It will increment the count of requests made to CreateResourceDefinitionVersion.
+func (c *Greengrass) CreateResourceDefinitionVersionWithContext(ctx aws.Context, input *greengrass.CreateResourceDefinitionVersionInput, opts ...request.Option) (*greengrass.CreateResourceDefinitionVersionOutput, error) {
+	c.inc("CreateResourceDefinitionVersion")
+	return c.svc.CreateResourceDefinitionVersionWithContext(ctx, input, opts...)
+}
+
+// CreateSoftwareUpdateJobRequest is a passthrough to the underlying CreateSoftwareUpdateJobRequest.
+// It will increment the count of requests made to CreateSoftwareUpdateJob.
+func (c *Greengrass) CreateSoftwareUpdateJobRequest(input *greengrass.CreateSoftwareUpdateJobInput) (req *request.Request, output *greengrass.CreateSoftwareUpdateJobOutput) {
+	c.inc("CreateSoftwareUpdateJob")
+	return c.svc.CreateSoftwareUpdateJobRequest(input)
+}
+
+// CreateSoftwareUpdateJob is a passthrough to the underlying CreateSoftwareUpdateJob method.
+// It will increment the count of requests made to CreateSoftwareUpdateJob.
+func (c *Greengrass) CreateSoftwareUpdateJob(input *greengrass.CreateSoftwareUpdateJobInput) (*greengrass.CreateSoftwareUpdateJobOutput, error) {
+	c.inc("CreateSoftwareUpdateJob")
+	return c.svc.CreateSoftwareUpdateJob(input)
+}
+
+// CreateSoftwareUpdateJobWithContext is a passthrough to the underlying CreateSoftwareUpdateJobWithContext method.
+// It will increment the count of requests made to CreateSoftwareUpdateJob.
+func (c *Greengrass) CreateSoftwareUpdateJobWithContext(ctx aws.Context, input *greengrass.CreateSoftwareUpdateJobInput, opts ...request.Option) (*greengrass.CreateSoftwareUpdateJobOutput, error) {
+	c.inc("CreateSoftwareUpdateJob")
+	return c.svc.CreateSoftwareUpdateJobWithContext(ctx, input, opts...)
+}
+
 // CreateSubscriptionDefinitionRequest is a passthrough to the underlying CreateSubscriptionDefinitionRequest.
 // It will increment the count of requests made to CreateSubscriptionDefinition.
 func (c *Greengrass) CreateSubscriptionDefinitionRequest(input *greengrass.CreateSubscriptionDefinitionInput) (req *request.Request, output *greengrass.CreateSubscriptionDefinitionOutput) {
@@ -447,6 +510,27 @@ func (c *Greengrass) DeleteLoggerDefinition(input *greengrass.DeleteLoggerDefini
 func (c *Greengrass) DeleteLoggerDefinitionWithContext(ctx aws.Context, input *greengrass.DeleteLoggerDefinitionInput, opts ...request.Option) (*greengrass.DeleteLoggerDefinitionOutput, error) {
 	c.inc("DeleteLoggerDefinition")
 	return c.svc.DeleteLoggerDefinitionWithContext(ctx, input, opts...)
+}
+
+// DeleteResourceDefinitionRequest is a passthrough to the underlying DeleteResourceDefinitionRequest.
+// It will increment the count of requests made to DeleteResourceDefinition.
+func (c *Greengrass) DeleteResourceDefinitionRequest(input *greengrass.DeleteResourceDefinitionInput) (req *request.Request, output *greengrass.DeleteResourceDefinitionOutput) {
+	c.inc("DeleteResourceDefinition")
+	return c.svc.DeleteResourceDefinitionRequest(input)
+}
+
+// DeleteResourceDefinition is a passthrough to the underlying DeleteResourceDefinition method.
+// It will increment the count of requests made to DeleteResourceDefinition.
+func (c *Greengrass) DeleteResourceDefinition(input *greengrass.DeleteResourceDefinitionInput) (*greengrass.DeleteResourceDefinitionOutput, error) {
+	c.inc("DeleteResourceDefinition")
+	return c.svc.DeleteResourceDefinition(input)
+}
+
+// DeleteResourceDefinitionWithContext is a passthrough to the underlying DeleteResourceDefinitionWithContext method.
+// It will increment the count of requests made to DeleteResourceDefinition.
+func (c *Greengrass) DeleteResourceDefinitionWithContext(ctx aws.Context, input *greengrass.DeleteResourceDefinitionInput, opts ...request.Option) (*greengrass.DeleteResourceDefinitionOutput, error) {
+	c.inc("DeleteResourceDefinition")
+	return c.svc.DeleteResourceDefinitionWithContext(ctx, input, opts...)
 }
 
 // DeleteSubscriptionDefinitionRequest is a passthrough to the underlying DeleteSubscriptionDefinitionRequest.
@@ -827,6 +911,48 @@ func (c *Greengrass) GetLoggerDefinitionVersionWithContext(ctx aws.Context, inpu
 	return c.svc.GetLoggerDefinitionVersionWithContext(ctx, input, opts...)
 }
 
+// GetResourceDefinitionRequest is a passthrough to the underlying GetResourceDefinitionRequest.
+// It will increment the count of requests made to GetResourceDefinition.
+func (c *Greengrass) GetResourceDefinitionRequest(input *greengrass.GetResourceDefinitionInput) (req *request.Request, output *greengrass.GetResourceDefinitionOutput) {
+	c.inc("GetResourceDefinition")
+	return c.svc.GetResourceDefinitionRequest(input)
+}
+
+// GetResourceDefinition is a passthrough to the underlying GetResourceDefinition method.
+// It will increment the count of requests made to GetResourceDefinition.
+func (c *Greengrass) GetResourceDefinition(input *greengrass.GetResourceDefinitionInput) (*greengrass.GetResourceDefinitionOutput, error) {
+	c.inc("GetResourceDefinition")
+	return c.svc.GetResourceDefinition(input)
+}
+
+// GetResourceDefinitionWithContext is a passthrough to the underlying GetResourceDefinitionWithContext method.
+// It will increment the count of requests made to GetResourceDefinition.
+func (c *Greengrass) GetResourceDefinitionWithContext(ctx aws.Context, input *greengrass.GetResourceDefinitionInput, opts ...request.Option) (*greengrass.GetResourceDefinitionOutput, error) {
+	c.inc("GetResourceDefinition")
+	return c.svc.GetResourceDefinitionWithContext(ctx, input, opts...)
+}
+
+// GetResourceDefinitionVersionRequest is a passthrough to the underlying GetResourceDefinitionVersionRequest.
+// It will increment the count of requests made to GetResourceDefinitionVersion.
+func (c *Greengrass) GetResourceDefinitionVersionRequest(input *greengrass.GetResourceDefinitionVersionInput) (req *request.Request, output *greengrass.GetResourceDefinitionVersionOutput) {
+	c.inc("GetResourceDefinitionVersion")
+	return c.svc.GetResourceDefinitionVersionRequest(input)
+}
+
+// GetResourceDefinitionVersion is a passthrough to the underlying GetResourceDefinitionVersion method.
+// It will increment the count of requests made to GetResourceDefinitionVersion.
+func (c *Greengrass) GetResourceDefinitionVersion(input *greengrass.GetResourceDefinitionVersionInput) (*greengrass.GetResourceDefinitionVersionOutput, error) {
+	c.inc("GetResourceDefinitionVersion")
+	return c.svc.GetResourceDefinitionVersion(input)
+}
+
+// GetResourceDefinitionVersionWithContext is a passthrough to the underlying GetResourceDefinitionVersionWithContext method.
+// It will increment the count of requests made to GetResourceDefinitionVersion.
+func (c *Greengrass) GetResourceDefinitionVersionWithContext(ctx aws.Context, input *greengrass.GetResourceDefinitionVersionInput, opts ...request.Option) (*greengrass.GetResourceDefinitionVersionOutput, error) {
+	c.inc("GetResourceDefinitionVersion")
+	return c.svc.GetResourceDefinitionVersionWithContext(ctx, input, opts...)
+}
+
 // GetServiceRoleForAccountRequest is a passthrough to the underlying GetServiceRoleForAccountRequest.
 // It will increment the count of requests made to GetServiceRoleForAccount.
 func (c *Greengrass) GetServiceRoleForAccountRequest(input *greengrass.GetServiceRoleForAccountInput) (req *request.Request, output *greengrass.GetServiceRoleForAccountOutput) {
@@ -1142,6 +1268,48 @@ func (c *Greengrass) ListLoggerDefinitionsWithContext(ctx aws.Context, input *gr
 	return c.svc.ListLoggerDefinitionsWithContext(ctx, input, opts...)
 }
 
+// ListResourceDefinitionVersionsRequest is a passthrough to the underlying ListResourceDefinitionVersionsRequest.
+// It will increment the count of requests made to ListResourceDefinitionVersions.
+func (c *Greengrass) ListResourceDefinitionVersionsRequest(input *greengrass.ListResourceDefinitionVersionsInput) (req *request.Request, output *greengrass.ListResourceDefinitionVersionsOutput) {
+	c.inc("ListResourceDefinitionVersions")
+	return c.svc.ListResourceDefinitionVersionsRequest(input)
+}
+
+// ListResourceDefinitionVersions is a passthrough to the underlying ListResourceDefinitionVersions method.
+// It will increment the count of requests made to ListResourceDefinitionVersions.
+func (c *Greengrass) ListResourceDefinitionVersions(input *greengrass.ListResourceDefinitionVersionsInput) (*greengrass.ListResourceDefinitionVersionsOutput, error) {
+	c.inc("ListResourceDefinitionVersions")
+	return c.svc.ListResourceDefinitionVersions(input)
+}
+
+// ListResourceDefinitionVersionsWithContext is a passthrough to the underlying ListResourceDefinitionVersionsWithContext method.
+// It will increment the count of requests made to ListResourceDefinitionVersions.
+func (c *Greengrass) ListResourceDefinitionVersionsWithContext(ctx aws.Context, input *greengrass.ListResourceDefinitionVersionsInput, opts ...request.Option) (*greengrass.ListResourceDefinitionVersionsOutput, error) {
+	c.inc("ListResourceDefinitionVersions")
+	return c.svc.ListResourceDefinitionVersionsWithContext(ctx, input, opts...)
+}
+
+// ListResourceDefinitionsRequest is a passthrough to the underlying ListResourceDefinitionsRequest.
+// It will increment the count of requests made to ListResourceDefinitions.
+func (c *Greengrass) ListResourceDefinitionsRequest(input *greengrass.ListResourceDefinitionsInput) (req *request.Request, output *greengrass.ListResourceDefinitionsOutput) {
+	c.inc("ListResourceDefinitions")
+	return c.svc.ListResourceDefinitionsRequest(input)
+}
+
+// ListResourceDefinitions is a passthrough to the underlying ListResourceDefinitions method.
+// It will increment the count of requests made to ListResourceDefinitions.
+func (c *Greengrass) ListResourceDefinitions(input *greengrass.ListResourceDefinitionsInput) (*greengrass.ListResourceDefinitionsOutput, error) {
+	c.inc("ListResourceDefinitions")
+	return c.svc.ListResourceDefinitions(input)
+}
+
+// ListResourceDefinitionsWithContext is a passthrough to the underlying ListResourceDefinitionsWithContext method.
+// It will increment the count of requests made to ListResourceDefinitions.
+func (c *Greengrass) ListResourceDefinitionsWithContext(ctx aws.Context, input *greengrass.ListResourceDefinitionsInput, opts ...request.Option) (*greengrass.ListResourceDefinitionsOutput, error) {
+	c.inc("ListResourceDefinitions")
+	return c.svc.ListResourceDefinitionsWithContext(ctx, input, opts...)
+}
+
 // ListSubscriptionDefinitionVersionsRequest is a passthrough to the underlying ListSubscriptionDefinitionVersionsRequest.
 // It will increment the count of requests made to ListSubscriptionDefinitionVersions.
 func (c *Greengrass) ListSubscriptionDefinitionVersionsRequest(input *greengrass.ListSubscriptionDefinitionVersionsInput) (req *request.Request, output *greengrass.ListSubscriptionDefinitionVersionsOutput) {
@@ -1350,6 +1518,27 @@ func (c *Greengrass) UpdateLoggerDefinition(input *greengrass.UpdateLoggerDefini
 func (c *Greengrass) UpdateLoggerDefinitionWithContext(ctx aws.Context, input *greengrass.UpdateLoggerDefinitionInput, opts ...request.Option) (*greengrass.UpdateLoggerDefinitionOutput, error) {
 	c.inc("UpdateLoggerDefinition")
 	return c.svc.UpdateLoggerDefinitionWithContext(ctx, input, opts...)
+}
+
+// UpdateResourceDefinitionRequest is a passthrough to the underlying UpdateResourceDefinitionRequest.
+// It will increment the count of requests made to UpdateResourceDefinition.
+func (c *Greengrass) UpdateResourceDefinitionRequest(input *greengrass.UpdateResourceDefinitionInput) (req *request.Request, output *greengrass.UpdateResourceDefinitionOutput) {
+	c.inc("UpdateResourceDefinition")
+	return c.svc.UpdateResourceDefinitionRequest(input)
+}
+
+// UpdateResourceDefinition is a passthrough to the underlying UpdateResourceDefinition method.
+// It will increment the count of requests made to UpdateResourceDefinition.
+func (c *Greengrass) UpdateResourceDefinition(input *greengrass.UpdateResourceDefinitionInput) (*greengrass.UpdateResourceDefinitionOutput, error) {
+	c.inc("UpdateResourceDefinition")
+	return c.svc.UpdateResourceDefinition(input)
+}
+
+// UpdateResourceDefinitionWithContext is a passthrough to the underlying UpdateResourceDefinitionWithContext method.
+// It will increment the count of requests made to UpdateResourceDefinition.
+func (c *Greengrass) UpdateResourceDefinitionWithContext(ctx aws.Context, input *greengrass.UpdateResourceDefinitionInput, opts ...request.Option) (*greengrass.UpdateResourceDefinitionOutput, error) {
+	c.inc("UpdateResourceDefinition")
+	return c.svc.UpdateResourceDefinitionWithContext(ctx, input, opts...)
 }
 
 // UpdateSubscriptionDefinitionRequest is a passthrough to the underlying UpdateSubscriptionDefinitionRequest.

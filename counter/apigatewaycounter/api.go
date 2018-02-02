@@ -302,6 +302,27 @@ func (c *APIGateway) CreateUsagePlanKeyWithContext(ctx aws.Context, input *apiga
 	return c.svc.CreateUsagePlanKeyWithContext(ctx, input, opts...)
 }
 
+// CreateVpcLinkRequest is a passthrough to the underlying CreateVpcLinkRequest.
+// It will increment the count of requests made to CreateVpcLink.
+func (c *APIGateway) CreateVpcLinkRequest(input *apigateway.CreateVpcLinkInput) (req *request.Request, output *apigateway.UpdateVpcLinkOutput) {
+	c.inc("CreateVpcLink")
+	return c.svc.CreateVpcLinkRequest(input)
+}
+
+// CreateVpcLink is a passthrough to the underlying CreateVpcLink method.
+// It will increment the count of requests made to CreateVpcLink.
+func (c *APIGateway) CreateVpcLink(input *apigateway.CreateVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error) {
+	c.inc("CreateVpcLink")
+	return c.svc.CreateVpcLink(input)
+}
+
+// CreateVpcLinkWithContext is a passthrough to the underlying CreateVpcLinkWithContext method.
+// It will increment the count of requests made to CreateVpcLink.
+func (c *APIGateway) CreateVpcLinkWithContext(ctx aws.Context, input *apigateway.CreateVpcLinkInput, opts ...request.Option) (*apigateway.UpdateVpcLinkOutput, error) {
+	c.inc("CreateVpcLink")
+	return c.svc.CreateVpcLinkWithContext(ctx, input, opts...)
+}
+
 // DeleteApiKeyRequest is a passthrough to the underlying DeleteApiKeyRequest.
 // It will increment the count of requests made to DeleteApiKey.
 func (c *APIGateway) DeleteApiKeyRequest(input *apigateway.DeleteApiKeyInput) (req *request.Request, output *apigateway.DeleteApiKeyOutput) {
@@ -720,6 +741,27 @@ func (c *APIGateway) DeleteUsagePlanKey(input *apigateway.DeleteUsagePlanKeyInpu
 func (c *APIGateway) DeleteUsagePlanKeyWithContext(ctx aws.Context, input *apigateway.DeleteUsagePlanKeyInput, opts ...request.Option) (*apigateway.DeleteUsagePlanKeyOutput, error) {
 	c.inc("DeleteUsagePlanKey")
 	return c.svc.DeleteUsagePlanKeyWithContext(ctx, input, opts...)
+}
+
+// DeleteVpcLinkRequest is a passthrough to the underlying DeleteVpcLinkRequest.
+// It will increment the count of requests made to DeleteVpcLink.
+func (c *APIGateway) DeleteVpcLinkRequest(input *apigateway.DeleteVpcLinkInput) (req *request.Request, output *apigateway.DeleteVpcLinkOutput) {
+	c.inc("DeleteVpcLink")
+	return c.svc.DeleteVpcLinkRequest(input)
+}
+
+// DeleteVpcLink is a passthrough to the underlying DeleteVpcLink method.
+// It will increment the count of requests made to DeleteVpcLink.
+func (c *APIGateway) DeleteVpcLink(input *apigateway.DeleteVpcLinkInput) (*apigateway.DeleteVpcLinkOutput, error) {
+	c.inc("DeleteVpcLink")
+	return c.svc.DeleteVpcLink(input)
+}
+
+// DeleteVpcLinkWithContext is a passthrough to the underlying DeleteVpcLinkWithContext method.
+// It will increment the count of requests made to DeleteVpcLink.
+func (c *APIGateway) DeleteVpcLinkWithContext(ctx aws.Context, input *apigateway.DeleteVpcLinkInput, opts ...request.Option) (*apigateway.DeleteVpcLinkOutput, error) {
+	c.inc("DeleteVpcLink")
+	return c.svc.DeleteVpcLinkWithContext(ctx, input, opts...)
 }
 
 // FlushStageAuthorizersCacheRequest is a passthrough to the underlying FlushStageAuthorizersCacheRequest.
@@ -1735,6 +1777,27 @@ func (c *APIGateway) GetStagesWithContext(ctx aws.Context, input *apigateway.Get
 	return c.svc.GetStagesWithContext(ctx, input, opts...)
 }
 
+// GetTagsRequest is a passthrough to the underlying GetTagsRequest.
+// It will increment the count of requests made to GetTags.
+func (c *APIGateway) GetTagsRequest(input *apigateway.GetTagsInput) (req *request.Request, output *apigateway.GetTagsOutput) {
+	c.inc("GetTags")
+	return c.svc.GetTagsRequest(input)
+}
+
+// GetTags is a passthrough to the underlying GetTags method.
+// It will increment the count of requests made to GetTags.
+func (c *APIGateway) GetTags(input *apigateway.GetTagsInput) (*apigateway.GetTagsOutput, error) {
+	c.inc("GetTags")
+	return c.svc.GetTags(input)
+}
+
+// GetTagsWithContext is a passthrough to the underlying GetTagsWithContext method.
+// It will increment the count of requests made to GetTags.
+func (c *APIGateway) GetTagsWithContext(ctx aws.Context, input *apigateway.GetTagsInput, opts ...request.Option) (*apigateway.GetTagsOutput, error) {
+	c.inc("GetTags")
+	return c.svc.GetTagsWithContext(ctx, input, opts...)
+}
+
 // GetUsageRequest is a passthrough to the underlying GetUsageRequest.
 // It will increment the count of requests made to GetUsage.
 func (c *APIGateway) GetUsageRequest(input *apigateway.GetUsageInput) (req *request.Request, output *apigateway.Usage) {
@@ -1895,6 +1958,67 @@ func (c *APIGateway) GetUsagePlansPages(input *apigateway.GetUsagePlansInput, fn
 func (c *APIGateway) GetUsagePlansPagesWithContext(ctx aws.Context, input *apigateway.GetUsagePlansInput, fn func(*apigateway.GetUsagePlansOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetUsagePlans"))
 	return c.svc.GetUsagePlansPagesWithContext(ctx, input, fn, opts...)
+}
+
+// GetVpcLinkRequest is a passthrough to the underlying GetVpcLinkRequest.
+// It will increment the count of requests made to GetVpcLink.
+func (c *APIGateway) GetVpcLinkRequest(input *apigateway.GetVpcLinkInput) (req *request.Request, output *apigateway.UpdateVpcLinkOutput) {
+	c.inc("GetVpcLink")
+	return c.svc.GetVpcLinkRequest(input)
+}
+
+// GetVpcLink is a passthrough to the underlying GetVpcLink method.
+// It will increment the count of requests made to GetVpcLink.
+func (c *APIGateway) GetVpcLink(input *apigateway.GetVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error) {
+	c.inc("GetVpcLink")
+	return c.svc.GetVpcLink(input)
+}
+
+// GetVpcLinkWithContext is a passthrough to the underlying GetVpcLinkWithContext method.
+// It will increment the count of requests made to GetVpcLink.
+func (c *APIGateway) GetVpcLinkWithContext(ctx aws.Context, input *apigateway.GetVpcLinkInput, opts ...request.Option) (*apigateway.UpdateVpcLinkOutput, error) {
+	c.inc("GetVpcLink")
+	return c.svc.GetVpcLinkWithContext(ctx, input, opts...)
+}
+
+// GetVpcLinksRequest is a passthrough to the underlying GetVpcLinksRequest.
+// It will increment the count of requests made to GetVpcLinks.
+func (c *APIGateway) GetVpcLinksRequest(input *apigateway.GetVpcLinksInput) (req *request.Request, output *apigateway.GetVpcLinksOutput) {
+	c.inc("GetVpcLinks")
+	return c.svc.GetVpcLinksRequest(input)
+}
+
+// GetVpcLinks is a passthrough to the underlying GetVpcLinks method.
+// It will increment the count of requests made to GetVpcLinks.
+func (c *APIGateway) GetVpcLinks(input *apigateway.GetVpcLinksInput) (*apigateway.GetVpcLinksOutput, error) {
+	c.inc("GetVpcLinks")
+	return c.svc.GetVpcLinks(input)
+}
+
+// GetVpcLinksWithContext is a passthrough to the underlying GetVpcLinksWithContext method.
+// It will increment the count of requests made to GetVpcLinks.
+func (c *APIGateway) GetVpcLinksWithContext(ctx aws.Context, input *apigateway.GetVpcLinksInput, opts ...request.Option) (*apigateway.GetVpcLinksOutput, error) {
+	c.inc("GetVpcLinks")
+	return c.svc.GetVpcLinksWithContext(ctx, input, opts...)
+}
+
+// GetVpcLinksPages is a passthrough to the underlying GetVpcLinksPages method.
+// It will increment the count of requests made to GetVpcLinks on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use GetVpcLinksPagesWithContext to avoid this.
+func (c *APIGateway) GetVpcLinksPages(input *apigateway.GetVpcLinksInput, fn func(*apigateway.GetVpcLinksOutput, bool) bool) error {
+	wrappedFn := func(page *apigateway.GetVpcLinksOutput, lastPage bool) bool {
+		c.inc("GetVpcLinks")
+		return fn(page, lastPage)
+	}
+	return c.svc.GetVpcLinksPages(input, wrappedFn)
+}
+
+// GetVpcLinksPagesWithContext is a passthrough to the underlying GetVpcLinksPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to GetVpcLinks when applied to the request.
+func (c *APIGateway) GetVpcLinksPagesWithContext(ctx aws.Context, input *apigateway.GetVpcLinksInput, fn func(*apigateway.GetVpcLinksOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("GetVpcLinks"))
+	return c.svc.GetVpcLinksPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ImportApiKeysRequest is a passthrough to the underlying ImportApiKeysRequest.
@@ -2086,6 +2210,27 @@ func (c *APIGateway) PutRestApiWithContext(ctx aws.Context, input *apigateway.Pu
 	return c.svc.PutRestApiWithContext(ctx, input, opts...)
 }
 
+// TagResourceRequest is a passthrough to the underlying TagResourceRequest.
+// It will increment the count of requests made to TagResource.
+func (c *APIGateway) TagResourceRequest(input *apigateway.TagResourceInput) (req *request.Request, output *apigateway.TagResourceOutput) {
+	c.inc("TagResource")
+	return c.svc.TagResourceRequest(input)
+}
+
+// TagResource is a passthrough to the underlying TagResource method.
+// It will increment the count of requests made to TagResource.
+func (c *APIGateway) TagResource(input *apigateway.TagResourceInput) (*apigateway.TagResourceOutput, error) {
+	c.inc("TagResource")
+	return c.svc.TagResource(input)
+}
+
+// TagResourceWithContext is a passthrough to the underlying TagResourceWithContext method.
+// It will increment the count of requests made to TagResource.
+func (c *APIGateway) TagResourceWithContext(ctx aws.Context, input *apigateway.TagResourceInput, opts ...request.Option) (*apigateway.TagResourceOutput, error) {
+	c.inc("TagResource")
+	return c.svc.TagResourceWithContext(ctx, input, opts...)
+}
+
 // TestInvokeAuthorizerRequest is a passthrough to the underlying TestInvokeAuthorizerRequest.
 // It will increment the count of requests made to TestInvokeAuthorizer.
 func (c *APIGateway) TestInvokeAuthorizerRequest(input *apigateway.TestInvokeAuthorizerInput) (req *request.Request, output *apigateway.TestInvokeAuthorizerOutput) {
@@ -2126,6 +2271,27 @@ func (c *APIGateway) TestInvokeMethod(input *apigateway.TestInvokeMethodInput) (
 func (c *APIGateway) TestInvokeMethodWithContext(ctx aws.Context, input *apigateway.TestInvokeMethodInput, opts ...request.Option) (*apigateway.TestInvokeMethodOutput, error) {
 	c.inc("TestInvokeMethod")
 	return c.svc.TestInvokeMethodWithContext(ctx, input, opts...)
+}
+
+// UntagResourceRequest is a passthrough to the underlying UntagResourceRequest.
+// It will increment the count of requests made to UntagResource.
+func (c *APIGateway) UntagResourceRequest(input *apigateway.UntagResourceInput) (req *request.Request, output *apigateway.UntagResourceOutput) {
+	c.inc("UntagResource")
+	return c.svc.UntagResourceRequest(input)
+}
+
+// UntagResource is a passthrough to the underlying UntagResource method.
+// It will increment the count of requests made to UntagResource.
+func (c *APIGateway) UntagResource(input *apigateway.UntagResourceInput) (*apigateway.UntagResourceOutput, error) {
+	c.inc("UntagResource")
+	return c.svc.UntagResource(input)
+}
+
+// UntagResourceWithContext is a passthrough to the underlying UntagResourceWithContext method.
+// It will increment the count of requests made to UntagResource.
+func (c *APIGateway) UntagResourceWithContext(ctx aws.Context, input *apigateway.UntagResourceInput, opts ...request.Option) (*apigateway.UntagResourceOutput, error) {
+	c.inc("UntagResource")
+	return c.svc.UntagResourceWithContext(ctx, input, opts...)
 }
 
 // UpdateAccountRequest is a passthrough to the underlying UpdateAccountRequest.
@@ -2567,4 +2733,25 @@ func (c *APIGateway) UpdateUsagePlan(input *apigateway.UpdateUsagePlanInput) (*a
 func (c *APIGateway) UpdateUsagePlanWithContext(ctx aws.Context, input *apigateway.UpdateUsagePlanInput, opts ...request.Option) (*apigateway.UsagePlan, error) {
 	c.inc("UpdateUsagePlan")
 	return c.svc.UpdateUsagePlanWithContext(ctx, input, opts...)
+}
+
+// UpdateVpcLinkRequest is a passthrough to the underlying UpdateVpcLinkRequest.
+// It will increment the count of requests made to UpdateVpcLink.
+func (c *APIGateway) UpdateVpcLinkRequest(input *apigateway.UpdateVpcLinkInput) (req *request.Request, output *apigateway.UpdateVpcLinkOutput) {
+	c.inc("UpdateVpcLink")
+	return c.svc.UpdateVpcLinkRequest(input)
+}
+
+// UpdateVpcLink is a passthrough to the underlying UpdateVpcLink method.
+// It will increment the count of requests made to UpdateVpcLink.
+func (c *APIGateway) UpdateVpcLink(input *apigateway.UpdateVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error) {
+	c.inc("UpdateVpcLink")
+	return c.svc.UpdateVpcLink(input)
+}
+
+// UpdateVpcLinkWithContext is a passthrough to the underlying UpdateVpcLinkWithContext method.
+// It will increment the count of requests made to UpdateVpcLink.
+func (c *APIGateway) UpdateVpcLinkWithContext(ctx aws.Context, input *apigateway.UpdateVpcLinkInput, opts ...request.Option) (*apigateway.UpdateVpcLinkOutput, error) {
+	c.inc("UpdateVpcLink")
+	return c.svc.UpdateVpcLinkWithContext(ctx, input, opts...)
 }

@@ -50,6 +50,27 @@ func (c *CodeCommit) CreateBranchWithContext(ctx aws.Context, input *codecommit.
 	return c.svc.CreateBranchWithContext(ctx, input, opts...)
 }
 
+// CreatePullRequestRequest is a passthrough to the underlying CreatePullRequestRequest.
+// It will increment the count of requests made to CreatePullRequest.
+func (c *CodeCommit) CreatePullRequestRequest(input *codecommit.CreatePullRequestInput) (req *request.Request, output *codecommit.CreatePullRequestOutput) {
+	c.inc("CreatePullRequest")
+	return c.svc.CreatePullRequestRequest(input)
+}
+
+// CreatePullRequest is a passthrough to the underlying CreatePullRequest method.
+// It will increment the count of requests made to CreatePullRequest.
+func (c *CodeCommit) CreatePullRequest(input *codecommit.CreatePullRequestInput) (*codecommit.CreatePullRequestOutput, error) {
+	c.inc("CreatePullRequest")
+	return c.svc.CreatePullRequest(input)
+}
+
+// CreatePullRequestWithContext is a passthrough to the underlying CreatePullRequestWithContext method.
+// It will increment the count of requests made to CreatePullRequest.
+func (c *CodeCommit) CreatePullRequestWithContext(ctx aws.Context, input *codecommit.CreatePullRequestInput, opts ...request.Option) (*codecommit.CreatePullRequestOutput, error) {
+	c.inc("CreatePullRequest")
+	return c.svc.CreatePullRequestWithContext(ctx, input, opts...)
+}
+
 // CreateRepositoryRequest is a passthrough to the underlying CreateRepositoryRequest.
 // It will increment the count of requests made to CreateRepository.
 func (c *CodeCommit) CreateRepositoryRequest(input *codecommit.CreateRepositoryInput) (req *request.Request, output *codecommit.CreateRepositoryOutput) {
@@ -92,6 +113,27 @@ func (c *CodeCommit) DeleteBranchWithContext(ctx aws.Context, input *codecommit.
 	return c.svc.DeleteBranchWithContext(ctx, input, opts...)
 }
 
+// DeleteCommentContentRequest is a passthrough to the underlying DeleteCommentContentRequest.
+// It will increment the count of requests made to DeleteCommentContent.
+func (c *CodeCommit) DeleteCommentContentRequest(input *codecommit.DeleteCommentContentInput) (req *request.Request, output *codecommit.DeleteCommentContentOutput) {
+	c.inc("DeleteCommentContent")
+	return c.svc.DeleteCommentContentRequest(input)
+}
+
+// DeleteCommentContent is a passthrough to the underlying DeleteCommentContent method.
+// It will increment the count of requests made to DeleteCommentContent.
+func (c *CodeCommit) DeleteCommentContent(input *codecommit.DeleteCommentContentInput) (*codecommit.DeleteCommentContentOutput, error) {
+	c.inc("DeleteCommentContent")
+	return c.svc.DeleteCommentContent(input)
+}
+
+// DeleteCommentContentWithContext is a passthrough to the underlying DeleteCommentContentWithContext method.
+// It will increment the count of requests made to DeleteCommentContent.
+func (c *CodeCommit) DeleteCommentContentWithContext(ctx aws.Context, input *codecommit.DeleteCommentContentInput, opts ...request.Option) (*codecommit.DeleteCommentContentOutput, error) {
+	c.inc("DeleteCommentContent")
+	return c.svc.DeleteCommentContentWithContext(ctx, input, opts...)
+}
+
 // DeleteRepositoryRequest is a passthrough to the underlying DeleteRepositoryRequest.
 // It will increment the count of requests made to DeleteRepository.
 func (c *CodeCommit) DeleteRepositoryRequest(input *codecommit.DeleteRepositoryInput) (req *request.Request, output *codecommit.DeleteRepositoryOutput) {
@@ -111,6 +153,46 @@ func (c *CodeCommit) DeleteRepository(input *codecommit.DeleteRepositoryInput) (
 func (c *CodeCommit) DeleteRepositoryWithContext(ctx aws.Context, input *codecommit.DeleteRepositoryInput, opts ...request.Option) (*codecommit.DeleteRepositoryOutput, error) {
 	c.inc("DeleteRepository")
 	return c.svc.DeleteRepositoryWithContext(ctx, input, opts...)
+}
+
+// DescribePullRequestEventsRequest is a passthrough to the underlying DescribePullRequestEventsRequest.
+// It will increment the count of requests made to DescribePullRequestEvents.
+func (c *CodeCommit) DescribePullRequestEventsRequest(input *codecommit.DescribePullRequestEventsInput) (req *request.Request, output *codecommit.DescribePullRequestEventsOutput) {
+	c.inc("DescribePullRequestEvents")
+	return c.svc.DescribePullRequestEventsRequest(input)
+}
+
+// DescribePullRequestEvents is a passthrough to the underlying DescribePullRequestEvents method.
+// It will increment the count of requests made to DescribePullRequestEvents.
+func (c *CodeCommit) DescribePullRequestEvents(input *codecommit.DescribePullRequestEventsInput) (*codecommit.DescribePullRequestEventsOutput, error) {
+	c.inc("DescribePullRequestEvents")
+	return c.svc.DescribePullRequestEvents(input)
+}
+
+// DescribePullRequestEventsWithContext is a passthrough to the underlying DescribePullRequestEventsWithContext method.
+// It will increment the count of requests made to DescribePullRequestEvents.
+func (c *CodeCommit) DescribePullRequestEventsWithContext(ctx aws.Context, input *codecommit.DescribePullRequestEventsInput, opts ...request.Option) (*codecommit.DescribePullRequestEventsOutput, error) {
+	c.inc("DescribePullRequestEvents")
+	return c.svc.DescribePullRequestEventsWithContext(ctx, input, opts...)
+}
+
+// DescribePullRequestEventsPages is a passthrough to the underlying DescribePullRequestEventsPages method.
+// It will increment the count of requests made to DescribePullRequestEvents on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use DescribePullRequestEventsPagesWithContext to avoid this.
+func (c *CodeCommit) DescribePullRequestEventsPages(input *codecommit.DescribePullRequestEventsInput, fn func(*codecommit.DescribePullRequestEventsOutput, bool) bool) error {
+	wrappedFn := func(page *codecommit.DescribePullRequestEventsOutput, lastPage bool) bool {
+		c.inc("DescribePullRequestEvents")
+		return fn(page, lastPage)
+	}
+	return c.svc.DescribePullRequestEventsPages(input, wrappedFn)
+}
+
+// DescribePullRequestEventsPagesWithContext is a passthrough to the underlying DescribePullRequestEventsPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to DescribePullRequestEvents when applied to the request.
+func (c *CodeCommit) DescribePullRequestEventsPagesWithContext(ctx aws.Context, input *codecommit.DescribePullRequestEventsInput, fn func(*codecommit.DescribePullRequestEventsOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("DescribePullRequestEvents"))
+	return c.svc.DescribePullRequestEventsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetBlobRequest is a passthrough to the underlying GetBlobRequest.
@@ -153,6 +235,107 @@ func (c *CodeCommit) GetBranch(input *codecommit.GetBranchInput) (*codecommit.Ge
 func (c *CodeCommit) GetBranchWithContext(ctx aws.Context, input *codecommit.GetBranchInput, opts ...request.Option) (*codecommit.GetBranchOutput, error) {
 	c.inc("GetBranch")
 	return c.svc.GetBranchWithContext(ctx, input, opts...)
+}
+
+// GetCommentRequest is a passthrough to the underlying GetCommentRequest.
+// It will increment the count of requests made to GetComment.
+func (c *CodeCommit) GetCommentRequest(input *codecommit.GetCommentInput) (req *request.Request, output *codecommit.GetCommentOutput) {
+	c.inc("GetComment")
+	return c.svc.GetCommentRequest(input)
+}
+
+// GetComment is a passthrough to the underlying GetComment method.
+// It will increment the count of requests made to GetComment.
+func (c *CodeCommit) GetComment(input *codecommit.GetCommentInput) (*codecommit.GetCommentOutput, error) {
+	c.inc("GetComment")
+	return c.svc.GetComment(input)
+}
+
+// GetCommentWithContext is a passthrough to the underlying GetCommentWithContext method.
+// It will increment the count of requests made to GetComment.
+func (c *CodeCommit) GetCommentWithContext(ctx aws.Context, input *codecommit.GetCommentInput, opts ...request.Option) (*codecommit.GetCommentOutput, error) {
+	c.inc("GetComment")
+	return c.svc.GetCommentWithContext(ctx, input, opts...)
+}
+
+// GetCommentsForComparedCommitRequest is a passthrough to the underlying GetCommentsForComparedCommitRequest.
+// It will increment the count of requests made to GetCommentsForComparedCommit.
+func (c *CodeCommit) GetCommentsForComparedCommitRequest(input *codecommit.GetCommentsForComparedCommitInput) (req *request.Request, output *codecommit.GetCommentsForComparedCommitOutput) {
+	c.inc("GetCommentsForComparedCommit")
+	return c.svc.GetCommentsForComparedCommitRequest(input)
+}
+
+// GetCommentsForComparedCommit is a passthrough to the underlying GetCommentsForComparedCommit method.
+// It will increment the count of requests made to GetCommentsForComparedCommit.
+func (c *CodeCommit) GetCommentsForComparedCommit(input *codecommit.GetCommentsForComparedCommitInput) (*codecommit.GetCommentsForComparedCommitOutput, error) {
+	c.inc("GetCommentsForComparedCommit")
+	return c.svc.GetCommentsForComparedCommit(input)
+}
+
+// GetCommentsForComparedCommitWithContext is a passthrough to the underlying GetCommentsForComparedCommitWithContext method.
+// It will increment the count of requests made to GetCommentsForComparedCommit.
+func (c *CodeCommit) GetCommentsForComparedCommitWithContext(ctx aws.Context, input *codecommit.GetCommentsForComparedCommitInput, opts ...request.Option) (*codecommit.GetCommentsForComparedCommitOutput, error) {
+	c.inc("GetCommentsForComparedCommit")
+	return c.svc.GetCommentsForComparedCommitWithContext(ctx, input, opts...)
+}
+
+// GetCommentsForComparedCommitPages is a passthrough to the underlying GetCommentsForComparedCommitPages method.
+// It will increment the count of requests made to GetCommentsForComparedCommit on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use GetCommentsForComparedCommitPagesWithContext to avoid this.
+func (c *CodeCommit) GetCommentsForComparedCommitPages(input *codecommit.GetCommentsForComparedCommitInput, fn func(*codecommit.GetCommentsForComparedCommitOutput, bool) bool) error {
+	wrappedFn := func(page *codecommit.GetCommentsForComparedCommitOutput, lastPage bool) bool {
+		c.inc("GetCommentsForComparedCommit")
+		return fn(page, lastPage)
+	}
+	return c.svc.GetCommentsForComparedCommitPages(input, wrappedFn)
+}
+
+// GetCommentsForComparedCommitPagesWithContext is a passthrough to the underlying GetCommentsForComparedCommitPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to GetCommentsForComparedCommit when applied to the request.
+func (c *CodeCommit) GetCommentsForComparedCommitPagesWithContext(ctx aws.Context, input *codecommit.GetCommentsForComparedCommitInput, fn func(*codecommit.GetCommentsForComparedCommitOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("GetCommentsForComparedCommit"))
+	return c.svc.GetCommentsForComparedCommitPagesWithContext(ctx, input, fn, opts...)
+}
+
+// GetCommentsForPullRequestRequest is a passthrough to the underlying GetCommentsForPullRequestRequest.
+// It will increment the count of requests made to GetCommentsForPullRequest.
+func (c *CodeCommit) GetCommentsForPullRequestRequest(input *codecommit.GetCommentsForPullRequestInput) (req *request.Request, output *codecommit.GetCommentsForPullRequestOutput) {
+	c.inc("GetCommentsForPullRequest")
+	return c.svc.GetCommentsForPullRequestRequest(input)
+}
+
+// GetCommentsForPullRequest is a passthrough to the underlying GetCommentsForPullRequest method.
+// It will increment the count of requests made to GetCommentsForPullRequest.
+func (c *CodeCommit) GetCommentsForPullRequest(input *codecommit.GetCommentsForPullRequestInput) (*codecommit.GetCommentsForPullRequestOutput, error) {
+	c.inc("GetCommentsForPullRequest")
+	return c.svc.GetCommentsForPullRequest(input)
+}
+
+// GetCommentsForPullRequestWithContext is a passthrough to the underlying GetCommentsForPullRequestWithContext method.
+// It will increment the count of requests made to GetCommentsForPullRequest.
+func (c *CodeCommit) GetCommentsForPullRequestWithContext(ctx aws.Context, input *codecommit.GetCommentsForPullRequestInput, opts ...request.Option) (*codecommit.GetCommentsForPullRequestOutput, error) {
+	c.inc("GetCommentsForPullRequest")
+	return c.svc.GetCommentsForPullRequestWithContext(ctx, input, opts...)
+}
+
+// GetCommentsForPullRequestPages is a passthrough to the underlying GetCommentsForPullRequestPages method.
+// It will increment the count of requests made to GetCommentsForPullRequest on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use GetCommentsForPullRequestPagesWithContext to avoid this.
+func (c *CodeCommit) GetCommentsForPullRequestPages(input *codecommit.GetCommentsForPullRequestInput, fn func(*codecommit.GetCommentsForPullRequestOutput, bool) bool) error {
+	wrappedFn := func(page *codecommit.GetCommentsForPullRequestOutput, lastPage bool) bool {
+		c.inc("GetCommentsForPullRequest")
+		return fn(page, lastPage)
+	}
+	return c.svc.GetCommentsForPullRequestPages(input, wrappedFn)
+}
+
+// GetCommentsForPullRequestPagesWithContext is a passthrough to the underlying GetCommentsForPullRequestPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to GetCommentsForPullRequest when applied to the request.
+func (c *CodeCommit) GetCommentsForPullRequestPagesWithContext(ctx aws.Context, input *codecommit.GetCommentsForPullRequestInput, fn func(*codecommit.GetCommentsForPullRequestOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("GetCommentsForPullRequest"))
+	return c.svc.GetCommentsForPullRequestPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetCommitRequest is a passthrough to the underlying GetCommitRequest.
@@ -214,6 +397,48 @@ func (c *CodeCommit) GetDifferencesPages(input *codecommit.GetDifferencesInput, 
 func (c *CodeCommit) GetDifferencesPagesWithContext(ctx aws.Context, input *codecommit.GetDifferencesInput, fn func(*codecommit.GetDifferencesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("GetDifferences"))
 	return c.svc.GetDifferencesPagesWithContext(ctx, input, fn, opts...)
+}
+
+// GetMergeConflictsRequest is a passthrough to the underlying GetMergeConflictsRequest.
+// It will increment the count of requests made to GetMergeConflicts.
+func (c *CodeCommit) GetMergeConflictsRequest(input *codecommit.GetMergeConflictsInput) (req *request.Request, output *codecommit.GetMergeConflictsOutput) {
+	c.inc("GetMergeConflicts")
+	return c.svc.GetMergeConflictsRequest(input)
+}
+
+// GetMergeConflicts is a passthrough to the underlying GetMergeConflicts method.
+// It will increment the count of requests made to GetMergeConflicts.
+func (c *CodeCommit) GetMergeConflicts(input *codecommit.GetMergeConflictsInput) (*codecommit.GetMergeConflictsOutput, error) {
+	c.inc("GetMergeConflicts")
+	return c.svc.GetMergeConflicts(input)
+}
+
+// GetMergeConflictsWithContext is a passthrough to the underlying GetMergeConflictsWithContext method.
+// It will increment the count of requests made to GetMergeConflicts.
+func (c *CodeCommit) GetMergeConflictsWithContext(ctx aws.Context, input *codecommit.GetMergeConflictsInput, opts ...request.Option) (*codecommit.GetMergeConflictsOutput, error) {
+	c.inc("GetMergeConflicts")
+	return c.svc.GetMergeConflictsWithContext(ctx, input, opts...)
+}
+
+// GetPullRequestRequest is a passthrough to the underlying GetPullRequestRequest.
+// It will increment the count of requests made to GetPullRequest.
+func (c *CodeCommit) GetPullRequestRequest(input *codecommit.GetPullRequestInput) (req *request.Request, output *codecommit.GetPullRequestOutput) {
+	c.inc("GetPullRequest")
+	return c.svc.GetPullRequestRequest(input)
+}
+
+// GetPullRequest is a passthrough to the underlying GetPullRequest method.
+// It will increment the count of requests made to GetPullRequest.
+func (c *CodeCommit) GetPullRequest(input *codecommit.GetPullRequestInput) (*codecommit.GetPullRequestOutput, error) {
+	c.inc("GetPullRequest")
+	return c.svc.GetPullRequest(input)
+}
+
+// GetPullRequestWithContext is a passthrough to the underlying GetPullRequestWithContext method.
+// It will increment the count of requests made to GetPullRequest.
+func (c *CodeCommit) GetPullRequestWithContext(ctx aws.Context, input *codecommit.GetPullRequestInput, opts ...request.Option) (*codecommit.GetPullRequestOutput, error) {
+	c.inc("GetPullRequest")
+	return c.svc.GetPullRequestWithContext(ctx, input, opts...)
 }
 
 // GetRepositoryRequest is a passthrough to the underlying GetRepositoryRequest.
@@ -298,6 +523,46 @@ func (c *CodeCommit) ListBranchesPagesWithContext(ctx aws.Context, input *codeco
 	return c.svc.ListBranchesPagesWithContext(ctx, input, fn, opts...)
 }
 
+// ListPullRequestsRequest is a passthrough to the underlying ListPullRequestsRequest.
+// It will increment the count of requests made to ListPullRequests.
+func (c *CodeCommit) ListPullRequestsRequest(input *codecommit.ListPullRequestsInput) (req *request.Request, output *codecommit.ListPullRequestsOutput) {
+	c.inc("ListPullRequests")
+	return c.svc.ListPullRequestsRequest(input)
+}
+
+// ListPullRequests is a passthrough to the underlying ListPullRequests method.
+// It will increment the count of requests made to ListPullRequests.
+func (c *CodeCommit) ListPullRequests(input *codecommit.ListPullRequestsInput) (*codecommit.ListPullRequestsOutput, error) {
+	c.inc("ListPullRequests")
+	return c.svc.ListPullRequests(input)
+}
+
+// ListPullRequestsWithContext is a passthrough to the underlying ListPullRequestsWithContext method.
+// It will increment the count of requests made to ListPullRequests.
+func (c *CodeCommit) ListPullRequestsWithContext(ctx aws.Context, input *codecommit.ListPullRequestsInput, opts ...request.Option) (*codecommit.ListPullRequestsOutput, error) {
+	c.inc("ListPullRequests")
+	return c.svc.ListPullRequestsWithContext(ctx, input, opts...)
+}
+
+// ListPullRequestsPages is a passthrough to the underlying ListPullRequestsPages method.
+// It will increment the count of requests made to ListPullRequests on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use ListPullRequestsPagesWithContext to avoid this.
+func (c *CodeCommit) ListPullRequestsPages(input *codecommit.ListPullRequestsInput, fn func(*codecommit.ListPullRequestsOutput, bool) bool) error {
+	wrappedFn := func(page *codecommit.ListPullRequestsOutput, lastPage bool) bool {
+		c.inc("ListPullRequests")
+		return fn(page, lastPage)
+	}
+	return c.svc.ListPullRequestsPages(input, wrappedFn)
+}
+
+// ListPullRequestsPagesWithContext is a passthrough to the underlying ListPullRequestsPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to ListPullRequests when applied to the request.
+func (c *CodeCommit) ListPullRequestsPagesWithContext(ctx aws.Context, input *codecommit.ListPullRequestsInput, fn func(*codecommit.ListPullRequestsOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("ListPullRequests"))
+	return c.svc.ListPullRequestsPagesWithContext(ctx, input, fn, opts...)
+}
+
 // ListRepositoriesRequest is a passthrough to the underlying ListRepositoriesRequest.
 // It will increment the count of requests made to ListRepositories.
 func (c *CodeCommit) ListRepositoriesRequest(input *codecommit.ListRepositoriesInput) (req *request.Request, output *codecommit.ListRepositoriesOutput) {
@@ -336,6 +601,90 @@ func (c *CodeCommit) ListRepositoriesPages(input *codecommit.ListRepositoriesInp
 func (c *CodeCommit) ListRepositoriesPagesWithContext(ctx aws.Context, input *codecommit.ListRepositoriesInput, fn func(*codecommit.ListRepositoriesOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListRepositories"))
 	return c.svc.ListRepositoriesPagesWithContext(ctx, input, fn, opts...)
+}
+
+// MergePullRequestByFastForwardRequest is a passthrough to the underlying MergePullRequestByFastForwardRequest.
+// It will increment the count of requests made to MergePullRequestByFastForward.
+func (c *CodeCommit) MergePullRequestByFastForwardRequest(input *codecommit.MergePullRequestByFastForwardInput) (req *request.Request, output *codecommit.MergePullRequestByFastForwardOutput) {
+	c.inc("MergePullRequestByFastForward")
+	return c.svc.MergePullRequestByFastForwardRequest(input)
+}
+
+// MergePullRequestByFastForward is a passthrough to the underlying MergePullRequestByFastForward method.
+// It will increment the count of requests made to MergePullRequestByFastForward.
+func (c *CodeCommit) MergePullRequestByFastForward(input *codecommit.MergePullRequestByFastForwardInput) (*codecommit.MergePullRequestByFastForwardOutput, error) {
+	c.inc("MergePullRequestByFastForward")
+	return c.svc.MergePullRequestByFastForward(input)
+}
+
+// MergePullRequestByFastForwardWithContext is a passthrough to the underlying MergePullRequestByFastForwardWithContext method.
+// It will increment the count of requests made to MergePullRequestByFastForward.
+func (c *CodeCommit) MergePullRequestByFastForwardWithContext(ctx aws.Context, input *codecommit.MergePullRequestByFastForwardInput, opts ...request.Option) (*codecommit.MergePullRequestByFastForwardOutput, error) {
+	c.inc("MergePullRequestByFastForward")
+	return c.svc.MergePullRequestByFastForwardWithContext(ctx, input, opts...)
+}
+
+// PostCommentForComparedCommitRequest is a passthrough to the underlying PostCommentForComparedCommitRequest.
+// It will increment the count of requests made to PostCommentForComparedCommit.
+func (c *CodeCommit) PostCommentForComparedCommitRequest(input *codecommit.PostCommentForComparedCommitInput) (req *request.Request, output *codecommit.PostCommentForComparedCommitOutput) {
+	c.inc("PostCommentForComparedCommit")
+	return c.svc.PostCommentForComparedCommitRequest(input)
+}
+
+// PostCommentForComparedCommit is a passthrough to the underlying PostCommentForComparedCommit method.
+// It will increment the count of requests made to PostCommentForComparedCommit.
+func (c *CodeCommit) PostCommentForComparedCommit(input *codecommit.PostCommentForComparedCommitInput) (*codecommit.PostCommentForComparedCommitOutput, error) {
+	c.inc("PostCommentForComparedCommit")
+	return c.svc.PostCommentForComparedCommit(input)
+}
+
+// PostCommentForComparedCommitWithContext is a passthrough to the underlying PostCommentForComparedCommitWithContext method.
+// It will increment the count of requests made to PostCommentForComparedCommit.
+func (c *CodeCommit) PostCommentForComparedCommitWithContext(ctx aws.Context, input *codecommit.PostCommentForComparedCommitInput, opts ...request.Option) (*codecommit.PostCommentForComparedCommitOutput, error) {
+	c.inc("PostCommentForComparedCommit")
+	return c.svc.PostCommentForComparedCommitWithContext(ctx, input, opts...)
+}
+
+// PostCommentForPullRequestRequest is a passthrough to the underlying PostCommentForPullRequestRequest.
+// It will increment the count of requests made to PostCommentForPullRequest.
+func (c *CodeCommit) PostCommentForPullRequestRequest(input *codecommit.PostCommentForPullRequestInput) (req *request.Request, output *codecommit.PostCommentForPullRequestOutput) {
+	c.inc("PostCommentForPullRequest")
+	return c.svc.PostCommentForPullRequestRequest(input)
+}
+
+// PostCommentForPullRequest is a passthrough to the underlying PostCommentForPullRequest method.
+// It will increment the count of requests made to PostCommentForPullRequest.
+func (c *CodeCommit) PostCommentForPullRequest(input *codecommit.PostCommentForPullRequestInput) (*codecommit.PostCommentForPullRequestOutput, error) {
+	c.inc("PostCommentForPullRequest")
+	return c.svc.PostCommentForPullRequest(input)
+}
+
+// PostCommentForPullRequestWithContext is a passthrough to the underlying PostCommentForPullRequestWithContext method.
+// It will increment the count of requests made to PostCommentForPullRequest.
+func (c *CodeCommit) PostCommentForPullRequestWithContext(ctx aws.Context, input *codecommit.PostCommentForPullRequestInput, opts ...request.Option) (*codecommit.PostCommentForPullRequestOutput, error) {
+	c.inc("PostCommentForPullRequest")
+	return c.svc.PostCommentForPullRequestWithContext(ctx, input, opts...)
+}
+
+// PostCommentReplyRequest is a passthrough to the underlying PostCommentReplyRequest.
+// It will increment the count of requests made to PostCommentReply.
+func (c *CodeCommit) PostCommentReplyRequest(input *codecommit.PostCommentReplyInput) (req *request.Request, output *codecommit.PostCommentReplyOutput) {
+	c.inc("PostCommentReply")
+	return c.svc.PostCommentReplyRequest(input)
+}
+
+// PostCommentReply is a passthrough to the underlying PostCommentReply method.
+// It will increment the count of requests made to PostCommentReply.
+func (c *CodeCommit) PostCommentReply(input *codecommit.PostCommentReplyInput) (*codecommit.PostCommentReplyOutput, error) {
+	c.inc("PostCommentReply")
+	return c.svc.PostCommentReply(input)
+}
+
+// PostCommentReplyWithContext is a passthrough to the underlying PostCommentReplyWithContext method.
+// It will increment the count of requests made to PostCommentReply.
+func (c *CodeCommit) PostCommentReplyWithContext(ctx aws.Context, input *codecommit.PostCommentReplyInput, opts ...request.Option) (*codecommit.PostCommentReplyOutput, error) {
+	c.inc("PostCommentReply")
+	return c.svc.PostCommentReplyWithContext(ctx, input, opts...)
 }
 
 // PutRepositoryTriggersRequest is a passthrough to the underlying PutRepositoryTriggersRequest.
@@ -380,6 +729,27 @@ func (c *CodeCommit) TestRepositoryTriggersWithContext(ctx aws.Context, input *c
 	return c.svc.TestRepositoryTriggersWithContext(ctx, input, opts...)
 }
 
+// UpdateCommentRequest is a passthrough to the underlying UpdateCommentRequest.
+// It will increment the count of requests made to UpdateComment.
+func (c *CodeCommit) UpdateCommentRequest(input *codecommit.UpdateCommentInput) (req *request.Request, output *codecommit.UpdateCommentOutput) {
+	c.inc("UpdateComment")
+	return c.svc.UpdateCommentRequest(input)
+}
+
+// UpdateComment is a passthrough to the underlying UpdateComment method.
+// It will increment the count of requests made to UpdateComment.
+func (c *CodeCommit) UpdateComment(input *codecommit.UpdateCommentInput) (*codecommit.UpdateCommentOutput, error) {
+	c.inc("UpdateComment")
+	return c.svc.UpdateComment(input)
+}
+
+// UpdateCommentWithContext is a passthrough to the underlying UpdateCommentWithContext method.
+// It will increment the count of requests made to UpdateComment.
+func (c *CodeCommit) UpdateCommentWithContext(ctx aws.Context, input *codecommit.UpdateCommentInput, opts ...request.Option) (*codecommit.UpdateCommentOutput, error) {
+	c.inc("UpdateComment")
+	return c.svc.UpdateCommentWithContext(ctx, input, opts...)
+}
+
 // UpdateDefaultBranchRequest is a passthrough to the underlying UpdateDefaultBranchRequest.
 // It will increment the count of requests made to UpdateDefaultBranch.
 func (c *CodeCommit) UpdateDefaultBranchRequest(input *codecommit.UpdateDefaultBranchInput) (req *request.Request, output *codecommit.UpdateDefaultBranchOutput) {
@@ -399,6 +769,69 @@ func (c *CodeCommit) UpdateDefaultBranch(input *codecommit.UpdateDefaultBranchIn
 func (c *CodeCommit) UpdateDefaultBranchWithContext(ctx aws.Context, input *codecommit.UpdateDefaultBranchInput, opts ...request.Option) (*codecommit.UpdateDefaultBranchOutput, error) {
 	c.inc("UpdateDefaultBranch")
 	return c.svc.UpdateDefaultBranchWithContext(ctx, input, opts...)
+}
+
+// UpdatePullRequestDescriptionRequest is a passthrough to the underlying UpdatePullRequestDescriptionRequest.
+// It will increment the count of requests made to UpdatePullRequestDescription.
+func (c *CodeCommit) UpdatePullRequestDescriptionRequest(input *codecommit.UpdatePullRequestDescriptionInput) (req *request.Request, output *codecommit.UpdatePullRequestDescriptionOutput) {
+	c.inc("UpdatePullRequestDescription")
+	return c.svc.UpdatePullRequestDescriptionRequest(input)
+}
+
+// UpdatePullRequestDescription is a passthrough to the underlying UpdatePullRequestDescription method.
+// It will increment the count of requests made to UpdatePullRequestDescription.
+func (c *CodeCommit) UpdatePullRequestDescription(input *codecommit.UpdatePullRequestDescriptionInput) (*codecommit.UpdatePullRequestDescriptionOutput, error) {
+	c.inc("UpdatePullRequestDescription")
+	return c.svc.UpdatePullRequestDescription(input)
+}
+
+// UpdatePullRequestDescriptionWithContext is a passthrough to the underlying UpdatePullRequestDescriptionWithContext method.
+// It will increment the count of requests made to UpdatePullRequestDescription.
+func (c *CodeCommit) UpdatePullRequestDescriptionWithContext(ctx aws.Context, input *codecommit.UpdatePullRequestDescriptionInput, opts ...request.Option) (*codecommit.UpdatePullRequestDescriptionOutput, error) {
+	c.inc("UpdatePullRequestDescription")
+	return c.svc.UpdatePullRequestDescriptionWithContext(ctx, input, opts...)
+}
+
+// UpdatePullRequestStatusRequest is a passthrough to the underlying UpdatePullRequestStatusRequest.
+// It will increment the count of requests made to UpdatePullRequestStatus.
+func (c *CodeCommit) UpdatePullRequestStatusRequest(input *codecommit.UpdatePullRequestStatusInput) (req *request.Request, output *codecommit.UpdatePullRequestStatusOutput) {
+	c.inc("UpdatePullRequestStatus")
+	return c.svc.UpdatePullRequestStatusRequest(input)
+}
+
+// UpdatePullRequestStatus is a passthrough to the underlying UpdatePullRequestStatus method.
+// It will increment the count of requests made to UpdatePullRequestStatus.
+func (c *CodeCommit) UpdatePullRequestStatus(input *codecommit.UpdatePullRequestStatusInput) (*codecommit.UpdatePullRequestStatusOutput, error) {
+	c.inc("UpdatePullRequestStatus")
+	return c.svc.UpdatePullRequestStatus(input)
+}
+
+// UpdatePullRequestStatusWithContext is a passthrough to the underlying UpdatePullRequestStatusWithContext method.
+// It will increment the count of requests made to UpdatePullRequestStatus.
+func (c *CodeCommit) UpdatePullRequestStatusWithContext(ctx aws.Context, input *codecommit.UpdatePullRequestStatusInput, opts ...request.Option) (*codecommit.UpdatePullRequestStatusOutput, error) {
+	c.inc("UpdatePullRequestStatus")
+	return c.svc.UpdatePullRequestStatusWithContext(ctx, input, opts...)
+}
+
+// UpdatePullRequestTitleRequest is a passthrough to the underlying UpdatePullRequestTitleRequest.
+// It will increment the count of requests made to UpdatePullRequestTitle.
+func (c *CodeCommit) UpdatePullRequestTitleRequest(input *codecommit.UpdatePullRequestTitleInput) (req *request.Request, output *codecommit.UpdatePullRequestTitleOutput) {
+	c.inc("UpdatePullRequestTitle")
+	return c.svc.UpdatePullRequestTitleRequest(input)
+}
+
+// UpdatePullRequestTitle is a passthrough to the underlying UpdatePullRequestTitle method.
+// It will increment the count of requests made to UpdatePullRequestTitle.
+func (c *CodeCommit) UpdatePullRequestTitle(input *codecommit.UpdatePullRequestTitleInput) (*codecommit.UpdatePullRequestTitleOutput, error) {
+	c.inc("UpdatePullRequestTitle")
+	return c.svc.UpdatePullRequestTitle(input)
+}
+
+// UpdatePullRequestTitleWithContext is a passthrough to the underlying UpdatePullRequestTitleWithContext method.
+// It will increment the count of requests made to UpdatePullRequestTitle.
+func (c *CodeCommit) UpdatePullRequestTitleWithContext(ctx aws.Context, input *codecommit.UpdatePullRequestTitleInput, opts ...request.Option) (*codecommit.UpdatePullRequestTitleOutput, error) {
+	c.inc("UpdatePullRequestTitle")
+	return c.svc.UpdatePullRequestTitleWithContext(ctx, input, opts...)
 }
 
 // UpdateRepositoryDescriptionRequest is a passthrough to the underlying UpdateRepositoryDescriptionRequest.

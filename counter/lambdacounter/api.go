@@ -155,6 +155,27 @@ func (c *Lambda) DeleteFunctionWithContext(ctx aws.Context, input *lambda.Delete
 	return c.svc.DeleteFunctionWithContext(ctx, input, opts...)
 }
 
+// DeleteFunctionConcurrencyRequest is a passthrough to the underlying DeleteFunctionConcurrencyRequest.
+// It will increment the count of requests made to DeleteFunctionConcurrency.
+func (c *Lambda) DeleteFunctionConcurrencyRequest(input *lambda.DeleteFunctionConcurrencyInput) (req *request.Request, output *lambda.DeleteFunctionConcurrencyOutput) {
+	c.inc("DeleteFunctionConcurrency")
+	return c.svc.DeleteFunctionConcurrencyRequest(input)
+}
+
+// DeleteFunctionConcurrency is a passthrough to the underlying DeleteFunctionConcurrency method.
+// It will increment the count of requests made to DeleteFunctionConcurrency.
+func (c *Lambda) DeleteFunctionConcurrency(input *lambda.DeleteFunctionConcurrencyInput) (*lambda.DeleteFunctionConcurrencyOutput, error) {
+	c.inc("DeleteFunctionConcurrency")
+	return c.svc.DeleteFunctionConcurrency(input)
+}
+
+// DeleteFunctionConcurrencyWithContext is a passthrough to the underlying DeleteFunctionConcurrencyWithContext method.
+// It will increment the count of requests made to DeleteFunctionConcurrency.
+func (c *Lambda) DeleteFunctionConcurrencyWithContext(ctx aws.Context, input *lambda.DeleteFunctionConcurrencyInput, opts ...request.Option) (*lambda.DeleteFunctionConcurrencyOutput, error) {
+	c.inc("DeleteFunctionConcurrency")
+	return c.svc.DeleteFunctionConcurrencyWithContext(ctx, input, opts...)
+}
+
 // GetAccountSettingsRequest is a passthrough to the underlying GetAccountSettingsRequest.
 // It will increment the count of requests made to GetAccountSettings.
 func (c *Lambda) GetAccountSettingsRequest(input *lambda.GetAccountSettingsInput) (req *request.Request, output *lambda.GetAccountSettingsOutput) {
@@ -485,6 +506,27 @@ func (c *Lambda) PublishVersion(input *lambda.PublishVersionInput) (*lambda.Func
 func (c *Lambda) PublishVersionWithContext(ctx aws.Context, input *lambda.PublishVersionInput, opts ...request.Option) (*lambda.FunctionConfiguration, error) {
 	c.inc("PublishVersion")
 	return c.svc.PublishVersionWithContext(ctx, input, opts...)
+}
+
+// PutFunctionConcurrencyRequest is a passthrough to the underlying PutFunctionConcurrencyRequest.
+// It will increment the count of requests made to PutFunctionConcurrency.
+func (c *Lambda) PutFunctionConcurrencyRequest(input *lambda.PutFunctionConcurrencyInput) (req *request.Request, output *lambda.PutFunctionConcurrencyOutput) {
+	c.inc("PutFunctionConcurrency")
+	return c.svc.PutFunctionConcurrencyRequest(input)
+}
+
+// PutFunctionConcurrency is a passthrough to the underlying PutFunctionConcurrency method.
+// It will increment the count of requests made to PutFunctionConcurrency.
+func (c *Lambda) PutFunctionConcurrency(input *lambda.PutFunctionConcurrencyInput) (*lambda.PutFunctionConcurrencyOutput, error) {
+	c.inc("PutFunctionConcurrency")
+	return c.svc.PutFunctionConcurrency(input)
+}
+
+// PutFunctionConcurrencyWithContext is a passthrough to the underlying PutFunctionConcurrencyWithContext method.
+// It will increment the count of requests made to PutFunctionConcurrency.
+func (c *Lambda) PutFunctionConcurrencyWithContext(ctx aws.Context, input *lambda.PutFunctionConcurrencyInput, opts ...request.Option) (*lambda.PutFunctionConcurrencyOutput, error) {
+	c.inc("PutFunctionConcurrency")
+	return c.svc.PutFunctionConcurrencyWithContext(ctx, input, opts...)
 }
 
 // RemovePermissionRequest is a passthrough to the underlying RemovePermissionRequest.

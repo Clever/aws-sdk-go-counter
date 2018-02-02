@@ -386,6 +386,27 @@ func (c *Organizations) DetachPolicyWithContext(ctx aws.Context, input *organiza
 	return c.svc.DetachPolicyWithContext(ctx, input, opts...)
 }
 
+// DisableAWSServiceAccessRequest is a passthrough to the underlying DisableAWSServiceAccessRequest.
+// It will increment the count of requests made to DisableAWSServiceAccess.
+func (c *Organizations) DisableAWSServiceAccessRequest(input *organizations.DisableAWSServiceAccessInput) (req *request.Request, output *organizations.DisableAWSServiceAccessOutput) {
+	c.inc("DisableAWSServiceAccess")
+	return c.svc.DisableAWSServiceAccessRequest(input)
+}
+
+// DisableAWSServiceAccess is a passthrough to the underlying DisableAWSServiceAccess method.
+// It will increment the count of requests made to DisableAWSServiceAccess.
+func (c *Organizations) DisableAWSServiceAccess(input *organizations.DisableAWSServiceAccessInput) (*organizations.DisableAWSServiceAccessOutput, error) {
+	c.inc("DisableAWSServiceAccess")
+	return c.svc.DisableAWSServiceAccess(input)
+}
+
+// DisableAWSServiceAccessWithContext is a passthrough to the underlying DisableAWSServiceAccessWithContext method.
+// It will increment the count of requests made to DisableAWSServiceAccess.
+func (c *Organizations) DisableAWSServiceAccessWithContext(ctx aws.Context, input *organizations.DisableAWSServiceAccessInput, opts ...request.Option) (*organizations.DisableAWSServiceAccessOutput, error) {
+	c.inc("DisableAWSServiceAccess")
+	return c.svc.DisableAWSServiceAccessWithContext(ctx, input, opts...)
+}
+
 // DisablePolicyTypeRequest is a passthrough to the underlying DisablePolicyTypeRequest.
 // It will increment the count of requests made to DisablePolicyType.
 func (c *Organizations) DisablePolicyTypeRequest(input *organizations.DisablePolicyTypeInput) (req *request.Request, output *organizations.DisablePolicyTypeOutput) {
@@ -405,6 +426,27 @@ func (c *Organizations) DisablePolicyType(input *organizations.DisablePolicyType
 func (c *Organizations) DisablePolicyTypeWithContext(ctx aws.Context, input *organizations.DisablePolicyTypeInput, opts ...request.Option) (*organizations.DisablePolicyTypeOutput, error) {
 	c.inc("DisablePolicyType")
 	return c.svc.DisablePolicyTypeWithContext(ctx, input, opts...)
+}
+
+// EnableAWSServiceAccessRequest is a passthrough to the underlying EnableAWSServiceAccessRequest.
+// It will increment the count of requests made to EnableAWSServiceAccess.
+func (c *Organizations) EnableAWSServiceAccessRequest(input *organizations.EnableAWSServiceAccessInput) (req *request.Request, output *organizations.EnableAWSServiceAccessOutput) {
+	c.inc("EnableAWSServiceAccess")
+	return c.svc.EnableAWSServiceAccessRequest(input)
+}
+
+// EnableAWSServiceAccess is a passthrough to the underlying EnableAWSServiceAccess method.
+// It will increment the count of requests made to EnableAWSServiceAccess.
+func (c *Organizations) EnableAWSServiceAccess(input *organizations.EnableAWSServiceAccessInput) (*organizations.EnableAWSServiceAccessOutput, error) {
+	c.inc("EnableAWSServiceAccess")
+	return c.svc.EnableAWSServiceAccess(input)
+}
+
+// EnableAWSServiceAccessWithContext is a passthrough to the underlying EnableAWSServiceAccessWithContext method.
+// It will increment the count of requests made to EnableAWSServiceAccess.
+func (c *Organizations) EnableAWSServiceAccessWithContext(ctx aws.Context, input *organizations.EnableAWSServiceAccessInput, opts ...request.Option) (*organizations.EnableAWSServiceAccessOutput, error) {
+	c.inc("EnableAWSServiceAccess")
+	return c.svc.EnableAWSServiceAccessWithContext(ctx, input, opts...)
 }
 
 // EnableAllFeaturesRequest is a passthrough to the underlying EnableAllFeaturesRequest.
@@ -489,6 +531,46 @@ func (c *Organizations) LeaveOrganization(input *organizations.LeaveOrganization
 func (c *Organizations) LeaveOrganizationWithContext(ctx aws.Context, input *organizations.LeaveOrganizationInput, opts ...request.Option) (*organizations.LeaveOrganizationOutput, error) {
 	c.inc("LeaveOrganization")
 	return c.svc.LeaveOrganizationWithContext(ctx, input, opts...)
+}
+
+// ListAWSServiceAccessForOrganizationRequest is a passthrough to the underlying ListAWSServiceAccessForOrganizationRequest.
+// It will increment the count of requests made to ListAWSServiceAccessForOrganization.
+func (c *Organizations) ListAWSServiceAccessForOrganizationRequest(input *organizations.ListAWSServiceAccessForOrganizationInput) (req *request.Request, output *organizations.ListAWSServiceAccessForOrganizationOutput) {
+	c.inc("ListAWSServiceAccessForOrganization")
+	return c.svc.ListAWSServiceAccessForOrganizationRequest(input)
+}
+
+// ListAWSServiceAccessForOrganization is a passthrough to the underlying ListAWSServiceAccessForOrganization method.
+// It will increment the count of requests made to ListAWSServiceAccessForOrganization.
+func (c *Organizations) ListAWSServiceAccessForOrganization(input *organizations.ListAWSServiceAccessForOrganizationInput) (*organizations.ListAWSServiceAccessForOrganizationOutput, error) {
+	c.inc("ListAWSServiceAccessForOrganization")
+	return c.svc.ListAWSServiceAccessForOrganization(input)
+}
+
+// ListAWSServiceAccessForOrganizationWithContext is a passthrough to the underlying ListAWSServiceAccessForOrganizationWithContext method.
+// It will increment the count of requests made to ListAWSServiceAccessForOrganization.
+func (c *Organizations) ListAWSServiceAccessForOrganizationWithContext(ctx aws.Context, input *organizations.ListAWSServiceAccessForOrganizationInput, opts ...request.Option) (*organizations.ListAWSServiceAccessForOrganizationOutput, error) {
+	c.inc("ListAWSServiceAccessForOrganization")
+	return c.svc.ListAWSServiceAccessForOrganizationWithContext(ctx, input, opts...)
+}
+
+// ListAWSServiceAccessForOrganizationPages is a passthrough to the underlying ListAWSServiceAccessForOrganizationPages method.
+// It will increment the count of requests made to ListAWSServiceAccessForOrganization on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use ListAWSServiceAccessForOrganizationPagesWithContext to avoid this.
+func (c *Organizations) ListAWSServiceAccessForOrganizationPages(input *organizations.ListAWSServiceAccessForOrganizationInput, fn func(*organizations.ListAWSServiceAccessForOrganizationOutput, bool) bool) error {
+	wrappedFn := func(page *organizations.ListAWSServiceAccessForOrganizationOutput, lastPage bool) bool {
+		c.inc("ListAWSServiceAccessForOrganization")
+		return fn(page, lastPage)
+	}
+	return c.svc.ListAWSServiceAccessForOrganizationPages(input, wrappedFn)
+}
+
+// ListAWSServiceAccessForOrganizationPagesWithContext is a passthrough to the underlying ListAWSServiceAccessForOrganizationPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to ListAWSServiceAccessForOrganization when applied to the request.
+func (c *Organizations) ListAWSServiceAccessForOrganizationPagesWithContext(ctx aws.Context, input *organizations.ListAWSServiceAccessForOrganizationInput, fn func(*organizations.ListAWSServiceAccessForOrganizationOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("ListAWSServiceAccessForOrganization"))
+	return c.svc.ListAWSServiceAccessForOrganizationPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListAccountsRequest is a passthrough to the underlying ListAccountsRequest.

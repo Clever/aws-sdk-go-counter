@@ -899,6 +899,27 @@ func (c *CloudFormation) UpdateStackWithContext(ctx aws.Context, input *cloudfor
 	return c.svc.UpdateStackWithContext(ctx, input, opts...)
 }
 
+// UpdateStackInstancesRequest is a passthrough to the underlying UpdateStackInstancesRequest.
+// It will increment the count of requests made to UpdateStackInstances.
+func (c *CloudFormation) UpdateStackInstancesRequest(input *cloudformation.UpdateStackInstancesInput) (req *request.Request, output *cloudformation.UpdateStackInstancesOutput) {
+	c.inc("UpdateStackInstances")
+	return c.svc.UpdateStackInstancesRequest(input)
+}
+
+// UpdateStackInstances is a passthrough to the underlying UpdateStackInstances method.
+// It will increment the count of requests made to UpdateStackInstances.
+func (c *CloudFormation) UpdateStackInstances(input *cloudformation.UpdateStackInstancesInput) (*cloudformation.UpdateStackInstancesOutput, error) {
+	c.inc("UpdateStackInstances")
+	return c.svc.UpdateStackInstances(input)
+}
+
+// UpdateStackInstancesWithContext is a passthrough to the underlying UpdateStackInstancesWithContext method.
+// It will increment the count of requests made to UpdateStackInstances.
+func (c *CloudFormation) UpdateStackInstancesWithContext(ctx aws.Context, input *cloudformation.UpdateStackInstancesInput, opts ...request.Option) (*cloudformation.UpdateStackInstancesOutput, error) {
+	c.inc("UpdateStackInstances")
+	return c.svc.UpdateStackInstancesWithContext(ctx, input, opts...)
+}
+
 // UpdateStackSetRequest is a passthrough to the underlying UpdateStackSetRequest.
 // It will increment the count of requests made to UpdateStackSet.
 func (c *CloudFormation) UpdateStackSetRequest(input *cloudformation.UpdateStackSetInput) (req *request.Request, output *cloudformation.UpdateStackSetOutput) {

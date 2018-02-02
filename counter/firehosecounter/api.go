@@ -71,27 +71,6 @@ func (c *Firehose) DescribeDeliveryStreamWithContext(ctx aws.Context, input *fir
 	return c.svc.DescribeDeliveryStreamWithContext(ctx, input, opts...)
 }
 
-// GetKinesisStreamRequest is a passthrough to the underlying GetKinesisStreamRequest.
-// It will increment the count of requests made to GetKinesisStream.
-func (c *Firehose) GetKinesisStreamRequest(input *firehose.GetKinesisStreamInput) (req *request.Request, output *firehose.GetKinesisStreamOutput) {
-	c.inc("GetKinesisStream")
-	return c.svc.GetKinesisStreamRequest(input)
-}
-
-// GetKinesisStream is a passthrough to the underlying GetKinesisStream method.
-// It will increment the count of requests made to GetKinesisStream.
-func (c *Firehose) GetKinesisStream(input *firehose.GetKinesisStreamInput) (*firehose.GetKinesisStreamOutput, error) {
-	c.inc("GetKinesisStream")
-	return c.svc.GetKinesisStream(input)
-}
-
-// GetKinesisStreamWithContext is a passthrough to the underlying GetKinesisStreamWithContext method.
-// It will increment the count of requests made to GetKinesisStream.
-func (c *Firehose) GetKinesisStreamWithContext(ctx aws.Context, input *firehose.GetKinesisStreamInput, opts ...request.Option) (*firehose.GetKinesisStreamOutput, error) {
-	c.inc("GetKinesisStream")
-	return c.svc.GetKinesisStreamWithContext(ctx, input, opts...)
-}
-
 // ListDeliveryStreamsRequest is a passthrough to the underlying ListDeliveryStreamsRequest.
 // It will increment the count of requests made to ListDeliveryStreams.
 func (c *Firehose) ListDeliveryStreamsRequest(input *firehose.ListDeliveryStreamsInput) (req *request.Request, output *firehose.ListDeliveryStreamsOutput) {

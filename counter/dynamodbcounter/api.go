@@ -69,6 +69,48 @@ func (c *DynamoDB) BatchWriteItemWithContext(ctx aws.Context, input *dynamodb.Ba
 	return c.svc.BatchWriteItemWithContext(ctx, input, opts...)
 }
 
+// CreateBackupRequest is a passthrough to the underlying CreateBackupRequest.
+// It will increment the count of requests made to CreateBackup.
+func (c *DynamoDB) CreateBackupRequest(input *dynamodb.CreateBackupInput) (req *request.Request, output *dynamodb.CreateBackupOutput) {
+	c.inc("CreateBackup")
+	return c.svc.CreateBackupRequest(input)
+}
+
+// CreateBackup is a passthrough to the underlying CreateBackup method.
+// It will increment the count of requests made to CreateBackup.
+func (c *DynamoDB) CreateBackup(input *dynamodb.CreateBackupInput) (*dynamodb.CreateBackupOutput, error) {
+	c.inc("CreateBackup")
+	return c.svc.CreateBackup(input)
+}
+
+// CreateBackupWithContext is a passthrough to the underlying CreateBackupWithContext method.
+// It will increment the count of requests made to CreateBackup.
+func (c *DynamoDB) CreateBackupWithContext(ctx aws.Context, input *dynamodb.CreateBackupInput, opts ...request.Option) (*dynamodb.CreateBackupOutput, error) {
+	c.inc("CreateBackup")
+	return c.svc.CreateBackupWithContext(ctx, input, opts...)
+}
+
+// CreateGlobalTableRequest is a passthrough to the underlying CreateGlobalTableRequest.
+// It will increment the count of requests made to CreateGlobalTable.
+func (c *DynamoDB) CreateGlobalTableRequest(input *dynamodb.CreateGlobalTableInput) (req *request.Request, output *dynamodb.CreateGlobalTableOutput) {
+	c.inc("CreateGlobalTable")
+	return c.svc.CreateGlobalTableRequest(input)
+}
+
+// CreateGlobalTable is a passthrough to the underlying CreateGlobalTable method.
+// It will increment the count of requests made to CreateGlobalTable.
+func (c *DynamoDB) CreateGlobalTable(input *dynamodb.CreateGlobalTableInput) (*dynamodb.CreateGlobalTableOutput, error) {
+	c.inc("CreateGlobalTable")
+	return c.svc.CreateGlobalTable(input)
+}
+
+// CreateGlobalTableWithContext is a passthrough to the underlying CreateGlobalTableWithContext method.
+// It will increment the count of requests made to CreateGlobalTable.
+func (c *DynamoDB) CreateGlobalTableWithContext(ctx aws.Context, input *dynamodb.CreateGlobalTableInput, opts ...request.Option) (*dynamodb.CreateGlobalTableOutput, error) {
+	c.inc("CreateGlobalTable")
+	return c.svc.CreateGlobalTableWithContext(ctx, input, opts...)
+}
+
 // CreateTableRequest is a passthrough to the underlying CreateTableRequest.
 // It will increment the count of requests made to CreateTable.
 func (c *DynamoDB) CreateTableRequest(input *dynamodb.CreateTableInput) (req *request.Request, output *dynamodb.CreateTableOutput) {
@@ -88,6 +130,27 @@ func (c *DynamoDB) CreateTable(input *dynamodb.CreateTableInput) (*dynamodb.Crea
 func (c *DynamoDB) CreateTableWithContext(ctx aws.Context, input *dynamodb.CreateTableInput, opts ...request.Option) (*dynamodb.CreateTableOutput, error) {
 	c.inc("CreateTable")
 	return c.svc.CreateTableWithContext(ctx, input, opts...)
+}
+
+// DeleteBackupRequest is a passthrough to the underlying DeleteBackupRequest.
+// It will increment the count of requests made to DeleteBackup.
+func (c *DynamoDB) DeleteBackupRequest(input *dynamodb.DeleteBackupInput) (req *request.Request, output *dynamodb.DeleteBackupOutput) {
+	c.inc("DeleteBackup")
+	return c.svc.DeleteBackupRequest(input)
+}
+
+// DeleteBackup is a passthrough to the underlying DeleteBackup method.
+// It will increment the count of requests made to DeleteBackup.
+func (c *DynamoDB) DeleteBackup(input *dynamodb.DeleteBackupInput) (*dynamodb.DeleteBackupOutput, error) {
+	c.inc("DeleteBackup")
+	return c.svc.DeleteBackup(input)
+}
+
+// DeleteBackupWithContext is a passthrough to the underlying DeleteBackupWithContext method.
+// It will increment the count of requests made to DeleteBackup.
+func (c *DynamoDB) DeleteBackupWithContext(ctx aws.Context, input *dynamodb.DeleteBackupInput, opts ...request.Option) (*dynamodb.DeleteBackupOutput, error) {
+	c.inc("DeleteBackup")
+	return c.svc.DeleteBackupWithContext(ctx, input, opts...)
 }
 
 // DeleteItemRequest is a passthrough to the underlying DeleteItemRequest.
@@ -130,6 +193,69 @@ func (c *DynamoDB) DeleteTable(input *dynamodb.DeleteTableInput) (*dynamodb.Dele
 func (c *DynamoDB) DeleteTableWithContext(ctx aws.Context, input *dynamodb.DeleteTableInput, opts ...request.Option) (*dynamodb.DeleteTableOutput, error) {
 	c.inc("DeleteTable")
 	return c.svc.DeleteTableWithContext(ctx, input, opts...)
+}
+
+// DescribeBackupRequest is a passthrough to the underlying DescribeBackupRequest.
+// It will increment the count of requests made to DescribeBackup.
+func (c *DynamoDB) DescribeBackupRequest(input *dynamodb.DescribeBackupInput) (req *request.Request, output *dynamodb.DescribeBackupOutput) {
+	c.inc("DescribeBackup")
+	return c.svc.DescribeBackupRequest(input)
+}
+
+// DescribeBackup is a passthrough to the underlying DescribeBackup method.
+// It will increment the count of requests made to DescribeBackup.
+func (c *DynamoDB) DescribeBackup(input *dynamodb.DescribeBackupInput) (*dynamodb.DescribeBackupOutput, error) {
+	c.inc("DescribeBackup")
+	return c.svc.DescribeBackup(input)
+}
+
+// DescribeBackupWithContext is a passthrough to the underlying DescribeBackupWithContext method.
+// It will increment the count of requests made to DescribeBackup.
+func (c *DynamoDB) DescribeBackupWithContext(ctx aws.Context, input *dynamodb.DescribeBackupInput, opts ...request.Option) (*dynamodb.DescribeBackupOutput, error) {
+	c.inc("DescribeBackup")
+	return c.svc.DescribeBackupWithContext(ctx, input, opts...)
+}
+
+// DescribeContinuousBackupsRequest is a passthrough to the underlying DescribeContinuousBackupsRequest.
+// It will increment the count of requests made to DescribeContinuousBackups.
+func (c *DynamoDB) DescribeContinuousBackupsRequest(input *dynamodb.DescribeContinuousBackupsInput) (req *request.Request, output *dynamodb.DescribeContinuousBackupsOutput) {
+	c.inc("DescribeContinuousBackups")
+	return c.svc.DescribeContinuousBackupsRequest(input)
+}
+
+// DescribeContinuousBackups is a passthrough to the underlying DescribeContinuousBackups method.
+// It will increment the count of requests made to DescribeContinuousBackups.
+func (c *DynamoDB) DescribeContinuousBackups(input *dynamodb.DescribeContinuousBackupsInput) (*dynamodb.DescribeContinuousBackupsOutput, error) {
+	c.inc("DescribeContinuousBackups")
+	return c.svc.DescribeContinuousBackups(input)
+}
+
+// DescribeContinuousBackupsWithContext is a passthrough to the underlying DescribeContinuousBackupsWithContext method.
+// It will increment the count of requests made to DescribeContinuousBackups.
+func (c *DynamoDB) DescribeContinuousBackupsWithContext(ctx aws.Context, input *dynamodb.DescribeContinuousBackupsInput, opts ...request.Option) (*dynamodb.DescribeContinuousBackupsOutput, error) {
+	c.inc("DescribeContinuousBackups")
+	return c.svc.DescribeContinuousBackupsWithContext(ctx, input, opts...)
+}
+
+// DescribeGlobalTableRequest is a passthrough to the underlying DescribeGlobalTableRequest.
+// It will increment the count of requests made to DescribeGlobalTable.
+func (c *DynamoDB) DescribeGlobalTableRequest(input *dynamodb.DescribeGlobalTableInput) (req *request.Request, output *dynamodb.DescribeGlobalTableOutput) {
+	c.inc("DescribeGlobalTable")
+	return c.svc.DescribeGlobalTableRequest(input)
+}
+
+// DescribeGlobalTable is a passthrough to the underlying DescribeGlobalTable method.
+// It will increment the count of requests made to DescribeGlobalTable.
+func (c *DynamoDB) DescribeGlobalTable(input *dynamodb.DescribeGlobalTableInput) (*dynamodb.DescribeGlobalTableOutput, error) {
+	c.inc("DescribeGlobalTable")
+	return c.svc.DescribeGlobalTable(input)
+}
+
+// DescribeGlobalTableWithContext is a passthrough to the underlying DescribeGlobalTableWithContext method.
+// It will increment the count of requests made to DescribeGlobalTable.
+func (c *DynamoDB) DescribeGlobalTableWithContext(ctx aws.Context, input *dynamodb.DescribeGlobalTableInput, opts ...request.Option) (*dynamodb.DescribeGlobalTableOutput, error) {
+	c.inc("DescribeGlobalTable")
+	return c.svc.DescribeGlobalTableWithContext(ctx, input, opts...)
 }
 
 // DescribeLimitsRequest is a passthrough to the underlying DescribeLimitsRequest.
@@ -214,6 +340,48 @@ func (c *DynamoDB) GetItem(input *dynamodb.GetItemInput) (*dynamodb.GetItemOutpu
 func (c *DynamoDB) GetItemWithContext(ctx aws.Context, input *dynamodb.GetItemInput, opts ...request.Option) (*dynamodb.GetItemOutput, error) {
 	c.inc("GetItem")
 	return c.svc.GetItemWithContext(ctx, input, opts...)
+}
+
+// ListBackupsRequest is a passthrough to the underlying ListBackupsRequest.
+// It will increment the count of requests made to ListBackups.
+func (c *DynamoDB) ListBackupsRequest(input *dynamodb.ListBackupsInput) (req *request.Request, output *dynamodb.ListBackupsOutput) {
+	c.inc("ListBackups")
+	return c.svc.ListBackupsRequest(input)
+}
+
+// ListBackups is a passthrough to the underlying ListBackups method.
+// It will increment the count of requests made to ListBackups.
+func (c *DynamoDB) ListBackups(input *dynamodb.ListBackupsInput) (*dynamodb.ListBackupsOutput, error) {
+	c.inc("ListBackups")
+	return c.svc.ListBackups(input)
+}
+
+// ListBackupsWithContext is a passthrough to the underlying ListBackupsWithContext method.
+// It will increment the count of requests made to ListBackups.
+func (c *DynamoDB) ListBackupsWithContext(ctx aws.Context, input *dynamodb.ListBackupsInput, opts ...request.Option) (*dynamodb.ListBackupsOutput, error) {
+	c.inc("ListBackups")
+	return c.svc.ListBackupsWithContext(ctx, input, opts...)
+}
+
+// ListGlobalTablesRequest is a passthrough to the underlying ListGlobalTablesRequest.
+// It will increment the count of requests made to ListGlobalTables.
+func (c *DynamoDB) ListGlobalTablesRequest(input *dynamodb.ListGlobalTablesInput) (req *request.Request, output *dynamodb.ListGlobalTablesOutput) {
+	c.inc("ListGlobalTables")
+	return c.svc.ListGlobalTablesRequest(input)
+}
+
+// ListGlobalTables is a passthrough to the underlying ListGlobalTables method.
+// It will increment the count of requests made to ListGlobalTables.
+func (c *DynamoDB) ListGlobalTables(input *dynamodb.ListGlobalTablesInput) (*dynamodb.ListGlobalTablesOutput, error) {
+	c.inc("ListGlobalTables")
+	return c.svc.ListGlobalTables(input)
+}
+
+// ListGlobalTablesWithContext is a passthrough to the underlying ListGlobalTablesWithContext method.
+// It will increment the count of requests made to ListGlobalTables.
+func (c *DynamoDB) ListGlobalTablesWithContext(ctx aws.Context, input *dynamodb.ListGlobalTablesInput, opts ...request.Option) (*dynamodb.ListGlobalTablesOutput, error) {
+	c.inc("ListGlobalTables")
+	return c.svc.ListGlobalTablesWithContext(ctx, input, opts...)
 }
 
 // ListTablesRequest is a passthrough to the underlying ListTablesRequest.
@@ -338,6 +506,27 @@ func (c *DynamoDB) QueryPagesWithContext(ctx aws.Context, input *dynamodb.QueryI
 	return c.svc.QueryPagesWithContext(ctx, input, fn, opts...)
 }
 
+// RestoreTableFromBackupRequest is a passthrough to the underlying RestoreTableFromBackupRequest.
+// It will increment the count of requests made to RestoreTableFromBackup.
+func (c *DynamoDB) RestoreTableFromBackupRequest(input *dynamodb.RestoreTableFromBackupInput) (req *request.Request, output *dynamodb.RestoreTableFromBackupOutput) {
+	c.inc("RestoreTableFromBackup")
+	return c.svc.RestoreTableFromBackupRequest(input)
+}
+
+// RestoreTableFromBackup is a passthrough to the underlying RestoreTableFromBackup method.
+// It will increment the count of requests made to RestoreTableFromBackup.
+func (c *DynamoDB) RestoreTableFromBackup(input *dynamodb.RestoreTableFromBackupInput) (*dynamodb.RestoreTableFromBackupOutput, error) {
+	c.inc("RestoreTableFromBackup")
+	return c.svc.RestoreTableFromBackup(input)
+}
+
+// RestoreTableFromBackupWithContext is a passthrough to the underlying RestoreTableFromBackupWithContext method.
+// It will increment the count of requests made to RestoreTableFromBackup.
+func (c *DynamoDB) RestoreTableFromBackupWithContext(ctx aws.Context, input *dynamodb.RestoreTableFromBackupInput, opts ...request.Option) (*dynamodb.RestoreTableFromBackupOutput, error) {
+	c.inc("RestoreTableFromBackup")
+	return c.svc.RestoreTableFromBackupWithContext(ctx, input, opts...)
+}
+
 // ScanRequest is a passthrough to the underlying ScanRequest.
 // It will increment the count of requests made to Scan.
 func (c *DynamoDB) ScanRequest(input *dynamodb.ScanInput) (req *request.Request, output *dynamodb.ScanOutput) {
@@ -418,6 +607,27 @@ func (c *DynamoDB) UntagResource(input *dynamodb.UntagResourceInput) (*dynamodb.
 func (c *DynamoDB) UntagResourceWithContext(ctx aws.Context, input *dynamodb.UntagResourceInput, opts ...request.Option) (*dynamodb.UntagResourceOutput, error) {
 	c.inc("UntagResource")
 	return c.svc.UntagResourceWithContext(ctx, input, opts...)
+}
+
+// UpdateGlobalTableRequest is a passthrough to the underlying UpdateGlobalTableRequest.
+// It will increment the count of requests made to UpdateGlobalTable.
+func (c *DynamoDB) UpdateGlobalTableRequest(input *dynamodb.UpdateGlobalTableInput) (req *request.Request, output *dynamodb.UpdateGlobalTableOutput) {
+	c.inc("UpdateGlobalTable")
+	return c.svc.UpdateGlobalTableRequest(input)
+}
+
+// UpdateGlobalTable is a passthrough to the underlying UpdateGlobalTable method.
+// It will increment the count of requests made to UpdateGlobalTable.
+func (c *DynamoDB) UpdateGlobalTable(input *dynamodb.UpdateGlobalTableInput) (*dynamodb.UpdateGlobalTableOutput, error) {
+	c.inc("UpdateGlobalTable")
+	return c.svc.UpdateGlobalTable(input)
+}
+
+// UpdateGlobalTableWithContext is a passthrough to the underlying UpdateGlobalTableWithContext method.
+// It will increment the count of requests made to UpdateGlobalTable.
+func (c *DynamoDB) UpdateGlobalTableWithContext(ctx aws.Context, input *dynamodb.UpdateGlobalTableInput, opts ...request.Option) (*dynamodb.UpdateGlobalTableOutput, error) {
+	c.inc("UpdateGlobalTable")
+	return c.svc.UpdateGlobalTableWithContext(ctx, input, opts...)
 }
 
 // UpdateItemRequest is a passthrough to the underlying UpdateItemRequest.

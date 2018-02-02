@@ -344,6 +344,27 @@ func (c *CognitoIdentityProvider) AdminListGroupsForUserWithContext(ctx aws.Cont
 	return c.svc.AdminListGroupsForUserWithContext(ctx, input, opts...)
 }
 
+// AdminListUserAuthEventsRequest is a passthrough to the underlying AdminListUserAuthEventsRequest.
+// It will increment the count of requests made to AdminListUserAuthEvents.
+func (c *CognitoIdentityProvider) AdminListUserAuthEventsRequest(input *cognitoidentityprovider.AdminListUserAuthEventsInput) (req *request.Request, output *cognitoidentityprovider.AdminListUserAuthEventsOutput) {
+	c.inc("AdminListUserAuthEvents")
+	return c.svc.AdminListUserAuthEventsRequest(input)
+}
+
+// AdminListUserAuthEvents is a passthrough to the underlying AdminListUserAuthEvents method.
+// It will increment the count of requests made to AdminListUserAuthEvents.
+func (c *CognitoIdentityProvider) AdminListUserAuthEvents(input *cognitoidentityprovider.AdminListUserAuthEventsInput) (*cognitoidentityprovider.AdminListUserAuthEventsOutput, error) {
+	c.inc("AdminListUserAuthEvents")
+	return c.svc.AdminListUserAuthEvents(input)
+}
+
+// AdminListUserAuthEventsWithContext is a passthrough to the underlying AdminListUserAuthEventsWithContext method.
+// It will increment the count of requests made to AdminListUserAuthEvents.
+func (c *CognitoIdentityProvider) AdminListUserAuthEventsWithContext(ctx aws.Context, input *cognitoidentityprovider.AdminListUserAuthEventsInput, opts ...request.Option) (*cognitoidentityprovider.AdminListUserAuthEventsOutput, error) {
+	c.inc("AdminListUserAuthEvents")
+	return c.svc.AdminListUserAuthEventsWithContext(ctx, input, opts...)
+}
+
 // AdminRemoveUserFromGroupRequest is a passthrough to the underlying AdminRemoveUserFromGroupRequest.
 // It will increment the count of requests made to AdminRemoveUserFromGroup.
 func (c *CognitoIdentityProvider) AdminRemoveUserFromGroupRequest(input *cognitoidentityprovider.AdminRemoveUserFromGroupInput) (req *request.Request, output *cognitoidentityprovider.AdminRemoveUserFromGroupOutput) {
@@ -407,6 +428,27 @@ func (c *CognitoIdentityProvider) AdminRespondToAuthChallengeWithContext(ctx aws
 	return c.svc.AdminRespondToAuthChallengeWithContext(ctx, input, opts...)
 }
 
+// AdminSetUserMFAPreferenceRequest is a passthrough to the underlying AdminSetUserMFAPreferenceRequest.
+// It will increment the count of requests made to AdminSetUserMFAPreference.
+func (c *CognitoIdentityProvider) AdminSetUserMFAPreferenceRequest(input *cognitoidentityprovider.AdminSetUserMFAPreferenceInput) (req *request.Request, output *cognitoidentityprovider.AdminSetUserMFAPreferenceOutput) {
+	c.inc("AdminSetUserMFAPreference")
+	return c.svc.AdminSetUserMFAPreferenceRequest(input)
+}
+
+// AdminSetUserMFAPreference is a passthrough to the underlying AdminSetUserMFAPreference method.
+// It will increment the count of requests made to AdminSetUserMFAPreference.
+func (c *CognitoIdentityProvider) AdminSetUserMFAPreference(input *cognitoidentityprovider.AdminSetUserMFAPreferenceInput) (*cognitoidentityprovider.AdminSetUserMFAPreferenceOutput, error) {
+	c.inc("AdminSetUserMFAPreference")
+	return c.svc.AdminSetUserMFAPreference(input)
+}
+
+// AdminSetUserMFAPreferenceWithContext is a passthrough to the underlying AdminSetUserMFAPreferenceWithContext method.
+// It will increment the count of requests made to AdminSetUserMFAPreference.
+func (c *CognitoIdentityProvider) AdminSetUserMFAPreferenceWithContext(ctx aws.Context, input *cognitoidentityprovider.AdminSetUserMFAPreferenceInput, opts ...request.Option) (*cognitoidentityprovider.AdminSetUserMFAPreferenceOutput, error) {
+	c.inc("AdminSetUserMFAPreference")
+	return c.svc.AdminSetUserMFAPreferenceWithContext(ctx, input, opts...)
+}
+
 // AdminSetUserSettingsRequest is a passthrough to the underlying AdminSetUserSettingsRequest.
 // It will increment the count of requests made to AdminSetUserSettings.
 func (c *CognitoIdentityProvider) AdminSetUserSettingsRequest(input *cognitoidentityprovider.AdminSetUserSettingsInput) (req *request.Request, output *cognitoidentityprovider.AdminSetUserSettingsOutput) {
@@ -426,6 +468,27 @@ func (c *CognitoIdentityProvider) AdminSetUserSettings(input *cognitoidentitypro
 func (c *CognitoIdentityProvider) AdminSetUserSettingsWithContext(ctx aws.Context, input *cognitoidentityprovider.AdminSetUserSettingsInput, opts ...request.Option) (*cognitoidentityprovider.AdminSetUserSettingsOutput, error) {
 	c.inc("AdminSetUserSettings")
 	return c.svc.AdminSetUserSettingsWithContext(ctx, input, opts...)
+}
+
+// AdminUpdateAuthEventFeedbackRequest is a passthrough to the underlying AdminUpdateAuthEventFeedbackRequest.
+// It will increment the count of requests made to AdminUpdateAuthEventFeedback.
+func (c *CognitoIdentityProvider) AdminUpdateAuthEventFeedbackRequest(input *cognitoidentityprovider.AdminUpdateAuthEventFeedbackInput) (req *request.Request, output *cognitoidentityprovider.AdminUpdateAuthEventFeedbackOutput) {
+	c.inc("AdminUpdateAuthEventFeedback")
+	return c.svc.AdminUpdateAuthEventFeedbackRequest(input)
+}
+
+// AdminUpdateAuthEventFeedback is a passthrough to the underlying AdminUpdateAuthEventFeedback method.
+// It will increment the count of requests made to AdminUpdateAuthEventFeedback.
+func (c *CognitoIdentityProvider) AdminUpdateAuthEventFeedback(input *cognitoidentityprovider.AdminUpdateAuthEventFeedbackInput) (*cognitoidentityprovider.AdminUpdateAuthEventFeedbackOutput, error) {
+	c.inc("AdminUpdateAuthEventFeedback")
+	return c.svc.AdminUpdateAuthEventFeedback(input)
+}
+
+// AdminUpdateAuthEventFeedbackWithContext is a passthrough to the underlying AdminUpdateAuthEventFeedbackWithContext method.
+// It will increment the count of requests made to AdminUpdateAuthEventFeedback.
+func (c *CognitoIdentityProvider) AdminUpdateAuthEventFeedbackWithContext(ctx aws.Context, input *cognitoidentityprovider.AdminUpdateAuthEventFeedbackInput, opts ...request.Option) (*cognitoidentityprovider.AdminUpdateAuthEventFeedbackOutput, error) {
+	c.inc("AdminUpdateAuthEventFeedback")
+	return c.svc.AdminUpdateAuthEventFeedbackWithContext(ctx, input, opts...)
 }
 
 // AdminUpdateDeviceStatusRequest is a passthrough to the underlying AdminUpdateDeviceStatusRequest.
@@ -489,6 +552,27 @@ func (c *CognitoIdentityProvider) AdminUserGlobalSignOut(input *cognitoidentityp
 func (c *CognitoIdentityProvider) AdminUserGlobalSignOutWithContext(ctx aws.Context, input *cognitoidentityprovider.AdminUserGlobalSignOutInput, opts ...request.Option) (*cognitoidentityprovider.AdminUserGlobalSignOutOutput, error) {
 	c.inc("AdminUserGlobalSignOut")
 	return c.svc.AdminUserGlobalSignOutWithContext(ctx, input, opts...)
+}
+
+// AssociateSoftwareTokenRequest is a passthrough to the underlying AssociateSoftwareTokenRequest.
+// It will increment the count of requests made to AssociateSoftwareToken.
+func (c *CognitoIdentityProvider) AssociateSoftwareTokenRequest(input *cognitoidentityprovider.AssociateSoftwareTokenInput) (req *request.Request, output *cognitoidentityprovider.AssociateSoftwareTokenOutput) {
+	c.inc("AssociateSoftwareToken")
+	return c.svc.AssociateSoftwareTokenRequest(input)
+}
+
+// AssociateSoftwareToken is a passthrough to the underlying AssociateSoftwareToken method.
+// It will increment the count of requests made to AssociateSoftwareToken.
+func (c *CognitoIdentityProvider) AssociateSoftwareToken(input *cognitoidentityprovider.AssociateSoftwareTokenInput) (*cognitoidentityprovider.AssociateSoftwareTokenOutput, error) {
+	c.inc("AssociateSoftwareToken")
+	return c.svc.AssociateSoftwareToken(input)
+}
+
+// AssociateSoftwareTokenWithContext is a passthrough to the underlying AssociateSoftwareTokenWithContext method.
+// It will increment the count of requests made to AssociateSoftwareToken.
+func (c *CognitoIdentityProvider) AssociateSoftwareTokenWithContext(ctx aws.Context, input *cognitoidentityprovider.AssociateSoftwareTokenInput, opts ...request.Option) (*cognitoidentityprovider.AssociateSoftwareTokenOutput, error) {
+	c.inc("AssociateSoftwareToken")
+	return c.svc.AssociateSoftwareTokenWithContext(ctx, input, opts...)
 }
 
 // ChangePasswordRequest is a passthrough to the underlying ChangePasswordRequest.
@@ -932,6 +1016,27 @@ func (c *CognitoIdentityProvider) DescribeResourceServerWithContext(ctx aws.Cont
 	return c.svc.DescribeResourceServerWithContext(ctx, input, opts...)
 }
 
+// DescribeRiskConfigurationRequest is a passthrough to the underlying DescribeRiskConfigurationRequest.
+// It will increment the count of requests made to DescribeRiskConfiguration.
+func (c *CognitoIdentityProvider) DescribeRiskConfigurationRequest(input *cognitoidentityprovider.DescribeRiskConfigurationInput) (req *request.Request, output *cognitoidentityprovider.DescribeRiskConfigurationOutput) {
+	c.inc("DescribeRiskConfiguration")
+	return c.svc.DescribeRiskConfigurationRequest(input)
+}
+
+// DescribeRiskConfiguration is a passthrough to the underlying DescribeRiskConfiguration method.
+// It will increment the count of requests made to DescribeRiskConfiguration.
+func (c *CognitoIdentityProvider) DescribeRiskConfiguration(input *cognitoidentityprovider.DescribeRiskConfigurationInput) (*cognitoidentityprovider.DescribeRiskConfigurationOutput, error) {
+	c.inc("DescribeRiskConfiguration")
+	return c.svc.DescribeRiskConfiguration(input)
+}
+
+// DescribeRiskConfigurationWithContext is a passthrough to the underlying DescribeRiskConfigurationWithContext method.
+// It will increment the count of requests made to DescribeRiskConfiguration.
+func (c *CognitoIdentityProvider) DescribeRiskConfigurationWithContext(ctx aws.Context, input *cognitoidentityprovider.DescribeRiskConfigurationInput, opts ...request.Option) (*cognitoidentityprovider.DescribeRiskConfigurationOutput, error) {
+	c.inc("DescribeRiskConfiguration")
+	return c.svc.DescribeRiskConfigurationWithContext(ctx, input, opts...)
+}
+
 // DescribeUserImportJobRequest is a passthrough to the underlying DescribeUserImportJobRequest.
 // It will increment the count of requests made to DescribeUserImportJob.
 func (c *CognitoIdentityProvider) DescribeUserImportJobRequest(input *cognitoidentityprovider.DescribeUserImportJobInput) (req *request.Request, output *cognitoidentityprovider.DescribeUserImportJobOutput) {
@@ -1203,6 +1308,27 @@ func (c *CognitoIdentityProvider) GetUserAttributeVerificationCode(input *cognit
 func (c *CognitoIdentityProvider) GetUserAttributeVerificationCodeWithContext(ctx aws.Context, input *cognitoidentityprovider.GetUserAttributeVerificationCodeInput, opts ...request.Option) (*cognitoidentityprovider.GetUserAttributeVerificationCodeOutput, error) {
 	c.inc("GetUserAttributeVerificationCode")
 	return c.svc.GetUserAttributeVerificationCodeWithContext(ctx, input, opts...)
+}
+
+// GetUserPoolMfaConfigRequest is a passthrough to the underlying GetUserPoolMfaConfigRequest.
+// It will increment the count of requests made to GetUserPoolMfaConfig.
+func (c *CognitoIdentityProvider) GetUserPoolMfaConfigRequest(input *cognitoidentityprovider.GetUserPoolMfaConfigInput) (req *request.Request, output *cognitoidentityprovider.GetUserPoolMfaConfigOutput) {
+	c.inc("GetUserPoolMfaConfig")
+	return c.svc.GetUserPoolMfaConfigRequest(input)
+}
+
+// GetUserPoolMfaConfig is a passthrough to the underlying GetUserPoolMfaConfig method.
+// It will increment the count of requests made to GetUserPoolMfaConfig.
+func (c *CognitoIdentityProvider) GetUserPoolMfaConfig(input *cognitoidentityprovider.GetUserPoolMfaConfigInput) (*cognitoidentityprovider.GetUserPoolMfaConfigOutput, error) {
+	c.inc("GetUserPoolMfaConfig")
+	return c.svc.GetUserPoolMfaConfig(input)
+}
+
+// GetUserPoolMfaConfigWithContext is a passthrough to the underlying GetUserPoolMfaConfigWithContext method.
+// It will increment the count of requests made to GetUserPoolMfaConfig.
+func (c *CognitoIdentityProvider) GetUserPoolMfaConfigWithContext(ctx aws.Context, input *cognitoidentityprovider.GetUserPoolMfaConfigInput, opts ...request.Option) (*cognitoidentityprovider.GetUserPoolMfaConfigOutput, error) {
+	c.inc("GetUserPoolMfaConfig")
+	return c.svc.GetUserPoolMfaConfigWithContext(ctx, input, opts...)
 }
 
 // GlobalSignOutRequest is a passthrough to the underlying GlobalSignOutRequest.
@@ -1478,6 +1604,27 @@ func (c *CognitoIdentityProvider) RespondToAuthChallengeWithContext(ctx aws.Cont
 	return c.svc.RespondToAuthChallengeWithContext(ctx, input, opts...)
 }
 
+// SetRiskConfigurationRequest is a passthrough to the underlying SetRiskConfigurationRequest.
+// It will increment the count of requests made to SetRiskConfiguration.
+func (c *CognitoIdentityProvider) SetRiskConfigurationRequest(input *cognitoidentityprovider.SetRiskConfigurationInput) (req *request.Request, output *cognitoidentityprovider.SetRiskConfigurationOutput) {
+	c.inc("SetRiskConfiguration")
+	return c.svc.SetRiskConfigurationRequest(input)
+}
+
+// SetRiskConfiguration is a passthrough to the underlying SetRiskConfiguration method.
+// It will increment the count of requests made to SetRiskConfiguration.
+func (c *CognitoIdentityProvider) SetRiskConfiguration(input *cognitoidentityprovider.SetRiskConfigurationInput) (*cognitoidentityprovider.SetRiskConfigurationOutput, error) {
+	c.inc("SetRiskConfiguration")
+	return c.svc.SetRiskConfiguration(input)
+}
+
+// SetRiskConfigurationWithContext is a passthrough to the underlying SetRiskConfigurationWithContext method.
+// It will increment the count of requests made to SetRiskConfiguration.
+func (c *CognitoIdentityProvider) SetRiskConfigurationWithContext(ctx aws.Context, input *cognitoidentityprovider.SetRiskConfigurationInput, opts ...request.Option) (*cognitoidentityprovider.SetRiskConfigurationOutput, error) {
+	c.inc("SetRiskConfiguration")
+	return c.svc.SetRiskConfigurationWithContext(ctx, input, opts...)
+}
+
 // SetUICustomizationRequest is a passthrough to the underlying SetUICustomizationRequest.
 // It will increment the count of requests made to SetUICustomization.
 func (c *CognitoIdentityProvider) SetUICustomizationRequest(input *cognitoidentityprovider.SetUICustomizationInput) (req *request.Request, output *cognitoidentityprovider.SetUICustomizationOutput) {
@@ -1497,6 +1644,48 @@ func (c *CognitoIdentityProvider) SetUICustomization(input *cognitoidentityprovi
 func (c *CognitoIdentityProvider) SetUICustomizationWithContext(ctx aws.Context, input *cognitoidentityprovider.SetUICustomizationInput, opts ...request.Option) (*cognitoidentityprovider.SetUICustomizationOutput, error) {
 	c.inc("SetUICustomization")
 	return c.svc.SetUICustomizationWithContext(ctx, input, opts...)
+}
+
+// SetUserMFAPreferenceRequest is a passthrough to the underlying SetUserMFAPreferenceRequest.
+// It will increment the count of requests made to SetUserMFAPreference.
+func (c *CognitoIdentityProvider) SetUserMFAPreferenceRequest(input *cognitoidentityprovider.SetUserMFAPreferenceInput) (req *request.Request, output *cognitoidentityprovider.SetUserMFAPreferenceOutput) {
+	c.inc("SetUserMFAPreference")
+	return c.svc.SetUserMFAPreferenceRequest(input)
+}
+
+// SetUserMFAPreference is a passthrough to the underlying SetUserMFAPreference method.
+// It will increment the count of requests made to SetUserMFAPreference.
+func (c *CognitoIdentityProvider) SetUserMFAPreference(input *cognitoidentityprovider.SetUserMFAPreferenceInput) (*cognitoidentityprovider.SetUserMFAPreferenceOutput, error) {
+	c.inc("SetUserMFAPreference")
+	return c.svc.SetUserMFAPreference(input)
+}
+
+// SetUserMFAPreferenceWithContext is a passthrough to the underlying SetUserMFAPreferenceWithContext method.
+// It will increment the count of requests made to SetUserMFAPreference.
+func (c *CognitoIdentityProvider) SetUserMFAPreferenceWithContext(ctx aws.Context, input *cognitoidentityprovider.SetUserMFAPreferenceInput, opts ...request.Option) (*cognitoidentityprovider.SetUserMFAPreferenceOutput, error) {
+	c.inc("SetUserMFAPreference")
+	return c.svc.SetUserMFAPreferenceWithContext(ctx, input, opts...)
+}
+
+// SetUserPoolMfaConfigRequest is a passthrough to the underlying SetUserPoolMfaConfigRequest.
+// It will increment the count of requests made to SetUserPoolMfaConfig.
+func (c *CognitoIdentityProvider) SetUserPoolMfaConfigRequest(input *cognitoidentityprovider.SetUserPoolMfaConfigInput) (req *request.Request, output *cognitoidentityprovider.SetUserPoolMfaConfigOutput) {
+	c.inc("SetUserPoolMfaConfig")
+	return c.svc.SetUserPoolMfaConfigRequest(input)
+}
+
+// SetUserPoolMfaConfig is a passthrough to the underlying SetUserPoolMfaConfig method.
+// It will increment the count of requests made to SetUserPoolMfaConfig.
+func (c *CognitoIdentityProvider) SetUserPoolMfaConfig(input *cognitoidentityprovider.SetUserPoolMfaConfigInput) (*cognitoidentityprovider.SetUserPoolMfaConfigOutput, error) {
+	c.inc("SetUserPoolMfaConfig")
+	return c.svc.SetUserPoolMfaConfig(input)
+}
+
+// SetUserPoolMfaConfigWithContext is a passthrough to the underlying SetUserPoolMfaConfigWithContext method.
+// It will increment the count of requests made to SetUserPoolMfaConfig.
+func (c *CognitoIdentityProvider) SetUserPoolMfaConfigWithContext(ctx aws.Context, input *cognitoidentityprovider.SetUserPoolMfaConfigInput, opts ...request.Option) (*cognitoidentityprovider.SetUserPoolMfaConfigOutput, error) {
+	c.inc("SetUserPoolMfaConfig")
+	return c.svc.SetUserPoolMfaConfigWithContext(ctx, input, opts...)
 }
 
 // SetUserSettingsRequest is a passthrough to the underlying SetUserSettingsRequest.
@@ -1581,6 +1770,27 @@ func (c *CognitoIdentityProvider) StopUserImportJob(input *cognitoidentityprovid
 func (c *CognitoIdentityProvider) StopUserImportJobWithContext(ctx aws.Context, input *cognitoidentityprovider.StopUserImportJobInput, opts ...request.Option) (*cognitoidentityprovider.StopUserImportJobOutput, error) {
 	c.inc("StopUserImportJob")
 	return c.svc.StopUserImportJobWithContext(ctx, input, opts...)
+}
+
+// UpdateAuthEventFeedbackRequest is a passthrough to the underlying UpdateAuthEventFeedbackRequest.
+// It will increment the count of requests made to UpdateAuthEventFeedback.
+func (c *CognitoIdentityProvider) UpdateAuthEventFeedbackRequest(input *cognitoidentityprovider.UpdateAuthEventFeedbackInput) (req *request.Request, output *cognitoidentityprovider.UpdateAuthEventFeedbackOutput) {
+	c.inc("UpdateAuthEventFeedback")
+	return c.svc.UpdateAuthEventFeedbackRequest(input)
+}
+
+// UpdateAuthEventFeedback is a passthrough to the underlying UpdateAuthEventFeedback method.
+// It will increment the count of requests made to UpdateAuthEventFeedback.
+func (c *CognitoIdentityProvider) UpdateAuthEventFeedback(input *cognitoidentityprovider.UpdateAuthEventFeedbackInput) (*cognitoidentityprovider.UpdateAuthEventFeedbackOutput, error) {
+	c.inc("UpdateAuthEventFeedback")
+	return c.svc.UpdateAuthEventFeedback(input)
+}
+
+// UpdateAuthEventFeedbackWithContext is a passthrough to the underlying UpdateAuthEventFeedbackWithContext method.
+// It will increment the count of requests made to UpdateAuthEventFeedback.
+func (c *CognitoIdentityProvider) UpdateAuthEventFeedbackWithContext(ctx aws.Context, input *cognitoidentityprovider.UpdateAuthEventFeedbackInput, opts ...request.Option) (*cognitoidentityprovider.UpdateAuthEventFeedbackOutput, error) {
+	c.inc("UpdateAuthEventFeedback")
+	return c.svc.UpdateAuthEventFeedbackWithContext(ctx, input, opts...)
 }
 
 // UpdateDeviceStatusRequest is a passthrough to the underlying UpdateDeviceStatusRequest.
@@ -1728,6 +1938,27 @@ func (c *CognitoIdentityProvider) UpdateUserPoolClient(input *cognitoidentitypro
 func (c *CognitoIdentityProvider) UpdateUserPoolClientWithContext(ctx aws.Context, input *cognitoidentityprovider.UpdateUserPoolClientInput, opts ...request.Option) (*cognitoidentityprovider.UpdateUserPoolClientOutput, error) {
 	c.inc("UpdateUserPoolClient")
 	return c.svc.UpdateUserPoolClientWithContext(ctx, input, opts...)
+}
+
+// VerifySoftwareTokenRequest is a passthrough to the underlying VerifySoftwareTokenRequest.
+// It will increment the count of requests made to VerifySoftwareToken.
+func (c *CognitoIdentityProvider) VerifySoftwareTokenRequest(input *cognitoidentityprovider.VerifySoftwareTokenInput) (req *request.Request, output *cognitoidentityprovider.VerifySoftwareTokenOutput) {
+	c.inc("VerifySoftwareToken")
+	return c.svc.VerifySoftwareTokenRequest(input)
+}
+
+// VerifySoftwareToken is a passthrough to the underlying VerifySoftwareToken method.
+// It will increment the count of requests made to VerifySoftwareToken.
+func (c *CognitoIdentityProvider) VerifySoftwareToken(input *cognitoidentityprovider.VerifySoftwareTokenInput) (*cognitoidentityprovider.VerifySoftwareTokenOutput, error) {
+	c.inc("VerifySoftwareToken")
+	return c.svc.VerifySoftwareToken(input)
+}
+
+// VerifySoftwareTokenWithContext is a passthrough to the underlying VerifySoftwareTokenWithContext method.
+// It will increment the count of requests made to VerifySoftwareToken.
+func (c *CognitoIdentityProvider) VerifySoftwareTokenWithContext(ctx aws.Context, input *cognitoidentityprovider.VerifySoftwareTokenInput, opts ...request.Option) (*cognitoidentityprovider.VerifySoftwareTokenOutput, error) {
+	c.inc("VerifySoftwareToken")
+	return c.svc.VerifySoftwareTokenWithContext(ctx, input, opts...)
 }
 
 // VerifyUserAttributeRequest is a passthrough to the underlying VerifyUserAttributeRequest.

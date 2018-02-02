@@ -29,6 +29,25 @@ func (c *XRay) BatchGetTracesWithContext(ctx aws.Context, input *xray.BatchGetTr
 	return c.svc.BatchGetTracesWithContext(ctx, input, opts...)
 }
 
+// BatchGetTracesPages is a passthrough to the underlying BatchGetTracesPages method.
+// It will increment the count of requests made to BatchGetTraces on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use BatchGetTracesPagesWithContext to avoid this.
+func (c *XRay) BatchGetTracesPages(input *xray.BatchGetTracesInput, fn func(*xray.BatchGetTracesOutput, bool) bool) error {
+	wrappedFn := func(page *xray.BatchGetTracesOutput, lastPage bool) bool {
+		c.inc("BatchGetTraces")
+		return fn(page, lastPage)
+	}
+	return c.svc.BatchGetTracesPages(input, wrappedFn)
+}
+
+// BatchGetTracesPagesWithContext is a passthrough to the underlying BatchGetTracesPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to BatchGetTraces when applied to the request.
+func (c *XRay) BatchGetTracesPagesWithContext(ctx aws.Context, input *xray.BatchGetTracesInput, fn func(*xray.BatchGetTracesOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("BatchGetTraces"))
+	return c.svc.BatchGetTracesPagesWithContext(ctx, input, fn, opts...)
+}
+
 // GetServiceGraphRequest is a passthrough to the underlying GetServiceGraphRequest.
 // It will increment the count of requests made to GetServiceGraph.
 func (c *XRay) GetServiceGraphRequest(input *xray.GetServiceGraphInput) (req *request.Request, output *xray.GetServiceGraphOutput) {
@@ -48,6 +67,25 @@ func (c *XRay) GetServiceGraph(input *xray.GetServiceGraphInput) (*xray.GetServi
 func (c *XRay) GetServiceGraphWithContext(ctx aws.Context, input *xray.GetServiceGraphInput, opts ...request.Option) (*xray.GetServiceGraphOutput, error) {
 	c.inc("GetServiceGraph")
 	return c.svc.GetServiceGraphWithContext(ctx, input, opts...)
+}
+
+// GetServiceGraphPages is a passthrough to the underlying GetServiceGraphPages method.
+// It will increment the count of requests made to GetServiceGraph on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use GetServiceGraphPagesWithContext to avoid this.
+func (c *XRay) GetServiceGraphPages(input *xray.GetServiceGraphInput, fn func(*xray.GetServiceGraphOutput, bool) bool) error {
+	wrappedFn := func(page *xray.GetServiceGraphOutput, lastPage bool) bool {
+		c.inc("GetServiceGraph")
+		return fn(page, lastPage)
+	}
+	return c.svc.GetServiceGraphPages(input, wrappedFn)
+}
+
+// GetServiceGraphPagesWithContext is a passthrough to the underlying GetServiceGraphPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to GetServiceGraph when applied to the request.
+func (c *XRay) GetServiceGraphPagesWithContext(ctx aws.Context, input *xray.GetServiceGraphInput, fn func(*xray.GetServiceGraphOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("GetServiceGraph"))
+	return c.svc.GetServiceGraphPagesWithContext(ctx, input, fn, opts...)
 }
 
 // GetTraceGraphRequest is a passthrough to the underlying GetTraceGraphRequest.
@@ -71,6 +109,25 @@ func (c *XRay) GetTraceGraphWithContext(ctx aws.Context, input *xray.GetTraceGra
 	return c.svc.GetTraceGraphWithContext(ctx, input, opts...)
 }
 
+// GetTraceGraphPages is a passthrough to the underlying GetTraceGraphPages method.
+// It will increment the count of requests made to GetTraceGraph on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use GetTraceGraphPagesWithContext to avoid this.
+func (c *XRay) GetTraceGraphPages(input *xray.GetTraceGraphInput, fn func(*xray.GetTraceGraphOutput, bool) bool) error {
+	wrappedFn := func(page *xray.GetTraceGraphOutput, lastPage bool) bool {
+		c.inc("GetTraceGraph")
+		return fn(page, lastPage)
+	}
+	return c.svc.GetTraceGraphPages(input, wrappedFn)
+}
+
+// GetTraceGraphPagesWithContext is a passthrough to the underlying GetTraceGraphPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to GetTraceGraph when applied to the request.
+func (c *XRay) GetTraceGraphPagesWithContext(ctx aws.Context, input *xray.GetTraceGraphInput, fn func(*xray.GetTraceGraphOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("GetTraceGraph"))
+	return c.svc.GetTraceGraphPagesWithContext(ctx, input, fn, opts...)
+}
+
 // GetTraceSummariesRequest is a passthrough to the underlying GetTraceSummariesRequest.
 // It will increment the count of requests made to GetTraceSummaries.
 func (c *XRay) GetTraceSummariesRequest(input *xray.GetTraceSummariesInput) (req *request.Request, output *xray.GetTraceSummariesOutput) {
@@ -90,6 +147,25 @@ func (c *XRay) GetTraceSummaries(input *xray.GetTraceSummariesInput) (*xray.GetT
 func (c *XRay) GetTraceSummariesWithContext(ctx aws.Context, input *xray.GetTraceSummariesInput, opts ...request.Option) (*xray.GetTraceSummariesOutput, error) {
 	c.inc("GetTraceSummaries")
 	return c.svc.GetTraceSummariesWithContext(ctx, input, opts...)
+}
+
+// GetTraceSummariesPages is a passthrough to the underlying GetTraceSummariesPages method.
+// It will increment the count of requests made to GetTraceSummaries on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use GetTraceSummariesPagesWithContext to avoid this.
+func (c *XRay) GetTraceSummariesPages(input *xray.GetTraceSummariesInput, fn func(*xray.GetTraceSummariesOutput, bool) bool) error {
+	wrappedFn := func(page *xray.GetTraceSummariesOutput, lastPage bool) bool {
+		c.inc("GetTraceSummaries")
+		return fn(page, lastPage)
+	}
+	return c.svc.GetTraceSummariesPages(input, wrappedFn)
+}
+
+// GetTraceSummariesPagesWithContext is a passthrough to the underlying GetTraceSummariesPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to GetTraceSummaries when applied to the request.
+func (c *XRay) GetTraceSummariesPagesWithContext(ctx aws.Context, input *xray.GetTraceSummariesInput, fn func(*xray.GetTraceSummariesOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("GetTraceSummaries"))
+	return c.svc.GetTraceSummariesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // PutTelemetryRecordsRequest is a passthrough to the underlying PutTelemetryRecordsRequest.

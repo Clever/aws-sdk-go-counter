@@ -531,6 +531,27 @@ func (c *SSM) DescribeAutomationExecutionsWithContext(ctx aws.Context, input *ss
 	return c.svc.DescribeAutomationExecutionsWithContext(ctx, input, opts...)
 }
 
+// DescribeAutomationStepExecutionsRequest is a passthrough to the underlying DescribeAutomationStepExecutionsRequest.
+// It will increment the count of requests made to DescribeAutomationStepExecutions.
+func (c *SSM) DescribeAutomationStepExecutionsRequest(input *ssm.DescribeAutomationStepExecutionsInput) (req *request.Request, output *ssm.DescribeAutomationStepExecutionsOutput) {
+	c.inc("DescribeAutomationStepExecutions")
+	return c.svc.DescribeAutomationStepExecutionsRequest(input)
+}
+
+// DescribeAutomationStepExecutions is a passthrough to the underlying DescribeAutomationStepExecutions method.
+// It will increment the count of requests made to DescribeAutomationStepExecutions.
+func (c *SSM) DescribeAutomationStepExecutions(input *ssm.DescribeAutomationStepExecutionsInput) (*ssm.DescribeAutomationStepExecutionsOutput, error) {
+	c.inc("DescribeAutomationStepExecutions")
+	return c.svc.DescribeAutomationStepExecutions(input)
+}
+
+// DescribeAutomationStepExecutionsWithContext is a passthrough to the underlying DescribeAutomationStepExecutionsWithContext method.
+// It will increment the count of requests made to DescribeAutomationStepExecutions.
+func (c *SSM) DescribeAutomationStepExecutionsWithContext(ctx aws.Context, input *ssm.DescribeAutomationStepExecutionsInput, opts ...request.Option) (*ssm.DescribeAutomationStepExecutionsOutput, error) {
+	c.inc("DescribeAutomationStepExecutions")
+	return c.svc.DescribeAutomationStepExecutionsWithContext(ctx, input, opts...)
+}
+
 // DescribeAvailablePatchesRequest is a passthrough to the underlying DescribeAvailablePatchesRequest.
 // It will increment the count of requests made to DescribeAvailablePatches.
 func (c *SSM) DescribeAvailablePatchesRequest(input *ssm.DescribeAvailablePatchesInput) (req *request.Request, output *ssm.DescribeAvailablePatchesOutput) {

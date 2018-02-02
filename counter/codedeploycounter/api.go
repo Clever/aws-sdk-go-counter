@@ -323,6 +323,27 @@ func (c *CodeDeploy) DeleteDeploymentGroupWithContext(ctx aws.Context, input *co
 	return c.svc.DeleteDeploymentGroupWithContext(ctx, input, opts...)
 }
 
+// DeleteGitHubAccountTokenRequest is a passthrough to the underlying DeleteGitHubAccountTokenRequest.
+// It will increment the count of requests made to DeleteGitHubAccountToken.
+func (c *CodeDeploy) DeleteGitHubAccountTokenRequest(input *codedeploy.DeleteGitHubAccountTokenInput) (req *request.Request, output *codedeploy.DeleteGitHubAccountTokenOutput) {
+	c.inc("DeleteGitHubAccountToken")
+	return c.svc.DeleteGitHubAccountTokenRequest(input)
+}
+
+// DeleteGitHubAccountToken is a passthrough to the underlying DeleteGitHubAccountToken method.
+// It will increment the count of requests made to DeleteGitHubAccountToken.
+func (c *CodeDeploy) DeleteGitHubAccountToken(input *codedeploy.DeleteGitHubAccountTokenInput) (*codedeploy.DeleteGitHubAccountTokenOutput, error) {
+	c.inc("DeleteGitHubAccountToken")
+	return c.svc.DeleteGitHubAccountToken(input)
+}
+
+// DeleteGitHubAccountTokenWithContext is a passthrough to the underlying DeleteGitHubAccountTokenWithContext method.
+// It will increment the count of requests made to DeleteGitHubAccountToken.
+func (c *CodeDeploy) DeleteGitHubAccountTokenWithContext(ctx aws.Context, input *codedeploy.DeleteGitHubAccountTokenInput, opts ...request.Option) (*codedeploy.DeleteGitHubAccountTokenOutput, error) {
+	c.inc("DeleteGitHubAccountToken")
+	return c.svc.DeleteGitHubAccountTokenWithContext(ctx, input, opts...)
+}
+
 // DeregisterOnPremisesInstanceRequest is a passthrough to the underlying DeregisterOnPremisesInstanceRequest.
 // It will increment the count of requests made to DeregisterOnPremisesInstance.
 func (c *CodeDeploy) DeregisterOnPremisesInstanceRequest(input *codedeploy.DeregisterOnPremisesInstanceInput) (req *request.Request, output *codedeploy.DeregisterOnPremisesInstanceOutput) {
@@ -771,6 +792,27 @@ func (c *CodeDeploy) ListOnPremisesInstances(input *codedeploy.ListOnPremisesIns
 func (c *CodeDeploy) ListOnPremisesInstancesWithContext(ctx aws.Context, input *codedeploy.ListOnPremisesInstancesInput, opts ...request.Option) (*codedeploy.ListOnPremisesInstancesOutput, error) {
 	c.inc("ListOnPremisesInstances")
 	return c.svc.ListOnPremisesInstancesWithContext(ctx, input, opts...)
+}
+
+// PutLifecycleEventHookExecutionStatusRequest is a passthrough to the underlying PutLifecycleEventHookExecutionStatusRequest.
+// It will increment the count of requests made to PutLifecycleEventHookExecutionStatus.
+func (c *CodeDeploy) PutLifecycleEventHookExecutionStatusRequest(input *codedeploy.PutLifecycleEventHookExecutionStatusInput) (req *request.Request, output *codedeploy.PutLifecycleEventHookExecutionStatusOutput) {
+	c.inc("PutLifecycleEventHookExecutionStatus")
+	return c.svc.PutLifecycleEventHookExecutionStatusRequest(input)
+}
+
+// PutLifecycleEventHookExecutionStatus is a passthrough to the underlying PutLifecycleEventHookExecutionStatus method.
+// It will increment the count of requests made to PutLifecycleEventHookExecutionStatus.
+func (c *CodeDeploy) PutLifecycleEventHookExecutionStatus(input *codedeploy.PutLifecycleEventHookExecutionStatusInput) (*codedeploy.PutLifecycleEventHookExecutionStatusOutput, error) {
+	c.inc("PutLifecycleEventHookExecutionStatus")
+	return c.svc.PutLifecycleEventHookExecutionStatus(input)
+}
+
+// PutLifecycleEventHookExecutionStatusWithContext is a passthrough to the underlying PutLifecycleEventHookExecutionStatusWithContext method.
+// It will increment the count of requests made to PutLifecycleEventHookExecutionStatus.
+func (c *CodeDeploy) PutLifecycleEventHookExecutionStatusWithContext(ctx aws.Context, input *codedeploy.PutLifecycleEventHookExecutionStatusInput, opts ...request.Option) (*codedeploy.PutLifecycleEventHookExecutionStatusOutput, error) {
+	c.inc("PutLifecycleEventHookExecutionStatus")
+	return c.svc.PutLifecycleEventHookExecutionStatusWithContext(ctx, input, opts...)
 }
 
 // RegisterApplicationRevisionRequest is a passthrough to the underlying RegisterApplicationRevisionRequest.

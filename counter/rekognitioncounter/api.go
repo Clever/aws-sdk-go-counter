@@ -50,6 +50,27 @@ func (c *Rekognition) CreateCollectionWithContext(ctx aws.Context, input *rekogn
 	return c.svc.CreateCollectionWithContext(ctx, input, opts...)
 }
 
+// CreateStreamProcessorRequest is a passthrough to the underlying CreateStreamProcessorRequest.
+// It will increment the count of requests made to CreateStreamProcessor.
+func (c *Rekognition) CreateStreamProcessorRequest(input *rekognition.CreateStreamProcessorInput) (req *request.Request, output *rekognition.CreateStreamProcessorOutput) {
+	c.inc("CreateStreamProcessor")
+	return c.svc.CreateStreamProcessorRequest(input)
+}
+
+// CreateStreamProcessor is a passthrough to the underlying CreateStreamProcessor method.
+// It will increment the count of requests made to CreateStreamProcessor.
+func (c *Rekognition) CreateStreamProcessor(input *rekognition.CreateStreamProcessorInput) (*rekognition.CreateStreamProcessorOutput, error) {
+	c.inc("CreateStreamProcessor")
+	return c.svc.CreateStreamProcessor(input)
+}
+
+// CreateStreamProcessorWithContext is a passthrough to the underlying CreateStreamProcessorWithContext method.
+// It will increment the count of requests made to CreateStreamProcessor.
+func (c *Rekognition) CreateStreamProcessorWithContext(ctx aws.Context, input *rekognition.CreateStreamProcessorInput, opts ...request.Option) (*rekognition.CreateStreamProcessorOutput, error) {
+	c.inc("CreateStreamProcessor")
+	return c.svc.CreateStreamProcessorWithContext(ctx, input, opts...)
+}
+
 // DeleteCollectionRequest is a passthrough to the underlying DeleteCollectionRequest.
 // It will increment the count of requests made to DeleteCollection.
 func (c *Rekognition) DeleteCollectionRequest(input *rekognition.DeleteCollectionInput) (req *request.Request, output *rekognition.DeleteCollectionOutput) {
@@ -90,6 +111,48 @@ func (c *Rekognition) DeleteFaces(input *rekognition.DeleteFacesInput) (*rekogni
 func (c *Rekognition) DeleteFacesWithContext(ctx aws.Context, input *rekognition.DeleteFacesInput, opts ...request.Option) (*rekognition.DeleteFacesOutput, error) {
 	c.inc("DeleteFaces")
 	return c.svc.DeleteFacesWithContext(ctx, input, opts...)
+}
+
+// DeleteStreamProcessorRequest is a passthrough to the underlying DeleteStreamProcessorRequest.
+// It will increment the count of requests made to DeleteStreamProcessor.
+func (c *Rekognition) DeleteStreamProcessorRequest(input *rekognition.DeleteStreamProcessorInput) (req *request.Request, output *rekognition.DeleteStreamProcessorOutput) {
+	c.inc("DeleteStreamProcessor")
+	return c.svc.DeleteStreamProcessorRequest(input)
+}
+
+// DeleteStreamProcessor is a passthrough to the underlying DeleteStreamProcessor method.
+// It will increment the count of requests made to DeleteStreamProcessor.
+func (c *Rekognition) DeleteStreamProcessor(input *rekognition.DeleteStreamProcessorInput) (*rekognition.DeleteStreamProcessorOutput, error) {
+	c.inc("DeleteStreamProcessor")
+	return c.svc.DeleteStreamProcessor(input)
+}
+
+// DeleteStreamProcessorWithContext is a passthrough to the underlying DeleteStreamProcessorWithContext method.
+// It will increment the count of requests made to DeleteStreamProcessor.
+func (c *Rekognition) DeleteStreamProcessorWithContext(ctx aws.Context, input *rekognition.DeleteStreamProcessorInput, opts ...request.Option) (*rekognition.DeleteStreamProcessorOutput, error) {
+	c.inc("DeleteStreamProcessor")
+	return c.svc.DeleteStreamProcessorWithContext(ctx, input, opts...)
+}
+
+// DescribeStreamProcessorRequest is a passthrough to the underlying DescribeStreamProcessorRequest.
+// It will increment the count of requests made to DescribeStreamProcessor.
+func (c *Rekognition) DescribeStreamProcessorRequest(input *rekognition.DescribeStreamProcessorInput) (req *request.Request, output *rekognition.DescribeStreamProcessorOutput) {
+	c.inc("DescribeStreamProcessor")
+	return c.svc.DescribeStreamProcessorRequest(input)
+}
+
+// DescribeStreamProcessor is a passthrough to the underlying DescribeStreamProcessor method.
+// It will increment the count of requests made to DescribeStreamProcessor.
+func (c *Rekognition) DescribeStreamProcessor(input *rekognition.DescribeStreamProcessorInput) (*rekognition.DescribeStreamProcessorOutput, error) {
+	c.inc("DescribeStreamProcessor")
+	return c.svc.DescribeStreamProcessor(input)
+}
+
+// DescribeStreamProcessorWithContext is a passthrough to the underlying DescribeStreamProcessorWithContext method.
+// It will increment the count of requests made to DescribeStreamProcessor.
+func (c *Rekognition) DescribeStreamProcessorWithContext(ctx aws.Context, input *rekognition.DescribeStreamProcessorInput, opts ...request.Option) (*rekognition.DescribeStreamProcessorOutput, error) {
+	c.inc("DescribeStreamProcessor")
+	return c.svc.DescribeStreamProcessorWithContext(ctx, input, opts...)
 }
 
 // DetectFacesRequest is a passthrough to the underlying DetectFacesRequest.
@@ -155,6 +218,27 @@ func (c *Rekognition) DetectModerationLabelsWithContext(ctx aws.Context, input *
 	return c.svc.DetectModerationLabelsWithContext(ctx, input, opts...)
 }
 
+// DetectTextRequest is a passthrough to the underlying DetectTextRequest.
+// It will increment the count of requests made to DetectText.
+func (c *Rekognition) DetectTextRequest(input *rekognition.DetectTextInput) (req *request.Request, output *rekognition.DetectTextOutput) {
+	c.inc("DetectText")
+	return c.svc.DetectTextRequest(input)
+}
+
+// DetectText is a passthrough to the underlying DetectText method.
+// It will increment the count of requests made to DetectText.
+func (c *Rekognition) DetectText(input *rekognition.DetectTextInput) (*rekognition.DetectTextOutput, error) {
+	c.inc("DetectText")
+	return c.svc.DetectText(input)
+}
+
+// DetectTextWithContext is a passthrough to the underlying DetectTextWithContext method.
+// It will increment the count of requests made to DetectText.
+func (c *Rekognition) DetectTextWithContext(ctx aws.Context, input *rekognition.DetectTextInput, opts ...request.Option) (*rekognition.DetectTextOutput, error) {
+	c.inc("DetectText")
+	return c.svc.DetectTextWithContext(ctx, input, opts...)
+}
+
 // GetCelebrityInfoRequest is a passthrough to the underlying GetCelebrityInfoRequest.
 // It will increment the count of requests made to GetCelebrityInfo.
 func (c *Rekognition) GetCelebrityInfoRequest(input *rekognition.GetCelebrityInfoInput) (req *request.Request, output *rekognition.GetCelebrityInfoOutput) {
@@ -174,6 +258,246 @@ func (c *Rekognition) GetCelebrityInfo(input *rekognition.GetCelebrityInfoInput)
 func (c *Rekognition) GetCelebrityInfoWithContext(ctx aws.Context, input *rekognition.GetCelebrityInfoInput, opts ...request.Option) (*rekognition.GetCelebrityInfoOutput, error) {
 	c.inc("GetCelebrityInfo")
 	return c.svc.GetCelebrityInfoWithContext(ctx, input, opts...)
+}
+
+// GetCelebrityRecognitionRequest is a passthrough to the underlying GetCelebrityRecognitionRequest.
+// It will increment the count of requests made to GetCelebrityRecognition.
+func (c *Rekognition) GetCelebrityRecognitionRequest(input *rekognition.GetCelebrityRecognitionInput) (req *request.Request, output *rekognition.GetCelebrityRecognitionOutput) {
+	c.inc("GetCelebrityRecognition")
+	return c.svc.GetCelebrityRecognitionRequest(input)
+}
+
+// GetCelebrityRecognition is a passthrough to the underlying GetCelebrityRecognition method.
+// It will increment the count of requests made to GetCelebrityRecognition.
+func (c *Rekognition) GetCelebrityRecognition(input *rekognition.GetCelebrityRecognitionInput) (*rekognition.GetCelebrityRecognitionOutput, error) {
+	c.inc("GetCelebrityRecognition")
+	return c.svc.GetCelebrityRecognition(input)
+}
+
+// GetCelebrityRecognitionWithContext is a passthrough to the underlying GetCelebrityRecognitionWithContext method.
+// It will increment the count of requests made to GetCelebrityRecognition.
+func (c *Rekognition) GetCelebrityRecognitionWithContext(ctx aws.Context, input *rekognition.GetCelebrityRecognitionInput, opts ...request.Option) (*rekognition.GetCelebrityRecognitionOutput, error) {
+	c.inc("GetCelebrityRecognition")
+	return c.svc.GetCelebrityRecognitionWithContext(ctx, input, opts...)
+}
+
+// GetCelebrityRecognitionPages is a passthrough to the underlying GetCelebrityRecognitionPages method.
+// It will increment the count of requests made to GetCelebrityRecognition on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use GetCelebrityRecognitionPagesWithContext to avoid this.
+func (c *Rekognition) GetCelebrityRecognitionPages(input *rekognition.GetCelebrityRecognitionInput, fn func(*rekognition.GetCelebrityRecognitionOutput, bool) bool) error {
+	wrappedFn := func(page *rekognition.GetCelebrityRecognitionOutput, lastPage bool) bool {
+		c.inc("GetCelebrityRecognition")
+		return fn(page, lastPage)
+	}
+	return c.svc.GetCelebrityRecognitionPages(input, wrappedFn)
+}
+
+// GetCelebrityRecognitionPagesWithContext is a passthrough to the underlying GetCelebrityRecognitionPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to GetCelebrityRecognition when applied to the request.
+func (c *Rekognition) GetCelebrityRecognitionPagesWithContext(ctx aws.Context, input *rekognition.GetCelebrityRecognitionInput, fn func(*rekognition.GetCelebrityRecognitionOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("GetCelebrityRecognition"))
+	return c.svc.GetCelebrityRecognitionPagesWithContext(ctx, input, fn, opts...)
+}
+
+// GetContentModerationRequest is a passthrough to the underlying GetContentModerationRequest.
+// It will increment the count of requests made to GetContentModeration.
+func (c *Rekognition) GetContentModerationRequest(input *rekognition.GetContentModerationInput) (req *request.Request, output *rekognition.GetContentModerationOutput) {
+	c.inc("GetContentModeration")
+	return c.svc.GetContentModerationRequest(input)
+}
+
+// GetContentModeration is a passthrough to the underlying GetContentModeration method.
+// It will increment the count of requests made to GetContentModeration.
+func (c *Rekognition) GetContentModeration(input *rekognition.GetContentModerationInput) (*rekognition.GetContentModerationOutput, error) {
+	c.inc("GetContentModeration")
+	return c.svc.GetContentModeration(input)
+}
+
+// GetContentModerationWithContext is a passthrough to the underlying GetContentModerationWithContext method.
+// It will increment the count of requests made to GetContentModeration.
+func (c *Rekognition) GetContentModerationWithContext(ctx aws.Context, input *rekognition.GetContentModerationInput, opts ...request.Option) (*rekognition.GetContentModerationOutput, error) {
+	c.inc("GetContentModeration")
+	return c.svc.GetContentModerationWithContext(ctx, input, opts...)
+}
+
+// GetContentModerationPages is a passthrough to the underlying GetContentModerationPages method.
+// It will increment the count of requests made to GetContentModeration on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use GetContentModerationPagesWithContext to avoid this.
+func (c *Rekognition) GetContentModerationPages(input *rekognition.GetContentModerationInput, fn func(*rekognition.GetContentModerationOutput, bool) bool) error {
+	wrappedFn := func(page *rekognition.GetContentModerationOutput, lastPage bool) bool {
+		c.inc("GetContentModeration")
+		return fn(page, lastPage)
+	}
+	return c.svc.GetContentModerationPages(input, wrappedFn)
+}
+
+// GetContentModerationPagesWithContext is a passthrough to the underlying GetContentModerationPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to GetContentModeration when applied to the request.
+func (c *Rekognition) GetContentModerationPagesWithContext(ctx aws.Context, input *rekognition.GetContentModerationInput, fn func(*rekognition.GetContentModerationOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("GetContentModeration"))
+	return c.svc.GetContentModerationPagesWithContext(ctx, input, fn, opts...)
+}
+
+// GetFaceDetectionRequest is a passthrough to the underlying GetFaceDetectionRequest.
+// It will increment the count of requests made to GetFaceDetection.
+func (c *Rekognition) GetFaceDetectionRequest(input *rekognition.GetFaceDetectionInput) (req *request.Request, output *rekognition.GetFaceDetectionOutput) {
+	c.inc("GetFaceDetection")
+	return c.svc.GetFaceDetectionRequest(input)
+}
+
+// GetFaceDetection is a passthrough to the underlying GetFaceDetection method.
+// It will increment the count of requests made to GetFaceDetection.
+func (c *Rekognition) GetFaceDetection(input *rekognition.GetFaceDetectionInput) (*rekognition.GetFaceDetectionOutput, error) {
+	c.inc("GetFaceDetection")
+	return c.svc.GetFaceDetection(input)
+}
+
+// GetFaceDetectionWithContext is a passthrough to the underlying GetFaceDetectionWithContext method.
+// It will increment the count of requests made to GetFaceDetection.
+func (c *Rekognition) GetFaceDetectionWithContext(ctx aws.Context, input *rekognition.GetFaceDetectionInput, opts ...request.Option) (*rekognition.GetFaceDetectionOutput, error) {
+	c.inc("GetFaceDetection")
+	return c.svc.GetFaceDetectionWithContext(ctx, input, opts...)
+}
+
+// GetFaceDetectionPages is a passthrough to the underlying GetFaceDetectionPages method.
+// It will increment the count of requests made to GetFaceDetection on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use GetFaceDetectionPagesWithContext to avoid this.
+func (c *Rekognition) GetFaceDetectionPages(input *rekognition.GetFaceDetectionInput, fn func(*rekognition.GetFaceDetectionOutput, bool) bool) error {
+	wrappedFn := func(page *rekognition.GetFaceDetectionOutput, lastPage bool) bool {
+		c.inc("GetFaceDetection")
+		return fn(page, lastPage)
+	}
+	return c.svc.GetFaceDetectionPages(input, wrappedFn)
+}
+
+// GetFaceDetectionPagesWithContext is a passthrough to the underlying GetFaceDetectionPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to GetFaceDetection when applied to the request.
+func (c *Rekognition) GetFaceDetectionPagesWithContext(ctx aws.Context, input *rekognition.GetFaceDetectionInput, fn func(*rekognition.GetFaceDetectionOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("GetFaceDetection"))
+	return c.svc.GetFaceDetectionPagesWithContext(ctx, input, fn, opts...)
+}
+
+// GetFaceSearchRequest is a passthrough to the underlying GetFaceSearchRequest.
+// It will increment the count of requests made to GetFaceSearch.
+func (c *Rekognition) GetFaceSearchRequest(input *rekognition.GetFaceSearchInput) (req *request.Request, output *rekognition.GetFaceSearchOutput) {
+	c.inc("GetFaceSearch")
+	return c.svc.GetFaceSearchRequest(input)
+}
+
+// GetFaceSearch is a passthrough to the underlying GetFaceSearch method.
+// It will increment the count of requests made to GetFaceSearch.
+func (c *Rekognition) GetFaceSearch(input *rekognition.GetFaceSearchInput) (*rekognition.GetFaceSearchOutput, error) {
+	c.inc("GetFaceSearch")
+	return c.svc.GetFaceSearch(input)
+}
+
+// GetFaceSearchWithContext is a passthrough to the underlying GetFaceSearchWithContext method.
+// It will increment the count of requests made to GetFaceSearch.
+func (c *Rekognition) GetFaceSearchWithContext(ctx aws.Context, input *rekognition.GetFaceSearchInput, opts ...request.Option) (*rekognition.GetFaceSearchOutput, error) {
+	c.inc("GetFaceSearch")
+	return c.svc.GetFaceSearchWithContext(ctx, input, opts...)
+}
+
+// GetFaceSearchPages is a passthrough to the underlying GetFaceSearchPages method.
+// It will increment the count of requests made to GetFaceSearch on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use GetFaceSearchPagesWithContext to avoid this.
+func (c *Rekognition) GetFaceSearchPages(input *rekognition.GetFaceSearchInput, fn func(*rekognition.GetFaceSearchOutput, bool) bool) error {
+	wrappedFn := func(page *rekognition.GetFaceSearchOutput, lastPage bool) bool {
+		c.inc("GetFaceSearch")
+		return fn(page, lastPage)
+	}
+	return c.svc.GetFaceSearchPages(input, wrappedFn)
+}
+
+// GetFaceSearchPagesWithContext is a passthrough to the underlying GetFaceSearchPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to GetFaceSearch when applied to the request.
+func (c *Rekognition) GetFaceSearchPagesWithContext(ctx aws.Context, input *rekognition.GetFaceSearchInput, fn func(*rekognition.GetFaceSearchOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("GetFaceSearch"))
+	return c.svc.GetFaceSearchPagesWithContext(ctx, input, fn, opts...)
+}
+
+// GetLabelDetectionRequest is a passthrough to the underlying GetLabelDetectionRequest.
+// It will increment the count of requests made to GetLabelDetection.
+func (c *Rekognition) GetLabelDetectionRequest(input *rekognition.GetLabelDetectionInput) (req *request.Request, output *rekognition.GetLabelDetectionOutput) {
+	c.inc("GetLabelDetection")
+	return c.svc.GetLabelDetectionRequest(input)
+}
+
+// GetLabelDetection is a passthrough to the underlying GetLabelDetection method.
+// It will increment the count of requests made to GetLabelDetection.
+func (c *Rekognition) GetLabelDetection(input *rekognition.GetLabelDetectionInput) (*rekognition.GetLabelDetectionOutput, error) {
+	c.inc("GetLabelDetection")
+	return c.svc.GetLabelDetection(input)
+}
+
+// GetLabelDetectionWithContext is a passthrough to the underlying GetLabelDetectionWithContext method.
+// It will increment the count of requests made to GetLabelDetection.
+func (c *Rekognition) GetLabelDetectionWithContext(ctx aws.Context, input *rekognition.GetLabelDetectionInput, opts ...request.Option) (*rekognition.GetLabelDetectionOutput, error) {
+	c.inc("GetLabelDetection")
+	return c.svc.GetLabelDetectionWithContext(ctx, input, opts...)
+}
+
+// GetLabelDetectionPages is a passthrough to the underlying GetLabelDetectionPages method.
+// It will increment the count of requests made to GetLabelDetection on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use GetLabelDetectionPagesWithContext to avoid this.
+func (c *Rekognition) GetLabelDetectionPages(input *rekognition.GetLabelDetectionInput, fn func(*rekognition.GetLabelDetectionOutput, bool) bool) error {
+	wrappedFn := func(page *rekognition.GetLabelDetectionOutput, lastPage bool) bool {
+		c.inc("GetLabelDetection")
+		return fn(page, lastPage)
+	}
+	return c.svc.GetLabelDetectionPages(input, wrappedFn)
+}
+
+// GetLabelDetectionPagesWithContext is a passthrough to the underlying GetLabelDetectionPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to GetLabelDetection when applied to the request.
+func (c *Rekognition) GetLabelDetectionPagesWithContext(ctx aws.Context, input *rekognition.GetLabelDetectionInput, fn func(*rekognition.GetLabelDetectionOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("GetLabelDetection"))
+	return c.svc.GetLabelDetectionPagesWithContext(ctx, input, fn, opts...)
+}
+
+// GetPersonTrackingRequest is a passthrough to the underlying GetPersonTrackingRequest.
+// It will increment the count of requests made to GetPersonTracking.
+func (c *Rekognition) GetPersonTrackingRequest(input *rekognition.GetPersonTrackingInput) (req *request.Request, output *rekognition.GetPersonTrackingOutput) {
+	c.inc("GetPersonTracking")
+	return c.svc.GetPersonTrackingRequest(input)
+}
+
+// GetPersonTracking is a passthrough to the underlying GetPersonTracking method.
+// It will increment the count of requests made to GetPersonTracking.
+func (c *Rekognition) GetPersonTracking(input *rekognition.GetPersonTrackingInput) (*rekognition.GetPersonTrackingOutput, error) {
+	c.inc("GetPersonTracking")
+	return c.svc.GetPersonTracking(input)
+}
+
+// GetPersonTrackingWithContext is a passthrough to the underlying GetPersonTrackingWithContext method.
+// It will increment the count of requests made to GetPersonTracking.
+func (c *Rekognition) GetPersonTrackingWithContext(ctx aws.Context, input *rekognition.GetPersonTrackingInput, opts ...request.Option) (*rekognition.GetPersonTrackingOutput, error) {
+	c.inc("GetPersonTracking")
+	return c.svc.GetPersonTrackingWithContext(ctx, input, opts...)
+}
+
+// GetPersonTrackingPages is a passthrough to the underlying GetPersonTrackingPages method.
+// It will increment the count of requests made to GetPersonTracking on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use GetPersonTrackingPagesWithContext to avoid this.
+func (c *Rekognition) GetPersonTrackingPages(input *rekognition.GetPersonTrackingInput, fn func(*rekognition.GetPersonTrackingOutput, bool) bool) error {
+	wrappedFn := func(page *rekognition.GetPersonTrackingOutput, lastPage bool) bool {
+		c.inc("GetPersonTracking")
+		return fn(page, lastPage)
+	}
+	return c.svc.GetPersonTrackingPages(input, wrappedFn)
+}
+
+// GetPersonTrackingPagesWithContext is a passthrough to the underlying GetPersonTrackingPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to GetPersonTracking when applied to the request.
+func (c *Rekognition) GetPersonTrackingPagesWithContext(ctx aws.Context, input *rekognition.GetPersonTrackingInput, fn func(*rekognition.GetPersonTrackingOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("GetPersonTracking"))
+	return c.svc.GetPersonTrackingPagesWithContext(ctx, input, fn, opts...)
 }
 
 // IndexFacesRequest is a passthrough to the underlying IndexFacesRequest.
@@ -277,6 +601,46 @@ func (c *Rekognition) ListFacesPagesWithContext(ctx aws.Context, input *rekognit
 	return c.svc.ListFacesPagesWithContext(ctx, input, fn, opts...)
 }
 
+// ListStreamProcessorsRequest is a passthrough to the underlying ListStreamProcessorsRequest.
+// It will increment the count of requests made to ListStreamProcessors.
+func (c *Rekognition) ListStreamProcessorsRequest(input *rekognition.ListStreamProcessorsInput) (req *request.Request, output *rekognition.ListStreamProcessorsOutput) {
+	c.inc("ListStreamProcessors")
+	return c.svc.ListStreamProcessorsRequest(input)
+}
+
+// ListStreamProcessors is a passthrough to the underlying ListStreamProcessors method.
+// It will increment the count of requests made to ListStreamProcessors.
+func (c *Rekognition) ListStreamProcessors(input *rekognition.ListStreamProcessorsInput) (*rekognition.ListStreamProcessorsOutput, error) {
+	c.inc("ListStreamProcessors")
+	return c.svc.ListStreamProcessors(input)
+}
+
+// ListStreamProcessorsWithContext is a passthrough to the underlying ListStreamProcessorsWithContext method.
+// It will increment the count of requests made to ListStreamProcessors.
+func (c *Rekognition) ListStreamProcessorsWithContext(ctx aws.Context, input *rekognition.ListStreamProcessorsInput, opts ...request.Option) (*rekognition.ListStreamProcessorsOutput, error) {
+	c.inc("ListStreamProcessors")
+	return c.svc.ListStreamProcessorsWithContext(ctx, input, opts...)
+}
+
+// ListStreamProcessorsPages is a passthrough to the underlying ListStreamProcessorsPages method.
+// It will increment the count of requests made to ListStreamProcessors on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use ListStreamProcessorsPagesWithContext to avoid this.
+func (c *Rekognition) ListStreamProcessorsPages(input *rekognition.ListStreamProcessorsInput, fn func(*rekognition.ListStreamProcessorsOutput, bool) bool) error {
+	wrappedFn := func(page *rekognition.ListStreamProcessorsOutput, lastPage bool) bool {
+		c.inc("ListStreamProcessors")
+		return fn(page, lastPage)
+	}
+	return c.svc.ListStreamProcessorsPages(input, wrappedFn)
+}
+
+// ListStreamProcessorsPagesWithContext is a passthrough to the underlying ListStreamProcessorsPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to ListStreamProcessors when applied to the request.
+func (c *Rekognition) ListStreamProcessorsPagesWithContext(ctx aws.Context, input *rekognition.ListStreamProcessorsInput, fn func(*rekognition.ListStreamProcessorsOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("ListStreamProcessors"))
+	return c.svc.ListStreamProcessorsPagesWithContext(ctx, input, fn, opts...)
+}
+
 // RecognizeCelebritiesRequest is a passthrough to the underlying RecognizeCelebritiesRequest.
 // It will increment the count of requests made to RecognizeCelebrities.
 func (c *Rekognition) RecognizeCelebritiesRequest(input *rekognition.RecognizeCelebritiesInput) (req *request.Request, output *rekognition.RecognizeCelebritiesOutput) {
@@ -338,4 +702,172 @@ func (c *Rekognition) SearchFacesByImage(input *rekognition.SearchFacesByImageIn
 func (c *Rekognition) SearchFacesByImageWithContext(ctx aws.Context, input *rekognition.SearchFacesByImageInput, opts ...request.Option) (*rekognition.SearchFacesByImageOutput, error) {
 	c.inc("SearchFacesByImage")
 	return c.svc.SearchFacesByImageWithContext(ctx, input, opts...)
+}
+
+// StartCelebrityRecognitionRequest is a passthrough to the underlying StartCelebrityRecognitionRequest.
+// It will increment the count of requests made to StartCelebrityRecognition.
+func (c *Rekognition) StartCelebrityRecognitionRequest(input *rekognition.StartCelebrityRecognitionInput) (req *request.Request, output *rekognition.StartCelebrityRecognitionOutput) {
+	c.inc("StartCelebrityRecognition")
+	return c.svc.StartCelebrityRecognitionRequest(input)
+}
+
+// StartCelebrityRecognition is a passthrough to the underlying StartCelebrityRecognition method.
+// It will increment the count of requests made to StartCelebrityRecognition.
+func (c *Rekognition) StartCelebrityRecognition(input *rekognition.StartCelebrityRecognitionInput) (*rekognition.StartCelebrityRecognitionOutput, error) {
+	c.inc("StartCelebrityRecognition")
+	return c.svc.StartCelebrityRecognition(input)
+}
+
+// StartCelebrityRecognitionWithContext is a passthrough to the underlying StartCelebrityRecognitionWithContext method.
+// It will increment the count of requests made to StartCelebrityRecognition.
+func (c *Rekognition) StartCelebrityRecognitionWithContext(ctx aws.Context, input *rekognition.StartCelebrityRecognitionInput, opts ...request.Option) (*rekognition.StartCelebrityRecognitionOutput, error) {
+	c.inc("StartCelebrityRecognition")
+	return c.svc.StartCelebrityRecognitionWithContext(ctx, input, opts...)
+}
+
+// StartContentModerationRequest is a passthrough to the underlying StartContentModerationRequest.
+// It will increment the count of requests made to StartContentModeration.
+func (c *Rekognition) StartContentModerationRequest(input *rekognition.StartContentModerationInput) (req *request.Request, output *rekognition.StartContentModerationOutput) {
+	c.inc("StartContentModeration")
+	return c.svc.StartContentModerationRequest(input)
+}
+
+// StartContentModeration is a passthrough to the underlying StartContentModeration method.
+// It will increment the count of requests made to StartContentModeration.
+func (c *Rekognition) StartContentModeration(input *rekognition.StartContentModerationInput) (*rekognition.StartContentModerationOutput, error) {
+	c.inc("StartContentModeration")
+	return c.svc.StartContentModeration(input)
+}
+
+// StartContentModerationWithContext is a passthrough to the underlying StartContentModerationWithContext method.
+// It will increment the count of requests made to StartContentModeration.
+func (c *Rekognition) StartContentModerationWithContext(ctx aws.Context, input *rekognition.StartContentModerationInput, opts ...request.Option) (*rekognition.StartContentModerationOutput, error) {
+	c.inc("StartContentModeration")
+	return c.svc.StartContentModerationWithContext(ctx, input, opts...)
+}
+
+// StartFaceDetectionRequest is a passthrough to the underlying StartFaceDetectionRequest.
+// It will increment the count of requests made to StartFaceDetection.
+func (c *Rekognition) StartFaceDetectionRequest(input *rekognition.StartFaceDetectionInput) (req *request.Request, output *rekognition.StartFaceDetectionOutput) {
+	c.inc("StartFaceDetection")
+	return c.svc.StartFaceDetectionRequest(input)
+}
+
+// StartFaceDetection is a passthrough to the underlying StartFaceDetection method.
+// It will increment the count of requests made to StartFaceDetection.
+func (c *Rekognition) StartFaceDetection(input *rekognition.StartFaceDetectionInput) (*rekognition.StartFaceDetectionOutput, error) {
+	c.inc("StartFaceDetection")
+	return c.svc.StartFaceDetection(input)
+}
+
+// StartFaceDetectionWithContext is a passthrough to the underlying StartFaceDetectionWithContext method.
+// It will increment the count of requests made to StartFaceDetection.
+func (c *Rekognition) StartFaceDetectionWithContext(ctx aws.Context, input *rekognition.StartFaceDetectionInput, opts ...request.Option) (*rekognition.StartFaceDetectionOutput, error) {
+	c.inc("StartFaceDetection")
+	return c.svc.StartFaceDetectionWithContext(ctx, input, opts...)
+}
+
+// StartFaceSearchRequest is a passthrough to the underlying StartFaceSearchRequest.
+// It will increment the count of requests made to StartFaceSearch.
+func (c *Rekognition) StartFaceSearchRequest(input *rekognition.StartFaceSearchInput) (req *request.Request, output *rekognition.StartFaceSearchOutput) {
+	c.inc("StartFaceSearch")
+	return c.svc.StartFaceSearchRequest(input)
+}
+
+// StartFaceSearch is a passthrough to the underlying StartFaceSearch method.
+// It will increment the count of requests made to StartFaceSearch.
+func (c *Rekognition) StartFaceSearch(input *rekognition.StartFaceSearchInput) (*rekognition.StartFaceSearchOutput, error) {
+	c.inc("StartFaceSearch")
+	return c.svc.StartFaceSearch(input)
+}
+
+// StartFaceSearchWithContext is a passthrough to the underlying StartFaceSearchWithContext method.
+// It will increment the count of requests made to StartFaceSearch.
+func (c *Rekognition) StartFaceSearchWithContext(ctx aws.Context, input *rekognition.StartFaceSearchInput, opts ...request.Option) (*rekognition.StartFaceSearchOutput, error) {
+	c.inc("StartFaceSearch")
+	return c.svc.StartFaceSearchWithContext(ctx, input, opts...)
+}
+
+// StartLabelDetectionRequest is a passthrough to the underlying StartLabelDetectionRequest.
+// It will increment the count of requests made to StartLabelDetection.
+func (c *Rekognition) StartLabelDetectionRequest(input *rekognition.StartLabelDetectionInput) (req *request.Request, output *rekognition.StartLabelDetectionOutput) {
+	c.inc("StartLabelDetection")
+	return c.svc.StartLabelDetectionRequest(input)
+}
+
+// StartLabelDetection is a passthrough to the underlying StartLabelDetection method.
+// It will increment the count of requests made to StartLabelDetection.
+func (c *Rekognition) StartLabelDetection(input *rekognition.StartLabelDetectionInput) (*rekognition.StartLabelDetectionOutput, error) {
+	c.inc("StartLabelDetection")
+	return c.svc.StartLabelDetection(input)
+}
+
+// StartLabelDetectionWithContext is a passthrough to the underlying StartLabelDetectionWithContext method.
+// It will increment the count of requests made to StartLabelDetection.
+func (c *Rekognition) StartLabelDetectionWithContext(ctx aws.Context, input *rekognition.StartLabelDetectionInput, opts ...request.Option) (*rekognition.StartLabelDetectionOutput, error) {
+	c.inc("StartLabelDetection")
+	return c.svc.StartLabelDetectionWithContext(ctx, input, opts...)
+}
+
+// StartPersonTrackingRequest is a passthrough to the underlying StartPersonTrackingRequest.
+// It will increment the count of requests made to StartPersonTracking.
+func (c *Rekognition) StartPersonTrackingRequest(input *rekognition.StartPersonTrackingInput) (req *request.Request, output *rekognition.StartPersonTrackingOutput) {
+	c.inc("StartPersonTracking")
+	return c.svc.StartPersonTrackingRequest(input)
+}
+
+// StartPersonTracking is a passthrough to the underlying StartPersonTracking method.
+// It will increment the count of requests made to StartPersonTracking.
+func (c *Rekognition) StartPersonTracking(input *rekognition.StartPersonTrackingInput) (*rekognition.StartPersonTrackingOutput, error) {
+	c.inc("StartPersonTracking")
+	return c.svc.StartPersonTracking(input)
+}
+
+// StartPersonTrackingWithContext is a passthrough to the underlying StartPersonTrackingWithContext method.
+// It will increment the count of requests made to StartPersonTracking.
+func (c *Rekognition) StartPersonTrackingWithContext(ctx aws.Context, input *rekognition.StartPersonTrackingInput, opts ...request.Option) (*rekognition.StartPersonTrackingOutput, error) {
+	c.inc("StartPersonTracking")
+	return c.svc.StartPersonTrackingWithContext(ctx, input, opts...)
+}
+
+// StartStreamProcessorRequest is a passthrough to the underlying StartStreamProcessorRequest.
+// It will increment the count of requests made to StartStreamProcessor.
+func (c *Rekognition) StartStreamProcessorRequest(input *rekognition.StartStreamProcessorInput) (req *request.Request, output *rekognition.StartStreamProcessorOutput) {
+	c.inc("StartStreamProcessor")
+	return c.svc.StartStreamProcessorRequest(input)
+}
+
+// StartStreamProcessor is a passthrough to the underlying StartStreamProcessor method.
+// It will increment the count of requests made to StartStreamProcessor.
+func (c *Rekognition) StartStreamProcessor(input *rekognition.StartStreamProcessorInput) (*rekognition.StartStreamProcessorOutput, error) {
+	c.inc("StartStreamProcessor")
+	return c.svc.StartStreamProcessor(input)
+}
+
+// StartStreamProcessorWithContext is a passthrough to the underlying StartStreamProcessorWithContext method.
+// It will increment the count of requests made to StartStreamProcessor.
+func (c *Rekognition) StartStreamProcessorWithContext(ctx aws.Context, input *rekognition.StartStreamProcessorInput, opts ...request.Option) (*rekognition.StartStreamProcessorOutput, error) {
+	c.inc("StartStreamProcessor")
+	return c.svc.StartStreamProcessorWithContext(ctx, input, opts...)
+}
+
+// StopStreamProcessorRequest is a passthrough to the underlying StopStreamProcessorRequest.
+// It will increment the count of requests made to StopStreamProcessor.
+func (c *Rekognition) StopStreamProcessorRequest(input *rekognition.StopStreamProcessorInput) (req *request.Request, output *rekognition.StopStreamProcessorOutput) {
+	c.inc("StopStreamProcessor")
+	return c.svc.StopStreamProcessorRequest(input)
+}
+
+// StopStreamProcessor is a passthrough to the underlying StopStreamProcessor method.
+// It will increment the count of requests made to StopStreamProcessor.
+func (c *Rekognition) StopStreamProcessor(input *rekognition.StopStreamProcessorInput) (*rekognition.StopStreamProcessorOutput, error) {
+	c.inc("StopStreamProcessor")
+	return c.svc.StopStreamProcessor(input)
+}
+
+// StopStreamProcessorWithContext is a passthrough to the underlying StopStreamProcessorWithContext method.
+// It will increment the count of requests made to StopStreamProcessor.
+func (c *Rekognition) StopStreamProcessorWithContext(ctx aws.Context, input *rekognition.StopStreamProcessorInput, opts ...request.Option) (*rekognition.StopStreamProcessorOutput, error) {
+	c.inc("StopStreamProcessor")
+	return c.svc.StopStreamProcessorWithContext(ctx, input, opts...)
 }

@@ -29,6 +29,69 @@ func (c *IoT) AcceptCertificateTransferWithContext(ctx aws.Context, input *iot.A
 	return c.svc.AcceptCertificateTransferWithContext(ctx, input, opts...)
 }
 
+// AddThingToThingGroupRequest is a passthrough to the underlying AddThingToThingGroupRequest.
+// It will increment the count of requests made to AddThingToThingGroup.
+func (c *IoT) AddThingToThingGroupRequest(input *iot.AddThingToThingGroupInput) (req *request.Request, output *iot.AddThingToThingGroupOutput) {
+	c.inc("AddThingToThingGroup")
+	return c.svc.AddThingToThingGroupRequest(input)
+}
+
+// AddThingToThingGroup is a passthrough to the underlying AddThingToThingGroup method.
+// It will increment the count of requests made to AddThingToThingGroup.
+func (c *IoT) AddThingToThingGroup(input *iot.AddThingToThingGroupInput) (*iot.AddThingToThingGroupOutput, error) {
+	c.inc("AddThingToThingGroup")
+	return c.svc.AddThingToThingGroup(input)
+}
+
+// AddThingToThingGroupWithContext is a passthrough to the underlying AddThingToThingGroupWithContext method.
+// It will increment the count of requests made to AddThingToThingGroup.
+func (c *IoT) AddThingToThingGroupWithContext(ctx aws.Context, input *iot.AddThingToThingGroupInput, opts ...request.Option) (*iot.AddThingToThingGroupOutput, error) {
+	c.inc("AddThingToThingGroup")
+	return c.svc.AddThingToThingGroupWithContext(ctx, input, opts...)
+}
+
+// AssociateTargetsWithJobRequest is a passthrough to the underlying AssociateTargetsWithJobRequest.
+// It will increment the count of requests made to AssociateTargetsWithJob.
+func (c *IoT) AssociateTargetsWithJobRequest(input *iot.AssociateTargetsWithJobInput) (req *request.Request, output *iot.AssociateTargetsWithJobOutput) {
+	c.inc("AssociateTargetsWithJob")
+	return c.svc.AssociateTargetsWithJobRequest(input)
+}
+
+// AssociateTargetsWithJob is a passthrough to the underlying AssociateTargetsWithJob method.
+// It will increment the count of requests made to AssociateTargetsWithJob.
+func (c *IoT) AssociateTargetsWithJob(input *iot.AssociateTargetsWithJobInput) (*iot.AssociateTargetsWithJobOutput, error) {
+	c.inc("AssociateTargetsWithJob")
+	return c.svc.AssociateTargetsWithJob(input)
+}
+
+// AssociateTargetsWithJobWithContext is a passthrough to the underlying AssociateTargetsWithJobWithContext method.
+// It will increment the count of requests made to AssociateTargetsWithJob.
+func (c *IoT) AssociateTargetsWithJobWithContext(ctx aws.Context, input *iot.AssociateTargetsWithJobInput, opts ...request.Option) (*iot.AssociateTargetsWithJobOutput, error) {
+	c.inc("AssociateTargetsWithJob")
+	return c.svc.AssociateTargetsWithJobWithContext(ctx, input, opts...)
+}
+
+// AttachPolicyRequest is a passthrough to the underlying AttachPolicyRequest.
+// It will increment the count of requests made to AttachPolicy.
+func (c *IoT) AttachPolicyRequest(input *iot.AttachPolicyInput) (req *request.Request, output *iot.AttachPolicyOutput) {
+	c.inc("AttachPolicy")
+	return c.svc.AttachPolicyRequest(input)
+}
+
+// AttachPolicy is a passthrough to the underlying AttachPolicy method.
+// It will increment the count of requests made to AttachPolicy.
+func (c *IoT) AttachPolicy(input *iot.AttachPolicyInput) (*iot.AttachPolicyOutput, error) {
+	c.inc("AttachPolicy")
+	return c.svc.AttachPolicy(input)
+}
+
+// AttachPolicyWithContext is a passthrough to the underlying AttachPolicyWithContext method.
+// It will increment the count of requests made to AttachPolicy.
+func (c *IoT) AttachPolicyWithContext(ctx aws.Context, input *iot.AttachPolicyInput, opts ...request.Option) (*iot.AttachPolicyOutput, error) {
+	c.inc("AttachPolicy")
+	return c.svc.AttachPolicyWithContext(ctx, input, opts...)
+}
+
 // AttachPrincipalPolicyRequest is a passthrough to the underlying AttachPrincipalPolicyRequest.
 // It will increment the count of requests made to AttachPrincipalPolicy.
 func (c *IoT) AttachPrincipalPolicyRequest(input *iot.AttachPrincipalPolicyInput) (req *request.Request, output *iot.AttachPrincipalPolicyOutput) {
@@ -92,6 +155,69 @@ func (c *IoT) CancelCertificateTransferWithContext(ctx aws.Context, input *iot.C
 	return c.svc.CancelCertificateTransferWithContext(ctx, input, opts...)
 }
 
+// CancelJobRequest is a passthrough to the underlying CancelJobRequest.
+// It will increment the count of requests made to CancelJob.
+func (c *IoT) CancelJobRequest(input *iot.CancelJobInput) (req *request.Request, output *iot.CancelJobOutput) {
+	c.inc("CancelJob")
+	return c.svc.CancelJobRequest(input)
+}
+
+// CancelJob is a passthrough to the underlying CancelJob method.
+// It will increment the count of requests made to CancelJob.
+func (c *IoT) CancelJob(input *iot.CancelJobInput) (*iot.CancelJobOutput, error) {
+	c.inc("CancelJob")
+	return c.svc.CancelJob(input)
+}
+
+// CancelJobWithContext is a passthrough to the underlying CancelJobWithContext method.
+// It will increment the count of requests made to CancelJob.
+func (c *IoT) CancelJobWithContext(ctx aws.Context, input *iot.CancelJobInput, opts ...request.Option) (*iot.CancelJobOutput, error) {
+	c.inc("CancelJob")
+	return c.svc.CancelJobWithContext(ctx, input, opts...)
+}
+
+// ClearDefaultAuthorizerRequest is a passthrough to the underlying ClearDefaultAuthorizerRequest.
+// It will increment the count of requests made to ClearDefaultAuthorizer.
+func (c *IoT) ClearDefaultAuthorizerRequest(input *iot.ClearDefaultAuthorizerInput) (req *request.Request, output *iot.ClearDefaultAuthorizerOutput) {
+	c.inc("ClearDefaultAuthorizer")
+	return c.svc.ClearDefaultAuthorizerRequest(input)
+}
+
+// ClearDefaultAuthorizer is a passthrough to the underlying ClearDefaultAuthorizer method.
+// It will increment the count of requests made to ClearDefaultAuthorizer.
+func (c *IoT) ClearDefaultAuthorizer(input *iot.ClearDefaultAuthorizerInput) (*iot.ClearDefaultAuthorizerOutput, error) {
+	c.inc("ClearDefaultAuthorizer")
+	return c.svc.ClearDefaultAuthorizer(input)
+}
+
+// ClearDefaultAuthorizerWithContext is a passthrough to the underlying ClearDefaultAuthorizerWithContext method.
+// It will increment the count of requests made to ClearDefaultAuthorizer.
+func (c *IoT) ClearDefaultAuthorizerWithContext(ctx aws.Context, input *iot.ClearDefaultAuthorizerInput, opts ...request.Option) (*iot.ClearDefaultAuthorizerOutput, error) {
+	c.inc("ClearDefaultAuthorizer")
+	return c.svc.ClearDefaultAuthorizerWithContext(ctx, input, opts...)
+}
+
+// CreateAuthorizerRequest is a passthrough to the underlying CreateAuthorizerRequest.
+// It will increment the count of requests made to CreateAuthorizer.
+func (c *IoT) CreateAuthorizerRequest(input *iot.CreateAuthorizerInput) (req *request.Request, output *iot.CreateAuthorizerOutput) {
+	c.inc("CreateAuthorizer")
+	return c.svc.CreateAuthorizerRequest(input)
+}
+
+// CreateAuthorizer is a passthrough to the underlying CreateAuthorizer method.
+// It will increment the count of requests made to CreateAuthorizer.
+func (c *IoT) CreateAuthorizer(input *iot.CreateAuthorizerInput) (*iot.CreateAuthorizerOutput, error) {
+	c.inc("CreateAuthorizer")
+	return c.svc.CreateAuthorizer(input)
+}
+
+// CreateAuthorizerWithContext is a passthrough to the underlying CreateAuthorizerWithContext method.
+// It will increment the count of requests made to CreateAuthorizer.
+func (c *IoT) CreateAuthorizerWithContext(ctx aws.Context, input *iot.CreateAuthorizerInput, opts ...request.Option) (*iot.CreateAuthorizerOutput, error) {
+	c.inc("CreateAuthorizer")
+	return c.svc.CreateAuthorizerWithContext(ctx, input, opts...)
+}
+
 // CreateCertificateFromCsrRequest is a passthrough to the underlying CreateCertificateFromCsrRequest.
 // It will increment the count of requests made to CreateCertificateFromCsr.
 func (c *IoT) CreateCertificateFromCsrRequest(input *iot.CreateCertificateFromCsrInput) (req *request.Request, output *iot.CreateCertificateFromCsrOutput) {
@@ -113,6 +239,27 @@ func (c *IoT) CreateCertificateFromCsrWithContext(ctx aws.Context, input *iot.Cr
 	return c.svc.CreateCertificateFromCsrWithContext(ctx, input, opts...)
 }
 
+// CreateJobRequest is a passthrough to the underlying CreateJobRequest.
+// It will increment the count of requests made to CreateJob.
+func (c *IoT) CreateJobRequest(input *iot.CreateJobInput) (req *request.Request, output *iot.CreateJobOutput) {
+	c.inc("CreateJob")
+	return c.svc.CreateJobRequest(input)
+}
+
+// CreateJob is a passthrough to the underlying CreateJob method.
+// It will increment the count of requests made to CreateJob.
+func (c *IoT) CreateJob(input *iot.CreateJobInput) (*iot.CreateJobOutput, error) {
+	c.inc("CreateJob")
+	return c.svc.CreateJob(input)
+}
+
+// CreateJobWithContext is a passthrough to the underlying CreateJobWithContext method.
+// It will increment the count of requests made to CreateJob.
+func (c *IoT) CreateJobWithContext(ctx aws.Context, input *iot.CreateJobInput, opts ...request.Option) (*iot.CreateJobOutput, error) {
+	c.inc("CreateJob")
+	return c.svc.CreateJobWithContext(ctx, input, opts...)
+}
+
 // CreateKeysAndCertificateRequest is a passthrough to the underlying CreateKeysAndCertificateRequest.
 // It will increment the count of requests made to CreateKeysAndCertificate.
 func (c *IoT) CreateKeysAndCertificateRequest(input *iot.CreateKeysAndCertificateInput) (req *request.Request, output *iot.CreateKeysAndCertificateOutput) {
@@ -132,6 +279,27 @@ func (c *IoT) CreateKeysAndCertificate(input *iot.CreateKeysAndCertificateInput)
 func (c *IoT) CreateKeysAndCertificateWithContext(ctx aws.Context, input *iot.CreateKeysAndCertificateInput, opts ...request.Option) (*iot.CreateKeysAndCertificateOutput, error) {
 	c.inc("CreateKeysAndCertificate")
 	return c.svc.CreateKeysAndCertificateWithContext(ctx, input, opts...)
+}
+
+// CreateOTAUpdateRequest is a passthrough to the underlying CreateOTAUpdateRequest.
+// It will increment the count of requests made to CreateOTAUpdate.
+func (c *IoT) CreateOTAUpdateRequest(input *iot.CreateOTAUpdateInput) (req *request.Request, output *iot.CreateOTAUpdateOutput) {
+	c.inc("CreateOTAUpdate")
+	return c.svc.CreateOTAUpdateRequest(input)
+}
+
+// CreateOTAUpdate is a passthrough to the underlying CreateOTAUpdate method.
+// It will increment the count of requests made to CreateOTAUpdate.
+func (c *IoT) CreateOTAUpdate(input *iot.CreateOTAUpdateInput) (*iot.CreateOTAUpdateOutput, error) {
+	c.inc("CreateOTAUpdate")
+	return c.svc.CreateOTAUpdate(input)
+}
+
+// CreateOTAUpdateWithContext is a passthrough to the underlying CreateOTAUpdateWithContext method.
+// It will increment the count of requests made to CreateOTAUpdate.
+func (c *IoT) CreateOTAUpdateWithContext(ctx aws.Context, input *iot.CreateOTAUpdateInput, opts ...request.Option) (*iot.CreateOTAUpdateOutput, error) {
+	c.inc("CreateOTAUpdate")
+	return c.svc.CreateOTAUpdateWithContext(ctx, input, opts...)
 }
 
 // CreatePolicyRequest is a passthrough to the underlying CreatePolicyRequest.
@@ -176,6 +344,48 @@ func (c *IoT) CreatePolicyVersionWithContext(ctx aws.Context, input *iot.CreateP
 	return c.svc.CreatePolicyVersionWithContext(ctx, input, opts...)
 }
 
+// CreateRoleAliasRequest is a passthrough to the underlying CreateRoleAliasRequest.
+// It will increment the count of requests made to CreateRoleAlias.
+func (c *IoT) CreateRoleAliasRequest(input *iot.CreateRoleAliasInput) (req *request.Request, output *iot.CreateRoleAliasOutput) {
+	c.inc("CreateRoleAlias")
+	return c.svc.CreateRoleAliasRequest(input)
+}
+
+// CreateRoleAlias is a passthrough to the underlying CreateRoleAlias method.
+// It will increment the count of requests made to CreateRoleAlias.
+func (c *IoT) CreateRoleAlias(input *iot.CreateRoleAliasInput) (*iot.CreateRoleAliasOutput, error) {
+	c.inc("CreateRoleAlias")
+	return c.svc.CreateRoleAlias(input)
+}
+
+// CreateRoleAliasWithContext is a passthrough to the underlying CreateRoleAliasWithContext method.
+// It will increment the count of requests made to CreateRoleAlias.
+func (c *IoT) CreateRoleAliasWithContext(ctx aws.Context, input *iot.CreateRoleAliasInput, opts ...request.Option) (*iot.CreateRoleAliasOutput, error) {
+	c.inc("CreateRoleAlias")
+	return c.svc.CreateRoleAliasWithContext(ctx, input, opts...)
+}
+
+// CreateStreamRequest is a passthrough to the underlying CreateStreamRequest.
+// It will increment the count of requests made to CreateStream.
+func (c *IoT) CreateStreamRequest(input *iot.CreateStreamInput) (req *request.Request, output *iot.CreateStreamOutput) {
+	c.inc("CreateStream")
+	return c.svc.CreateStreamRequest(input)
+}
+
+// CreateStream is a passthrough to the underlying CreateStream method.
+// It will increment the count of requests made to CreateStream.
+func (c *IoT) CreateStream(input *iot.CreateStreamInput) (*iot.CreateStreamOutput, error) {
+	c.inc("CreateStream")
+	return c.svc.CreateStream(input)
+}
+
+// CreateStreamWithContext is a passthrough to the underlying CreateStreamWithContext method.
+// It will increment the count of requests made to CreateStream.
+func (c *IoT) CreateStreamWithContext(ctx aws.Context, input *iot.CreateStreamInput, opts ...request.Option) (*iot.CreateStreamOutput, error) {
+	c.inc("CreateStream")
+	return c.svc.CreateStreamWithContext(ctx, input, opts...)
+}
+
 // CreateThingRequest is a passthrough to the underlying CreateThingRequest.
 // It will increment the count of requests made to CreateThing.
 func (c *IoT) CreateThingRequest(input *iot.CreateThingInput) (req *request.Request, output *iot.CreateThingOutput) {
@@ -195,6 +405,27 @@ func (c *IoT) CreateThing(input *iot.CreateThingInput) (*iot.CreateThingOutput, 
 func (c *IoT) CreateThingWithContext(ctx aws.Context, input *iot.CreateThingInput, opts ...request.Option) (*iot.CreateThingOutput, error) {
 	c.inc("CreateThing")
 	return c.svc.CreateThingWithContext(ctx, input, opts...)
+}
+
+// CreateThingGroupRequest is a passthrough to the underlying CreateThingGroupRequest.
+// It will increment the count of requests made to CreateThingGroup.
+func (c *IoT) CreateThingGroupRequest(input *iot.CreateThingGroupInput) (req *request.Request, output *iot.CreateThingGroupOutput) {
+	c.inc("CreateThingGroup")
+	return c.svc.CreateThingGroupRequest(input)
+}
+
+// CreateThingGroup is a passthrough to the underlying CreateThingGroup method.
+// It will increment the count of requests made to CreateThingGroup.
+func (c *IoT) CreateThingGroup(input *iot.CreateThingGroupInput) (*iot.CreateThingGroupOutput, error) {
+	c.inc("CreateThingGroup")
+	return c.svc.CreateThingGroup(input)
+}
+
+// CreateThingGroupWithContext is a passthrough to the underlying CreateThingGroupWithContext method.
+// It will increment the count of requests made to CreateThingGroup.
+func (c *IoT) CreateThingGroupWithContext(ctx aws.Context, input *iot.CreateThingGroupInput, opts ...request.Option) (*iot.CreateThingGroupOutput, error) {
+	c.inc("CreateThingGroup")
+	return c.svc.CreateThingGroupWithContext(ctx, input, opts...)
 }
 
 // CreateThingTypeRequest is a passthrough to the underlying CreateThingTypeRequest.
@@ -239,6 +470,27 @@ func (c *IoT) CreateTopicRuleWithContext(ctx aws.Context, input *iot.CreateTopic
 	return c.svc.CreateTopicRuleWithContext(ctx, input, opts...)
 }
 
+// DeleteAuthorizerRequest is a passthrough to the underlying DeleteAuthorizerRequest.
+// It will increment the count of requests made to DeleteAuthorizer.
+func (c *IoT) DeleteAuthorizerRequest(input *iot.DeleteAuthorizerInput) (req *request.Request, output *iot.DeleteAuthorizerOutput) {
+	c.inc("DeleteAuthorizer")
+	return c.svc.DeleteAuthorizerRequest(input)
+}
+
+// DeleteAuthorizer is a passthrough to the underlying DeleteAuthorizer method.
+// It will increment the count of requests made to DeleteAuthorizer.
+func (c *IoT) DeleteAuthorizer(input *iot.DeleteAuthorizerInput) (*iot.DeleteAuthorizerOutput, error) {
+	c.inc("DeleteAuthorizer")
+	return c.svc.DeleteAuthorizer(input)
+}
+
+// DeleteAuthorizerWithContext is a passthrough to the underlying DeleteAuthorizerWithContext method.
+// It will increment the count of requests made to DeleteAuthorizer.
+func (c *IoT) DeleteAuthorizerWithContext(ctx aws.Context, input *iot.DeleteAuthorizerInput, opts ...request.Option) (*iot.DeleteAuthorizerOutput, error) {
+	c.inc("DeleteAuthorizer")
+	return c.svc.DeleteAuthorizerWithContext(ctx, input, opts...)
+}
+
 // DeleteCACertificateRequest is a passthrough to the underlying DeleteCACertificateRequest.
 // It will increment the count of requests made to DeleteCACertificate.
 func (c *IoT) DeleteCACertificateRequest(input *iot.DeleteCACertificateInput) (req *request.Request, output *iot.DeleteCACertificateOutput) {
@@ -279,6 +531,27 @@ func (c *IoT) DeleteCertificate(input *iot.DeleteCertificateInput) (*iot.DeleteC
 func (c *IoT) DeleteCertificateWithContext(ctx aws.Context, input *iot.DeleteCertificateInput, opts ...request.Option) (*iot.DeleteCertificateOutput, error) {
 	c.inc("DeleteCertificate")
 	return c.svc.DeleteCertificateWithContext(ctx, input, opts...)
+}
+
+// DeleteOTAUpdateRequest is a passthrough to the underlying DeleteOTAUpdateRequest.
+// It will increment the count of requests made to DeleteOTAUpdate.
+func (c *IoT) DeleteOTAUpdateRequest(input *iot.DeleteOTAUpdateInput) (req *request.Request, output *iot.DeleteOTAUpdateOutput) {
+	c.inc("DeleteOTAUpdate")
+	return c.svc.DeleteOTAUpdateRequest(input)
+}
+
+// DeleteOTAUpdate is a passthrough to the underlying DeleteOTAUpdate method.
+// It will increment the count of requests made to DeleteOTAUpdate.
+func (c *IoT) DeleteOTAUpdate(input *iot.DeleteOTAUpdateInput) (*iot.DeleteOTAUpdateOutput, error) {
+	c.inc("DeleteOTAUpdate")
+	return c.svc.DeleteOTAUpdate(input)
+}
+
+// DeleteOTAUpdateWithContext is a passthrough to the underlying DeleteOTAUpdateWithContext method.
+// It will increment the count of requests made to DeleteOTAUpdate.
+func (c *IoT) DeleteOTAUpdateWithContext(ctx aws.Context, input *iot.DeleteOTAUpdateInput, opts ...request.Option) (*iot.DeleteOTAUpdateOutput, error) {
+	c.inc("DeleteOTAUpdate")
+	return c.svc.DeleteOTAUpdateWithContext(ctx, input, opts...)
 }
 
 // DeletePolicyRequest is a passthrough to the underlying DeletePolicyRequest.
@@ -344,6 +617,48 @@ func (c *IoT) DeleteRegistrationCodeWithContext(ctx aws.Context, input *iot.Dele
 	return c.svc.DeleteRegistrationCodeWithContext(ctx, input, opts...)
 }
 
+// DeleteRoleAliasRequest is a passthrough to the underlying DeleteRoleAliasRequest.
+// It will increment the count of requests made to DeleteRoleAlias.
+func (c *IoT) DeleteRoleAliasRequest(input *iot.DeleteRoleAliasInput) (req *request.Request, output *iot.DeleteRoleAliasOutput) {
+	c.inc("DeleteRoleAlias")
+	return c.svc.DeleteRoleAliasRequest(input)
+}
+
+// DeleteRoleAlias is a passthrough to the underlying DeleteRoleAlias method.
+// It will increment the count of requests made to DeleteRoleAlias.
+func (c *IoT) DeleteRoleAlias(input *iot.DeleteRoleAliasInput) (*iot.DeleteRoleAliasOutput, error) {
+	c.inc("DeleteRoleAlias")
+	return c.svc.DeleteRoleAlias(input)
+}
+
+// DeleteRoleAliasWithContext is a passthrough to the underlying DeleteRoleAliasWithContext method.
+// It will increment the count of requests made to DeleteRoleAlias.
+func (c *IoT) DeleteRoleAliasWithContext(ctx aws.Context, input *iot.DeleteRoleAliasInput, opts ...request.Option) (*iot.DeleteRoleAliasOutput, error) {
+	c.inc("DeleteRoleAlias")
+	return c.svc.DeleteRoleAliasWithContext(ctx, input, opts...)
+}
+
+// DeleteStreamRequest is a passthrough to the underlying DeleteStreamRequest.
+// It will increment the count of requests made to DeleteStream.
+func (c *IoT) DeleteStreamRequest(input *iot.DeleteStreamInput) (req *request.Request, output *iot.DeleteStreamOutput) {
+	c.inc("DeleteStream")
+	return c.svc.DeleteStreamRequest(input)
+}
+
+// DeleteStream is a passthrough to the underlying DeleteStream method.
+// It will increment the count of requests made to DeleteStream.
+func (c *IoT) DeleteStream(input *iot.DeleteStreamInput) (*iot.DeleteStreamOutput, error) {
+	c.inc("DeleteStream")
+	return c.svc.DeleteStream(input)
+}
+
+// DeleteStreamWithContext is a passthrough to the underlying DeleteStreamWithContext method.
+// It will increment the count of requests made to DeleteStream.
+func (c *IoT) DeleteStreamWithContext(ctx aws.Context, input *iot.DeleteStreamInput, opts ...request.Option) (*iot.DeleteStreamOutput, error) {
+	c.inc("DeleteStream")
+	return c.svc.DeleteStreamWithContext(ctx, input, opts...)
+}
+
 // DeleteThingRequest is a passthrough to the underlying DeleteThingRequest.
 // It will increment the count of requests made to DeleteThing.
 func (c *IoT) DeleteThingRequest(input *iot.DeleteThingInput) (req *request.Request, output *iot.DeleteThingOutput) {
@@ -363,6 +678,27 @@ func (c *IoT) DeleteThing(input *iot.DeleteThingInput) (*iot.DeleteThingOutput, 
 func (c *IoT) DeleteThingWithContext(ctx aws.Context, input *iot.DeleteThingInput, opts ...request.Option) (*iot.DeleteThingOutput, error) {
 	c.inc("DeleteThing")
 	return c.svc.DeleteThingWithContext(ctx, input, opts...)
+}
+
+// DeleteThingGroupRequest is a passthrough to the underlying DeleteThingGroupRequest.
+// It will increment the count of requests made to DeleteThingGroup.
+func (c *IoT) DeleteThingGroupRequest(input *iot.DeleteThingGroupInput) (req *request.Request, output *iot.DeleteThingGroupOutput) {
+	c.inc("DeleteThingGroup")
+	return c.svc.DeleteThingGroupRequest(input)
+}
+
+// DeleteThingGroup is a passthrough to the underlying DeleteThingGroup method.
+// It will increment the count of requests made to DeleteThingGroup.
+func (c *IoT) DeleteThingGroup(input *iot.DeleteThingGroupInput) (*iot.DeleteThingGroupOutput, error) {
+	c.inc("DeleteThingGroup")
+	return c.svc.DeleteThingGroup(input)
+}
+
+// DeleteThingGroupWithContext is a passthrough to the underlying DeleteThingGroupWithContext method.
+// It will increment the count of requests made to DeleteThingGroup.
+func (c *IoT) DeleteThingGroupWithContext(ctx aws.Context, input *iot.DeleteThingGroupInput, opts ...request.Option) (*iot.DeleteThingGroupOutput, error) {
+	c.inc("DeleteThingGroup")
+	return c.svc.DeleteThingGroupWithContext(ctx, input, opts...)
 }
 
 // DeleteThingTypeRequest is a passthrough to the underlying DeleteThingTypeRequest.
@@ -407,6 +743,27 @@ func (c *IoT) DeleteTopicRuleWithContext(ctx aws.Context, input *iot.DeleteTopic
 	return c.svc.DeleteTopicRuleWithContext(ctx, input, opts...)
 }
 
+// DeleteV2LoggingLevelRequest is a passthrough to the underlying DeleteV2LoggingLevelRequest.
+// It will increment the count of requests made to DeleteV2LoggingLevel.
+func (c *IoT) DeleteV2LoggingLevelRequest(input *iot.DeleteV2LoggingLevelInput) (req *request.Request, output *iot.DeleteV2LoggingLevelOutput) {
+	c.inc("DeleteV2LoggingLevel")
+	return c.svc.DeleteV2LoggingLevelRequest(input)
+}
+
+// DeleteV2LoggingLevel is a passthrough to the underlying DeleteV2LoggingLevel method.
+// It will increment the count of requests made to DeleteV2LoggingLevel.
+func (c *IoT) DeleteV2LoggingLevel(input *iot.DeleteV2LoggingLevelInput) (*iot.DeleteV2LoggingLevelOutput, error) {
+	c.inc("DeleteV2LoggingLevel")
+	return c.svc.DeleteV2LoggingLevel(input)
+}
+
+// DeleteV2LoggingLevelWithContext is a passthrough to the underlying DeleteV2LoggingLevelWithContext method.
+// It will increment the count of requests made to DeleteV2LoggingLevel.
+func (c *IoT) DeleteV2LoggingLevelWithContext(ctx aws.Context, input *iot.DeleteV2LoggingLevelInput, opts ...request.Option) (*iot.DeleteV2LoggingLevelOutput, error) {
+	c.inc("DeleteV2LoggingLevel")
+	return c.svc.DeleteV2LoggingLevelWithContext(ctx, input, opts...)
+}
+
 // DeprecateThingTypeRequest is a passthrough to the underlying DeprecateThingTypeRequest.
 // It will increment the count of requests made to DeprecateThingType.
 func (c *IoT) DeprecateThingTypeRequest(input *iot.DeprecateThingTypeInput) (req *request.Request, output *iot.DeprecateThingTypeOutput) {
@@ -426,6 +783,27 @@ func (c *IoT) DeprecateThingType(input *iot.DeprecateThingTypeInput) (*iot.Depre
 func (c *IoT) DeprecateThingTypeWithContext(ctx aws.Context, input *iot.DeprecateThingTypeInput, opts ...request.Option) (*iot.DeprecateThingTypeOutput, error) {
 	c.inc("DeprecateThingType")
 	return c.svc.DeprecateThingTypeWithContext(ctx, input, opts...)
+}
+
+// DescribeAuthorizerRequest is a passthrough to the underlying DescribeAuthorizerRequest.
+// It will increment the count of requests made to DescribeAuthorizer.
+func (c *IoT) DescribeAuthorizerRequest(input *iot.DescribeAuthorizerInput) (req *request.Request, output *iot.DescribeAuthorizerOutput) {
+	c.inc("DescribeAuthorizer")
+	return c.svc.DescribeAuthorizerRequest(input)
+}
+
+// DescribeAuthorizer is a passthrough to the underlying DescribeAuthorizer method.
+// It will increment the count of requests made to DescribeAuthorizer.
+func (c *IoT) DescribeAuthorizer(input *iot.DescribeAuthorizerInput) (*iot.DescribeAuthorizerOutput, error) {
+	c.inc("DescribeAuthorizer")
+	return c.svc.DescribeAuthorizer(input)
+}
+
+// DescribeAuthorizerWithContext is a passthrough to the underlying DescribeAuthorizerWithContext method.
+// It will increment the count of requests made to DescribeAuthorizer.
+func (c *IoT) DescribeAuthorizerWithContext(ctx aws.Context, input *iot.DescribeAuthorizerInput, opts ...request.Option) (*iot.DescribeAuthorizerOutput, error) {
+	c.inc("DescribeAuthorizer")
+	return c.svc.DescribeAuthorizerWithContext(ctx, input, opts...)
 }
 
 // DescribeCACertificateRequest is a passthrough to the underlying DescribeCACertificateRequest.
@@ -470,6 +848,27 @@ func (c *IoT) DescribeCertificateWithContext(ctx aws.Context, input *iot.Describ
 	return c.svc.DescribeCertificateWithContext(ctx, input, opts...)
 }
 
+// DescribeDefaultAuthorizerRequest is a passthrough to the underlying DescribeDefaultAuthorizerRequest.
+// It will increment the count of requests made to DescribeDefaultAuthorizer.
+func (c *IoT) DescribeDefaultAuthorizerRequest(input *iot.DescribeDefaultAuthorizerInput) (req *request.Request, output *iot.DescribeDefaultAuthorizerOutput) {
+	c.inc("DescribeDefaultAuthorizer")
+	return c.svc.DescribeDefaultAuthorizerRequest(input)
+}
+
+// DescribeDefaultAuthorizer is a passthrough to the underlying DescribeDefaultAuthorizer method.
+// It will increment the count of requests made to DescribeDefaultAuthorizer.
+func (c *IoT) DescribeDefaultAuthorizer(input *iot.DescribeDefaultAuthorizerInput) (*iot.DescribeDefaultAuthorizerOutput, error) {
+	c.inc("DescribeDefaultAuthorizer")
+	return c.svc.DescribeDefaultAuthorizer(input)
+}
+
+// DescribeDefaultAuthorizerWithContext is a passthrough to the underlying DescribeDefaultAuthorizerWithContext method.
+// It will increment the count of requests made to DescribeDefaultAuthorizer.
+func (c *IoT) DescribeDefaultAuthorizerWithContext(ctx aws.Context, input *iot.DescribeDefaultAuthorizerInput, opts ...request.Option) (*iot.DescribeDefaultAuthorizerOutput, error) {
+	c.inc("DescribeDefaultAuthorizer")
+	return c.svc.DescribeDefaultAuthorizerWithContext(ctx, input, opts...)
+}
+
 // DescribeEndpointRequest is a passthrough to the underlying DescribeEndpointRequest.
 // It will increment the count of requests made to DescribeEndpoint.
 func (c *IoT) DescribeEndpointRequest(input *iot.DescribeEndpointInput) (req *request.Request, output *iot.DescribeEndpointOutput) {
@@ -489,6 +888,132 @@ func (c *IoT) DescribeEndpoint(input *iot.DescribeEndpointInput) (*iot.DescribeE
 func (c *IoT) DescribeEndpointWithContext(ctx aws.Context, input *iot.DescribeEndpointInput, opts ...request.Option) (*iot.DescribeEndpointOutput, error) {
 	c.inc("DescribeEndpoint")
 	return c.svc.DescribeEndpointWithContext(ctx, input, opts...)
+}
+
+// DescribeEventConfigurationsRequest is a passthrough to the underlying DescribeEventConfigurationsRequest.
+// It will increment the count of requests made to DescribeEventConfigurations.
+func (c *IoT) DescribeEventConfigurationsRequest(input *iot.DescribeEventConfigurationsInput) (req *request.Request, output *iot.DescribeEventConfigurationsOutput) {
+	c.inc("DescribeEventConfigurations")
+	return c.svc.DescribeEventConfigurationsRequest(input)
+}
+
+// DescribeEventConfigurations is a passthrough to the underlying DescribeEventConfigurations method.
+// It will increment the count of requests made to DescribeEventConfigurations.
+func (c *IoT) DescribeEventConfigurations(input *iot.DescribeEventConfigurationsInput) (*iot.DescribeEventConfigurationsOutput, error) {
+	c.inc("DescribeEventConfigurations")
+	return c.svc.DescribeEventConfigurations(input)
+}
+
+// DescribeEventConfigurationsWithContext is a passthrough to the underlying DescribeEventConfigurationsWithContext method.
+// It will increment the count of requests made to DescribeEventConfigurations.
+func (c *IoT) DescribeEventConfigurationsWithContext(ctx aws.Context, input *iot.DescribeEventConfigurationsInput, opts ...request.Option) (*iot.DescribeEventConfigurationsOutput, error) {
+	c.inc("DescribeEventConfigurations")
+	return c.svc.DescribeEventConfigurationsWithContext(ctx, input, opts...)
+}
+
+// DescribeIndexRequest is a passthrough to the underlying DescribeIndexRequest.
+// It will increment the count of requests made to DescribeIndex.
+func (c *IoT) DescribeIndexRequest(input *iot.DescribeIndexInput) (req *request.Request, output *iot.DescribeIndexOutput) {
+	c.inc("DescribeIndex")
+	return c.svc.DescribeIndexRequest(input)
+}
+
+// DescribeIndex is a passthrough to the underlying DescribeIndex method.
+// It will increment the count of requests made to DescribeIndex.
+func (c *IoT) DescribeIndex(input *iot.DescribeIndexInput) (*iot.DescribeIndexOutput, error) {
+	c.inc("DescribeIndex")
+	return c.svc.DescribeIndex(input)
+}
+
+// DescribeIndexWithContext is a passthrough to the underlying DescribeIndexWithContext method.
+// It will increment the count of requests made to DescribeIndex.
+func (c *IoT) DescribeIndexWithContext(ctx aws.Context, input *iot.DescribeIndexInput, opts ...request.Option) (*iot.DescribeIndexOutput, error) {
+	c.inc("DescribeIndex")
+	return c.svc.DescribeIndexWithContext(ctx, input, opts...)
+}
+
+// DescribeJobRequest is a passthrough to the underlying DescribeJobRequest.
+// It will increment the count of requests made to DescribeJob.
+func (c *IoT) DescribeJobRequest(input *iot.DescribeJobInput) (req *request.Request, output *iot.DescribeJobOutput) {
+	c.inc("DescribeJob")
+	return c.svc.DescribeJobRequest(input)
+}
+
+// DescribeJob is a passthrough to the underlying DescribeJob method.
+// It will increment the count of requests made to DescribeJob.
+func (c *IoT) DescribeJob(input *iot.DescribeJobInput) (*iot.DescribeJobOutput, error) {
+	c.inc("DescribeJob")
+	return c.svc.DescribeJob(input)
+}
+
+// DescribeJobWithContext is a passthrough to the underlying DescribeJobWithContext method.
+// It will increment the count of requests made to DescribeJob.
+func (c *IoT) DescribeJobWithContext(ctx aws.Context, input *iot.DescribeJobInput, opts ...request.Option) (*iot.DescribeJobOutput, error) {
+	c.inc("DescribeJob")
+	return c.svc.DescribeJobWithContext(ctx, input, opts...)
+}
+
+// DescribeJobExecutionRequest is a passthrough to the underlying DescribeJobExecutionRequest.
+// It will increment the count of requests made to DescribeJobExecution.
+func (c *IoT) DescribeJobExecutionRequest(input *iot.DescribeJobExecutionInput) (req *request.Request, output *iot.DescribeJobExecutionOutput) {
+	c.inc("DescribeJobExecution")
+	return c.svc.DescribeJobExecutionRequest(input)
+}
+
+// DescribeJobExecution is a passthrough to the underlying DescribeJobExecution method.
+// It will increment the count of requests made to DescribeJobExecution.
+func (c *IoT) DescribeJobExecution(input *iot.DescribeJobExecutionInput) (*iot.DescribeJobExecutionOutput, error) {
+	c.inc("DescribeJobExecution")
+	return c.svc.DescribeJobExecution(input)
+}
+
+// DescribeJobExecutionWithContext is a passthrough to the underlying DescribeJobExecutionWithContext method.
+// It will increment the count of requests made to DescribeJobExecution.
+func (c *IoT) DescribeJobExecutionWithContext(ctx aws.Context, input *iot.DescribeJobExecutionInput, opts ...request.Option) (*iot.DescribeJobExecutionOutput, error) {
+	c.inc("DescribeJobExecution")
+	return c.svc.DescribeJobExecutionWithContext(ctx, input, opts...)
+}
+
+// DescribeRoleAliasRequest is a passthrough to the underlying DescribeRoleAliasRequest.
+// It will increment the count of requests made to DescribeRoleAlias.
+func (c *IoT) DescribeRoleAliasRequest(input *iot.DescribeRoleAliasInput) (req *request.Request, output *iot.DescribeRoleAliasOutput) {
+	c.inc("DescribeRoleAlias")
+	return c.svc.DescribeRoleAliasRequest(input)
+}
+
+// DescribeRoleAlias is a passthrough to the underlying DescribeRoleAlias method.
+// It will increment the count of requests made to DescribeRoleAlias.
+func (c *IoT) DescribeRoleAlias(input *iot.DescribeRoleAliasInput) (*iot.DescribeRoleAliasOutput, error) {
+	c.inc("DescribeRoleAlias")
+	return c.svc.DescribeRoleAlias(input)
+}
+
+// DescribeRoleAliasWithContext is a passthrough to the underlying DescribeRoleAliasWithContext method.
+// It will increment the count of requests made to DescribeRoleAlias.
+func (c *IoT) DescribeRoleAliasWithContext(ctx aws.Context, input *iot.DescribeRoleAliasInput, opts ...request.Option) (*iot.DescribeRoleAliasOutput, error) {
+	c.inc("DescribeRoleAlias")
+	return c.svc.DescribeRoleAliasWithContext(ctx, input, opts...)
+}
+
+// DescribeStreamRequest is a passthrough to the underlying DescribeStreamRequest.
+// It will increment the count of requests made to DescribeStream.
+func (c *IoT) DescribeStreamRequest(input *iot.DescribeStreamInput) (req *request.Request, output *iot.DescribeStreamOutput) {
+	c.inc("DescribeStream")
+	return c.svc.DescribeStreamRequest(input)
+}
+
+// DescribeStream is a passthrough to the underlying DescribeStream method.
+// It will increment the count of requests made to DescribeStream.
+func (c *IoT) DescribeStream(input *iot.DescribeStreamInput) (*iot.DescribeStreamOutput, error) {
+	c.inc("DescribeStream")
+	return c.svc.DescribeStream(input)
+}
+
+// DescribeStreamWithContext is a passthrough to the underlying DescribeStreamWithContext method.
+// It will increment the count of requests made to DescribeStream.
+func (c *IoT) DescribeStreamWithContext(ctx aws.Context, input *iot.DescribeStreamInput, opts ...request.Option) (*iot.DescribeStreamOutput, error) {
+	c.inc("DescribeStream")
+	return c.svc.DescribeStreamWithContext(ctx, input, opts...)
 }
 
 // DescribeThingRequest is a passthrough to the underlying DescribeThingRequest.
@@ -512,6 +1037,48 @@ func (c *IoT) DescribeThingWithContext(ctx aws.Context, input *iot.DescribeThing
 	return c.svc.DescribeThingWithContext(ctx, input, opts...)
 }
 
+// DescribeThingGroupRequest is a passthrough to the underlying DescribeThingGroupRequest.
+// It will increment the count of requests made to DescribeThingGroup.
+func (c *IoT) DescribeThingGroupRequest(input *iot.DescribeThingGroupInput) (req *request.Request, output *iot.DescribeThingGroupOutput) {
+	c.inc("DescribeThingGroup")
+	return c.svc.DescribeThingGroupRequest(input)
+}
+
+// DescribeThingGroup is a passthrough to the underlying DescribeThingGroup method.
+// It will increment the count of requests made to DescribeThingGroup.
+func (c *IoT) DescribeThingGroup(input *iot.DescribeThingGroupInput) (*iot.DescribeThingGroupOutput, error) {
+	c.inc("DescribeThingGroup")
+	return c.svc.DescribeThingGroup(input)
+}
+
+// DescribeThingGroupWithContext is a passthrough to the underlying DescribeThingGroupWithContext method.
+// It will increment the count of requests made to DescribeThingGroup.
+func (c *IoT) DescribeThingGroupWithContext(ctx aws.Context, input *iot.DescribeThingGroupInput, opts ...request.Option) (*iot.DescribeThingGroupOutput, error) {
+	c.inc("DescribeThingGroup")
+	return c.svc.DescribeThingGroupWithContext(ctx, input, opts...)
+}
+
+// DescribeThingRegistrationTaskRequest is a passthrough to the underlying DescribeThingRegistrationTaskRequest.
+// It will increment the count of requests made to DescribeThingRegistrationTask.
+func (c *IoT) DescribeThingRegistrationTaskRequest(input *iot.DescribeThingRegistrationTaskInput) (req *request.Request, output *iot.DescribeThingRegistrationTaskOutput) {
+	c.inc("DescribeThingRegistrationTask")
+	return c.svc.DescribeThingRegistrationTaskRequest(input)
+}
+
+// DescribeThingRegistrationTask is a passthrough to the underlying DescribeThingRegistrationTask method.
+// It will increment the count of requests made to DescribeThingRegistrationTask.
+func (c *IoT) DescribeThingRegistrationTask(input *iot.DescribeThingRegistrationTaskInput) (*iot.DescribeThingRegistrationTaskOutput, error) {
+	c.inc("DescribeThingRegistrationTask")
+	return c.svc.DescribeThingRegistrationTask(input)
+}
+
+// DescribeThingRegistrationTaskWithContext is a passthrough to the underlying DescribeThingRegistrationTaskWithContext method.
+// It will increment the count of requests made to DescribeThingRegistrationTask.
+func (c *IoT) DescribeThingRegistrationTaskWithContext(ctx aws.Context, input *iot.DescribeThingRegistrationTaskInput, opts ...request.Option) (*iot.DescribeThingRegistrationTaskOutput, error) {
+	c.inc("DescribeThingRegistrationTask")
+	return c.svc.DescribeThingRegistrationTaskWithContext(ctx, input, opts...)
+}
+
 // DescribeThingTypeRequest is a passthrough to the underlying DescribeThingTypeRequest.
 // It will increment the count of requests made to DescribeThingType.
 func (c *IoT) DescribeThingTypeRequest(input *iot.DescribeThingTypeInput) (req *request.Request, output *iot.DescribeThingTypeOutput) {
@@ -531,6 +1098,27 @@ func (c *IoT) DescribeThingType(input *iot.DescribeThingTypeInput) (*iot.Describ
 func (c *IoT) DescribeThingTypeWithContext(ctx aws.Context, input *iot.DescribeThingTypeInput, opts ...request.Option) (*iot.DescribeThingTypeOutput, error) {
 	c.inc("DescribeThingType")
 	return c.svc.DescribeThingTypeWithContext(ctx, input, opts...)
+}
+
+// DetachPolicyRequest is a passthrough to the underlying DetachPolicyRequest.
+// It will increment the count of requests made to DetachPolicy.
+func (c *IoT) DetachPolicyRequest(input *iot.DetachPolicyInput) (req *request.Request, output *iot.DetachPolicyOutput) {
+	c.inc("DetachPolicy")
+	return c.svc.DetachPolicyRequest(input)
+}
+
+// DetachPolicy is a passthrough to the underlying DetachPolicy method.
+// It will increment the count of requests made to DetachPolicy.
+func (c *IoT) DetachPolicy(input *iot.DetachPolicyInput) (*iot.DetachPolicyOutput, error) {
+	c.inc("DetachPolicy")
+	return c.svc.DetachPolicy(input)
+}
+
+// DetachPolicyWithContext is a passthrough to the underlying DetachPolicyWithContext method.
+// It will increment the count of requests made to DetachPolicy.
+func (c *IoT) DetachPolicyWithContext(ctx aws.Context, input *iot.DetachPolicyInput, opts ...request.Option) (*iot.DetachPolicyOutput, error) {
+	c.inc("DetachPolicy")
+	return c.svc.DetachPolicyWithContext(ctx, input, opts...)
 }
 
 // DetachPrincipalPolicyRequest is a passthrough to the underlying DetachPrincipalPolicyRequest.
@@ -617,6 +1205,69 @@ func (c *IoT) EnableTopicRuleWithContext(ctx aws.Context, input *iot.EnableTopic
 	return c.svc.EnableTopicRuleWithContext(ctx, input, opts...)
 }
 
+// GetEffectivePoliciesRequest is a passthrough to the underlying GetEffectivePoliciesRequest.
+// It will increment the count of requests made to GetEffectivePolicies.
+func (c *IoT) GetEffectivePoliciesRequest(input *iot.GetEffectivePoliciesInput) (req *request.Request, output *iot.GetEffectivePoliciesOutput) {
+	c.inc("GetEffectivePolicies")
+	return c.svc.GetEffectivePoliciesRequest(input)
+}
+
+// GetEffectivePolicies is a passthrough to the underlying GetEffectivePolicies method.
+// It will increment the count of requests made to GetEffectivePolicies.
+func (c *IoT) GetEffectivePolicies(input *iot.GetEffectivePoliciesInput) (*iot.GetEffectivePoliciesOutput, error) {
+	c.inc("GetEffectivePolicies")
+	return c.svc.GetEffectivePolicies(input)
+}
+
+// GetEffectivePoliciesWithContext is a passthrough to the underlying GetEffectivePoliciesWithContext method.
+// It will increment the count of requests made to GetEffectivePolicies.
+func (c *IoT) GetEffectivePoliciesWithContext(ctx aws.Context, input *iot.GetEffectivePoliciesInput, opts ...request.Option) (*iot.GetEffectivePoliciesOutput, error) {
+	c.inc("GetEffectivePolicies")
+	return c.svc.GetEffectivePoliciesWithContext(ctx, input, opts...)
+}
+
+// GetIndexingConfigurationRequest is a passthrough to the underlying GetIndexingConfigurationRequest.
+// It will increment the count of requests made to GetIndexingConfiguration.
+func (c *IoT) GetIndexingConfigurationRequest(input *iot.GetIndexingConfigurationInput) (req *request.Request, output *iot.GetIndexingConfigurationOutput) {
+	c.inc("GetIndexingConfiguration")
+	return c.svc.GetIndexingConfigurationRequest(input)
+}
+
+// GetIndexingConfiguration is a passthrough to the underlying GetIndexingConfiguration method.
+// It will increment the count of requests made to GetIndexingConfiguration.
+func (c *IoT) GetIndexingConfiguration(input *iot.GetIndexingConfigurationInput) (*iot.GetIndexingConfigurationOutput, error) {
+	c.inc("GetIndexingConfiguration")
+	return c.svc.GetIndexingConfiguration(input)
+}
+
+// GetIndexingConfigurationWithContext is a passthrough to the underlying GetIndexingConfigurationWithContext method.
+// It will increment the count of requests made to GetIndexingConfiguration.
+func (c *IoT) GetIndexingConfigurationWithContext(ctx aws.Context, input *iot.GetIndexingConfigurationInput, opts ...request.Option) (*iot.GetIndexingConfigurationOutput, error) {
+	c.inc("GetIndexingConfiguration")
+	return c.svc.GetIndexingConfigurationWithContext(ctx, input, opts...)
+}
+
+// GetJobDocumentRequest is a passthrough to the underlying GetJobDocumentRequest.
+// It will increment the count of requests made to GetJobDocument.
+func (c *IoT) GetJobDocumentRequest(input *iot.GetJobDocumentInput) (req *request.Request, output *iot.GetJobDocumentOutput) {
+	c.inc("GetJobDocument")
+	return c.svc.GetJobDocumentRequest(input)
+}
+
+// GetJobDocument is a passthrough to the underlying GetJobDocument method.
+// It will increment the count of requests made to GetJobDocument.
+func (c *IoT) GetJobDocument(input *iot.GetJobDocumentInput) (*iot.GetJobDocumentOutput, error) {
+	c.inc("GetJobDocument")
+	return c.svc.GetJobDocument(input)
+}
+
+// GetJobDocumentWithContext is a passthrough to the underlying GetJobDocumentWithContext method.
+// It will increment the count of requests made to GetJobDocument.
+func (c *IoT) GetJobDocumentWithContext(ctx aws.Context, input *iot.GetJobDocumentInput, opts ...request.Option) (*iot.GetJobDocumentOutput, error) {
+	c.inc("GetJobDocument")
+	return c.svc.GetJobDocumentWithContext(ctx, input, opts...)
+}
+
 // GetLoggingOptionsRequest is a passthrough to the underlying GetLoggingOptionsRequest.
 // It will increment the count of requests made to GetLoggingOptions.
 func (c *IoT) GetLoggingOptionsRequest(input *iot.GetLoggingOptionsInput) (req *request.Request, output *iot.GetLoggingOptionsOutput) {
@@ -636,6 +1287,27 @@ func (c *IoT) GetLoggingOptions(input *iot.GetLoggingOptionsInput) (*iot.GetLogg
 func (c *IoT) GetLoggingOptionsWithContext(ctx aws.Context, input *iot.GetLoggingOptionsInput, opts ...request.Option) (*iot.GetLoggingOptionsOutput, error) {
 	c.inc("GetLoggingOptions")
 	return c.svc.GetLoggingOptionsWithContext(ctx, input, opts...)
+}
+
+// GetOTAUpdateRequest is a passthrough to the underlying GetOTAUpdateRequest.
+// It will increment the count of requests made to GetOTAUpdate.
+func (c *IoT) GetOTAUpdateRequest(input *iot.GetOTAUpdateInput) (req *request.Request, output *iot.GetOTAUpdateOutput) {
+	c.inc("GetOTAUpdate")
+	return c.svc.GetOTAUpdateRequest(input)
+}
+
+// GetOTAUpdate is a passthrough to the underlying GetOTAUpdate method.
+// It will increment the count of requests made to GetOTAUpdate.
+func (c *IoT) GetOTAUpdate(input *iot.GetOTAUpdateInput) (*iot.GetOTAUpdateOutput, error) {
+	c.inc("GetOTAUpdate")
+	return c.svc.GetOTAUpdate(input)
+}
+
+// GetOTAUpdateWithContext is a passthrough to the underlying GetOTAUpdateWithContext method.
+// It will increment the count of requests made to GetOTAUpdate.
+func (c *IoT) GetOTAUpdateWithContext(ctx aws.Context, input *iot.GetOTAUpdateInput, opts ...request.Option) (*iot.GetOTAUpdateOutput, error) {
+	c.inc("GetOTAUpdate")
+	return c.svc.GetOTAUpdateWithContext(ctx, input, opts...)
 }
 
 // GetPolicyRequest is a passthrough to the underlying GetPolicyRequest.
@@ -722,6 +1394,69 @@ func (c *IoT) GetTopicRuleWithContext(ctx aws.Context, input *iot.GetTopicRuleIn
 	return c.svc.GetTopicRuleWithContext(ctx, input, opts...)
 }
 
+// GetV2LoggingOptionsRequest is a passthrough to the underlying GetV2LoggingOptionsRequest.
+// It will increment the count of requests made to GetV2LoggingOptions.
+func (c *IoT) GetV2LoggingOptionsRequest(input *iot.GetV2LoggingOptionsInput) (req *request.Request, output *iot.GetV2LoggingOptionsOutput) {
+	c.inc("GetV2LoggingOptions")
+	return c.svc.GetV2LoggingOptionsRequest(input)
+}
+
+// GetV2LoggingOptions is a passthrough to the underlying GetV2LoggingOptions method.
+// It will increment the count of requests made to GetV2LoggingOptions.
+func (c *IoT) GetV2LoggingOptions(input *iot.GetV2LoggingOptionsInput) (*iot.GetV2LoggingOptionsOutput, error) {
+	c.inc("GetV2LoggingOptions")
+	return c.svc.GetV2LoggingOptions(input)
+}
+
+// GetV2LoggingOptionsWithContext is a passthrough to the underlying GetV2LoggingOptionsWithContext method.
+// It will increment the count of requests made to GetV2LoggingOptions.
+func (c *IoT) GetV2LoggingOptionsWithContext(ctx aws.Context, input *iot.GetV2LoggingOptionsInput, opts ...request.Option) (*iot.GetV2LoggingOptionsOutput, error) {
+	c.inc("GetV2LoggingOptions")
+	return c.svc.GetV2LoggingOptionsWithContext(ctx, input, opts...)
+}
+
+// ListAttachedPoliciesRequest is a passthrough to the underlying ListAttachedPoliciesRequest.
+// It will increment the count of requests made to ListAttachedPolicies.
+func (c *IoT) ListAttachedPoliciesRequest(input *iot.ListAttachedPoliciesInput) (req *request.Request, output *iot.ListAttachedPoliciesOutput) {
+	c.inc("ListAttachedPolicies")
+	return c.svc.ListAttachedPoliciesRequest(input)
+}
+
+// ListAttachedPolicies is a passthrough to the underlying ListAttachedPolicies method.
+// It will increment the count of requests made to ListAttachedPolicies.
+func (c *IoT) ListAttachedPolicies(input *iot.ListAttachedPoliciesInput) (*iot.ListAttachedPoliciesOutput, error) {
+	c.inc("ListAttachedPolicies")
+	return c.svc.ListAttachedPolicies(input)
+}
+
+// ListAttachedPoliciesWithContext is a passthrough to the underlying ListAttachedPoliciesWithContext method.
+// It will increment the count of requests made to ListAttachedPolicies.
+func (c *IoT) ListAttachedPoliciesWithContext(ctx aws.Context, input *iot.ListAttachedPoliciesInput, opts ...request.Option) (*iot.ListAttachedPoliciesOutput, error) {
+	c.inc("ListAttachedPolicies")
+	return c.svc.ListAttachedPoliciesWithContext(ctx, input, opts...)
+}
+
+// ListAuthorizersRequest is a passthrough to the underlying ListAuthorizersRequest.
+// It will increment the count of requests made to ListAuthorizers.
+func (c *IoT) ListAuthorizersRequest(input *iot.ListAuthorizersInput) (req *request.Request, output *iot.ListAuthorizersOutput) {
+	c.inc("ListAuthorizers")
+	return c.svc.ListAuthorizersRequest(input)
+}
+
+// ListAuthorizers is a passthrough to the underlying ListAuthorizers method.
+// It will increment the count of requests made to ListAuthorizers.
+func (c *IoT) ListAuthorizers(input *iot.ListAuthorizersInput) (*iot.ListAuthorizersOutput, error) {
+	c.inc("ListAuthorizers")
+	return c.svc.ListAuthorizers(input)
+}
+
+// ListAuthorizersWithContext is a passthrough to the underlying ListAuthorizersWithContext method.
+// It will increment the count of requests made to ListAuthorizers.
+func (c *IoT) ListAuthorizersWithContext(ctx aws.Context, input *iot.ListAuthorizersInput, opts ...request.Option) (*iot.ListAuthorizersOutput, error) {
+	c.inc("ListAuthorizers")
+	return c.svc.ListAuthorizersWithContext(ctx, input, opts...)
+}
+
 // ListCACertificatesRequest is a passthrough to the underlying ListCACertificatesRequest.
 // It will increment the count of requests made to ListCACertificates.
 func (c *IoT) ListCACertificatesRequest(input *iot.ListCACertificatesInput) (req *request.Request, output *iot.ListCACertificatesOutput) {
@@ -783,6 +1518,111 @@ func (c *IoT) ListCertificatesByCA(input *iot.ListCertificatesByCAInput) (*iot.L
 func (c *IoT) ListCertificatesByCAWithContext(ctx aws.Context, input *iot.ListCertificatesByCAInput, opts ...request.Option) (*iot.ListCertificatesByCAOutput, error) {
 	c.inc("ListCertificatesByCA")
 	return c.svc.ListCertificatesByCAWithContext(ctx, input, opts...)
+}
+
+// ListIndicesRequest is a passthrough to the underlying ListIndicesRequest.
+// It will increment the count of requests made to ListIndices.
+func (c *IoT) ListIndicesRequest(input *iot.ListIndicesInput) (req *request.Request, output *iot.ListIndicesOutput) {
+	c.inc("ListIndices")
+	return c.svc.ListIndicesRequest(input)
+}
+
+// ListIndices is a passthrough to the underlying ListIndices method.
+// It will increment the count of requests made to ListIndices.
+func (c *IoT) ListIndices(input *iot.ListIndicesInput) (*iot.ListIndicesOutput, error) {
+	c.inc("ListIndices")
+	return c.svc.ListIndices(input)
+}
+
+// ListIndicesWithContext is a passthrough to the underlying ListIndicesWithContext method.
+// It will increment the count of requests made to ListIndices.
+func (c *IoT) ListIndicesWithContext(ctx aws.Context, input *iot.ListIndicesInput, opts ...request.Option) (*iot.ListIndicesOutput, error) {
+	c.inc("ListIndices")
+	return c.svc.ListIndicesWithContext(ctx, input, opts...)
+}
+
+// ListJobExecutionsForJobRequest is a passthrough to the underlying ListJobExecutionsForJobRequest.
+// It will increment the count of requests made to ListJobExecutionsForJob.
+func (c *IoT) ListJobExecutionsForJobRequest(input *iot.ListJobExecutionsForJobInput) (req *request.Request, output *iot.ListJobExecutionsForJobOutput) {
+	c.inc("ListJobExecutionsForJob")
+	return c.svc.ListJobExecutionsForJobRequest(input)
+}
+
+// ListJobExecutionsForJob is a passthrough to the underlying ListJobExecutionsForJob method.
+// It will increment the count of requests made to ListJobExecutionsForJob.
+func (c *IoT) ListJobExecutionsForJob(input *iot.ListJobExecutionsForJobInput) (*iot.ListJobExecutionsForJobOutput, error) {
+	c.inc("ListJobExecutionsForJob")
+	return c.svc.ListJobExecutionsForJob(input)
+}
+
+// ListJobExecutionsForJobWithContext is a passthrough to the underlying ListJobExecutionsForJobWithContext method.
+// It will increment the count of requests made to ListJobExecutionsForJob.
+func (c *IoT) ListJobExecutionsForJobWithContext(ctx aws.Context, input *iot.ListJobExecutionsForJobInput, opts ...request.Option) (*iot.ListJobExecutionsForJobOutput, error) {
+	c.inc("ListJobExecutionsForJob")
+	return c.svc.ListJobExecutionsForJobWithContext(ctx, input, opts...)
+}
+
+// ListJobExecutionsForThingRequest is a passthrough to the underlying ListJobExecutionsForThingRequest.
+// It will increment the count of requests made to ListJobExecutionsForThing.
+func (c *IoT) ListJobExecutionsForThingRequest(input *iot.ListJobExecutionsForThingInput) (req *request.Request, output *iot.ListJobExecutionsForThingOutput) {
+	c.inc("ListJobExecutionsForThing")
+	return c.svc.ListJobExecutionsForThingRequest(input)
+}
+
+// ListJobExecutionsForThing is a passthrough to the underlying ListJobExecutionsForThing method.
+// It will increment the count of requests made to ListJobExecutionsForThing.
+func (c *IoT) ListJobExecutionsForThing(input *iot.ListJobExecutionsForThingInput) (*iot.ListJobExecutionsForThingOutput, error) {
+	c.inc("ListJobExecutionsForThing")
+	return c.svc.ListJobExecutionsForThing(input)
+}
+
+// ListJobExecutionsForThingWithContext is a passthrough to the underlying ListJobExecutionsForThingWithContext method.
+// It will increment the count of requests made to ListJobExecutionsForThing.
+func (c *IoT) ListJobExecutionsForThingWithContext(ctx aws.Context, input *iot.ListJobExecutionsForThingInput, opts ...request.Option) (*iot.ListJobExecutionsForThingOutput, error) {
+	c.inc("ListJobExecutionsForThing")
+	return c.svc.ListJobExecutionsForThingWithContext(ctx, input, opts...)
+}
+
+// ListJobsRequest is a passthrough to the underlying ListJobsRequest.
+// It will increment the count of requests made to ListJobs.
+func (c *IoT) ListJobsRequest(input *iot.ListJobsInput) (req *request.Request, output *iot.ListJobsOutput) {
+	c.inc("ListJobs")
+	return c.svc.ListJobsRequest(input)
+}
+
+// ListJobs is a passthrough to the underlying ListJobs method.
+// It will increment the count of requests made to ListJobs.
+func (c *IoT) ListJobs(input *iot.ListJobsInput) (*iot.ListJobsOutput, error) {
+	c.inc("ListJobs")
+	return c.svc.ListJobs(input)
+}
+
+// ListJobsWithContext is a passthrough to the underlying ListJobsWithContext method.
+// It will increment the count of requests made to ListJobs.
+func (c *IoT) ListJobsWithContext(ctx aws.Context, input *iot.ListJobsInput, opts ...request.Option) (*iot.ListJobsOutput, error) {
+	c.inc("ListJobs")
+	return c.svc.ListJobsWithContext(ctx, input, opts...)
+}
+
+// ListOTAUpdatesRequest is a passthrough to the underlying ListOTAUpdatesRequest.
+// It will increment the count of requests made to ListOTAUpdates.
+func (c *IoT) ListOTAUpdatesRequest(input *iot.ListOTAUpdatesInput) (req *request.Request, output *iot.ListOTAUpdatesOutput) {
+	c.inc("ListOTAUpdates")
+	return c.svc.ListOTAUpdatesRequest(input)
+}
+
+// ListOTAUpdates is a passthrough to the underlying ListOTAUpdates method.
+// It will increment the count of requests made to ListOTAUpdates.
+func (c *IoT) ListOTAUpdates(input *iot.ListOTAUpdatesInput) (*iot.ListOTAUpdatesOutput, error) {
+	c.inc("ListOTAUpdates")
+	return c.svc.ListOTAUpdates(input)
+}
+
+// ListOTAUpdatesWithContext is a passthrough to the underlying ListOTAUpdatesWithContext method.
+// It will increment the count of requests made to ListOTAUpdates.
+func (c *IoT) ListOTAUpdatesWithContext(ctx aws.Context, input *iot.ListOTAUpdatesInput, opts ...request.Option) (*iot.ListOTAUpdatesOutput, error) {
+	c.inc("ListOTAUpdates")
+	return c.svc.ListOTAUpdatesWithContext(ctx, input, opts...)
 }
 
 // ListOutgoingCertificatesRequest is a passthrough to the underlying ListOutgoingCertificatesRequest.
@@ -911,6 +1751,111 @@ func (c *IoT) ListPrincipalThingsWithContext(ctx aws.Context, input *iot.ListPri
 	return c.svc.ListPrincipalThingsWithContext(ctx, input, opts...)
 }
 
+// ListRoleAliasesRequest is a passthrough to the underlying ListRoleAliasesRequest.
+// It will increment the count of requests made to ListRoleAliases.
+func (c *IoT) ListRoleAliasesRequest(input *iot.ListRoleAliasesInput) (req *request.Request, output *iot.ListRoleAliasesOutput) {
+	c.inc("ListRoleAliases")
+	return c.svc.ListRoleAliasesRequest(input)
+}
+
+// ListRoleAliases is a passthrough to the underlying ListRoleAliases method.
+// It will increment the count of requests made to ListRoleAliases.
+func (c *IoT) ListRoleAliases(input *iot.ListRoleAliasesInput) (*iot.ListRoleAliasesOutput, error) {
+	c.inc("ListRoleAliases")
+	return c.svc.ListRoleAliases(input)
+}
+
+// ListRoleAliasesWithContext is a passthrough to the underlying ListRoleAliasesWithContext method.
+// It will increment the count of requests made to ListRoleAliases.
+func (c *IoT) ListRoleAliasesWithContext(ctx aws.Context, input *iot.ListRoleAliasesInput, opts ...request.Option) (*iot.ListRoleAliasesOutput, error) {
+	c.inc("ListRoleAliases")
+	return c.svc.ListRoleAliasesWithContext(ctx, input, opts...)
+}
+
+// ListStreamsRequest is a passthrough to the underlying ListStreamsRequest.
+// It will increment the count of requests made to ListStreams.
+func (c *IoT) ListStreamsRequest(input *iot.ListStreamsInput) (req *request.Request, output *iot.ListStreamsOutput) {
+	c.inc("ListStreams")
+	return c.svc.ListStreamsRequest(input)
+}
+
+// ListStreams is a passthrough to the underlying ListStreams method.
+// It will increment the count of requests made to ListStreams.
+func (c *IoT) ListStreams(input *iot.ListStreamsInput) (*iot.ListStreamsOutput, error) {
+	c.inc("ListStreams")
+	return c.svc.ListStreams(input)
+}
+
+// ListStreamsWithContext is a passthrough to the underlying ListStreamsWithContext method.
+// It will increment the count of requests made to ListStreams.
+func (c *IoT) ListStreamsWithContext(ctx aws.Context, input *iot.ListStreamsInput, opts ...request.Option) (*iot.ListStreamsOutput, error) {
+	c.inc("ListStreams")
+	return c.svc.ListStreamsWithContext(ctx, input, opts...)
+}
+
+// ListTargetsForPolicyRequest is a passthrough to the underlying ListTargetsForPolicyRequest.
+// It will increment the count of requests made to ListTargetsForPolicy.
+func (c *IoT) ListTargetsForPolicyRequest(input *iot.ListTargetsForPolicyInput) (req *request.Request, output *iot.ListTargetsForPolicyOutput) {
+	c.inc("ListTargetsForPolicy")
+	return c.svc.ListTargetsForPolicyRequest(input)
+}
+
+// ListTargetsForPolicy is a passthrough to the underlying ListTargetsForPolicy method.
+// It will increment the count of requests made to ListTargetsForPolicy.
+func (c *IoT) ListTargetsForPolicy(input *iot.ListTargetsForPolicyInput) (*iot.ListTargetsForPolicyOutput, error) {
+	c.inc("ListTargetsForPolicy")
+	return c.svc.ListTargetsForPolicy(input)
+}
+
+// ListTargetsForPolicyWithContext is a passthrough to the underlying ListTargetsForPolicyWithContext method.
+// It will increment the count of requests made to ListTargetsForPolicy.
+func (c *IoT) ListTargetsForPolicyWithContext(ctx aws.Context, input *iot.ListTargetsForPolicyInput, opts ...request.Option) (*iot.ListTargetsForPolicyOutput, error) {
+	c.inc("ListTargetsForPolicy")
+	return c.svc.ListTargetsForPolicyWithContext(ctx, input, opts...)
+}
+
+// ListThingGroupsRequest is a passthrough to the underlying ListThingGroupsRequest.
+// It will increment the count of requests made to ListThingGroups.
+func (c *IoT) ListThingGroupsRequest(input *iot.ListThingGroupsInput) (req *request.Request, output *iot.ListThingGroupsOutput) {
+	c.inc("ListThingGroups")
+	return c.svc.ListThingGroupsRequest(input)
+}
+
+// ListThingGroups is a passthrough to the underlying ListThingGroups method.
+// It will increment the count of requests made to ListThingGroups.
+func (c *IoT) ListThingGroups(input *iot.ListThingGroupsInput) (*iot.ListThingGroupsOutput, error) {
+	c.inc("ListThingGroups")
+	return c.svc.ListThingGroups(input)
+}
+
+// ListThingGroupsWithContext is a passthrough to the underlying ListThingGroupsWithContext method.
+// It will increment the count of requests made to ListThingGroups.
+func (c *IoT) ListThingGroupsWithContext(ctx aws.Context, input *iot.ListThingGroupsInput, opts ...request.Option) (*iot.ListThingGroupsOutput, error) {
+	c.inc("ListThingGroups")
+	return c.svc.ListThingGroupsWithContext(ctx, input, opts...)
+}
+
+// ListThingGroupsForThingRequest is a passthrough to the underlying ListThingGroupsForThingRequest.
+// It will increment the count of requests made to ListThingGroupsForThing.
+func (c *IoT) ListThingGroupsForThingRequest(input *iot.ListThingGroupsForThingInput) (req *request.Request, output *iot.ListThingGroupsForThingOutput) {
+	c.inc("ListThingGroupsForThing")
+	return c.svc.ListThingGroupsForThingRequest(input)
+}
+
+// ListThingGroupsForThing is a passthrough to the underlying ListThingGroupsForThing method.
+// It will increment the count of requests made to ListThingGroupsForThing.
+func (c *IoT) ListThingGroupsForThing(input *iot.ListThingGroupsForThingInput) (*iot.ListThingGroupsForThingOutput, error) {
+	c.inc("ListThingGroupsForThing")
+	return c.svc.ListThingGroupsForThing(input)
+}
+
+// ListThingGroupsForThingWithContext is a passthrough to the underlying ListThingGroupsForThingWithContext method.
+// It will increment the count of requests made to ListThingGroupsForThing.
+func (c *IoT) ListThingGroupsForThingWithContext(ctx aws.Context, input *iot.ListThingGroupsForThingInput, opts ...request.Option) (*iot.ListThingGroupsForThingOutput, error) {
+	c.inc("ListThingGroupsForThing")
+	return c.svc.ListThingGroupsForThingWithContext(ctx, input, opts...)
+}
+
 // ListThingPrincipalsRequest is a passthrough to the underlying ListThingPrincipalsRequest.
 // It will increment the count of requests made to ListThingPrincipals.
 func (c *IoT) ListThingPrincipalsRequest(input *iot.ListThingPrincipalsInput) (req *request.Request, output *iot.ListThingPrincipalsOutput) {
@@ -930,6 +1875,48 @@ func (c *IoT) ListThingPrincipals(input *iot.ListThingPrincipalsInput) (*iot.Lis
 func (c *IoT) ListThingPrincipalsWithContext(ctx aws.Context, input *iot.ListThingPrincipalsInput, opts ...request.Option) (*iot.ListThingPrincipalsOutput, error) {
 	c.inc("ListThingPrincipals")
 	return c.svc.ListThingPrincipalsWithContext(ctx, input, opts...)
+}
+
+// ListThingRegistrationTaskReportsRequest is a passthrough to the underlying ListThingRegistrationTaskReportsRequest.
+// It will increment the count of requests made to ListThingRegistrationTaskReports.
+func (c *IoT) ListThingRegistrationTaskReportsRequest(input *iot.ListThingRegistrationTaskReportsInput) (req *request.Request, output *iot.ListThingRegistrationTaskReportsOutput) {
+	c.inc("ListThingRegistrationTaskReports")
+	return c.svc.ListThingRegistrationTaskReportsRequest(input)
+}
+
+// ListThingRegistrationTaskReports is a passthrough to the underlying ListThingRegistrationTaskReports method.
+// It will increment the count of requests made to ListThingRegistrationTaskReports.
+func (c *IoT) ListThingRegistrationTaskReports(input *iot.ListThingRegistrationTaskReportsInput) (*iot.ListThingRegistrationTaskReportsOutput, error) {
+	c.inc("ListThingRegistrationTaskReports")
+	return c.svc.ListThingRegistrationTaskReports(input)
+}
+
+// ListThingRegistrationTaskReportsWithContext is a passthrough to the underlying ListThingRegistrationTaskReportsWithContext method.
+// It will increment the count of requests made to ListThingRegistrationTaskReports.
+func (c *IoT) ListThingRegistrationTaskReportsWithContext(ctx aws.Context, input *iot.ListThingRegistrationTaskReportsInput, opts ...request.Option) (*iot.ListThingRegistrationTaskReportsOutput, error) {
+	c.inc("ListThingRegistrationTaskReports")
+	return c.svc.ListThingRegistrationTaskReportsWithContext(ctx, input, opts...)
+}
+
+// ListThingRegistrationTasksRequest is a passthrough to the underlying ListThingRegistrationTasksRequest.
+// It will increment the count of requests made to ListThingRegistrationTasks.
+func (c *IoT) ListThingRegistrationTasksRequest(input *iot.ListThingRegistrationTasksInput) (req *request.Request, output *iot.ListThingRegistrationTasksOutput) {
+	c.inc("ListThingRegistrationTasks")
+	return c.svc.ListThingRegistrationTasksRequest(input)
+}
+
+// ListThingRegistrationTasks is a passthrough to the underlying ListThingRegistrationTasks method.
+// It will increment the count of requests made to ListThingRegistrationTasks.
+func (c *IoT) ListThingRegistrationTasks(input *iot.ListThingRegistrationTasksInput) (*iot.ListThingRegistrationTasksOutput, error) {
+	c.inc("ListThingRegistrationTasks")
+	return c.svc.ListThingRegistrationTasks(input)
+}
+
+// ListThingRegistrationTasksWithContext is a passthrough to the underlying ListThingRegistrationTasksWithContext method.
+// It will increment the count of requests made to ListThingRegistrationTasks.
+func (c *IoT) ListThingRegistrationTasksWithContext(ctx aws.Context, input *iot.ListThingRegistrationTasksInput, opts ...request.Option) (*iot.ListThingRegistrationTasksOutput, error) {
+	c.inc("ListThingRegistrationTasks")
+	return c.svc.ListThingRegistrationTasksWithContext(ctx, input, opts...)
 }
 
 // ListThingTypesRequest is a passthrough to the underlying ListThingTypesRequest.
@@ -974,6 +1961,27 @@ func (c *IoT) ListThingsWithContext(ctx aws.Context, input *iot.ListThingsInput,
 	return c.svc.ListThingsWithContext(ctx, input, opts...)
 }
 
+// ListThingsInThingGroupRequest is a passthrough to the underlying ListThingsInThingGroupRequest.
+// It will increment the count of requests made to ListThingsInThingGroup.
+func (c *IoT) ListThingsInThingGroupRequest(input *iot.ListThingsInThingGroupInput) (req *request.Request, output *iot.ListThingsInThingGroupOutput) {
+	c.inc("ListThingsInThingGroup")
+	return c.svc.ListThingsInThingGroupRequest(input)
+}
+
+// ListThingsInThingGroup is a passthrough to the underlying ListThingsInThingGroup method.
+// It will increment the count of requests made to ListThingsInThingGroup.
+func (c *IoT) ListThingsInThingGroup(input *iot.ListThingsInThingGroupInput) (*iot.ListThingsInThingGroupOutput, error) {
+	c.inc("ListThingsInThingGroup")
+	return c.svc.ListThingsInThingGroup(input)
+}
+
+// ListThingsInThingGroupWithContext is a passthrough to the underlying ListThingsInThingGroupWithContext method.
+// It will increment the count of requests made to ListThingsInThingGroup.
+func (c *IoT) ListThingsInThingGroupWithContext(ctx aws.Context, input *iot.ListThingsInThingGroupInput, opts ...request.Option) (*iot.ListThingsInThingGroupOutput, error) {
+	c.inc("ListThingsInThingGroup")
+	return c.svc.ListThingsInThingGroupWithContext(ctx, input, opts...)
+}
+
 // ListTopicRulesRequest is a passthrough to the underlying ListTopicRulesRequest.
 // It will increment the count of requests made to ListTopicRules.
 func (c *IoT) ListTopicRulesRequest(input *iot.ListTopicRulesInput) (req *request.Request, output *iot.ListTopicRulesOutput) {
@@ -993,6 +2001,27 @@ func (c *IoT) ListTopicRules(input *iot.ListTopicRulesInput) (*iot.ListTopicRule
 func (c *IoT) ListTopicRulesWithContext(ctx aws.Context, input *iot.ListTopicRulesInput, opts ...request.Option) (*iot.ListTopicRulesOutput, error) {
 	c.inc("ListTopicRules")
 	return c.svc.ListTopicRulesWithContext(ctx, input, opts...)
+}
+
+// ListV2LoggingLevelsRequest is a passthrough to the underlying ListV2LoggingLevelsRequest.
+// It will increment the count of requests made to ListV2LoggingLevels.
+func (c *IoT) ListV2LoggingLevelsRequest(input *iot.ListV2LoggingLevelsInput) (req *request.Request, output *iot.ListV2LoggingLevelsOutput) {
+	c.inc("ListV2LoggingLevels")
+	return c.svc.ListV2LoggingLevelsRequest(input)
+}
+
+// ListV2LoggingLevels is a passthrough to the underlying ListV2LoggingLevels method.
+// It will increment the count of requests made to ListV2LoggingLevels.
+func (c *IoT) ListV2LoggingLevels(input *iot.ListV2LoggingLevelsInput) (*iot.ListV2LoggingLevelsOutput, error) {
+	c.inc("ListV2LoggingLevels")
+	return c.svc.ListV2LoggingLevels(input)
+}
+
+// ListV2LoggingLevelsWithContext is a passthrough to the underlying ListV2LoggingLevelsWithContext method.
+// It will increment the count of requests made to ListV2LoggingLevels.
+func (c *IoT) ListV2LoggingLevelsWithContext(ctx aws.Context, input *iot.ListV2LoggingLevelsInput, opts ...request.Option) (*iot.ListV2LoggingLevelsOutput, error) {
+	c.inc("ListV2LoggingLevels")
+	return c.svc.ListV2LoggingLevelsWithContext(ctx, input, opts...)
 }
 
 // RegisterCACertificateRequest is a passthrough to the underlying RegisterCACertificateRequest.
@@ -1037,6 +2066,27 @@ func (c *IoT) RegisterCertificateWithContext(ctx aws.Context, input *iot.Registe
 	return c.svc.RegisterCertificateWithContext(ctx, input, opts...)
 }
 
+// RegisterThingRequest is a passthrough to the underlying RegisterThingRequest.
+// It will increment the count of requests made to RegisterThing.
+func (c *IoT) RegisterThingRequest(input *iot.RegisterThingInput) (req *request.Request, output *iot.RegisterThingOutput) {
+	c.inc("RegisterThing")
+	return c.svc.RegisterThingRequest(input)
+}
+
+// RegisterThing is a passthrough to the underlying RegisterThing method.
+// It will increment the count of requests made to RegisterThing.
+func (c *IoT) RegisterThing(input *iot.RegisterThingInput) (*iot.RegisterThingOutput, error) {
+	c.inc("RegisterThing")
+	return c.svc.RegisterThing(input)
+}
+
+// RegisterThingWithContext is a passthrough to the underlying RegisterThingWithContext method.
+// It will increment the count of requests made to RegisterThing.
+func (c *IoT) RegisterThingWithContext(ctx aws.Context, input *iot.RegisterThingInput, opts ...request.Option) (*iot.RegisterThingOutput, error) {
+	c.inc("RegisterThing")
+	return c.svc.RegisterThingWithContext(ctx, input, opts...)
+}
+
 // RejectCertificateTransferRequest is a passthrough to the underlying RejectCertificateTransferRequest.
 // It will increment the count of requests made to RejectCertificateTransfer.
 func (c *IoT) RejectCertificateTransferRequest(input *iot.RejectCertificateTransferInput) (req *request.Request, output *iot.RejectCertificateTransferOutput) {
@@ -1058,6 +2108,27 @@ func (c *IoT) RejectCertificateTransferWithContext(ctx aws.Context, input *iot.R
 	return c.svc.RejectCertificateTransferWithContext(ctx, input, opts...)
 }
 
+// RemoveThingFromThingGroupRequest is a passthrough to the underlying RemoveThingFromThingGroupRequest.
+// It will increment the count of requests made to RemoveThingFromThingGroup.
+func (c *IoT) RemoveThingFromThingGroupRequest(input *iot.RemoveThingFromThingGroupInput) (req *request.Request, output *iot.RemoveThingFromThingGroupOutput) {
+	c.inc("RemoveThingFromThingGroup")
+	return c.svc.RemoveThingFromThingGroupRequest(input)
+}
+
+// RemoveThingFromThingGroup is a passthrough to the underlying RemoveThingFromThingGroup method.
+// It will increment the count of requests made to RemoveThingFromThingGroup.
+func (c *IoT) RemoveThingFromThingGroup(input *iot.RemoveThingFromThingGroupInput) (*iot.RemoveThingFromThingGroupOutput, error) {
+	c.inc("RemoveThingFromThingGroup")
+	return c.svc.RemoveThingFromThingGroup(input)
+}
+
+// RemoveThingFromThingGroupWithContext is a passthrough to the underlying RemoveThingFromThingGroupWithContext method.
+// It will increment the count of requests made to RemoveThingFromThingGroup.
+func (c *IoT) RemoveThingFromThingGroupWithContext(ctx aws.Context, input *iot.RemoveThingFromThingGroupInput, opts ...request.Option) (*iot.RemoveThingFromThingGroupOutput, error) {
+	c.inc("RemoveThingFromThingGroup")
+	return c.svc.RemoveThingFromThingGroupWithContext(ctx, input, opts...)
+}
+
 // ReplaceTopicRuleRequest is a passthrough to the underlying ReplaceTopicRuleRequest.
 // It will increment the count of requests made to ReplaceTopicRule.
 func (c *IoT) ReplaceTopicRuleRequest(input *iot.ReplaceTopicRuleInput) (req *request.Request, output *iot.ReplaceTopicRuleOutput) {
@@ -1077,6 +2148,48 @@ func (c *IoT) ReplaceTopicRule(input *iot.ReplaceTopicRuleInput) (*iot.ReplaceTo
 func (c *IoT) ReplaceTopicRuleWithContext(ctx aws.Context, input *iot.ReplaceTopicRuleInput, opts ...request.Option) (*iot.ReplaceTopicRuleOutput, error) {
 	c.inc("ReplaceTopicRule")
 	return c.svc.ReplaceTopicRuleWithContext(ctx, input, opts...)
+}
+
+// SearchIndexRequest is a passthrough to the underlying SearchIndexRequest.
+// It will increment the count of requests made to SearchIndex.
+func (c *IoT) SearchIndexRequest(input *iot.SearchIndexInput) (req *request.Request, output *iot.SearchIndexOutput) {
+	c.inc("SearchIndex")
+	return c.svc.SearchIndexRequest(input)
+}
+
+// SearchIndex is a passthrough to the underlying SearchIndex method.
+// It will increment the count of requests made to SearchIndex.
+func (c *IoT) SearchIndex(input *iot.SearchIndexInput) (*iot.SearchIndexOutput, error) {
+	c.inc("SearchIndex")
+	return c.svc.SearchIndex(input)
+}
+
+// SearchIndexWithContext is a passthrough to the underlying SearchIndexWithContext method.
+// It will increment the count of requests made to SearchIndex.
+func (c *IoT) SearchIndexWithContext(ctx aws.Context, input *iot.SearchIndexInput, opts ...request.Option) (*iot.SearchIndexOutput, error) {
+	c.inc("SearchIndex")
+	return c.svc.SearchIndexWithContext(ctx, input, opts...)
+}
+
+// SetDefaultAuthorizerRequest is a passthrough to the underlying SetDefaultAuthorizerRequest.
+// It will increment the count of requests made to SetDefaultAuthorizer.
+func (c *IoT) SetDefaultAuthorizerRequest(input *iot.SetDefaultAuthorizerInput) (req *request.Request, output *iot.SetDefaultAuthorizerOutput) {
+	c.inc("SetDefaultAuthorizer")
+	return c.svc.SetDefaultAuthorizerRequest(input)
+}
+
+// SetDefaultAuthorizer is a passthrough to the underlying SetDefaultAuthorizer method.
+// It will increment the count of requests made to SetDefaultAuthorizer.
+func (c *IoT) SetDefaultAuthorizer(input *iot.SetDefaultAuthorizerInput) (*iot.SetDefaultAuthorizerOutput, error) {
+	c.inc("SetDefaultAuthorizer")
+	return c.svc.SetDefaultAuthorizer(input)
+}
+
+// SetDefaultAuthorizerWithContext is a passthrough to the underlying SetDefaultAuthorizerWithContext method.
+// It will increment the count of requests made to SetDefaultAuthorizer.
+func (c *IoT) SetDefaultAuthorizerWithContext(ctx aws.Context, input *iot.SetDefaultAuthorizerInput, opts ...request.Option) (*iot.SetDefaultAuthorizerOutput, error) {
+	c.inc("SetDefaultAuthorizer")
+	return c.svc.SetDefaultAuthorizerWithContext(ctx, input, opts...)
 }
 
 // SetDefaultPolicyVersionRequest is a passthrough to the underlying SetDefaultPolicyVersionRequest.
@@ -1121,6 +2234,132 @@ func (c *IoT) SetLoggingOptionsWithContext(ctx aws.Context, input *iot.SetLoggin
 	return c.svc.SetLoggingOptionsWithContext(ctx, input, opts...)
 }
 
+// SetV2LoggingLevelRequest is a passthrough to the underlying SetV2LoggingLevelRequest.
+// It will increment the count of requests made to SetV2LoggingLevel.
+func (c *IoT) SetV2LoggingLevelRequest(input *iot.SetV2LoggingLevelInput) (req *request.Request, output *iot.SetV2LoggingLevelOutput) {
+	c.inc("SetV2LoggingLevel")
+	return c.svc.SetV2LoggingLevelRequest(input)
+}
+
+// SetV2LoggingLevel is a passthrough to the underlying SetV2LoggingLevel method.
+// It will increment the count of requests made to SetV2LoggingLevel.
+func (c *IoT) SetV2LoggingLevel(input *iot.SetV2LoggingLevelInput) (*iot.SetV2LoggingLevelOutput, error) {
+	c.inc("SetV2LoggingLevel")
+	return c.svc.SetV2LoggingLevel(input)
+}
+
+// SetV2LoggingLevelWithContext is a passthrough to the underlying SetV2LoggingLevelWithContext method.
+// It will increment the count of requests made to SetV2LoggingLevel.
+func (c *IoT) SetV2LoggingLevelWithContext(ctx aws.Context, input *iot.SetV2LoggingLevelInput, opts ...request.Option) (*iot.SetV2LoggingLevelOutput, error) {
+	c.inc("SetV2LoggingLevel")
+	return c.svc.SetV2LoggingLevelWithContext(ctx, input, opts...)
+}
+
+// SetV2LoggingOptionsRequest is a passthrough to the underlying SetV2LoggingOptionsRequest.
+// It will increment the count of requests made to SetV2LoggingOptions.
+func (c *IoT) SetV2LoggingOptionsRequest(input *iot.SetV2LoggingOptionsInput) (req *request.Request, output *iot.SetV2LoggingOptionsOutput) {
+	c.inc("SetV2LoggingOptions")
+	return c.svc.SetV2LoggingOptionsRequest(input)
+}
+
+// SetV2LoggingOptions is a passthrough to the underlying SetV2LoggingOptions method.
+// It will increment the count of requests made to SetV2LoggingOptions.
+func (c *IoT) SetV2LoggingOptions(input *iot.SetV2LoggingOptionsInput) (*iot.SetV2LoggingOptionsOutput, error) {
+	c.inc("SetV2LoggingOptions")
+	return c.svc.SetV2LoggingOptions(input)
+}
+
+// SetV2LoggingOptionsWithContext is a passthrough to the underlying SetV2LoggingOptionsWithContext method.
+// It will increment the count of requests made to SetV2LoggingOptions.
+func (c *IoT) SetV2LoggingOptionsWithContext(ctx aws.Context, input *iot.SetV2LoggingOptionsInput, opts ...request.Option) (*iot.SetV2LoggingOptionsOutput, error) {
+	c.inc("SetV2LoggingOptions")
+	return c.svc.SetV2LoggingOptionsWithContext(ctx, input, opts...)
+}
+
+// StartThingRegistrationTaskRequest is a passthrough to the underlying StartThingRegistrationTaskRequest.
+// It will increment the count of requests made to StartThingRegistrationTask.
+func (c *IoT) StartThingRegistrationTaskRequest(input *iot.StartThingRegistrationTaskInput) (req *request.Request, output *iot.StartThingRegistrationTaskOutput) {
+	c.inc("StartThingRegistrationTask")
+	return c.svc.StartThingRegistrationTaskRequest(input)
+}
+
+// StartThingRegistrationTask is a passthrough to the underlying StartThingRegistrationTask method.
+// It will increment the count of requests made to StartThingRegistrationTask.
+func (c *IoT) StartThingRegistrationTask(input *iot.StartThingRegistrationTaskInput) (*iot.StartThingRegistrationTaskOutput, error) {
+	c.inc("StartThingRegistrationTask")
+	return c.svc.StartThingRegistrationTask(input)
+}
+
+// StartThingRegistrationTaskWithContext is a passthrough to the underlying StartThingRegistrationTaskWithContext method.
+// It will increment the count of requests made to StartThingRegistrationTask.
+func (c *IoT) StartThingRegistrationTaskWithContext(ctx aws.Context, input *iot.StartThingRegistrationTaskInput, opts ...request.Option) (*iot.StartThingRegistrationTaskOutput, error) {
+	c.inc("StartThingRegistrationTask")
+	return c.svc.StartThingRegistrationTaskWithContext(ctx, input, opts...)
+}
+
+// StopThingRegistrationTaskRequest is a passthrough to the underlying StopThingRegistrationTaskRequest.
+// It will increment the count of requests made to StopThingRegistrationTask.
+func (c *IoT) StopThingRegistrationTaskRequest(input *iot.StopThingRegistrationTaskInput) (req *request.Request, output *iot.StopThingRegistrationTaskOutput) {
+	c.inc("StopThingRegistrationTask")
+	return c.svc.StopThingRegistrationTaskRequest(input)
+}
+
+// StopThingRegistrationTask is a passthrough to the underlying StopThingRegistrationTask method.
+// It will increment the count of requests made to StopThingRegistrationTask.
+func (c *IoT) StopThingRegistrationTask(input *iot.StopThingRegistrationTaskInput) (*iot.StopThingRegistrationTaskOutput, error) {
+	c.inc("StopThingRegistrationTask")
+	return c.svc.StopThingRegistrationTask(input)
+}
+
+// StopThingRegistrationTaskWithContext is a passthrough to the underlying StopThingRegistrationTaskWithContext method.
+// It will increment the count of requests made to StopThingRegistrationTask.
+func (c *IoT) StopThingRegistrationTaskWithContext(ctx aws.Context, input *iot.StopThingRegistrationTaskInput, opts ...request.Option) (*iot.StopThingRegistrationTaskOutput, error) {
+	c.inc("StopThingRegistrationTask")
+	return c.svc.StopThingRegistrationTaskWithContext(ctx, input, opts...)
+}
+
+// TestAuthorizationRequest is a passthrough to the underlying TestAuthorizationRequest.
+// It will increment the count of requests made to TestAuthorization.
+func (c *IoT) TestAuthorizationRequest(input *iot.TestAuthorizationInput) (req *request.Request, output *iot.TestAuthorizationOutput) {
+	c.inc("TestAuthorization")
+	return c.svc.TestAuthorizationRequest(input)
+}
+
+// TestAuthorization is a passthrough to the underlying TestAuthorization method.
+// It will increment the count of requests made to TestAuthorization.
+func (c *IoT) TestAuthorization(input *iot.TestAuthorizationInput) (*iot.TestAuthorizationOutput, error) {
+	c.inc("TestAuthorization")
+	return c.svc.TestAuthorization(input)
+}
+
+// TestAuthorizationWithContext is a passthrough to the underlying TestAuthorizationWithContext method.
+// It will increment the count of requests made to TestAuthorization.
+func (c *IoT) TestAuthorizationWithContext(ctx aws.Context, input *iot.TestAuthorizationInput, opts ...request.Option) (*iot.TestAuthorizationOutput, error) {
+	c.inc("TestAuthorization")
+	return c.svc.TestAuthorizationWithContext(ctx, input, opts...)
+}
+
+// TestInvokeAuthorizerRequest is a passthrough to the underlying TestInvokeAuthorizerRequest.
+// It will increment the count of requests made to TestInvokeAuthorizer.
+func (c *IoT) TestInvokeAuthorizerRequest(input *iot.TestInvokeAuthorizerInput) (req *request.Request, output *iot.TestInvokeAuthorizerOutput) {
+	c.inc("TestInvokeAuthorizer")
+	return c.svc.TestInvokeAuthorizerRequest(input)
+}
+
+// TestInvokeAuthorizer is a passthrough to the underlying TestInvokeAuthorizer method.
+// It will increment the count of requests made to TestInvokeAuthorizer.
+func (c *IoT) TestInvokeAuthorizer(input *iot.TestInvokeAuthorizerInput) (*iot.TestInvokeAuthorizerOutput, error) {
+	c.inc("TestInvokeAuthorizer")
+	return c.svc.TestInvokeAuthorizer(input)
+}
+
+// TestInvokeAuthorizerWithContext is a passthrough to the underlying TestInvokeAuthorizerWithContext method.
+// It will increment the count of requests made to TestInvokeAuthorizer.
+func (c *IoT) TestInvokeAuthorizerWithContext(ctx aws.Context, input *iot.TestInvokeAuthorizerInput, opts ...request.Option) (*iot.TestInvokeAuthorizerOutput, error) {
+	c.inc("TestInvokeAuthorizer")
+	return c.svc.TestInvokeAuthorizerWithContext(ctx, input, opts...)
+}
+
 // TransferCertificateRequest is a passthrough to the underlying TransferCertificateRequest.
 // It will increment the count of requests made to TransferCertificate.
 func (c *IoT) TransferCertificateRequest(input *iot.TransferCertificateInput) (req *request.Request, output *iot.TransferCertificateOutput) {
@@ -1140,6 +2379,27 @@ func (c *IoT) TransferCertificate(input *iot.TransferCertificateInput) (*iot.Tra
 func (c *IoT) TransferCertificateWithContext(ctx aws.Context, input *iot.TransferCertificateInput, opts ...request.Option) (*iot.TransferCertificateOutput, error) {
 	c.inc("TransferCertificate")
 	return c.svc.TransferCertificateWithContext(ctx, input, opts...)
+}
+
+// UpdateAuthorizerRequest is a passthrough to the underlying UpdateAuthorizerRequest.
+// It will increment the count of requests made to UpdateAuthorizer.
+func (c *IoT) UpdateAuthorizerRequest(input *iot.UpdateAuthorizerInput) (req *request.Request, output *iot.UpdateAuthorizerOutput) {
+	c.inc("UpdateAuthorizer")
+	return c.svc.UpdateAuthorizerRequest(input)
+}
+
+// UpdateAuthorizer is a passthrough to the underlying UpdateAuthorizer method.
+// It will increment the count of requests made to UpdateAuthorizer.
+func (c *IoT) UpdateAuthorizer(input *iot.UpdateAuthorizerInput) (*iot.UpdateAuthorizerOutput, error) {
+	c.inc("UpdateAuthorizer")
+	return c.svc.UpdateAuthorizer(input)
+}
+
+// UpdateAuthorizerWithContext is a passthrough to the underlying UpdateAuthorizerWithContext method.
+// It will increment the count of requests made to UpdateAuthorizer.
+func (c *IoT) UpdateAuthorizerWithContext(ctx aws.Context, input *iot.UpdateAuthorizerInput, opts ...request.Option) (*iot.UpdateAuthorizerOutput, error) {
+	c.inc("UpdateAuthorizer")
+	return c.svc.UpdateAuthorizerWithContext(ctx, input, opts...)
 }
 
 // UpdateCACertificateRequest is a passthrough to the underlying UpdateCACertificateRequest.
@@ -1184,6 +2444,90 @@ func (c *IoT) UpdateCertificateWithContext(ctx aws.Context, input *iot.UpdateCer
 	return c.svc.UpdateCertificateWithContext(ctx, input, opts...)
 }
 
+// UpdateEventConfigurationsRequest is a passthrough to the underlying UpdateEventConfigurationsRequest.
+// It will increment the count of requests made to UpdateEventConfigurations.
+func (c *IoT) UpdateEventConfigurationsRequest(input *iot.UpdateEventConfigurationsInput) (req *request.Request, output *iot.UpdateEventConfigurationsOutput) {
+	c.inc("UpdateEventConfigurations")
+	return c.svc.UpdateEventConfigurationsRequest(input)
+}
+
+// UpdateEventConfigurations is a passthrough to the underlying UpdateEventConfigurations method.
+// It will increment the count of requests made to UpdateEventConfigurations.
+func (c *IoT) UpdateEventConfigurations(input *iot.UpdateEventConfigurationsInput) (*iot.UpdateEventConfigurationsOutput, error) {
+	c.inc("UpdateEventConfigurations")
+	return c.svc.UpdateEventConfigurations(input)
+}
+
+// UpdateEventConfigurationsWithContext is a passthrough to the underlying UpdateEventConfigurationsWithContext method.
+// It will increment the count of requests made to UpdateEventConfigurations.
+func (c *IoT) UpdateEventConfigurationsWithContext(ctx aws.Context, input *iot.UpdateEventConfigurationsInput, opts ...request.Option) (*iot.UpdateEventConfigurationsOutput, error) {
+	c.inc("UpdateEventConfigurations")
+	return c.svc.UpdateEventConfigurationsWithContext(ctx, input, opts...)
+}
+
+// UpdateIndexingConfigurationRequest is a passthrough to the underlying UpdateIndexingConfigurationRequest.
+// It will increment the count of requests made to UpdateIndexingConfiguration.
+func (c *IoT) UpdateIndexingConfigurationRequest(input *iot.UpdateIndexingConfigurationInput) (req *request.Request, output *iot.UpdateIndexingConfigurationOutput) {
+	c.inc("UpdateIndexingConfiguration")
+	return c.svc.UpdateIndexingConfigurationRequest(input)
+}
+
+// UpdateIndexingConfiguration is a passthrough to the underlying UpdateIndexingConfiguration method.
+// It will increment the count of requests made to UpdateIndexingConfiguration.
+func (c *IoT) UpdateIndexingConfiguration(input *iot.UpdateIndexingConfigurationInput) (*iot.UpdateIndexingConfigurationOutput, error) {
+	c.inc("UpdateIndexingConfiguration")
+	return c.svc.UpdateIndexingConfiguration(input)
+}
+
+// UpdateIndexingConfigurationWithContext is a passthrough to the underlying UpdateIndexingConfigurationWithContext method.
+// It will increment the count of requests made to UpdateIndexingConfiguration.
+func (c *IoT) UpdateIndexingConfigurationWithContext(ctx aws.Context, input *iot.UpdateIndexingConfigurationInput, opts ...request.Option) (*iot.UpdateIndexingConfigurationOutput, error) {
+	c.inc("UpdateIndexingConfiguration")
+	return c.svc.UpdateIndexingConfigurationWithContext(ctx, input, opts...)
+}
+
+// UpdateRoleAliasRequest is a passthrough to the underlying UpdateRoleAliasRequest.
+// It will increment the count of requests made to UpdateRoleAlias.
+func (c *IoT) UpdateRoleAliasRequest(input *iot.UpdateRoleAliasInput) (req *request.Request, output *iot.UpdateRoleAliasOutput) {
+	c.inc("UpdateRoleAlias")
+	return c.svc.UpdateRoleAliasRequest(input)
+}
+
+// UpdateRoleAlias is a passthrough to the underlying UpdateRoleAlias method.
+// It will increment the count of requests made to UpdateRoleAlias.
+func (c *IoT) UpdateRoleAlias(input *iot.UpdateRoleAliasInput) (*iot.UpdateRoleAliasOutput, error) {
+	c.inc("UpdateRoleAlias")
+	return c.svc.UpdateRoleAlias(input)
+}
+
+// UpdateRoleAliasWithContext is a passthrough to the underlying UpdateRoleAliasWithContext method.
+// It will increment the count of requests made to UpdateRoleAlias.
+func (c *IoT) UpdateRoleAliasWithContext(ctx aws.Context, input *iot.UpdateRoleAliasInput, opts ...request.Option) (*iot.UpdateRoleAliasOutput, error) {
+	c.inc("UpdateRoleAlias")
+	return c.svc.UpdateRoleAliasWithContext(ctx, input, opts...)
+}
+
+// UpdateStreamRequest is a passthrough to the underlying UpdateStreamRequest.
+// It will increment the count of requests made to UpdateStream.
+func (c *IoT) UpdateStreamRequest(input *iot.UpdateStreamInput) (req *request.Request, output *iot.UpdateStreamOutput) {
+	c.inc("UpdateStream")
+	return c.svc.UpdateStreamRequest(input)
+}
+
+// UpdateStream is a passthrough to the underlying UpdateStream method.
+// It will increment the count of requests made to UpdateStream.
+func (c *IoT) UpdateStream(input *iot.UpdateStreamInput) (*iot.UpdateStreamOutput, error) {
+	c.inc("UpdateStream")
+	return c.svc.UpdateStream(input)
+}
+
+// UpdateStreamWithContext is a passthrough to the underlying UpdateStreamWithContext method.
+// It will increment the count of requests made to UpdateStream.
+func (c *IoT) UpdateStreamWithContext(ctx aws.Context, input *iot.UpdateStreamInput, opts ...request.Option) (*iot.UpdateStreamOutput, error) {
+	c.inc("UpdateStream")
+	return c.svc.UpdateStreamWithContext(ctx, input, opts...)
+}
+
 // UpdateThingRequest is a passthrough to the underlying UpdateThingRequest.
 // It will increment the count of requests made to UpdateThing.
 func (c *IoT) UpdateThingRequest(input *iot.UpdateThingInput) (req *request.Request, output *iot.UpdateThingOutput) {
@@ -1203,4 +2547,46 @@ func (c *IoT) UpdateThing(input *iot.UpdateThingInput) (*iot.UpdateThingOutput, 
 func (c *IoT) UpdateThingWithContext(ctx aws.Context, input *iot.UpdateThingInput, opts ...request.Option) (*iot.UpdateThingOutput, error) {
 	c.inc("UpdateThing")
 	return c.svc.UpdateThingWithContext(ctx, input, opts...)
+}
+
+// UpdateThingGroupRequest is a passthrough to the underlying UpdateThingGroupRequest.
+// It will increment the count of requests made to UpdateThingGroup.
+func (c *IoT) UpdateThingGroupRequest(input *iot.UpdateThingGroupInput) (req *request.Request, output *iot.UpdateThingGroupOutput) {
+	c.inc("UpdateThingGroup")
+	return c.svc.UpdateThingGroupRequest(input)
+}
+
+// UpdateThingGroup is a passthrough to the underlying UpdateThingGroup method.
+// It will increment the count of requests made to UpdateThingGroup.
+func (c *IoT) UpdateThingGroup(input *iot.UpdateThingGroupInput) (*iot.UpdateThingGroupOutput, error) {
+	c.inc("UpdateThingGroup")
+	return c.svc.UpdateThingGroup(input)
+}
+
+// UpdateThingGroupWithContext is a passthrough to the underlying UpdateThingGroupWithContext method.
+// It will increment the count of requests made to UpdateThingGroup.
+func (c *IoT) UpdateThingGroupWithContext(ctx aws.Context, input *iot.UpdateThingGroupInput, opts ...request.Option) (*iot.UpdateThingGroupOutput, error) {
+	c.inc("UpdateThingGroup")
+	return c.svc.UpdateThingGroupWithContext(ctx, input, opts...)
+}
+
+// UpdateThingGroupsForThingRequest is a passthrough to the underlying UpdateThingGroupsForThingRequest.
+// It will increment the count of requests made to UpdateThingGroupsForThing.
+func (c *IoT) UpdateThingGroupsForThingRequest(input *iot.UpdateThingGroupsForThingInput) (req *request.Request, output *iot.UpdateThingGroupsForThingOutput) {
+	c.inc("UpdateThingGroupsForThing")
+	return c.svc.UpdateThingGroupsForThingRequest(input)
+}
+
+// UpdateThingGroupsForThing is a passthrough to the underlying UpdateThingGroupsForThing method.
+// It will increment the count of requests made to UpdateThingGroupsForThing.
+func (c *IoT) UpdateThingGroupsForThing(input *iot.UpdateThingGroupsForThingInput) (*iot.UpdateThingGroupsForThingOutput, error) {
+	c.inc("UpdateThingGroupsForThing")
+	return c.svc.UpdateThingGroupsForThing(input)
+}
+
+// UpdateThingGroupsForThingWithContext is a passthrough to the underlying UpdateThingGroupsForThingWithContext method.
+// It will increment the count of requests made to UpdateThingGroupsForThing.
+func (c *IoT) UpdateThingGroupsForThingWithContext(ctx aws.Context, input *iot.UpdateThingGroupsForThingInput, opts ...request.Option) (*iot.UpdateThingGroupsForThingOutput, error) {
+	c.inc("UpdateThingGroupsForThing")
+	return c.svc.UpdateThingGroupsForThingWithContext(ctx, input, opts...)
 }

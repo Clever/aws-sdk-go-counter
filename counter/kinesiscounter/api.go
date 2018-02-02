@@ -153,6 +153,27 @@ func (c *Kinesis) DescribeStreamPagesWithContext(ctx aws.Context, input *kinesis
 	return c.svc.DescribeStreamPagesWithContext(ctx, input, fn, opts...)
 }
 
+// DescribeStreamSummaryRequest is a passthrough to the underlying DescribeStreamSummaryRequest.
+// It will increment the count of requests made to DescribeStreamSummary.
+func (c *Kinesis) DescribeStreamSummaryRequest(input *kinesis.DescribeStreamSummaryInput) (req *request.Request, output *kinesis.DescribeStreamSummaryOutput) {
+	c.inc("DescribeStreamSummary")
+	return c.svc.DescribeStreamSummaryRequest(input)
+}
+
+// DescribeStreamSummary is a passthrough to the underlying DescribeStreamSummary method.
+// It will increment the count of requests made to DescribeStreamSummary.
+func (c *Kinesis) DescribeStreamSummary(input *kinesis.DescribeStreamSummaryInput) (*kinesis.DescribeStreamSummaryOutput, error) {
+	c.inc("DescribeStreamSummary")
+	return c.svc.DescribeStreamSummary(input)
+}
+
+// DescribeStreamSummaryWithContext is a passthrough to the underlying DescribeStreamSummaryWithContext method.
+// It will increment the count of requests made to DescribeStreamSummary.
+func (c *Kinesis) DescribeStreamSummaryWithContext(ctx aws.Context, input *kinesis.DescribeStreamSummaryInput, opts ...request.Option) (*kinesis.DescribeStreamSummaryOutput, error) {
+	c.inc("DescribeStreamSummary")
+	return c.svc.DescribeStreamSummaryWithContext(ctx, input, opts...)
+}
+
 // DisableEnhancedMonitoringRequest is a passthrough to the underlying DisableEnhancedMonitoringRequest.
 // It will increment the count of requests made to DisableEnhancedMonitoring.
 func (c *Kinesis) DisableEnhancedMonitoringRequest(input *kinesis.DisableEnhancedMonitoringInput) (req *request.Request, output *kinesis.EnhancedMonitoringOutput) {

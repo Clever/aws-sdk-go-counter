@@ -29,6 +29,69 @@ func (c *Lightsail) AllocateStaticIpWithContext(ctx aws.Context, input *lightsai
 	return c.svc.AllocateStaticIpWithContext(ctx, input, opts...)
 }
 
+// AttachDiskRequest is a passthrough to the underlying AttachDiskRequest.
+// It will increment the count of requests made to AttachDisk.
+func (c *Lightsail) AttachDiskRequest(input *lightsail.AttachDiskInput) (req *request.Request, output *lightsail.AttachDiskOutput) {
+	c.inc("AttachDisk")
+	return c.svc.AttachDiskRequest(input)
+}
+
+// AttachDisk is a passthrough to the underlying AttachDisk method.
+// It will increment the count of requests made to AttachDisk.
+func (c *Lightsail) AttachDisk(input *lightsail.AttachDiskInput) (*lightsail.AttachDiskOutput, error) {
+	c.inc("AttachDisk")
+	return c.svc.AttachDisk(input)
+}
+
+// AttachDiskWithContext is a passthrough to the underlying AttachDiskWithContext method.
+// It will increment the count of requests made to AttachDisk.
+func (c *Lightsail) AttachDiskWithContext(ctx aws.Context, input *lightsail.AttachDiskInput, opts ...request.Option) (*lightsail.AttachDiskOutput, error) {
+	c.inc("AttachDisk")
+	return c.svc.AttachDiskWithContext(ctx, input, opts...)
+}
+
+// AttachInstancesToLoadBalancerRequest is a passthrough to the underlying AttachInstancesToLoadBalancerRequest.
+// It will increment the count of requests made to AttachInstancesToLoadBalancer.
+func (c *Lightsail) AttachInstancesToLoadBalancerRequest(input *lightsail.AttachInstancesToLoadBalancerInput) (req *request.Request, output *lightsail.AttachInstancesToLoadBalancerOutput) {
+	c.inc("AttachInstancesToLoadBalancer")
+	return c.svc.AttachInstancesToLoadBalancerRequest(input)
+}
+
+// AttachInstancesToLoadBalancer is a passthrough to the underlying AttachInstancesToLoadBalancer method.
+// It will increment the count of requests made to AttachInstancesToLoadBalancer.
+func (c *Lightsail) AttachInstancesToLoadBalancer(input *lightsail.AttachInstancesToLoadBalancerInput) (*lightsail.AttachInstancesToLoadBalancerOutput, error) {
+	c.inc("AttachInstancesToLoadBalancer")
+	return c.svc.AttachInstancesToLoadBalancer(input)
+}
+
+// AttachInstancesToLoadBalancerWithContext is a passthrough to the underlying AttachInstancesToLoadBalancerWithContext method.
+// It will increment the count of requests made to AttachInstancesToLoadBalancer.
+func (c *Lightsail) AttachInstancesToLoadBalancerWithContext(ctx aws.Context, input *lightsail.AttachInstancesToLoadBalancerInput, opts ...request.Option) (*lightsail.AttachInstancesToLoadBalancerOutput, error) {
+	c.inc("AttachInstancesToLoadBalancer")
+	return c.svc.AttachInstancesToLoadBalancerWithContext(ctx, input, opts...)
+}
+
+// AttachLoadBalancerTlsCertificateRequest is a passthrough to the underlying AttachLoadBalancerTlsCertificateRequest.
+// It will increment the count of requests made to AttachLoadBalancerTlsCertificate.
+func (c *Lightsail) AttachLoadBalancerTlsCertificateRequest(input *lightsail.AttachLoadBalancerTlsCertificateInput) (req *request.Request, output *lightsail.AttachLoadBalancerTlsCertificateOutput) {
+	c.inc("AttachLoadBalancerTlsCertificate")
+	return c.svc.AttachLoadBalancerTlsCertificateRequest(input)
+}
+
+// AttachLoadBalancerTlsCertificate is a passthrough to the underlying AttachLoadBalancerTlsCertificate method.
+// It will increment the count of requests made to AttachLoadBalancerTlsCertificate.
+func (c *Lightsail) AttachLoadBalancerTlsCertificate(input *lightsail.AttachLoadBalancerTlsCertificateInput) (*lightsail.AttachLoadBalancerTlsCertificateOutput, error) {
+	c.inc("AttachLoadBalancerTlsCertificate")
+	return c.svc.AttachLoadBalancerTlsCertificate(input)
+}
+
+// AttachLoadBalancerTlsCertificateWithContext is a passthrough to the underlying AttachLoadBalancerTlsCertificateWithContext method.
+// It will increment the count of requests made to AttachLoadBalancerTlsCertificate.
+func (c *Lightsail) AttachLoadBalancerTlsCertificateWithContext(ctx aws.Context, input *lightsail.AttachLoadBalancerTlsCertificateInput, opts ...request.Option) (*lightsail.AttachLoadBalancerTlsCertificateOutput, error) {
+	c.inc("AttachLoadBalancerTlsCertificate")
+	return c.svc.AttachLoadBalancerTlsCertificateWithContext(ctx, input, opts...)
+}
+
 // AttachStaticIpRequest is a passthrough to the underlying AttachStaticIpRequest.
 // It will increment the count of requests made to AttachStaticIp.
 func (c *Lightsail) AttachStaticIpRequest(input *lightsail.AttachStaticIpInput) (req *request.Request, output *lightsail.AttachStaticIpOutput) {
@@ -69,6 +132,69 @@ func (c *Lightsail) CloseInstancePublicPorts(input *lightsail.CloseInstancePubli
 func (c *Lightsail) CloseInstancePublicPortsWithContext(ctx aws.Context, input *lightsail.CloseInstancePublicPortsInput, opts ...request.Option) (*lightsail.CloseInstancePublicPortsOutput, error) {
 	c.inc("CloseInstancePublicPorts")
 	return c.svc.CloseInstancePublicPortsWithContext(ctx, input, opts...)
+}
+
+// CreateDiskRequest is a passthrough to the underlying CreateDiskRequest.
+// It will increment the count of requests made to CreateDisk.
+func (c *Lightsail) CreateDiskRequest(input *lightsail.CreateDiskInput) (req *request.Request, output *lightsail.CreateDiskOutput) {
+	c.inc("CreateDisk")
+	return c.svc.CreateDiskRequest(input)
+}
+
+// CreateDisk is a passthrough to the underlying CreateDisk method.
+// It will increment the count of requests made to CreateDisk.
+func (c *Lightsail) CreateDisk(input *lightsail.CreateDiskInput) (*lightsail.CreateDiskOutput, error) {
+	c.inc("CreateDisk")
+	return c.svc.CreateDisk(input)
+}
+
+// CreateDiskWithContext is a passthrough to the underlying CreateDiskWithContext method.
+// It will increment the count of requests made to CreateDisk.
+func (c *Lightsail) CreateDiskWithContext(ctx aws.Context, input *lightsail.CreateDiskInput, opts ...request.Option) (*lightsail.CreateDiskOutput, error) {
+	c.inc("CreateDisk")
+	return c.svc.CreateDiskWithContext(ctx, input, opts...)
+}
+
+// CreateDiskFromSnapshotRequest is a passthrough to the underlying CreateDiskFromSnapshotRequest.
+// It will increment the count of requests made to CreateDiskFromSnapshot.
+func (c *Lightsail) CreateDiskFromSnapshotRequest(input *lightsail.CreateDiskFromSnapshotInput) (req *request.Request, output *lightsail.CreateDiskFromSnapshotOutput) {
+	c.inc("CreateDiskFromSnapshot")
+	return c.svc.CreateDiskFromSnapshotRequest(input)
+}
+
+// CreateDiskFromSnapshot is a passthrough to the underlying CreateDiskFromSnapshot method.
+// It will increment the count of requests made to CreateDiskFromSnapshot.
+func (c *Lightsail) CreateDiskFromSnapshot(input *lightsail.CreateDiskFromSnapshotInput) (*lightsail.CreateDiskFromSnapshotOutput, error) {
+	c.inc("CreateDiskFromSnapshot")
+	return c.svc.CreateDiskFromSnapshot(input)
+}
+
+// CreateDiskFromSnapshotWithContext is a passthrough to the underlying CreateDiskFromSnapshotWithContext method.
+// It will increment the count of requests made to CreateDiskFromSnapshot.
+func (c *Lightsail) CreateDiskFromSnapshotWithContext(ctx aws.Context, input *lightsail.CreateDiskFromSnapshotInput, opts ...request.Option) (*lightsail.CreateDiskFromSnapshotOutput, error) {
+	c.inc("CreateDiskFromSnapshot")
+	return c.svc.CreateDiskFromSnapshotWithContext(ctx, input, opts...)
+}
+
+// CreateDiskSnapshotRequest is a passthrough to the underlying CreateDiskSnapshotRequest.
+// It will increment the count of requests made to CreateDiskSnapshot.
+func (c *Lightsail) CreateDiskSnapshotRequest(input *lightsail.CreateDiskSnapshotInput) (req *request.Request, output *lightsail.CreateDiskSnapshotOutput) {
+	c.inc("CreateDiskSnapshot")
+	return c.svc.CreateDiskSnapshotRequest(input)
+}
+
+// CreateDiskSnapshot is a passthrough to the underlying CreateDiskSnapshot method.
+// It will increment the count of requests made to CreateDiskSnapshot.
+func (c *Lightsail) CreateDiskSnapshot(input *lightsail.CreateDiskSnapshotInput) (*lightsail.CreateDiskSnapshotOutput, error) {
+	c.inc("CreateDiskSnapshot")
+	return c.svc.CreateDiskSnapshot(input)
+}
+
+// CreateDiskSnapshotWithContext is a passthrough to the underlying CreateDiskSnapshotWithContext method.
+// It will increment the count of requests made to CreateDiskSnapshot.
+func (c *Lightsail) CreateDiskSnapshotWithContext(ctx aws.Context, input *lightsail.CreateDiskSnapshotInput, opts ...request.Option) (*lightsail.CreateDiskSnapshotOutput, error) {
+	c.inc("CreateDiskSnapshot")
+	return c.svc.CreateDiskSnapshotWithContext(ctx, input, opts...)
 }
 
 // CreateDomainRequest is a passthrough to the underlying CreateDomainRequest.
@@ -197,6 +323,90 @@ func (c *Lightsail) CreateKeyPairWithContext(ctx aws.Context, input *lightsail.C
 	return c.svc.CreateKeyPairWithContext(ctx, input, opts...)
 }
 
+// CreateLoadBalancerRequest is a passthrough to the underlying CreateLoadBalancerRequest.
+// It will increment the count of requests made to CreateLoadBalancer.
+func (c *Lightsail) CreateLoadBalancerRequest(input *lightsail.CreateLoadBalancerInput) (req *request.Request, output *lightsail.CreateLoadBalancerOutput) {
+	c.inc("CreateLoadBalancer")
+	return c.svc.CreateLoadBalancerRequest(input)
+}
+
+// CreateLoadBalancer is a passthrough to the underlying CreateLoadBalancer method.
+// It will increment the count of requests made to CreateLoadBalancer.
+func (c *Lightsail) CreateLoadBalancer(input *lightsail.CreateLoadBalancerInput) (*lightsail.CreateLoadBalancerOutput, error) {
+	c.inc("CreateLoadBalancer")
+	return c.svc.CreateLoadBalancer(input)
+}
+
+// CreateLoadBalancerWithContext is a passthrough to the underlying CreateLoadBalancerWithContext method.
+// It will increment the count of requests made to CreateLoadBalancer.
+func (c *Lightsail) CreateLoadBalancerWithContext(ctx aws.Context, input *lightsail.CreateLoadBalancerInput, opts ...request.Option) (*lightsail.CreateLoadBalancerOutput, error) {
+	c.inc("CreateLoadBalancer")
+	return c.svc.CreateLoadBalancerWithContext(ctx, input, opts...)
+}
+
+// CreateLoadBalancerTlsCertificateRequest is a passthrough to the underlying CreateLoadBalancerTlsCertificateRequest.
+// It will increment the count of requests made to CreateLoadBalancerTlsCertificate.
+func (c *Lightsail) CreateLoadBalancerTlsCertificateRequest(input *lightsail.CreateLoadBalancerTlsCertificateInput) (req *request.Request, output *lightsail.CreateLoadBalancerTlsCertificateOutput) {
+	c.inc("CreateLoadBalancerTlsCertificate")
+	return c.svc.CreateLoadBalancerTlsCertificateRequest(input)
+}
+
+// CreateLoadBalancerTlsCertificate is a passthrough to the underlying CreateLoadBalancerTlsCertificate method.
+// It will increment the count of requests made to CreateLoadBalancerTlsCertificate.
+func (c *Lightsail) CreateLoadBalancerTlsCertificate(input *lightsail.CreateLoadBalancerTlsCertificateInput) (*lightsail.CreateLoadBalancerTlsCertificateOutput, error) {
+	c.inc("CreateLoadBalancerTlsCertificate")
+	return c.svc.CreateLoadBalancerTlsCertificate(input)
+}
+
+// CreateLoadBalancerTlsCertificateWithContext is a passthrough to the underlying CreateLoadBalancerTlsCertificateWithContext method.
+// It will increment the count of requests made to CreateLoadBalancerTlsCertificate.
+func (c *Lightsail) CreateLoadBalancerTlsCertificateWithContext(ctx aws.Context, input *lightsail.CreateLoadBalancerTlsCertificateInput, opts ...request.Option) (*lightsail.CreateLoadBalancerTlsCertificateOutput, error) {
+	c.inc("CreateLoadBalancerTlsCertificate")
+	return c.svc.CreateLoadBalancerTlsCertificateWithContext(ctx, input, opts...)
+}
+
+// DeleteDiskRequest is a passthrough to the underlying DeleteDiskRequest.
+// It will increment the count of requests made to DeleteDisk.
+func (c *Lightsail) DeleteDiskRequest(input *lightsail.DeleteDiskInput) (req *request.Request, output *lightsail.DeleteDiskOutput) {
+	c.inc("DeleteDisk")
+	return c.svc.DeleteDiskRequest(input)
+}
+
+// DeleteDisk is a passthrough to the underlying DeleteDisk method.
+// It will increment the count of requests made to DeleteDisk.
+func (c *Lightsail) DeleteDisk(input *lightsail.DeleteDiskInput) (*lightsail.DeleteDiskOutput, error) {
+	c.inc("DeleteDisk")
+	return c.svc.DeleteDisk(input)
+}
+
+// DeleteDiskWithContext is a passthrough to the underlying DeleteDiskWithContext method.
+// It will increment the count of requests made to DeleteDisk.
+func (c *Lightsail) DeleteDiskWithContext(ctx aws.Context, input *lightsail.DeleteDiskInput, opts ...request.Option) (*lightsail.DeleteDiskOutput, error) {
+	c.inc("DeleteDisk")
+	return c.svc.DeleteDiskWithContext(ctx, input, opts...)
+}
+
+// DeleteDiskSnapshotRequest is a passthrough to the underlying DeleteDiskSnapshotRequest.
+// It will increment the count of requests made to DeleteDiskSnapshot.
+func (c *Lightsail) DeleteDiskSnapshotRequest(input *lightsail.DeleteDiskSnapshotInput) (req *request.Request, output *lightsail.DeleteDiskSnapshotOutput) {
+	c.inc("DeleteDiskSnapshot")
+	return c.svc.DeleteDiskSnapshotRequest(input)
+}
+
+// DeleteDiskSnapshot is a passthrough to the underlying DeleteDiskSnapshot method.
+// It will increment the count of requests made to DeleteDiskSnapshot.
+func (c *Lightsail) DeleteDiskSnapshot(input *lightsail.DeleteDiskSnapshotInput) (*lightsail.DeleteDiskSnapshotOutput, error) {
+	c.inc("DeleteDiskSnapshot")
+	return c.svc.DeleteDiskSnapshot(input)
+}
+
+// DeleteDiskSnapshotWithContext is a passthrough to the underlying DeleteDiskSnapshotWithContext method.
+// It will increment the count of requests made to DeleteDiskSnapshot.
+func (c *Lightsail) DeleteDiskSnapshotWithContext(ctx aws.Context, input *lightsail.DeleteDiskSnapshotInput, opts ...request.Option) (*lightsail.DeleteDiskSnapshotOutput, error) {
+	c.inc("DeleteDiskSnapshot")
+	return c.svc.DeleteDiskSnapshotWithContext(ctx, input, opts...)
+}
+
 // DeleteDomainRequest is a passthrough to the underlying DeleteDomainRequest.
 // It will increment the count of requests made to DeleteDomain.
 func (c *Lightsail) DeleteDomainRequest(input *lightsail.DeleteDomainInput) (req *request.Request, output *lightsail.DeleteDomainOutput) {
@@ -302,6 +512,90 @@ func (c *Lightsail) DeleteKeyPairWithContext(ctx aws.Context, input *lightsail.D
 	return c.svc.DeleteKeyPairWithContext(ctx, input, opts...)
 }
 
+// DeleteLoadBalancerRequest is a passthrough to the underlying DeleteLoadBalancerRequest.
+// It will increment the count of requests made to DeleteLoadBalancer.
+func (c *Lightsail) DeleteLoadBalancerRequest(input *lightsail.DeleteLoadBalancerInput) (req *request.Request, output *lightsail.DeleteLoadBalancerOutput) {
+	c.inc("DeleteLoadBalancer")
+	return c.svc.DeleteLoadBalancerRequest(input)
+}
+
+// DeleteLoadBalancer is a passthrough to the underlying DeleteLoadBalancer method.
+// It will increment the count of requests made to DeleteLoadBalancer.
+func (c *Lightsail) DeleteLoadBalancer(input *lightsail.DeleteLoadBalancerInput) (*lightsail.DeleteLoadBalancerOutput, error) {
+	c.inc("DeleteLoadBalancer")
+	return c.svc.DeleteLoadBalancer(input)
+}
+
+// DeleteLoadBalancerWithContext is a passthrough to the underlying DeleteLoadBalancerWithContext method.
+// It will increment the count of requests made to DeleteLoadBalancer.
+func (c *Lightsail) DeleteLoadBalancerWithContext(ctx aws.Context, input *lightsail.DeleteLoadBalancerInput, opts ...request.Option) (*lightsail.DeleteLoadBalancerOutput, error) {
+	c.inc("DeleteLoadBalancer")
+	return c.svc.DeleteLoadBalancerWithContext(ctx, input, opts...)
+}
+
+// DeleteLoadBalancerTlsCertificateRequest is a passthrough to the underlying DeleteLoadBalancerTlsCertificateRequest.
+// It will increment the count of requests made to DeleteLoadBalancerTlsCertificate.
+func (c *Lightsail) DeleteLoadBalancerTlsCertificateRequest(input *lightsail.DeleteLoadBalancerTlsCertificateInput) (req *request.Request, output *lightsail.DeleteLoadBalancerTlsCertificateOutput) {
+	c.inc("DeleteLoadBalancerTlsCertificate")
+	return c.svc.DeleteLoadBalancerTlsCertificateRequest(input)
+}
+
+// DeleteLoadBalancerTlsCertificate is a passthrough to the underlying DeleteLoadBalancerTlsCertificate method.
+// It will increment the count of requests made to DeleteLoadBalancerTlsCertificate.
+func (c *Lightsail) DeleteLoadBalancerTlsCertificate(input *lightsail.DeleteLoadBalancerTlsCertificateInput) (*lightsail.DeleteLoadBalancerTlsCertificateOutput, error) {
+	c.inc("DeleteLoadBalancerTlsCertificate")
+	return c.svc.DeleteLoadBalancerTlsCertificate(input)
+}
+
+// DeleteLoadBalancerTlsCertificateWithContext is a passthrough to the underlying DeleteLoadBalancerTlsCertificateWithContext method.
+// It will increment the count of requests made to DeleteLoadBalancerTlsCertificate.
+func (c *Lightsail) DeleteLoadBalancerTlsCertificateWithContext(ctx aws.Context, input *lightsail.DeleteLoadBalancerTlsCertificateInput, opts ...request.Option) (*lightsail.DeleteLoadBalancerTlsCertificateOutput, error) {
+	c.inc("DeleteLoadBalancerTlsCertificate")
+	return c.svc.DeleteLoadBalancerTlsCertificateWithContext(ctx, input, opts...)
+}
+
+// DetachDiskRequest is a passthrough to the underlying DetachDiskRequest.
+// It will increment the count of requests made to DetachDisk.
+func (c *Lightsail) DetachDiskRequest(input *lightsail.DetachDiskInput) (req *request.Request, output *lightsail.DetachDiskOutput) {
+	c.inc("DetachDisk")
+	return c.svc.DetachDiskRequest(input)
+}
+
+// DetachDisk is a passthrough to the underlying DetachDisk method.
+// It will increment the count of requests made to DetachDisk.
+func (c *Lightsail) DetachDisk(input *lightsail.DetachDiskInput) (*lightsail.DetachDiskOutput, error) {
+	c.inc("DetachDisk")
+	return c.svc.DetachDisk(input)
+}
+
+// DetachDiskWithContext is a passthrough to the underlying DetachDiskWithContext method.
+// It will increment the count of requests made to DetachDisk.
+func (c *Lightsail) DetachDiskWithContext(ctx aws.Context, input *lightsail.DetachDiskInput, opts ...request.Option) (*lightsail.DetachDiskOutput, error) {
+	c.inc("DetachDisk")
+	return c.svc.DetachDiskWithContext(ctx, input, opts...)
+}
+
+// DetachInstancesFromLoadBalancerRequest is a passthrough to the underlying DetachInstancesFromLoadBalancerRequest.
+// It will increment the count of requests made to DetachInstancesFromLoadBalancer.
+func (c *Lightsail) DetachInstancesFromLoadBalancerRequest(input *lightsail.DetachInstancesFromLoadBalancerInput) (req *request.Request, output *lightsail.DetachInstancesFromLoadBalancerOutput) {
+	c.inc("DetachInstancesFromLoadBalancer")
+	return c.svc.DetachInstancesFromLoadBalancerRequest(input)
+}
+
+// DetachInstancesFromLoadBalancer is a passthrough to the underlying DetachInstancesFromLoadBalancer method.
+// It will increment the count of requests made to DetachInstancesFromLoadBalancer.
+func (c *Lightsail) DetachInstancesFromLoadBalancer(input *lightsail.DetachInstancesFromLoadBalancerInput) (*lightsail.DetachInstancesFromLoadBalancerOutput, error) {
+	c.inc("DetachInstancesFromLoadBalancer")
+	return c.svc.DetachInstancesFromLoadBalancer(input)
+}
+
+// DetachInstancesFromLoadBalancerWithContext is a passthrough to the underlying DetachInstancesFromLoadBalancerWithContext method.
+// It will increment the count of requests made to DetachInstancesFromLoadBalancer.
+func (c *Lightsail) DetachInstancesFromLoadBalancerWithContext(ctx aws.Context, input *lightsail.DetachInstancesFromLoadBalancerInput, opts ...request.Option) (*lightsail.DetachInstancesFromLoadBalancerOutput, error) {
+	c.inc("DetachInstancesFromLoadBalancer")
+	return c.svc.DetachInstancesFromLoadBalancerWithContext(ctx, input, opts...)
+}
+
 // DetachStaticIpRequest is a passthrough to the underlying DetachStaticIpRequest.
 // It will increment the count of requests made to DetachStaticIp.
 func (c *Lightsail) DetachStaticIpRequest(input *lightsail.DetachStaticIpInput) (req *request.Request, output *lightsail.DetachStaticIpOutput) {
@@ -405,6 +699,90 @@ func (c *Lightsail) GetBundles(input *lightsail.GetBundlesInput) (*lightsail.Get
 func (c *Lightsail) GetBundlesWithContext(ctx aws.Context, input *lightsail.GetBundlesInput, opts ...request.Option) (*lightsail.GetBundlesOutput, error) {
 	c.inc("GetBundles")
 	return c.svc.GetBundlesWithContext(ctx, input, opts...)
+}
+
+// GetDiskRequest is a passthrough to the underlying GetDiskRequest.
+// It will increment the count of requests made to GetDisk.
+func (c *Lightsail) GetDiskRequest(input *lightsail.GetDiskInput) (req *request.Request, output *lightsail.GetDiskOutput) {
+	c.inc("GetDisk")
+	return c.svc.GetDiskRequest(input)
+}
+
+// GetDisk is a passthrough to the underlying GetDisk method.
+// It will increment the count of requests made to GetDisk.
+func (c *Lightsail) GetDisk(input *lightsail.GetDiskInput) (*lightsail.GetDiskOutput, error) {
+	c.inc("GetDisk")
+	return c.svc.GetDisk(input)
+}
+
+// GetDiskWithContext is a passthrough to the underlying GetDiskWithContext method.
+// It will increment the count of requests made to GetDisk.
+func (c *Lightsail) GetDiskWithContext(ctx aws.Context, input *lightsail.GetDiskInput, opts ...request.Option) (*lightsail.GetDiskOutput, error) {
+	c.inc("GetDisk")
+	return c.svc.GetDiskWithContext(ctx, input, opts...)
+}
+
+// GetDiskSnapshotRequest is a passthrough to the underlying GetDiskSnapshotRequest.
+// It will increment the count of requests made to GetDiskSnapshot.
+func (c *Lightsail) GetDiskSnapshotRequest(input *lightsail.GetDiskSnapshotInput) (req *request.Request, output *lightsail.GetDiskSnapshotOutput) {
+	c.inc("GetDiskSnapshot")
+	return c.svc.GetDiskSnapshotRequest(input)
+}
+
+// GetDiskSnapshot is a passthrough to the underlying GetDiskSnapshot method.
+// It will increment the count of requests made to GetDiskSnapshot.
+func (c *Lightsail) GetDiskSnapshot(input *lightsail.GetDiskSnapshotInput) (*lightsail.GetDiskSnapshotOutput, error) {
+	c.inc("GetDiskSnapshot")
+	return c.svc.GetDiskSnapshot(input)
+}
+
+// GetDiskSnapshotWithContext is a passthrough to the underlying GetDiskSnapshotWithContext method.
+// It will increment the count of requests made to GetDiskSnapshot.
+func (c *Lightsail) GetDiskSnapshotWithContext(ctx aws.Context, input *lightsail.GetDiskSnapshotInput, opts ...request.Option) (*lightsail.GetDiskSnapshotOutput, error) {
+	c.inc("GetDiskSnapshot")
+	return c.svc.GetDiskSnapshotWithContext(ctx, input, opts...)
+}
+
+// GetDiskSnapshotsRequest is a passthrough to the underlying GetDiskSnapshotsRequest.
+// It will increment the count of requests made to GetDiskSnapshots.
+func (c *Lightsail) GetDiskSnapshotsRequest(input *lightsail.GetDiskSnapshotsInput) (req *request.Request, output *lightsail.GetDiskSnapshotsOutput) {
+	c.inc("GetDiskSnapshots")
+	return c.svc.GetDiskSnapshotsRequest(input)
+}
+
+// GetDiskSnapshots is a passthrough to the underlying GetDiskSnapshots method.
+// It will increment the count of requests made to GetDiskSnapshots.
+func (c *Lightsail) GetDiskSnapshots(input *lightsail.GetDiskSnapshotsInput) (*lightsail.GetDiskSnapshotsOutput, error) {
+	c.inc("GetDiskSnapshots")
+	return c.svc.GetDiskSnapshots(input)
+}
+
+// GetDiskSnapshotsWithContext is a passthrough to the underlying GetDiskSnapshotsWithContext method.
+// It will increment the count of requests made to GetDiskSnapshots.
+func (c *Lightsail) GetDiskSnapshotsWithContext(ctx aws.Context, input *lightsail.GetDiskSnapshotsInput, opts ...request.Option) (*lightsail.GetDiskSnapshotsOutput, error) {
+	c.inc("GetDiskSnapshots")
+	return c.svc.GetDiskSnapshotsWithContext(ctx, input, opts...)
+}
+
+// GetDisksRequest is a passthrough to the underlying GetDisksRequest.
+// It will increment the count of requests made to GetDisks.
+func (c *Lightsail) GetDisksRequest(input *lightsail.GetDisksInput) (req *request.Request, output *lightsail.GetDisksOutput) {
+	c.inc("GetDisks")
+	return c.svc.GetDisksRequest(input)
+}
+
+// GetDisks is a passthrough to the underlying GetDisks method.
+// It will increment the count of requests made to GetDisks.
+func (c *Lightsail) GetDisks(input *lightsail.GetDisksInput) (*lightsail.GetDisksOutput, error) {
+	c.inc("GetDisks")
+	return c.svc.GetDisks(input)
+}
+
+// GetDisksWithContext is a passthrough to the underlying GetDisksWithContext method.
+// It will increment the count of requests made to GetDisks.
+func (c *Lightsail) GetDisksWithContext(ctx aws.Context, input *lightsail.GetDisksInput, opts ...request.Option) (*lightsail.GetDisksOutput, error) {
+	c.inc("GetDisks")
+	return c.svc.GetDisksWithContext(ctx, input, opts...)
 }
 
 // GetDomainRequest is a passthrough to the underlying GetDomainRequest.
@@ -657,6 +1035,90 @@ func (c *Lightsail) GetKeyPairs(input *lightsail.GetKeyPairsInput) (*lightsail.G
 func (c *Lightsail) GetKeyPairsWithContext(ctx aws.Context, input *lightsail.GetKeyPairsInput, opts ...request.Option) (*lightsail.GetKeyPairsOutput, error) {
 	c.inc("GetKeyPairs")
 	return c.svc.GetKeyPairsWithContext(ctx, input, opts...)
+}
+
+// GetLoadBalancerRequest is a passthrough to the underlying GetLoadBalancerRequest.
+// It will increment the count of requests made to GetLoadBalancer.
+func (c *Lightsail) GetLoadBalancerRequest(input *lightsail.GetLoadBalancerInput) (req *request.Request, output *lightsail.GetLoadBalancerOutput) {
+	c.inc("GetLoadBalancer")
+	return c.svc.GetLoadBalancerRequest(input)
+}
+
+// GetLoadBalancer is a passthrough to the underlying GetLoadBalancer method.
+// It will increment the count of requests made to GetLoadBalancer.
+func (c *Lightsail) GetLoadBalancer(input *lightsail.GetLoadBalancerInput) (*lightsail.GetLoadBalancerOutput, error) {
+	c.inc("GetLoadBalancer")
+	return c.svc.GetLoadBalancer(input)
+}
+
+// GetLoadBalancerWithContext is a passthrough to the underlying GetLoadBalancerWithContext method.
+// It will increment the count of requests made to GetLoadBalancer.
+func (c *Lightsail) GetLoadBalancerWithContext(ctx aws.Context, input *lightsail.GetLoadBalancerInput, opts ...request.Option) (*lightsail.GetLoadBalancerOutput, error) {
+	c.inc("GetLoadBalancer")
+	return c.svc.GetLoadBalancerWithContext(ctx, input, opts...)
+}
+
+// GetLoadBalancerMetricDataRequest is a passthrough to the underlying GetLoadBalancerMetricDataRequest.
+// It will increment the count of requests made to GetLoadBalancerMetricData.
+func (c *Lightsail) GetLoadBalancerMetricDataRequest(input *lightsail.GetLoadBalancerMetricDataInput) (req *request.Request, output *lightsail.GetLoadBalancerMetricDataOutput) {
+	c.inc("GetLoadBalancerMetricData")
+	return c.svc.GetLoadBalancerMetricDataRequest(input)
+}
+
+// GetLoadBalancerMetricData is a passthrough to the underlying GetLoadBalancerMetricData method.
+// It will increment the count of requests made to GetLoadBalancerMetricData.
+func (c *Lightsail) GetLoadBalancerMetricData(input *lightsail.GetLoadBalancerMetricDataInput) (*lightsail.GetLoadBalancerMetricDataOutput, error) {
+	c.inc("GetLoadBalancerMetricData")
+	return c.svc.GetLoadBalancerMetricData(input)
+}
+
+// GetLoadBalancerMetricDataWithContext is a passthrough to the underlying GetLoadBalancerMetricDataWithContext method.
+// It will increment the count of requests made to GetLoadBalancerMetricData.
+func (c *Lightsail) GetLoadBalancerMetricDataWithContext(ctx aws.Context, input *lightsail.GetLoadBalancerMetricDataInput, opts ...request.Option) (*lightsail.GetLoadBalancerMetricDataOutput, error) {
+	c.inc("GetLoadBalancerMetricData")
+	return c.svc.GetLoadBalancerMetricDataWithContext(ctx, input, opts...)
+}
+
+// GetLoadBalancerTlsCertificatesRequest is a passthrough to the underlying GetLoadBalancerTlsCertificatesRequest.
+// It will increment the count of requests made to GetLoadBalancerTlsCertificates.
+func (c *Lightsail) GetLoadBalancerTlsCertificatesRequest(input *lightsail.GetLoadBalancerTlsCertificatesInput) (req *request.Request, output *lightsail.GetLoadBalancerTlsCertificatesOutput) {
+	c.inc("GetLoadBalancerTlsCertificates")
+	return c.svc.GetLoadBalancerTlsCertificatesRequest(input)
+}
+
+// GetLoadBalancerTlsCertificates is a passthrough to the underlying GetLoadBalancerTlsCertificates method.
+// It will increment the count of requests made to GetLoadBalancerTlsCertificates.
+func (c *Lightsail) GetLoadBalancerTlsCertificates(input *lightsail.GetLoadBalancerTlsCertificatesInput) (*lightsail.GetLoadBalancerTlsCertificatesOutput, error) {
+	c.inc("GetLoadBalancerTlsCertificates")
+	return c.svc.GetLoadBalancerTlsCertificates(input)
+}
+
+// GetLoadBalancerTlsCertificatesWithContext is a passthrough to the underlying GetLoadBalancerTlsCertificatesWithContext method.
+// It will increment the count of requests made to GetLoadBalancerTlsCertificates.
+func (c *Lightsail) GetLoadBalancerTlsCertificatesWithContext(ctx aws.Context, input *lightsail.GetLoadBalancerTlsCertificatesInput, opts ...request.Option) (*lightsail.GetLoadBalancerTlsCertificatesOutput, error) {
+	c.inc("GetLoadBalancerTlsCertificates")
+	return c.svc.GetLoadBalancerTlsCertificatesWithContext(ctx, input, opts...)
+}
+
+// GetLoadBalancersRequest is a passthrough to the underlying GetLoadBalancersRequest.
+// It will increment the count of requests made to GetLoadBalancers.
+func (c *Lightsail) GetLoadBalancersRequest(input *lightsail.GetLoadBalancersInput) (req *request.Request, output *lightsail.GetLoadBalancersOutput) {
+	c.inc("GetLoadBalancers")
+	return c.svc.GetLoadBalancersRequest(input)
+}
+
+// GetLoadBalancers is a passthrough to the underlying GetLoadBalancers method.
+// It will increment the count of requests made to GetLoadBalancers.
+func (c *Lightsail) GetLoadBalancers(input *lightsail.GetLoadBalancersInput) (*lightsail.GetLoadBalancersOutput, error) {
+	c.inc("GetLoadBalancers")
+	return c.svc.GetLoadBalancers(input)
+}
+
+// GetLoadBalancersWithContext is a passthrough to the underlying GetLoadBalancersWithContext method.
+// It will increment the count of requests made to GetLoadBalancers.
+func (c *Lightsail) GetLoadBalancersWithContext(ctx aws.Context, input *lightsail.GetLoadBalancersInput, opts ...request.Option) (*lightsail.GetLoadBalancersOutput, error) {
+	c.inc("GetLoadBalancers")
+	return c.svc.GetLoadBalancersWithContext(ctx, input, opts...)
 }
 
 // GetOperationRequest is a passthrough to the underlying GetOperationRequest.
@@ -1014,4 +1476,25 @@ func (c *Lightsail) UpdateDomainEntry(input *lightsail.UpdateDomainEntryInput) (
 func (c *Lightsail) UpdateDomainEntryWithContext(ctx aws.Context, input *lightsail.UpdateDomainEntryInput, opts ...request.Option) (*lightsail.UpdateDomainEntryOutput, error) {
 	c.inc("UpdateDomainEntry")
 	return c.svc.UpdateDomainEntryWithContext(ctx, input, opts...)
+}
+
+// UpdateLoadBalancerAttributeRequest is a passthrough to the underlying UpdateLoadBalancerAttributeRequest.
+// It will increment the count of requests made to UpdateLoadBalancerAttribute.
+func (c *Lightsail) UpdateLoadBalancerAttributeRequest(input *lightsail.UpdateLoadBalancerAttributeInput) (req *request.Request, output *lightsail.UpdateLoadBalancerAttributeOutput) {
+	c.inc("UpdateLoadBalancerAttribute")
+	return c.svc.UpdateLoadBalancerAttributeRequest(input)
+}
+
+// UpdateLoadBalancerAttribute is a passthrough to the underlying UpdateLoadBalancerAttribute method.
+// It will increment the count of requests made to UpdateLoadBalancerAttribute.
+func (c *Lightsail) UpdateLoadBalancerAttribute(input *lightsail.UpdateLoadBalancerAttributeInput) (*lightsail.UpdateLoadBalancerAttributeOutput, error) {
+	c.inc("UpdateLoadBalancerAttribute")
+	return c.svc.UpdateLoadBalancerAttribute(input)
+}
+
+// UpdateLoadBalancerAttributeWithContext is a passthrough to the underlying UpdateLoadBalancerAttributeWithContext method.
+// It will increment the count of requests made to UpdateLoadBalancerAttribute.
+func (c *Lightsail) UpdateLoadBalancerAttributeWithContext(ctx aws.Context, input *lightsail.UpdateLoadBalancerAttributeInput, opts ...request.Option) (*lightsail.UpdateLoadBalancerAttributeOutput, error) {
+	c.inc("UpdateLoadBalancerAttribute")
+	return c.svc.UpdateLoadBalancerAttributeWithContext(ctx, input, opts...)
 }

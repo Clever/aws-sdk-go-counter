@@ -29,6 +29,27 @@ func (c *EC2) AcceptReservedInstancesExchangeQuoteWithContext(ctx aws.Context, i
 	return c.svc.AcceptReservedInstancesExchangeQuoteWithContext(ctx, input, opts...)
 }
 
+// AcceptVpcEndpointConnectionsRequest is a passthrough to the underlying AcceptVpcEndpointConnectionsRequest.
+// It will increment the count of requests made to AcceptVpcEndpointConnections.
+func (c *EC2) AcceptVpcEndpointConnectionsRequest(input *ec2.AcceptVpcEndpointConnectionsInput) (req *request.Request, output *ec2.AcceptVpcEndpointConnectionsOutput) {
+	c.inc("AcceptVpcEndpointConnections")
+	return c.svc.AcceptVpcEndpointConnectionsRequest(input)
+}
+
+// AcceptVpcEndpointConnections is a passthrough to the underlying AcceptVpcEndpointConnections method.
+// It will increment the count of requests made to AcceptVpcEndpointConnections.
+func (c *EC2) AcceptVpcEndpointConnections(input *ec2.AcceptVpcEndpointConnectionsInput) (*ec2.AcceptVpcEndpointConnectionsOutput, error) {
+	c.inc("AcceptVpcEndpointConnections")
+	return c.svc.AcceptVpcEndpointConnections(input)
+}
+
+// AcceptVpcEndpointConnectionsWithContext is a passthrough to the underlying AcceptVpcEndpointConnectionsWithContext method.
+// It will increment the count of requests made to AcceptVpcEndpointConnections.
+func (c *EC2) AcceptVpcEndpointConnectionsWithContext(ctx aws.Context, input *ec2.AcceptVpcEndpointConnectionsInput, opts ...request.Option) (*ec2.AcceptVpcEndpointConnectionsOutput, error) {
+	c.inc("AcceptVpcEndpointConnections")
+	return c.svc.AcceptVpcEndpointConnectionsWithContext(ctx, input, opts...)
+}
+
 // AcceptVpcPeeringConnectionRequest is a passthrough to the underlying AcceptVpcPeeringConnectionRequest.
 // It will increment the count of requests made to AcceptVpcPeeringConnection.
 func (c *EC2) AcceptVpcPeeringConnectionRequest(input *ec2.AcceptVpcPeeringConnectionInput) (req *request.Request, output *ec2.AcceptVpcPeeringConnectionOutput) {
@@ -680,6 +701,27 @@ func (c *EC2) CreateCustomerGatewayWithContext(ctx aws.Context, input *ec2.Creat
 	return c.svc.CreateCustomerGatewayWithContext(ctx, input, opts...)
 }
 
+// CreateDefaultSubnetRequest is a passthrough to the underlying CreateDefaultSubnetRequest.
+// It will increment the count of requests made to CreateDefaultSubnet.
+func (c *EC2) CreateDefaultSubnetRequest(input *ec2.CreateDefaultSubnetInput) (req *request.Request, output *ec2.CreateDefaultSubnetOutput) {
+	c.inc("CreateDefaultSubnet")
+	return c.svc.CreateDefaultSubnetRequest(input)
+}
+
+// CreateDefaultSubnet is a passthrough to the underlying CreateDefaultSubnet method.
+// It will increment the count of requests made to CreateDefaultSubnet.
+func (c *EC2) CreateDefaultSubnet(input *ec2.CreateDefaultSubnetInput) (*ec2.CreateDefaultSubnetOutput, error) {
+	c.inc("CreateDefaultSubnet")
+	return c.svc.CreateDefaultSubnet(input)
+}
+
+// CreateDefaultSubnetWithContext is a passthrough to the underlying CreateDefaultSubnetWithContext method.
+// It will increment the count of requests made to CreateDefaultSubnet.
+func (c *EC2) CreateDefaultSubnetWithContext(ctx aws.Context, input *ec2.CreateDefaultSubnetInput, opts ...request.Option) (*ec2.CreateDefaultSubnetOutput, error) {
+	c.inc("CreateDefaultSubnet")
+	return c.svc.CreateDefaultSubnetWithContext(ctx, input, opts...)
+}
+
 // CreateDefaultVpcRequest is a passthrough to the underlying CreateDefaultVpcRequest.
 // It will increment the count of requests made to CreateDefaultVpc.
 func (c *EC2) CreateDefaultVpcRequest(input *ec2.CreateDefaultVpcInput) (req *request.Request, output *ec2.CreateDefaultVpcOutput) {
@@ -867,6 +909,48 @@ func (c *EC2) CreateKeyPair(input *ec2.CreateKeyPairInput) (*ec2.CreateKeyPairOu
 func (c *EC2) CreateKeyPairWithContext(ctx aws.Context, input *ec2.CreateKeyPairInput, opts ...request.Option) (*ec2.CreateKeyPairOutput, error) {
 	c.inc("CreateKeyPair")
 	return c.svc.CreateKeyPairWithContext(ctx, input, opts...)
+}
+
+// CreateLaunchTemplateRequest is a passthrough to the underlying CreateLaunchTemplateRequest.
+// It will increment the count of requests made to CreateLaunchTemplate.
+func (c *EC2) CreateLaunchTemplateRequest(input *ec2.CreateLaunchTemplateInput) (req *request.Request, output *ec2.CreateLaunchTemplateOutput) {
+	c.inc("CreateLaunchTemplate")
+	return c.svc.CreateLaunchTemplateRequest(input)
+}
+
+// CreateLaunchTemplate is a passthrough to the underlying CreateLaunchTemplate method.
+// It will increment the count of requests made to CreateLaunchTemplate.
+func (c *EC2) CreateLaunchTemplate(input *ec2.CreateLaunchTemplateInput) (*ec2.CreateLaunchTemplateOutput, error) {
+	c.inc("CreateLaunchTemplate")
+	return c.svc.CreateLaunchTemplate(input)
+}
+
+// CreateLaunchTemplateWithContext is a passthrough to the underlying CreateLaunchTemplateWithContext method.
+// It will increment the count of requests made to CreateLaunchTemplate.
+func (c *EC2) CreateLaunchTemplateWithContext(ctx aws.Context, input *ec2.CreateLaunchTemplateInput, opts ...request.Option) (*ec2.CreateLaunchTemplateOutput, error) {
+	c.inc("CreateLaunchTemplate")
+	return c.svc.CreateLaunchTemplateWithContext(ctx, input, opts...)
+}
+
+// CreateLaunchTemplateVersionRequest is a passthrough to the underlying CreateLaunchTemplateVersionRequest.
+// It will increment the count of requests made to CreateLaunchTemplateVersion.
+func (c *EC2) CreateLaunchTemplateVersionRequest(input *ec2.CreateLaunchTemplateVersionInput) (req *request.Request, output *ec2.CreateLaunchTemplateVersionOutput) {
+	c.inc("CreateLaunchTemplateVersion")
+	return c.svc.CreateLaunchTemplateVersionRequest(input)
+}
+
+// CreateLaunchTemplateVersion is a passthrough to the underlying CreateLaunchTemplateVersion method.
+// It will increment the count of requests made to CreateLaunchTemplateVersion.
+func (c *EC2) CreateLaunchTemplateVersion(input *ec2.CreateLaunchTemplateVersionInput) (*ec2.CreateLaunchTemplateVersionOutput, error) {
+	c.inc("CreateLaunchTemplateVersion")
+	return c.svc.CreateLaunchTemplateVersion(input)
+}
+
+// CreateLaunchTemplateVersionWithContext is a passthrough to the underlying CreateLaunchTemplateVersionWithContext method.
+// It will increment the count of requests made to CreateLaunchTemplateVersion.
+func (c *EC2) CreateLaunchTemplateVersionWithContext(ctx aws.Context, input *ec2.CreateLaunchTemplateVersionInput, opts ...request.Option) (*ec2.CreateLaunchTemplateVersionOutput, error) {
+	c.inc("CreateLaunchTemplateVersion")
+	return c.svc.CreateLaunchTemplateVersionWithContext(ctx, input, opts...)
 }
 
 // CreateNatGatewayRequest is a passthrough to the underlying CreateNatGatewayRequest.
@@ -1226,6 +1310,48 @@ func (c *EC2) CreateVpcEndpointWithContext(ctx aws.Context, input *ec2.CreateVpc
 	return c.svc.CreateVpcEndpointWithContext(ctx, input, opts...)
 }
 
+// CreateVpcEndpointConnectionNotificationRequest is a passthrough to the underlying CreateVpcEndpointConnectionNotificationRequest.
+// It will increment the count of requests made to CreateVpcEndpointConnectionNotification.
+func (c *EC2) CreateVpcEndpointConnectionNotificationRequest(input *ec2.CreateVpcEndpointConnectionNotificationInput) (req *request.Request, output *ec2.CreateVpcEndpointConnectionNotificationOutput) {
+	c.inc("CreateVpcEndpointConnectionNotification")
+	return c.svc.CreateVpcEndpointConnectionNotificationRequest(input)
+}
+
+// CreateVpcEndpointConnectionNotification is a passthrough to the underlying CreateVpcEndpointConnectionNotification method.
+// It will increment the count of requests made to CreateVpcEndpointConnectionNotification.
+func (c *EC2) CreateVpcEndpointConnectionNotification(input *ec2.CreateVpcEndpointConnectionNotificationInput) (*ec2.CreateVpcEndpointConnectionNotificationOutput, error) {
+	c.inc("CreateVpcEndpointConnectionNotification")
+	return c.svc.CreateVpcEndpointConnectionNotification(input)
+}
+
+// CreateVpcEndpointConnectionNotificationWithContext is a passthrough to the underlying CreateVpcEndpointConnectionNotificationWithContext method.
+// It will increment the count of requests made to CreateVpcEndpointConnectionNotification.
+func (c *EC2) CreateVpcEndpointConnectionNotificationWithContext(ctx aws.Context, input *ec2.CreateVpcEndpointConnectionNotificationInput, opts ...request.Option) (*ec2.CreateVpcEndpointConnectionNotificationOutput, error) {
+	c.inc("CreateVpcEndpointConnectionNotification")
+	return c.svc.CreateVpcEndpointConnectionNotificationWithContext(ctx, input, opts...)
+}
+
+// CreateVpcEndpointServiceConfigurationRequest is a passthrough to the underlying CreateVpcEndpointServiceConfigurationRequest.
+// It will increment the count of requests made to CreateVpcEndpointServiceConfiguration.
+func (c *EC2) CreateVpcEndpointServiceConfigurationRequest(input *ec2.CreateVpcEndpointServiceConfigurationInput) (req *request.Request, output *ec2.CreateVpcEndpointServiceConfigurationOutput) {
+	c.inc("CreateVpcEndpointServiceConfiguration")
+	return c.svc.CreateVpcEndpointServiceConfigurationRequest(input)
+}
+
+// CreateVpcEndpointServiceConfiguration is a passthrough to the underlying CreateVpcEndpointServiceConfiguration method.
+// It will increment the count of requests made to CreateVpcEndpointServiceConfiguration.
+func (c *EC2) CreateVpcEndpointServiceConfiguration(input *ec2.CreateVpcEndpointServiceConfigurationInput) (*ec2.CreateVpcEndpointServiceConfigurationOutput, error) {
+	c.inc("CreateVpcEndpointServiceConfiguration")
+	return c.svc.CreateVpcEndpointServiceConfiguration(input)
+}
+
+// CreateVpcEndpointServiceConfigurationWithContext is a passthrough to the underlying CreateVpcEndpointServiceConfigurationWithContext method.
+// It will increment the count of requests made to CreateVpcEndpointServiceConfiguration.
+func (c *EC2) CreateVpcEndpointServiceConfigurationWithContext(ctx aws.Context, input *ec2.CreateVpcEndpointServiceConfigurationInput, opts ...request.Option) (*ec2.CreateVpcEndpointServiceConfigurationOutput, error) {
+	c.inc("CreateVpcEndpointServiceConfiguration")
+	return c.svc.CreateVpcEndpointServiceConfigurationWithContext(ctx, input, opts...)
+}
+
 // CreateVpcPeeringConnectionRequest is a passthrough to the underlying CreateVpcPeeringConnectionRequest.
 // It will increment the count of requests made to CreateVpcPeeringConnection.
 func (c *EC2) CreateVpcPeeringConnectionRequest(input *ec2.CreateVpcPeeringConnectionInput) (req *request.Request, output *ec2.CreateVpcPeeringConnectionOutput) {
@@ -1455,6 +1581,48 @@ func (c *EC2) DeleteKeyPair(input *ec2.DeleteKeyPairInput) (*ec2.DeleteKeyPairOu
 func (c *EC2) DeleteKeyPairWithContext(ctx aws.Context, input *ec2.DeleteKeyPairInput, opts ...request.Option) (*ec2.DeleteKeyPairOutput, error) {
 	c.inc("DeleteKeyPair")
 	return c.svc.DeleteKeyPairWithContext(ctx, input, opts...)
+}
+
+// DeleteLaunchTemplateRequest is a passthrough to the underlying DeleteLaunchTemplateRequest.
+// It will increment the count of requests made to DeleteLaunchTemplate.
+func (c *EC2) DeleteLaunchTemplateRequest(input *ec2.DeleteLaunchTemplateInput) (req *request.Request, output *ec2.DeleteLaunchTemplateOutput) {
+	c.inc("DeleteLaunchTemplate")
+	return c.svc.DeleteLaunchTemplateRequest(input)
+}
+
+// DeleteLaunchTemplate is a passthrough to the underlying DeleteLaunchTemplate method.
+// It will increment the count of requests made to DeleteLaunchTemplate.
+func (c *EC2) DeleteLaunchTemplate(input *ec2.DeleteLaunchTemplateInput) (*ec2.DeleteLaunchTemplateOutput, error) {
+	c.inc("DeleteLaunchTemplate")
+	return c.svc.DeleteLaunchTemplate(input)
+}
+
+// DeleteLaunchTemplateWithContext is a passthrough to the underlying DeleteLaunchTemplateWithContext method.
+// It will increment the count of requests made to DeleteLaunchTemplate.
+func (c *EC2) DeleteLaunchTemplateWithContext(ctx aws.Context, input *ec2.DeleteLaunchTemplateInput, opts ...request.Option) (*ec2.DeleteLaunchTemplateOutput, error) {
+	c.inc("DeleteLaunchTemplate")
+	return c.svc.DeleteLaunchTemplateWithContext(ctx, input, opts...)
+}
+
+// DeleteLaunchTemplateVersionsRequest is a passthrough to the underlying DeleteLaunchTemplateVersionsRequest.
+// It will increment the count of requests made to DeleteLaunchTemplateVersions.
+func (c *EC2) DeleteLaunchTemplateVersionsRequest(input *ec2.DeleteLaunchTemplateVersionsInput) (req *request.Request, output *ec2.DeleteLaunchTemplateVersionsOutput) {
+	c.inc("DeleteLaunchTemplateVersions")
+	return c.svc.DeleteLaunchTemplateVersionsRequest(input)
+}
+
+// DeleteLaunchTemplateVersions is a passthrough to the underlying DeleteLaunchTemplateVersions method.
+// It will increment the count of requests made to DeleteLaunchTemplateVersions.
+func (c *EC2) DeleteLaunchTemplateVersions(input *ec2.DeleteLaunchTemplateVersionsInput) (*ec2.DeleteLaunchTemplateVersionsOutput, error) {
+	c.inc("DeleteLaunchTemplateVersions")
+	return c.svc.DeleteLaunchTemplateVersions(input)
+}
+
+// DeleteLaunchTemplateVersionsWithContext is a passthrough to the underlying DeleteLaunchTemplateVersionsWithContext method.
+// It will increment the count of requests made to DeleteLaunchTemplateVersions.
+func (c *EC2) DeleteLaunchTemplateVersionsWithContext(ctx aws.Context, input *ec2.DeleteLaunchTemplateVersionsInput, opts ...request.Option) (*ec2.DeleteLaunchTemplateVersionsOutput, error) {
+	c.inc("DeleteLaunchTemplateVersions")
+	return c.svc.DeleteLaunchTemplateVersionsWithContext(ctx, input, opts...)
 }
 
 // DeleteNatGatewayRequest is a passthrough to the underlying DeleteNatGatewayRequest.
@@ -1770,6 +1938,48 @@ func (c *EC2) DeleteVpc(input *ec2.DeleteVpcInput) (*ec2.DeleteVpcOutput, error)
 func (c *EC2) DeleteVpcWithContext(ctx aws.Context, input *ec2.DeleteVpcInput, opts ...request.Option) (*ec2.DeleteVpcOutput, error) {
 	c.inc("DeleteVpc")
 	return c.svc.DeleteVpcWithContext(ctx, input, opts...)
+}
+
+// DeleteVpcEndpointConnectionNotificationsRequest is a passthrough to the underlying DeleteVpcEndpointConnectionNotificationsRequest.
+// It will increment the count of requests made to DeleteVpcEndpointConnectionNotifications.
+func (c *EC2) DeleteVpcEndpointConnectionNotificationsRequest(input *ec2.DeleteVpcEndpointConnectionNotificationsInput) (req *request.Request, output *ec2.DeleteVpcEndpointConnectionNotificationsOutput) {
+	c.inc("DeleteVpcEndpointConnectionNotifications")
+	return c.svc.DeleteVpcEndpointConnectionNotificationsRequest(input)
+}
+
+// DeleteVpcEndpointConnectionNotifications is a passthrough to the underlying DeleteVpcEndpointConnectionNotifications method.
+// It will increment the count of requests made to DeleteVpcEndpointConnectionNotifications.
+func (c *EC2) DeleteVpcEndpointConnectionNotifications(input *ec2.DeleteVpcEndpointConnectionNotificationsInput) (*ec2.DeleteVpcEndpointConnectionNotificationsOutput, error) {
+	c.inc("DeleteVpcEndpointConnectionNotifications")
+	return c.svc.DeleteVpcEndpointConnectionNotifications(input)
+}
+
+// DeleteVpcEndpointConnectionNotificationsWithContext is a passthrough to the underlying DeleteVpcEndpointConnectionNotificationsWithContext method.
+// It will increment the count of requests made to DeleteVpcEndpointConnectionNotifications.
+func (c *EC2) DeleteVpcEndpointConnectionNotificationsWithContext(ctx aws.Context, input *ec2.DeleteVpcEndpointConnectionNotificationsInput, opts ...request.Option) (*ec2.DeleteVpcEndpointConnectionNotificationsOutput, error) {
+	c.inc("DeleteVpcEndpointConnectionNotifications")
+	return c.svc.DeleteVpcEndpointConnectionNotificationsWithContext(ctx, input, opts...)
+}
+
+// DeleteVpcEndpointServiceConfigurationsRequest is a passthrough to the underlying DeleteVpcEndpointServiceConfigurationsRequest.
+// It will increment the count of requests made to DeleteVpcEndpointServiceConfigurations.
+func (c *EC2) DeleteVpcEndpointServiceConfigurationsRequest(input *ec2.DeleteVpcEndpointServiceConfigurationsInput) (req *request.Request, output *ec2.DeleteVpcEndpointServiceConfigurationsOutput) {
+	c.inc("DeleteVpcEndpointServiceConfigurations")
+	return c.svc.DeleteVpcEndpointServiceConfigurationsRequest(input)
+}
+
+// DeleteVpcEndpointServiceConfigurations is a passthrough to the underlying DeleteVpcEndpointServiceConfigurations method.
+// It will increment the count of requests made to DeleteVpcEndpointServiceConfigurations.
+func (c *EC2) DeleteVpcEndpointServiceConfigurations(input *ec2.DeleteVpcEndpointServiceConfigurationsInput) (*ec2.DeleteVpcEndpointServiceConfigurationsOutput, error) {
+	c.inc("DeleteVpcEndpointServiceConfigurations")
+	return c.svc.DeleteVpcEndpointServiceConfigurations(input)
+}
+
+// DeleteVpcEndpointServiceConfigurationsWithContext is a passthrough to the underlying DeleteVpcEndpointServiceConfigurationsWithContext method.
+// It will increment the count of requests made to DeleteVpcEndpointServiceConfigurations.
+func (c *EC2) DeleteVpcEndpointServiceConfigurationsWithContext(ctx aws.Context, input *ec2.DeleteVpcEndpointServiceConfigurationsInput, opts ...request.Option) (*ec2.DeleteVpcEndpointServiceConfigurationsOutput, error) {
+	c.inc("DeleteVpcEndpointServiceConfigurations")
+	return c.svc.DeleteVpcEndpointServiceConfigurationsWithContext(ctx, input, opts...)
 }
 
 // DeleteVpcEndpointsRequest is a passthrough to the underlying DeleteVpcEndpointsRequest.
@@ -2423,6 +2633,27 @@ func (c *EC2) DescribeInstanceAttributeWithContext(ctx aws.Context, input *ec2.D
 	return c.svc.DescribeInstanceAttributeWithContext(ctx, input, opts...)
 }
 
+// DescribeInstanceCreditSpecificationsRequest is a passthrough to the underlying DescribeInstanceCreditSpecificationsRequest.
+// It will increment the count of requests made to DescribeInstanceCreditSpecifications.
+func (c *EC2) DescribeInstanceCreditSpecificationsRequest(input *ec2.DescribeInstanceCreditSpecificationsInput) (req *request.Request, output *ec2.DescribeInstanceCreditSpecificationsOutput) {
+	c.inc("DescribeInstanceCreditSpecifications")
+	return c.svc.DescribeInstanceCreditSpecificationsRequest(input)
+}
+
+// DescribeInstanceCreditSpecifications is a passthrough to the underlying DescribeInstanceCreditSpecifications method.
+// It will increment the count of requests made to DescribeInstanceCreditSpecifications.
+func (c *EC2) DescribeInstanceCreditSpecifications(input *ec2.DescribeInstanceCreditSpecificationsInput) (*ec2.DescribeInstanceCreditSpecificationsOutput, error) {
+	c.inc("DescribeInstanceCreditSpecifications")
+	return c.svc.DescribeInstanceCreditSpecifications(input)
+}
+
+// DescribeInstanceCreditSpecificationsWithContext is a passthrough to the underlying DescribeInstanceCreditSpecificationsWithContext method.
+// It will increment the count of requests made to DescribeInstanceCreditSpecifications.
+func (c *EC2) DescribeInstanceCreditSpecificationsWithContext(ctx aws.Context, input *ec2.DescribeInstanceCreditSpecificationsInput, opts ...request.Option) (*ec2.DescribeInstanceCreditSpecificationsOutput, error) {
+	c.inc("DescribeInstanceCreditSpecifications")
+	return c.svc.DescribeInstanceCreditSpecificationsWithContext(ctx, input, opts...)
+}
+
 // DescribeInstanceStatusRequest is a passthrough to the underlying DescribeInstanceStatusRequest.
 // It will increment the count of requests made to DescribeInstanceStatus.
 func (c *EC2) DescribeInstanceStatusRequest(input *ec2.DescribeInstanceStatusInput) (req *request.Request, output *ec2.DescribeInstanceStatusOutput) {
@@ -2543,6 +2774,48 @@ func (c *EC2) DescribeKeyPairs(input *ec2.DescribeKeyPairsInput) (*ec2.DescribeK
 func (c *EC2) DescribeKeyPairsWithContext(ctx aws.Context, input *ec2.DescribeKeyPairsInput, opts ...request.Option) (*ec2.DescribeKeyPairsOutput, error) {
 	c.inc("DescribeKeyPairs")
 	return c.svc.DescribeKeyPairsWithContext(ctx, input, opts...)
+}
+
+// DescribeLaunchTemplateVersionsRequest is a passthrough to the underlying DescribeLaunchTemplateVersionsRequest.
+// It will increment the count of requests made to DescribeLaunchTemplateVersions.
+func (c *EC2) DescribeLaunchTemplateVersionsRequest(input *ec2.DescribeLaunchTemplateVersionsInput) (req *request.Request, output *ec2.DescribeLaunchTemplateVersionsOutput) {
+	c.inc("DescribeLaunchTemplateVersions")
+	return c.svc.DescribeLaunchTemplateVersionsRequest(input)
+}
+
+// DescribeLaunchTemplateVersions is a passthrough to the underlying DescribeLaunchTemplateVersions method.
+// It will increment the count of requests made to DescribeLaunchTemplateVersions.
+func (c *EC2) DescribeLaunchTemplateVersions(input *ec2.DescribeLaunchTemplateVersionsInput) (*ec2.DescribeLaunchTemplateVersionsOutput, error) {
+	c.inc("DescribeLaunchTemplateVersions")
+	return c.svc.DescribeLaunchTemplateVersions(input)
+}
+
+// DescribeLaunchTemplateVersionsWithContext is a passthrough to the underlying DescribeLaunchTemplateVersionsWithContext method.
+// It will increment the count of requests made to DescribeLaunchTemplateVersions.
+func (c *EC2) DescribeLaunchTemplateVersionsWithContext(ctx aws.Context, input *ec2.DescribeLaunchTemplateVersionsInput, opts ...request.Option) (*ec2.DescribeLaunchTemplateVersionsOutput, error) {
+	c.inc("DescribeLaunchTemplateVersions")
+	return c.svc.DescribeLaunchTemplateVersionsWithContext(ctx, input, opts...)
+}
+
+// DescribeLaunchTemplatesRequest is a passthrough to the underlying DescribeLaunchTemplatesRequest.
+// It will increment the count of requests made to DescribeLaunchTemplates.
+func (c *EC2) DescribeLaunchTemplatesRequest(input *ec2.DescribeLaunchTemplatesInput) (req *request.Request, output *ec2.DescribeLaunchTemplatesOutput) {
+	c.inc("DescribeLaunchTemplates")
+	return c.svc.DescribeLaunchTemplatesRequest(input)
+}
+
+// DescribeLaunchTemplates is a passthrough to the underlying DescribeLaunchTemplates method.
+// It will increment the count of requests made to DescribeLaunchTemplates.
+func (c *EC2) DescribeLaunchTemplates(input *ec2.DescribeLaunchTemplatesInput) (*ec2.DescribeLaunchTemplatesOutput, error) {
+	c.inc("DescribeLaunchTemplates")
+	return c.svc.DescribeLaunchTemplates(input)
+}
+
+// DescribeLaunchTemplatesWithContext is a passthrough to the underlying DescribeLaunchTemplatesWithContext method.
+// It will increment the count of requests made to DescribeLaunchTemplates.
+func (c *EC2) DescribeLaunchTemplatesWithContext(ctx aws.Context, input *ec2.DescribeLaunchTemplatesInput, opts ...request.Option) (*ec2.DescribeLaunchTemplatesOutput, error) {
+	c.inc("DescribeLaunchTemplates")
+	return c.svc.DescribeLaunchTemplatesWithContext(ctx, input, opts...)
 }
 
 // DescribeMovingAddressesRequest is a passthrough to the underlying DescribeMovingAddressesRequest.
@@ -3472,6 +3745,90 @@ func (c *EC2) DescribeVpcClassicLinkDnsSupportWithContext(ctx aws.Context, input
 	return c.svc.DescribeVpcClassicLinkDnsSupportWithContext(ctx, input, opts...)
 }
 
+// DescribeVpcEndpointConnectionNotificationsRequest is a passthrough to the underlying DescribeVpcEndpointConnectionNotificationsRequest.
+// It will increment the count of requests made to DescribeVpcEndpointConnectionNotifications.
+func (c *EC2) DescribeVpcEndpointConnectionNotificationsRequest(input *ec2.DescribeVpcEndpointConnectionNotificationsInput) (req *request.Request, output *ec2.DescribeVpcEndpointConnectionNotificationsOutput) {
+	c.inc("DescribeVpcEndpointConnectionNotifications")
+	return c.svc.DescribeVpcEndpointConnectionNotificationsRequest(input)
+}
+
+// DescribeVpcEndpointConnectionNotifications is a passthrough to the underlying DescribeVpcEndpointConnectionNotifications method.
+// It will increment the count of requests made to DescribeVpcEndpointConnectionNotifications.
+func (c *EC2) DescribeVpcEndpointConnectionNotifications(input *ec2.DescribeVpcEndpointConnectionNotificationsInput) (*ec2.DescribeVpcEndpointConnectionNotificationsOutput, error) {
+	c.inc("DescribeVpcEndpointConnectionNotifications")
+	return c.svc.DescribeVpcEndpointConnectionNotifications(input)
+}
+
+// DescribeVpcEndpointConnectionNotificationsWithContext is a passthrough to the underlying DescribeVpcEndpointConnectionNotificationsWithContext method.
+// It will increment the count of requests made to DescribeVpcEndpointConnectionNotifications.
+func (c *EC2) DescribeVpcEndpointConnectionNotificationsWithContext(ctx aws.Context, input *ec2.DescribeVpcEndpointConnectionNotificationsInput, opts ...request.Option) (*ec2.DescribeVpcEndpointConnectionNotificationsOutput, error) {
+	c.inc("DescribeVpcEndpointConnectionNotifications")
+	return c.svc.DescribeVpcEndpointConnectionNotificationsWithContext(ctx, input, opts...)
+}
+
+// DescribeVpcEndpointConnectionsRequest is a passthrough to the underlying DescribeVpcEndpointConnectionsRequest.
+// It will increment the count of requests made to DescribeVpcEndpointConnections.
+func (c *EC2) DescribeVpcEndpointConnectionsRequest(input *ec2.DescribeVpcEndpointConnectionsInput) (req *request.Request, output *ec2.DescribeVpcEndpointConnectionsOutput) {
+	c.inc("DescribeVpcEndpointConnections")
+	return c.svc.DescribeVpcEndpointConnectionsRequest(input)
+}
+
+// DescribeVpcEndpointConnections is a passthrough to the underlying DescribeVpcEndpointConnections method.
+// It will increment the count of requests made to DescribeVpcEndpointConnections.
+func (c *EC2) DescribeVpcEndpointConnections(input *ec2.DescribeVpcEndpointConnectionsInput) (*ec2.DescribeVpcEndpointConnectionsOutput, error) {
+	c.inc("DescribeVpcEndpointConnections")
+	return c.svc.DescribeVpcEndpointConnections(input)
+}
+
+// DescribeVpcEndpointConnectionsWithContext is a passthrough to the underlying DescribeVpcEndpointConnectionsWithContext method.
+// It will increment the count of requests made to DescribeVpcEndpointConnections.
+func (c *EC2) DescribeVpcEndpointConnectionsWithContext(ctx aws.Context, input *ec2.DescribeVpcEndpointConnectionsInput, opts ...request.Option) (*ec2.DescribeVpcEndpointConnectionsOutput, error) {
+	c.inc("DescribeVpcEndpointConnections")
+	return c.svc.DescribeVpcEndpointConnectionsWithContext(ctx, input, opts...)
+}
+
+// DescribeVpcEndpointServiceConfigurationsRequest is a passthrough to the underlying DescribeVpcEndpointServiceConfigurationsRequest.
+// It will increment the count of requests made to DescribeVpcEndpointServiceConfigurations.
+func (c *EC2) DescribeVpcEndpointServiceConfigurationsRequest(input *ec2.DescribeVpcEndpointServiceConfigurationsInput) (req *request.Request, output *ec2.DescribeVpcEndpointServiceConfigurationsOutput) {
+	c.inc("DescribeVpcEndpointServiceConfigurations")
+	return c.svc.DescribeVpcEndpointServiceConfigurationsRequest(input)
+}
+
+// DescribeVpcEndpointServiceConfigurations is a passthrough to the underlying DescribeVpcEndpointServiceConfigurations method.
+// It will increment the count of requests made to DescribeVpcEndpointServiceConfigurations.
+func (c *EC2) DescribeVpcEndpointServiceConfigurations(input *ec2.DescribeVpcEndpointServiceConfigurationsInput) (*ec2.DescribeVpcEndpointServiceConfigurationsOutput, error) {
+	c.inc("DescribeVpcEndpointServiceConfigurations")
+	return c.svc.DescribeVpcEndpointServiceConfigurations(input)
+}
+
+// DescribeVpcEndpointServiceConfigurationsWithContext is a passthrough to the underlying DescribeVpcEndpointServiceConfigurationsWithContext method.
+// It will increment the count of requests made to DescribeVpcEndpointServiceConfigurations.
+func (c *EC2) DescribeVpcEndpointServiceConfigurationsWithContext(ctx aws.Context, input *ec2.DescribeVpcEndpointServiceConfigurationsInput, opts ...request.Option) (*ec2.DescribeVpcEndpointServiceConfigurationsOutput, error) {
+	c.inc("DescribeVpcEndpointServiceConfigurations")
+	return c.svc.DescribeVpcEndpointServiceConfigurationsWithContext(ctx, input, opts...)
+}
+
+// DescribeVpcEndpointServicePermissionsRequest is a passthrough to the underlying DescribeVpcEndpointServicePermissionsRequest.
+// It will increment the count of requests made to DescribeVpcEndpointServicePermissions.
+func (c *EC2) DescribeVpcEndpointServicePermissionsRequest(input *ec2.DescribeVpcEndpointServicePermissionsInput) (req *request.Request, output *ec2.DescribeVpcEndpointServicePermissionsOutput) {
+	c.inc("DescribeVpcEndpointServicePermissions")
+	return c.svc.DescribeVpcEndpointServicePermissionsRequest(input)
+}
+
+// DescribeVpcEndpointServicePermissions is a passthrough to the underlying DescribeVpcEndpointServicePermissions method.
+// It will increment the count of requests made to DescribeVpcEndpointServicePermissions.
+func (c *EC2) DescribeVpcEndpointServicePermissions(input *ec2.DescribeVpcEndpointServicePermissionsInput) (*ec2.DescribeVpcEndpointServicePermissionsOutput, error) {
+	c.inc("DescribeVpcEndpointServicePermissions")
+	return c.svc.DescribeVpcEndpointServicePermissions(input)
+}
+
+// DescribeVpcEndpointServicePermissionsWithContext is a passthrough to the underlying DescribeVpcEndpointServicePermissionsWithContext method.
+// It will increment the count of requests made to DescribeVpcEndpointServicePermissions.
+func (c *EC2) DescribeVpcEndpointServicePermissionsWithContext(ctx aws.Context, input *ec2.DescribeVpcEndpointServicePermissionsInput, opts ...request.Option) (*ec2.DescribeVpcEndpointServicePermissionsOutput, error) {
+	c.inc("DescribeVpcEndpointServicePermissions")
+	return c.svc.DescribeVpcEndpointServicePermissionsWithContext(ctx, input, opts...)
+}
+
 // DescribeVpcEndpointServicesRequest is a passthrough to the underlying DescribeVpcEndpointServicesRequest.
 // It will increment the count of requests made to DescribeVpcEndpointServices.
 func (c *EC2) DescribeVpcEndpointServicesRequest(input *ec2.DescribeVpcEndpointServicesInput) (req *request.Request, output *ec2.DescribeVpcEndpointServicesOutput) {
@@ -4018,6 +4375,27 @@ func (c *EC2) GetHostReservationPurchasePreviewWithContext(ctx aws.Context, inpu
 	return c.svc.GetHostReservationPurchasePreviewWithContext(ctx, input, opts...)
 }
 
+// GetLaunchTemplateDataRequest is a passthrough to the underlying GetLaunchTemplateDataRequest.
+// It will increment the count of requests made to GetLaunchTemplateData.
+func (c *EC2) GetLaunchTemplateDataRequest(input *ec2.GetLaunchTemplateDataInput) (req *request.Request, output *ec2.GetLaunchTemplateDataOutput) {
+	c.inc("GetLaunchTemplateData")
+	return c.svc.GetLaunchTemplateDataRequest(input)
+}
+
+// GetLaunchTemplateData is a passthrough to the underlying GetLaunchTemplateData method.
+// It will increment the count of requests made to GetLaunchTemplateData.
+func (c *EC2) GetLaunchTemplateData(input *ec2.GetLaunchTemplateDataInput) (*ec2.GetLaunchTemplateDataOutput, error) {
+	c.inc("GetLaunchTemplateData")
+	return c.svc.GetLaunchTemplateData(input)
+}
+
+// GetLaunchTemplateDataWithContext is a passthrough to the underlying GetLaunchTemplateDataWithContext method.
+// It will increment the count of requests made to GetLaunchTemplateData.
+func (c *EC2) GetLaunchTemplateDataWithContext(ctx aws.Context, input *ec2.GetLaunchTemplateDataInput, opts ...request.Option) (*ec2.GetLaunchTemplateDataOutput, error) {
+	c.inc("GetLaunchTemplateData")
+	return c.svc.GetLaunchTemplateDataWithContext(ctx, input, opts...)
+}
+
 // GetPasswordDataRequest is a passthrough to the underlying GetPasswordDataRequest.
 // It will increment the count of requests made to GetPasswordData.
 func (c *EC2) GetPasswordDataRequest(input *ec2.GetPasswordDataInput) (req *request.Request, output *ec2.GetPasswordDataOutput) {
@@ -4291,6 +4669,27 @@ func (c *EC2) ModifyInstanceAttributeWithContext(ctx aws.Context, input *ec2.Mod
 	return c.svc.ModifyInstanceAttributeWithContext(ctx, input, opts...)
 }
 
+// ModifyInstanceCreditSpecificationRequest is a passthrough to the underlying ModifyInstanceCreditSpecificationRequest.
+// It will increment the count of requests made to ModifyInstanceCreditSpecification.
+func (c *EC2) ModifyInstanceCreditSpecificationRequest(input *ec2.ModifyInstanceCreditSpecificationInput) (req *request.Request, output *ec2.ModifyInstanceCreditSpecificationOutput) {
+	c.inc("ModifyInstanceCreditSpecification")
+	return c.svc.ModifyInstanceCreditSpecificationRequest(input)
+}
+
+// ModifyInstanceCreditSpecification is a passthrough to the underlying ModifyInstanceCreditSpecification method.
+// It will increment the count of requests made to ModifyInstanceCreditSpecification.
+func (c *EC2) ModifyInstanceCreditSpecification(input *ec2.ModifyInstanceCreditSpecificationInput) (*ec2.ModifyInstanceCreditSpecificationOutput, error) {
+	c.inc("ModifyInstanceCreditSpecification")
+	return c.svc.ModifyInstanceCreditSpecification(input)
+}
+
+// ModifyInstanceCreditSpecificationWithContext is a passthrough to the underlying ModifyInstanceCreditSpecificationWithContext method.
+// It will increment the count of requests made to ModifyInstanceCreditSpecification.
+func (c *EC2) ModifyInstanceCreditSpecificationWithContext(ctx aws.Context, input *ec2.ModifyInstanceCreditSpecificationInput, opts ...request.Option) (*ec2.ModifyInstanceCreditSpecificationOutput, error) {
+	c.inc("ModifyInstanceCreditSpecification")
+	return c.svc.ModifyInstanceCreditSpecificationWithContext(ctx, input, opts...)
+}
+
 // ModifyInstancePlacementRequest is a passthrough to the underlying ModifyInstancePlacementRequest.
 // It will increment the count of requests made to ModifyInstancePlacement.
 func (c *EC2) ModifyInstancePlacementRequest(input *ec2.ModifyInstancePlacementInput) (req *request.Request, output *ec2.ModifyInstancePlacementOutput) {
@@ -4310,6 +4709,27 @@ func (c *EC2) ModifyInstancePlacement(input *ec2.ModifyInstancePlacementInput) (
 func (c *EC2) ModifyInstancePlacementWithContext(ctx aws.Context, input *ec2.ModifyInstancePlacementInput, opts ...request.Option) (*ec2.ModifyInstancePlacementOutput, error) {
 	c.inc("ModifyInstancePlacement")
 	return c.svc.ModifyInstancePlacementWithContext(ctx, input, opts...)
+}
+
+// ModifyLaunchTemplateRequest is a passthrough to the underlying ModifyLaunchTemplateRequest.
+// It will increment the count of requests made to ModifyLaunchTemplate.
+func (c *EC2) ModifyLaunchTemplateRequest(input *ec2.ModifyLaunchTemplateInput) (req *request.Request, output *ec2.ModifyLaunchTemplateOutput) {
+	c.inc("ModifyLaunchTemplate")
+	return c.svc.ModifyLaunchTemplateRequest(input)
+}
+
+// ModifyLaunchTemplate is a passthrough to the underlying ModifyLaunchTemplate method.
+// It will increment the count of requests made to ModifyLaunchTemplate.
+func (c *EC2) ModifyLaunchTemplate(input *ec2.ModifyLaunchTemplateInput) (*ec2.ModifyLaunchTemplateOutput, error) {
+	c.inc("ModifyLaunchTemplate")
+	return c.svc.ModifyLaunchTemplate(input)
+}
+
+// ModifyLaunchTemplateWithContext is a passthrough to the underlying ModifyLaunchTemplateWithContext method.
+// It will increment the count of requests made to ModifyLaunchTemplate.
+func (c *EC2) ModifyLaunchTemplateWithContext(ctx aws.Context, input *ec2.ModifyLaunchTemplateInput, opts ...request.Option) (*ec2.ModifyLaunchTemplateOutput, error) {
+	c.inc("ModifyLaunchTemplate")
+	return c.svc.ModifyLaunchTemplateWithContext(ctx, input, opts...)
 }
 
 // ModifyNetworkInterfaceAttributeRequest is a passthrough to the underlying ModifyNetworkInterfaceAttributeRequest.
@@ -4501,6 +4921,69 @@ func (c *EC2) ModifyVpcEndpointWithContext(ctx aws.Context, input *ec2.ModifyVpc
 	return c.svc.ModifyVpcEndpointWithContext(ctx, input, opts...)
 }
 
+// ModifyVpcEndpointConnectionNotificationRequest is a passthrough to the underlying ModifyVpcEndpointConnectionNotificationRequest.
+// It will increment the count of requests made to ModifyVpcEndpointConnectionNotification.
+func (c *EC2) ModifyVpcEndpointConnectionNotificationRequest(input *ec2.ModifyVpcEndpointConnectionNotificationInput) (req *request.Request, output *ec2.ModifyVpcEndpointConnectionNotificationOutput) {
+	c.inc("ModifyVpcEndpointConnectionNotification")
+	return c.svc.ModifyVpcEndpointConnectionNotificationRequest(input)
+}
+
+// ModifyVpcEndpointConnectionNotification is a passthrough to the underlying ModifyVpcEndpointConnectionNotification method.
+// It will increment the count of requests made to ModifyVpcEndpointConnectionNotification.
+func (c *EC2) ModifyVpcEndpointConnectionNotification(input *ec2.ModifyVpcEndpointConnectionNotificationInput) (*ec2.ModifyVpcEndpointConnectionNotificationOutput, error) {
+	c.inc("ModifyVpcEndpointConnectionNotification")
+	return c.svc.ModifyVpcEndpointConnectionNotification(input)
+}
+
+// ModifyVpcEndpointConnectionNotificationWithContext is a passthrough to the underlying ModifyVpcEndpointConnectionNotificationWithContext method.
+// It will increment the count of requests made to ModifyVpcEndpointConnectionNotification.
+func (c *EC2) ModifyVpcEndpointConnectionNotificationWithContext(ctx aws.Context, input *ec2.ModifyVpcEndpointConnectionNotificationInput, opts ...request.Option) (*ec2.ModifyVpcEndpointConnectionNotificationOutput, error) {
+	c.inc("ModifyVpcEndpointConnectionNotification")
+	return c.svc.ModifyVpcEndpointConnectionNotificationWithContext(ctx, input, opts...)
+}
+
+// ModifyVpcEndpointServiceConfigurationRequest is a passthrough to the underlying ModifyVpcEndpointServiceConfigurationRequest.
+// It will increment the count of requests made to ModifyVpcEndpointServiceConfiguration.
+func (c *EC2) ModifyVpcEndpointServiceConfigurationRequest(input *ec2.ModifyVpcEndpointServiceConfigurationInput) (req *request.Request, output *ec2.ModifyVpcEndpointServiceConfigurationOutput) {
+	c.inc("ModifyVpcEndpointServiceConfiguration")
+	return c.svc.ModifyVpcEndpointServiceConfigurationRequest(input)
+}
+
+// ModifyVpcEndpointServiceConfiguration is a passthrough to the underlying ModifyVpcEndpointServiceConfiguration method.
+// It will increment the count of requests made to ModifyVpcEndpointServiceConfiguration.
+func (c *EC2) ModifyVpcEndpointServiceConfiguration(input *ec2.ModifyVpcEndpointServiceConfigurationInput) (*ec2.ModifyVpcEndpointServiceConfigurationOutput, error) {
+	c.inc("ModifyVpcEndpointServiceConfiguration")
+	return c.svc.ModifyVpcEndpointServiceConfiguration(input)
+}
+
+// ModifyVpcEndpointServiceConfigurationWithContext is a passthrough to the underlying ModifyVpcEndpointServiceConfigurationWithContext method.
+// It will increment the count of requests made to ModifyVpcEndpointServiceConfiguration.
+func (c *EC2) ModifyVpcEndpointServiceConfigurationWithContext(ctx aws.Context, input *ec2.ModifyVpcEndpointServiceConfigurationInput, opts ...request.Option) (*ec2.ModifyVpcEndpointServiceConfigurationOutput, error) {
+	c.inc("ModifyVpcEndpointServiceConfiguration")
+	return c.svc.ModifyVpcEndpointServiceConfigurationWithContext(ctx, input, opts...)
+}
+
+// ModifyVpcEndpointServicePermissionsRequest is a passthrough to the underlying ModifyVpcEndpointServicePermissionsRequest.
+// It will increment the count of requests made to ModifyVpcEndpointServicePermissions.
+func (c *EC2) ModifyVpcEndpointServicePermissionsRequest(input *ec2.ModifyVpcEndpointServicePermissionsInput) (req *request.Request, output *ec2.ModifyVpcEndpointServicePermissionsOutput) {
+	c.inc("ModifyVpcEndpointServicePermissions")
+	return c.svc.ModifyVpcEndpointServicePermissionsRequest(input)
+}
+
+// ModifyVpcEndpointServicePermissions is a passthrough to the underlying ModifyVpcEndpointServicePermissions method.
+// It will increment the count of requests made to ModifyVpcEndpointServicePermissions.
+func (c *EC2) ModifyVpcEndpointServicePermissions(input *ec2.ModifyVpcEndpointServicePermissionsInput) (*ec2.ModifyVpcEndpointServicePermissionsOutput, error) {
+	c.inc("ModifyVpcEndpointServicePermissions")
+	return c.svc.ModifyVpcEndpointServicePermissions(input)
+}
+
+// ModifyVpcEndpointServicePermissionsWithContext is a passthrough to the underlying ModifyVpcEndpointServicePermissionsWithContext method.
+// It will increment the count of requests made to ModifyVpcEndpointServicePermissions.
+func (c *EC2) ModifyVpcEndpointServicePermissionsWithContext(ctx aws.Context, input *ec2.ModifyVpcEndpointServicePermissionsInput, opts ...request.Option) (*ec2.ModifyVpcEndpointServicePermissionsOutput, error) {
+	c.inc("ModifyVpcEndpointServicePermissions")
+	return c.svc.ModifyVpcEndpointServicePermissionsWithContext(ctx, input, opts...)
+}
+
 // ModifyVpcPeeringConnectionOptionsRequest is a passthrough to the underlying ModifyVpcPeeringConnectionOptionsRequest.
 // It will increment the count of requests made to ModifyVpcPeeringConnectionOptions.
 func (c *EC2) ModifyVpcPeeringConnectionOptionsRequest(input *ec2.ModifyVpcPeeringConnectionOptionsInput) (req *request.Request, output *ec2.ModifyVpcPeeringConnectionOptionsOutput) {
@@ -4688,6 +5171,27 @@ func (c *EC2) RegisterImage(input *ec2.RegisterImageInput) (*ec2.RegisterImageOu
 func (c *EC2) RegisterImageWithContext(ctx aws.Context, input *ec2.RegisterImageInput, opts ...request.Option) (*ec2.RegisterImageOutput, error) {
 	c.inc("RegisterImage")
 	return c.svc.RegisterImageWithContext(ctx, input, opts...)
+}
+
+// RejectVpcEndpointConnectionsRequest is a passthrough to the underlying RejectVpcEndpointConnectionsRequest.
+// It will increment the count of requests made to RejectVpcEndpointConnections.
+func (c *EC2) RejectVpcEndpointConnectionsRequest(input *ec2.RejectVpcEndpointConnectionsInput) (req *request.Request, output *ec2.RejectVpcEndpointConnectionsOutput) {
+	c.inc("RejectVpcEndpointConnections")
+	return c.svc.RejectVpcEndpointConnectionsRequest(input)
+}
+
+// RejectVpcEndpointConnections is a passthrough to the underlying RejectVpcEndpointConnections method.
+// It will increment the count of requests made to RejectVpcEndpointConnections.
+func (c *EC2) RejectVpcEndpointConnections(input *ec2.RejectVpcEndpointConnectionsInput) (*ec2.RejectVpcEndpointConnectionsOutput, error) {
+	c.inc("RejectVpcEndpointConnections")
+	return c.svc.RejectVpcEndpointConnections(input)
+}
+
+// RejectVpcEndpointConnectionsWithContext is a passthrough to the underlying RejectVpcEndpointConnectionsWithContext method.
+// It will increment the count of requests made to RejectVpcEndpointConnections.
+func (c *EC2) RejectVpcEndpointConnectionsWithContext(ctx aws.Context, input *ec2.RejectVpcEndpointConnectionsInput, opts ...request.Option) (*ec2.RejectVpcEndpointConnectionsOutput, error) {
+	c.inc("RejectVpcEndpointConnections")
+	return c.svc.RejectVpcEndpointConnectionsWithContext(ctx, input, opts...)
 }
 
 // RejectVpcPeeringConnectionRequest is a passthrough to the underlying RejectVpcPeeringConnectionRequest.

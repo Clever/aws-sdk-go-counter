@@ -176,6 +176,27 @@ func (c *S3) DeleteBucketCorsWithContext(ctx aws.Context, input *s3.DeleteBucket
 	return c.svc.DeleteBucketCorsWithContext(ctx, input, opts...)
 }
 
+// DeleteBucketEncryptionRequest is a passthrough to the underlying DeleteBucketEncryptionRequest.
+// It will increment the count of requests made to DeleteBucketEncryption.
+func (c *S3) DeleteBucketEncryptionRequest(input *s3.DeleteBucketEncryptionInput) (req *request.Request, output *s3.DeleteBucketEncryptionOutput) {
+	c.inc("DeleteBucketEncryption")
+	return c.svc.DeleteBucketEncryptionRequest(input)
+}
+
+// DeleteBucketEncryption is a passthrough to the underlying DeleteBucketEncryption method.
+// It will increment the count of requests made to DeleteBucketEncryption.
+func (c *S3) DeleteBucketEncryption(input *s3.DeleteBucketEncryptionInput) (*s3.DeleteBucketEncryptionOutput, error) {
+	c.inc("DeleteBucketEncryption")
+	return c.svc.DeleteBucketEncryption(input)
+}
+
+// DeleteBucketEncryptionWithContext is a passthrough to the underlying DeleteBucketEncryptionWithContext method.
+// It will increment the count of requests made to DeleteBucketEncryption.
+func (c *S3) DeleteBucketEncryptionWithContext(ctx aws.Context, input *s3.DeleteBucketEncryptionInput, opts ...request.Option) (*s3.DeleteBucketEncryptionOutput, error) {
+	c.inc("DeleteBucketEncryption")
+	return c.svc.DeleteBucketEncryptionWithContext(ctx, input, opts...)
+}
+
 // DeleteBucketInventoryConfigurationRequest is a passthrough to the underlying DeleteBucketInventoryConfigurationRequest.
 // It will increment the count of requests made to DeleteBucketInventoryConfiguration.
 func (c *S3) DeleteBucketInventoryConfigurationRequest(input *s3.DeleteBucketInventoryConfigurationInput) (req *request.Request, output *s3.DeleteBucketInventoryConfigurationOutput) {
@@ -468,6 +489,27 @@ func (c *S3) GetBucketCors(input *s3.GetBucketCorsInput) (*s3.GetBucketCorsOutpu
 func (c *S3) GetBucketCorsWithContext(ctx aws.Context, input *s3.GetBucketCorsInput, opts ...request.Option) (*s3.GetBucketCorsOutput, error) {
 	c.inc("GetBucketCors")
 	return c.svc.GetBucketCorsWithContext(ctx, input, opts...)
+}
+
+// GetBucketEncryptionRequest is a passthrough to the underlying GetBucketEncryptionRequest.
+// It will increment the count of requests made to GetBucketEncryption.
+func (c *S3) GetBucketEncryptionRequest(input *s3.GetBucketEncryptionInput) (req *request.Request, output *s3.GetBucketEncryptionOutput) {
+	c.inc("GetBucketEncryption")
+	return c.svc.GetBucketEncryptionRequest(input)
+}
+
+// GetBucketEncryption is a passthrough to the underlying GetBucketEncryption method.
+// It will increment the count of requests made to GetBucketEncryption.
+func (c *S3) GetBucketEncryption(input *s3.GetBucketEncryptionInput) (*s3.GetBucketEncryptionOutput, error) {
+	c.inc("GetBucketEncryption")
+	return c.svc.GetBucketEncryption(input)
+}
+
+// GetBucketEncryptionWithContext is a passthrough to the underlying GetBucketEncryptionWithContext method.
+// It will increment the count of requests made to GetBucketEncryption.
+func (c *S3) GetBucketEncryptionWithContext(ctx aws.Context, input *s3.GetBucketEncryptionInput, opts ...request.Option) (*s3.GetBucketEncryptionOutput, error) {
+	c.inc("GetBucketEncryption")
+	return c.svc.GetBucketEncryptionWithContext(ctx, input, opts...)
 }
 
 // GetBucketInventoryConfigurationRequest is a passthrough to the underlying GetBucketInventoryConfigurationRequest.
@@ -1256,6 +1298,27 @@ func (c *S3) PutBucketCors(input *s3.PutBucketCorsInput) (*s3.PutBucketCorsOutpu
 func (c *S3) PutBucketCorsWithContext(ctx aws.Context, input *s3.PutBucketCorsInput, opts ...request.Option) (*s3.PutBucketCorsOutput, error) {
 	c.inc("PutBucketCors")
 	return c.svc.PutBucketCorsWithContext(ctx, input, opts...)
+}
+
+// PutBucketEncryptionRequest is a passthrough to the underlying PutBucketEncryptionRequest.
+// It will increment the count of requests made to PutBucketEncryption.
+func (c *S3) PutBucketEncryptionRequest(input *s3.PutBucketEncryptionInput) (req *request.Request, output *s3.PutBucketEncryptionOutput) {
+	c.inc("PutBucketEncryption")
+	return c.svc.PutBucketEncryptionRequest(input)
+}
+
+// PutBucketEncryption is a passthrough to the underlying PutBucketEncryption method.
+// It will increment the count of requests made to PutBucketEncryption.
+func (c *S3) PutBucketEncryption(input *s3.PutBucketEncryptionInput) (*s3.PutBucketEncryptionOutput, error) {
+	c.inc("PutBucketEncryption")
+	return c.svc.PutBucketEncryption(input)
+}
+
+// PutBucketEncryptionWithContext is a passthrough to the underlying PutBucketEncryptionWithContext method.
+// It will increment the count of requests made to PutBucketEncryption.
+func (c *S3) PutBucketEncryptionWithContext(ctx aws.Context, input *s3.PutBucketEncryptionInput, opts ...request.Option) (*s3.PutBucketEncryptionOutput, error) {
+	c.inc("PutBucketEncryption")
+	return c.svc.PutBucketEncryptionWithContext(ctx, input, opts...)
 }
 
 // PutBucketInventoryConfigurationRequest is a passthrough to the underlying PutBucketInventoryConfigurationRequest.

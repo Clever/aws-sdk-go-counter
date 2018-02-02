@@ -929,6 +929,27 @@ func (c *ElastiCache) ModifyReplicationGroupWithContext(ctx aws.Context, input *
 	return c.svc.ModifyReplicationGroupWithContext(ctx, input, opts...)
 }
 
+// ModifyReplicationGroupShardConfigurationRequest is a passthrough to the underlying ModifyReplicationGroupShardConfigurationRequest.
+// It will increment the count of requests made to ModifyReplicationGroupShardConfiguration.
+func (c *ElastiCache) ModifyReplicationGroupShardConfigurationRequest(input *elasticache.ModifyReplicationGroupShardConfigurationInput) (req *request.Request, output *elasticache.ModifyReplicationGroupShardConfigurationOutput) {
+	c.inc("ModifyReplicationGroupShardConfiguration")
+	return c.svc.ModifyReplicationGroupShardConfigurationRequest(input)
+}
+
+// ModifyReplicationGroupShardConfiguration is a passthrough to the underlying ModifyReplicationGroupShardConfiguration method.
+// It will increment the count of requests made to ModifyReplicationGroupShardConfiguration.
+func (c *ElastiCache) ModifyReplicationGroupShardConfiguration(input *elasticache.ModifyReplicationGroupShardConfigurationInput) (*elasticache.ModifyReplicationGroupShardConfigurationOutput, error) {
+	c.inc("ModifyReplicationGroupShardConfiguration")
+	return c.svc.ModifyReplicationGroupShardConfiguration(input)
+}
+
+// ModifyReplicationGroupShardConfigurationWithContext is a passthrough to the underlying ModifyReplicationGroupShardConfigurationWithContext method.
+// It will increment the count of requests made to ModifyReplicationGroupShardConfiguration.
+func (c *ElastiCache) ModifyReplicationGroupShardConfigurationWithContext(ctx aws.Context, input *elasticache.ModifyReplicationGroupShardConfigurationInput, opts ...request.Option) (*elasticache.ModifyReplicationGroupShardConfigurationOutput, error) {
+	c.inc("ModifyReplicationGroupShardConfiguration")
+	return c.svc.ModifyReplicationGroupShardConfigurationWithContext(ctx, input, opts...)
+}
+
 // PurchaseReservedCacheNodesOfferingRequest is a passthrough to the underlying PurchaseReservedCacheNodesOfferingRequest.
 // It will increment the count of requests made to PurchaseReservedCacheNodesOffering.
 func (c *ElastiCache) PurchaseReservedCacheNodesOfferingRequest(input *elasticache.PurchaseReservedCacheNodesOfferingInput) (req *request.Request, output *elasticache.PurchaseReservedCacheNodesOfferingOutput) {

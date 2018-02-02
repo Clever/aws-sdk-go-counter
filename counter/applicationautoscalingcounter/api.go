@@ -29,6 +29,27 @@ func (c *ApplicationAutoScaling) DeleteScalingPolicyWithContext(ctx aws.Context,
 	return c.svc.DeleteScalingPolicyWithContext(ctx, input, opts...)
 }
 
+// DeleteScheduledActionRequest is a passthrough to the underlying DeleteScheduledActionRequest.
+// It will increment the count of requests made to DeleteScheduledAction.
+func (c *ApplicationAutoScaling) DeleteScheduledActionRequest(input *applicationautoscaling.DeleteScheduledActionInput) (req *request.Request, output *applicationautoscaling.DeleteScheduledActionOutput) {
+	c.inc("DeleteScheduledAction")
+	return c.svc.DeleteScheduledActionRequest(input)
+}
+
+// DeleteScheduledAction is a passthrough to the underlying DeleteScheduledAction method.
+// It will increment the count of requests made to DeleteScheduledAction.
+func (c *ApplicationAutoScaling) DeleteScheduledAction(input *applicationautoscaling.DeleteScheduledActionInput) (*applicationautoscaling.DeleteScheduledActionOutput, error) {
+	c.inc("DeleteScheduledAction")
+	return c.svc.DeleteScheduledAction(input)
+}
+
+// DeleteScheduledActionWithContext is a passthrough to the underlying DeleteScheduledActionWithContext method.
+// It will increment the count of requests made to DeleteScheduledAction.
+func (c *ApplicationAutoScaling) DeleteScheduledActionWithContext(ctx aws.Context, input *applicationautoscaling.DeleteScheduledActionInput, opts ...request.Option) (*applicationautoscaling.DeleteScheduledActionOutput, error) {
+	c.inc("DeleteScheduledAction")
+	return c.svc.DeleteScheduledActionWithContext(ctx, input, opts...)
+}
+
 // DeregisterScalableTargetRequest is a passthrough to the underlying DeregisterScalableTargetRequest.
 // It will increment the count of requests made to DeregisterScalableTarget.
 func (c *ApplicationAutoScaling) DeregisterScalableTargetRequest(input *applicationautoscaling.DeregisterScalableTargetInput) (req *request.Request, output *applicationautoscaling.DeregisterScalableTargetOutput) {
@@ -170,6 +191,27 @@ func (c *ApplicationAutoScaling) DescribeScalingPoliciesPagesWithContext(ctx aws
 	return c.svc.DescribeScalingPoliciesPagesWithContext(ctx, input, fn, opts...)
 }
 
+// DescribeScheduledActionsRequest is a passthrough to the underlying DescribeScheduledActionsRequest.
+// It will increment the count of requests made to DescribeScheduledActions.
+func (c *ApplicationAutoScaling) DescribeScheduledActionsRequest(input *applicationautoscaling.DescribeScheduledActionsInput) (req *request.Request, output *applicationautoscaling.DescribeScheduledActionsOutput) {
+	c.inc("DescribeScheduledActions")
+	return c.svc.DescribeScheduledActionsRequest(input)
+}
+
+// DescribeScheduledActions is a passthrough to the underlying DescribeScheduledActions method.
+// It will increment the count of requests made to DescribeScheduledActions.
+func (c *ApplicationAutoScaling) DescribeScheduledActions(input *applicationautoscaling.DescribeScheduledActionsInput) (*applicationautoscaling.DescribeScheduledActionsOutput, error) {
+	c.inc("DescribeScheduledActions")
+	return c.svc.DescribeScheduledActions(input)
+}
+
+// DescribeScheduledActionsWithContext is a passthrough to the underlying DescribeScheduledActionsWithContext method.
+// It will increment the count of requests made to DescribeScheduledActions.
+func (c *ApplicationAutoScaling) DescribeScheduledActionsWithContext(ctx aws.Context, input *applicationautoscaling.DescribeScheduledActionsInput, opts ...request.Option) (*applicationautoscaling.DescribeScheduledActionsOutput, error) {
+	c.inc("DescribeScheduledActions")
+	return c.svc.DescribeScheduledActionsWithContext(ctx, input, opts...)
+}
+
 // PutScalingPolicyRequest is a passthrough to the underlying PutScalingPolicyRequest.
 // It will increment the count of requests made to PutScalingPolicy.
 func (c *ApplicationAutoScaling) PutScalingPolicyRequest(input *applicationautoscaling.PutScalingPolicyInput) (req *request.Request, output *applicationautoscaling.PutScalingPolicyOutput) {
@@ -189,6 +231,27 @@ func (c *ApplicationAutoScaling) PutScalingPolicy(input *applicationautoscaling.
 func (c *ApplicationAutoScaling) PutScalingPolicyWithContext(ctx aws.Context, input *applicationautoscaling.PutScalingPolicyInput, opts ...request.Option) (*applicationautoscaling.PutScalingPolicyOutput, error) {
 	c.inc("PutScalingPolicy")
 	return c.svc.PutScalingPolicyWithContext(ctx, input, opts...)
+}
+
+// PutScheduledActionRequest is a passthrough to the underlying PutScheduledActionRequest.
+// It will increment the count of requests made to PutScheduledAction.
+func (c *ApplicationAutoScaling) PutScheduledActionRequest(input *applicationautoscaling.PutScheduledActionInput) (req *request.Request, output *applicationautoscaling.PutScheduledActionOutput) {
+	c.inc("PutScheduledAction")
+	return c.svc.PutScheduledActionRequest(input)
+}
+
+// PutScheduledAction is a passthrough to the underlying PutScheduledAction method.
+// It will increment the count of requests made to PutScheduledAction.
+func (c *ApplicationAutoScaling) PutScheduledAction(input *applicationautoscaling.PutScheduledActionInput) (*applicationautoscaling.PutScheduledActionOutput, error) {
+	c.inc("PutScheduledAction")
+	return c.svc.PutScheduledAction(input)
+}
+
+// PutScheduledActionWithContext is a passthrough to the underlying PutScheduledActionWithContext method.
+// It will increment the count of requests made to PutScheduledAction.
+func (c *ApplicationAutoScaling) PutScheduledActionWithContext(ctx aws.Context, input *applicationautoscaling.PutScheduledActionInput, opts ...request.Option) (*applicationautoscaling.PutScheduledActionOutput, error) {
+	c.inc("PutScheduledAction")
+	return c.svc.PutScheduledActionWithContext(ctx, input, opts...)
 }
 
 // RegisterScalableTargetRequest is a passthrough to the underlying RegisterScalableTargetRequest.

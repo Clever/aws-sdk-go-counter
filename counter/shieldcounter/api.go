@@ -155,6 +155,27 @@ func (c *Shield) DescribeSubscriptionWithContext(ctx aws.Context, input *shield.
 	return c.svc.DescribeSubscriptionWithContext(ctx, input, opts...)
 }
 
+// GetSubscriptionStateRequest is a passthrough to the underlying GetSubscriptionStateRequest.
+// It will increment the count of requests made to GetSubscriptionState.
+func (c *Shield) GetSubscriptionStateRequest(input *shield.GetSubscriptionStateInput) (req *request.Request, output *shield.GetSubscriptionStateOutput) {
+	c.inc("GetSubscriptionState")
+	return c.svc.GetSubscriptionStateRequest(input)
+}
+
+// GetSubscriptionState is a passthrough to the underlying GetSubscriptionState method.
+// It will increment the count of requests made to GetSubscriptionState.
+func (c *Shield) GetSubscriptionState(input *shield.GetSubscriptionStateInput) (*shield.GetSubscriptionStateOutput, error) {
+	c.inc("GetSubscriptionState")
+	return c.svc.GetSubscriptionState(input)
+}
+
+// GetSubscriptionStateWithContext is a passthrough to the underlying GetSubscriptionStateWithContext method.
+// It will increment the count of requests made to GetSubscriptionState.
+func (c *Shield) GetSubscriptionStateWithContext(ctx aws.Context, input *shield.GetSubscriptionStateInput, opts ...request.Option) (*shield.GetSubscriptionStateOutput, error) {
+	c.inc("GetSubscriptionState")
+	return c.svc.GetSubscriptionStateWithContext(ctx, input, opts...)
+}
+
 // ListAttacksRequest is a passthrough to the underlying ListAttacksRequest.
 // It will increment the count of requests made to ListAttacks.
 func (c *Shield) ListAttacksRequest(input *shield.ListAttacksInput) (req *request.Request, output *shield.ListAttacksOutput) {

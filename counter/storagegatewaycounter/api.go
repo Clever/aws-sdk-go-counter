@@ -1088,6 +1088,27 @@ func (c *StorageGateway) ListVolumesPagesWithContext(ctx aws.Context, input *sto
 	return c.svc.ListVolumesPagesWithContext(ctx, input, fn, opts...)
 }
 
+// NotifyWhenUploadedRequest is a passthrough to the underlying NotifyWhenUploadedRequest.
+// It will increment the count of requests made to NotifyWhenUploaded.
+func (c *StorageGateway) NotifyWhenUploadedRequest(input *storagegateway.NotifyWhenUploadedInput) (req *request.Request, output *storagegateway.NotifyWhenUploadedOutput) {
+	c.inc("NotifyWhenUploaded")
+	return c.svc.NotifyWhenUploadedRequest(input)
+}
+
+// NotifyWhenUploaded is a passthrough to the underlying NotifyWhenUploaded method.
+// It will increment the count of requests made to NotifyWhenUploaded.
+func (c *StorageGateway) NotifyWhenUploaded(input *storagegateway.NotifyWhenUploadedInput) (*storagegateway.NotifyWhenUploadedOutput, error) {
+	c.inc("NotifyWhenUploaded")
+	return c.svc.NotifyWhenUploaded(input)
+}
+
+// NotifyWhenUploadedWithContext is a passthrough to the underlying NotifyWhenUploadedWithContext method.
+// It will increment the count of requests made to NotifyWhenUploaded.
+func (c *StorageGateway) NotifyWhenUploadedWithContext(ctx aws.Context, input *storagegateway.NotifyWhenUploadedInput, opts ...request.Option) (*storagegateway.NotifyWhenUploadedOutput, error) {
+	c.inc("NotifyWhenUploaded")
+	return c.svc.NotifyWhenUploadedWithContext(ctx, input, opts...)
+}
+
 // RefreshCacheRequest is a passthrough to the underlying RefreshCacheRequest.
 // It will increment the count of requests made to RefreshCache.
 func (c *StorageGateway) RefreshCacheRequest(input *storagegateway.RefreshCacheInput) (req *request.Request, output *storagegateway.RefreshCacheOutput) {

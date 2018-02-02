@@ -92,6 +92,27 @@ func (c *SES) CreateConfigurationSetTrackingOptionsWithContext(ctx aws.Context, 
 	return c.svc.CreateConfigurationSetTrackingOptionsWithContext(ctx, input, opts...)
 }
 
+// CreateCustomVerificationEmailTemplateRequest is a passthrough to the underlying CreateCustomVerificationEmailTemplateRequest.
+// It will increment the count of requests made to CreateCustomVerificationEmailTemplate.
+func (c *SES) CreateCustomVerificationEmailTemplateRequest(input *ses.CreateCustomVerificationEmailTemplateInput) (req *request.Request, output *ses.CreateCustomVerificationEmailTemplateOutput) {
+	c.inc("CreateCustomVerificationEmailTemplate")
+	return c.svc.CreateCustomVerificationEmailTemplateRequest(input)
+}
+
+// CreateCustomVerificationEmailTemplate is a passthrough to the underlying CreateCustomVerificationEmailTemplate method.
+// It will increment the count of requests made to CreateCustomVerificationEmailTemplate.
+func (c *SES) CreateCustomVerificationEmailTemplate(input *ses.CreateCustomVerificationEmailTemplateInput) (*ses.CreateCustomVerificationEmailTemplateOutput, error) {
+	c.inc("CreateCustomVerificationEmailTemplate")
+	return c.svc.CreateCustomVerificationEmailTemplate(input)
+}
+
+// CreateCustomVerificationEmailTemplateWithContext is a passthrough to the underlying CreateCustomVerificationEmailTemplateWithContext method.
+// It will increment the count of requests made to CreateCustomVerificationEmailTemplate.
+func (c *SES) CreateCustomVerificationEmailTemplateWithContext(ctx aws.Context, input *ses.CreateCustomVerificationEmailTemplateInput, opts ...request.Option) (*ses.CreateCustomVerificationEmailTemplateOutput, error) {
+	c.inc("CreateCustomVerificationEmailTemplate")
+	return c.svc.CreateCustomVerificationEmailTemplateWithContext(ctx, input, opts...)
+}
+
 // CreateReceiptFilterRequest is a passthrough to the underlying CreateReceiptFilterRequest.
 // It will increment the count of requests made to CreateReceiptFilter.
 func (c *SES) CreateReceiptFilterRequest(input *ses.CreateReceiptFilterInput) (req *request.Request, output *ses.CreateReceiptFilterOutput) {
@@ -237,6 +258,27 @@ func (c *SES) DeleteConfigurationSetTrackingOptions(input *ses.DeleteConfigurati
 func (c *SES) DeleteConfigurationSetTrackingOptionsWithContext(ctx aws.Context, input *ses.DeleteConfigurationSetTrackingOptionsInput, opts ...request.Option) (*ses.DeleteConfigurationSetTrackingOptionsOutput, error) {
 	c.inc("DeleteConfigurationSetTrackingOptions")
 	return c.svc.DeleteConfigurationSetTrackingOptionsWithContext(ctx, input, opts...)
+}
+
+// DeleteCustomVerificationEmailTemplateRequest is a passthrough to the underlying DeleteCustomVerificationEmailTemplateRequest.
+// It will increment the count of requests made to DeleteCustomVerificationEmailTemplate.
+func (c *SES) DeleteCustomVerificationEmailTemplateRequest(input *ses.DeleteCustomVerificationEmailTemplateInput) (req *request.Request, output *ses.DeleteCustomVerificationEmailTemplateOutput) {
+	c.inc("DeleteCustomVerificationEmailTemplate")
+	return c.svc.DeleteCustomVerificationEmailTemplateRequest(input)
+}
+
+// DeleteCustomVerificationEmailTemplate is a passthrough to the underlying DeleteCustomVerificationEmailTemplate method.
+// It will increment the count of requests made to DeleteCustomVerificationEmailTemplate.
+func (c *SES) DeleteCustomVerificationEmailTemplate(input *ses.DeleteCustomVerificationEmailTemplateInput) (*ses.DeleteCustomVerificationEmailTemplateOutput, error) {
+	c.inc("DeleteCustomVerificationEmailTemplate")
+	return c.svc.DeleteCustomVerificationEmailTemplate(input)
+}
+
+// DeleteCustomVerificationEmailTemplateWithContext is a passthrough to the underlying DeleteCustomVerificationEmailTemplateWithContext method.
+// It will increment the count of requests made to DeleteCustomVerificationEmailTemplate.
+func (c *SES) DeleteCustomVerificationEmailTemplateWithContext(ctx aws.Context, input *ses.DeleteCustomVerificationEmailTemplateInput, opts ...request.Option) (*ses.DeleteCustomVerificationEmailTemplateOutput, error) {
+	c.inc("DeleteCustomVerificationEmailTemplate")
+	return c.svc.DeleteCustomVerificationEmailTemplateWithContext(ctx, input, opts...)
 }
 
 // DeleteIdentityRequest is a passthrough to the underlying DeleteIdentityRequest.
@@ -470,6 +512,48 @@ func (c *SES) DescribeReceiptRuleSetWithContext(ctx aws.Context, input *ses.Desc
 	return c.svc.DescribeReceiptRuleSetWithContext(ctx, input, opts...)
 }
 
+// GetAccountSendingEnabledRequest is a passthrough to the underlying GetAccountSendingEnabledRequest.
+// It will increment the count of requests made to GetAccountSendingEnabled.
+func (c *SES) GetAccountSendingEnabledRequest(input *ses.GetAccountSendingEnabledInput) (req *request.Request, output *ses.GetAccountSendingEnabledOutput) {
+	c.inc("GetAccountSendingEnabled")
+	return c.svc.GetAccountSendingEnabledRequest(input)
+}
+
+// GetAccountSendingEnabled is a passthrough to the underlying GetAccountSendingEnabled method.
+// It will increment the count of requests made to GetAccountSendingEnabled.
+func (c *SES) GetAccountSendingEnabled(input *ses.GetAccountSendingEnabledInput) (*ses.GetAccountSendingEnabledOutput, error) {
+	c.inc("GetAccountSendingEnabled")
+	return c.svc.GetAccountSendingEnabled(input)
+}
+
+// GetAccountSendingEnabledWithContext is a passthrough to the underlying GetAccountSendingEnabledWithContext method.
+// It will increment the count of requests made to GetAccountSendingEnabled.
+func (c *SES) GetAccountSendingEnabledWithContext(ctx aws.Context, input *ses.GetAccountSendingEnabledInput, opts ...request.Option) (*ses.GetAccountSendingEnabledOutput, error) {
+	c.inc("GetAccountSendingEnabled")
+	return c.svc.GetAccountSendingEnabledWithContext(ctx, input, opts...)
+}
+
+// GetCustomVerificationEmailTemplateRequest is a passthrough to the underlying GetCustomVerificationEmailTemplateRequest.
+// It will increment the count of requests made to GetCustomVerificationEmailTemplate.
+func (c *SES) GetCustomVerificationEmailTemplateRequest(input *ses.GetCustomVerificationEmailTemplateInput) (req *request.Request, output *ses.GetCustomVerificationEmailTemplateOutput) {
+	c.inc("GetCustomVerificationEmailTemplate")
+	return c.svc.GetCustomVerificationEmailTemplateRequest(input)
+}
+
+// GetCustomVerificationEmailTemplate is a passthrough to the underlying GetCustomVerificationEmailTemplate method.
+// It will increment the count of requests made to GetCustomVerificationEmailTemplate.
+func (c *SES) GetCustomVerificationEmailTemplate(input *ses.GetCustomVerificationEmailTemplateInput) (*ses.GetCustomVerificationEmailTemplateOutput, error) {
+	c.inc("GetCustomVerificationEmailTemplate")
+	return c.svc.GetCustomVerificationEmailTemplate(input)
+}
+
+// GetCustomVerificationEmailTemplateWithContext is a passthrough to the underlying GetCustomVerificationEmailTemplateWithContext method.
+// It will increment the count of requests made to GetCustomVerificationEmailTemplate.
+func (c *SES) GetCustomVerificationEmailTemplateWithContext(ctx aws.Context, input *ses.GetCustomVerificationEmailTemplateInput, opts ...request.Option) (*ses.GetCustomVerificationEmailTemplateOutput, error) {
+	c.inc("GetCustomVerificationEmailTemplate")
+	return c.svc.GetCustomVerificationEmailTemplateWithContext(ctx, input, opts...)
+}
+
 // GetIdentityDkimAttributesRequest is a passthrough to the underlying GetIdentityDkimAttributesRequest.
 // It will increment the count of requests made to GetIdentityDkimAttributes.
 func (c *SES) GetIdentityDkimAttributesRequest(input *ses.GetIdentityDkimAttributesInput) (req *request.Request, output *ses.GetIdentityDkimAttributesOutput) {
@@ -657,6 +741,46 @@ func (c *SES) ListConfigurationSets(input *ses.ListConfigurationSetsInput) (*ses
 func (c *SES) ListConfigurationSetsWithContext(ctx aws.Context, input *ses.ListConfigurationSetsInput, opts ...request.Option) (*ses.ListConfigurationSetsOutput, error) {
 	c.inc("ListConfigurationSets")
 	return c.svc.ListConfigurationSetsWithContext(ctx, input, opts...)
+}
+
+// ListCustomVerificationEmailTemplatesRequest is a passthrough to the underlying ListCustomVerificationEmailTemplatesRequest.
+// It will increment the count of requests made to ListCustomVerificationEmailTemplates.
+func (c *SES) ListCustomVerificationEmailTemplatesRequest(input *ses.ListCustomVerificationEmailTemplatesInput) (req *request.Request, output *ses.ListCustomVerificationEmailTemplatesOutput) {
+	c.inc("ListCustomVerificationEmailTemplates")
+	return c.svc.ListCustomVerificationEmailTemplatesRequest(input)
+}
+
+// ListCustomVerificationEmailTemplates is a passthrough to the underlying ListCustomVerificationEmailTemplates method.
+// It will increment the count of requests made to ListCustomVerificationEmailTemplates.
+func (c *SES) ListCustomVerificationEmailTemplates(input *ses.ListCustomVerificationEmailTemplatesInput) (*ses.ListCustomVerificationEmailTemplatesOutput, error) {
+	c.inc("ListCustomVerificationEmailTemplates")
+	return c.svc.ListCustomVerificationEmailTemplates(input)
+}
+
+// ListCustomVerificationEmailTemplatesWithContext is a passthrough to the underlying ListCustomVerificationEmailTemplatesWithContext method.
+// It will increment the count of requests made to ListCustomVerificationEmailTemplates.
+func (c *SES) ListCustomVerificationEmailTemplatesWithContext(ctx aws.Context, input *ses.ListCustomVerificationEmailTemplatesInput, opts ...request.Option) (*ses.ListCustomVerificationEmailTemplatesOutput, error) {
+	c.inc("ListCustomVerificationEmailTemplates")
+	return c.svc.ListCustomVerificationEmailTemplatesWithContext(ctx, input, opts...)
+}
+
+// ListCustomVerificationEmailTemplatesPages is a passthrough to the underlying ListCustomVerificationEmailTemplatesPages method.
+// It will increment the count of requests made to ListCustomVerificationEmailTemplates on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use ListCustomVerificationEmailTemplatesPagesWithContext to avoid this.
+func (c *SES) ListCustomVerificationEmailTemplatesPages(input *ses.ListCustomVerificationEmailTemplatesInput, fn func(*ses.ListCustomVerificationEmailTemplatesOutput, bool) bool) error {
+	wrappedFn := func(page *ses.ListCustomVerificationEmailTemplatesOutput, lastPage bool) bool {
+		c.inc("ListCustomVerificationEmailTemplates")
+		return fn(page, lastPage)
+	}
+	return c.svc.ListCustomVerificationEmailTemplatesPages(input, wrappedFn)
+}
+
+// ListCustomVerificationEmailTemplatesPagesWithContext is a passthrough to the underlying ListCustomVerificationEmailTemplatesPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to ListCustomVerificationEmailTemplates when applied to the request.
+func (c *SES) ListCustomVerificationEmailTemplatesPagesWithContext(ctx aws.Context, input *ses.ListCustomVerificationEmailTemplatesInput, fn func(*ses.ListCustomVerificationEmailTemplatesOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("ListCustomVerificationEmailTemplates"))
+	return c.svc.ListCustomVerificationEmailTemplatesPagesWithContext(ctx, input, fn, opts...)
 }
 
 // ListIdentitiesRequest is a passthrough to the underlying ListIdentitiesRequest.
@@ -886,6 +1010,27 @@ func (c *SES) SendBulkTemplatedEmail(input *ses.SendBulkTemplatedEmailInput) (*s
 func (c *SES) SendBulkTemplatedEmailWithContext(ctx aws.Context, input *ses.SendBulkTemplatedEmailInput, opts ...request.Option) (*ses.SendBulkTemplatedEmailOutput, error) {
 	c.inc("SendBulkTemplatedEmail")
 	return c.svc.SendBulkTemplatedEmailWithContext(ctx, input, opts...)
+}
+
+// SendCustomVerificationEmailRequest is a passthrough to the underlying SendCustomVerificationEmailRequest.
+// It will increment the count of requests made to SendCustomVerificationEmail.
+func (c *SES) SendCustomVerificationEmailRequest(input *ses.SendCustomVerificationEmailInput) (req *request.Request, output *ses.SendCustomVerificationEmailOutput) {
+	c.inc("SendCustomVerificationEmail")
+	return c.svc.SendCustomVerificationEmailRequest(input)
+}
+
+// SendCustomVerificationEmail is a passthrough to the underlying SendCustomVerificationEmail method.
+// It will increment the count of requests made to SendCustomVerificationEmail.
+func (c *SES) SendCustomVerificationEmail(input *ses.SendCustomVerificationEmailInput) (*ses.SendCustomVerificationEmailOutput, error) {
+	c.inc("SendCustomVerificationEmail")
+	return c.svc.SendCustomVerificationEmail(input)
+}
+
+// SendCustomVerificationEmailWithContext is a passthrough to the underlying SendCustomVerificationEmailWithContext method.
+// It will increment the count of requests made to SendCustomVerificationEmail.
+func (c *SES) SendCustomVerificationEmailWithContext(ctx aws.Context, input *ses.SendCustomVerificationEmailInput, opts ...request.Option) (*ses.SendCustomVerificationEmailOutput, error) {
+	c.inc("SendCustomVerificationEmail")
+	return c.svc.SendCustomVerificationEmailWithContext(ctx, input, opts...)
 }
 
 // SendEmailRequest is a passthrough to the underlying SendEmailRequest.
@@ -1119,6 +1264,27 @@ func (c *SES) TestRenderTemplateWithContext(ctx aws.Context, input *ses.TestRend
 	return c.svc.TestRenderTemplateWithContext(ctx, input, opts...)
 }
 
+// UpdateAccountSendingEnabledRequest is a passthrough to the underlying UpdateAccountSendingEnabledRequest.
+// It will increment the count of requests made to UpdateAccountSendingEnabled.
+func (c *SES) UpdateAccountSendingEnabledRequest(input *ses.UpdateAccountSendingEnabledInput) (req *request.Request, output *ses.UpdateAccountSendingEnabledOutput) {
+	c.inc("UpdateAccountSendingEnabled")
+	return c.svc.UpdateAccountSendingEnabledRequest(input)
+}
+
+// UpdateAccountSendingEnabled is a passthrough to the underlying UpdateAccountSendingEnabled method.
+// It will increment the count of requests made to UpdateAccountSendingEnabled.
+func (c *SES) UpdateAccountSendingEnabled(input *ses.UpdateAccountSendingEnabledInput) (*ses.UpdateAccountSendingEnabledOutput, error) {
+	c.inc("UpdateAccountSendingEnabled")
+	return c.svc.UpdateAccountSendingEnabled(input)
+}
+
+// UpdateAccountSendingEnabledWithContext is a passthrough to the underlying UpdateAccountSendingEnabledWithContext method.
+// It will increment the count of requests made to UpdateAccountSendingEnabled.
+func (c *SES) UpdateAccountSendingEnabledWithContext(ctx aws.Context, input *ses.UpdateAccountSendingEnabledInput, opts ...request.Option) (*ses.UpdateAccountSendingEnabledOutput, error) {
+	c.inc("UpdateAccountSendingEnabled")
+	return c.svc.UpdateAccountSendingEnabledWithContext(ctx, input, opts...)
+}
+
 // UpdateConfigurationSetEventDestinationRequest is a passthrough to the underlying UpdateConfigurationSetEventDestinationRequest.
 // It will increment the count of requests made to UpdateConfigurationSetEventDestination.
 func (c *SES) UpdateConfigurationSetEventDestinationRequest(input *ses.UpdateConfigurationSetEventDestinationInput) (req *request.Request, output *ses.UpdateConfigurationSetEventDestinationOutput) {
@@ -1140,6 +1306,48 @@ func (c *SES) UpdateConfigurationSetEventDestinationWithContext(ctx aws.Context,
 	return c.svc.UpdateConfigurationSetEventDestinationWithContext(ctx, input, opts...)
 }
 
+// UpdateConfigurationSetReputationMetricsEnabledRequest is a passthrough to the underlying UpdateConfigurationSetReputationMetricsEnabledRequest.
+// It will increment the count of requests made to UpdateConfigurationSetReputationMetricsEnabled.
+func (c *SES) UpdateConfigurationSetReputationMetricsEnabledRequest(input *ses.UpdateConfigurationSetReputationMetricsEnabledInput) (req *request.Request, output *ses.UpdateConfigurationSetReputationMetricsEnabledOutput) {
+	c.inc("UpdateConfigurationSetReputationMetricsEnabled")
+	return c.svc.UpdateConfigurationSetReputationMetricsEnabledRequest(input)
+}
+
+// UpdateConfigurationSetReputationMetricsEnabled is a passthrough to the underlying UpdateConfigurationSetReputationMetricsEnabled method.
+// It will increment the count of requests made to UpdateConfigurationSetReputationMetricsEnabled.
+func (c *SES) UpdateConfigurationSetReputationMetricsEnabled(input *ses.UpdateConfigurationSetReputationMetricsEnabledInput) (*ses.UpdateConfigurationSetReputationMetricsEnabledOutput, error) {
+	c.inc("UpdateConfigurationSetReputationMetricsEnabled")
+	return c.svc.UpdateConfigurationSetReputationMetricsEnabled(input)
+}
+
+// UpdateConfigurationSetReputationMetricsEnabledWithContext is a passthrough to the underlying UpdateConfigurationSetReputationMetricsEnabledWithContext method.
+// It will increment the count of requests made to UpdateConfigurationSetReputationMetricsEnabled.
+func (c *SES) UpdateConfigurationSetReputationMetricsEnabledWithContext(ctx aws.Context, input *ses.UpdateConfigurationSetReputationMetricsEnabledInput, opts ...request.Option) (*ses.UpdateConfigurationSetReputationMetricsEnabledOutput, error) {
+	c.inc("UpdateConfigurationSetReputationMetricsEnabled")
+	return c.svc.UpdateConfigurationSetReputationMetricsEnabledWithContext(ctx, input, opts...)
+}
+
+// UpdateConfigurationSetSendingEnabledRequest is a passthrough to the underlying UpdateConfigurationSetSendingEnabledRequest.
+// It will increment the count of requests made to UpdateConfigurationSetSendingEnabled.
+func (c *SES) UpdateConfigurationSetSendingEnabledRequest(input *ses.UpdateConfigurationSetSendingEnabledInput) (req *request.Request, output *ses.UpdateConfigurationSetSendingEnabledOutput) {
+	c.inc("UpdateConfigurationSetSendingEnabled")
+	return c.svc.UpdateConfigurationSetSendingEnabledRequest(input)
+}
+
+// UpdateConfigurationSetSendingEnabled is a passthrough to the underlying UpdateConfigurationSetSendingEnabled method.
+// It will increment the count of requests made to UpdateConfigurationSetSendingEnabled.
+func (c *SES) UpdateConfigurationSetSendingEnabled(input *ses.UpdateConfigurationSetSendingEnabledInput) (*ses.UpdateConfigurationSetSendingEnabledOutput, error) {
+	c.inc("UpdateConfigurationSetSendingEnabled")
+	return c.svc.UpdateConfigurationSetSendingEnabled(input)
+}
+
+// UpdateConfigurationSetSendingEnabledWithContext is a passthrough to the underlying UpdateConfigurationSetSendingEnabledWithContext method.
+// It will increment the count of requests made to UpdateConfigurationSetSendingEnabled.
+func (c *SES) UpdateConfigurationSetSendingEnabledWithContext(ctx aws.Context, input *ses.UpdateConfigurationSetSendingEnabledInput, opts ...request.Option) (*ses.UpdateConfigurationSetSendingEnabledOutput, error) {
+	c.inc("UpdateConfigurationSetSendingEnabled")
+	return c.svc.UpdateConfigurationSetSendingEnabledWithContext(ctx, input, opts...)
+}
+
 // UpdateConfigurationSetTrackingOptionsRequest is a passthrough to the underlying UpdateConfigurationSetTrackingOptionsRequest.
 // It will increment the count of requests made to UpdateConfigurationSetTrackingOptions.
 func (c *SES) UpdateConfigurationSetTrackingOptionsRequest(input *ses.UpdateConfigurationSetTrackingOptionsInput) (req *request.Request, output *ses.UpdateConfigurationSetTrackingOptionsOutput) {
@@ -1159,6 +1367,27 @@ func (c *SES) UpdateConfigurationSetTrackingOptions(input *ses.UpdateConfigurati
 func (c *SES) UpdateConfigurationSetTrackingOptionsWithContext(ctx aws.Context, input *ses.UpdateConfigurationSetTrackingOptionsInput, opts ...request.Option) (*ses.UpdateConfigurationSetTrackingOptionsOutput, error) {
 	c.inc("UpdateConfigurationSetTrackingOptions")
 	return c.svc.UpdateConfigurationSetTrackingOptionsWithContext(ctx, input, opts...)
+}
+
+// UpdateCustomVerificationEmailTemplateRequest is a passthrough to the underlying UpdateCustomVerificationEmailTemplateRequest.
+// It will increment the count of requests made to UpdateCustomVerificationEmailTemplate.
+func (c *SES) UpdateCustomVerificationEmailTemplateRequest(input *ses.UpdateCustomVerificationEmailTemplateInput) (req *request.Request, output *ses.UpdateCustomVerificationEmailTemplateOutput) {
+	c.inc("UpdateCustomVerificationEmailTemplate")
+	return c.svc.UpdateCustomVerificationEmailTemplateRequest(input)
+}
+
+// UpdateCustomVerificationEmailTemplate is a passthrough to the underlying UpdateCustomVerificationEmailTemplate method.
+// It will increment the count of requests made to UpdateCustomVerificationEmailTemplate.
+func (c *SES) UpdateCustomVerificationEmailTemplate(input *ses.UpdateCustomVerificationEmailTemplateInput) (*ses.UpdateCustomVerificationEmailTemplateOutput, error) {
+	c.inc("UpdateCustomVerificationEmailTemplate")
+	return c.svc.UpdateCustomVerificationEmailTemplate(input)
+}
+
+// UpdateCustomVerificationEmailTemplateWithContext is a passthrough to the underlying UpdateCustomVerificationEmailTemplateWithContext method.
+// It will increment the count of requests made to UpdateCustomVerificationEmailTemplate.
+func (c *SES) UpdateCustomVerificationEmailTemplateWithContext(ctx aws.Context, input *ses.UpdateCustomVerificationEmailTemplateInput, opts ...request.Option) (*ses.UpdateCustomVerificationEmailTemplateOutput, error) {
+	c.inc("UpdateCustomVerificationEmailTemplate")
+	return c.svc.UpdateCustomVerificationEmailTemplateWithContext(ctx, input, opts...)
 }
 
 // UpdateReceiptRuleRequest is a passthrough to the underlying UpdateReceiptRuleRequest.

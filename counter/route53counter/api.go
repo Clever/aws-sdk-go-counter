@@ -407,6 +407,27 @@ func (c *Route53) DisassociateVPCFromHostedZoneWithContext(ctx aws.Context, inpu
 	return c.svc.DisassociateVPCFromHostedZoneWithContext(ctx, input, opts...)
 }
 
+// GetAccountLimitRequest is a passthrough to the underlying GetAccountLimitRequest.
+// It will increment the count of requests made to GetAccountLimit.
+func (c *Route53) GetAccountLimitRequest(input *route53.GetAccountLimitInput) (req *request.Request, output *route53.GetAccountLimitOutput) {
+	c.inc("GetAccountLimit")
+	return c.svc.GetAccountLimitRequest(input)
+}
+
+// GetAccountLimit is a passthrough to the underlying GetAccountLimit method.
+// It will increment the count of requests made to GetAccountLimit.
+func (c *Route53) GetAccountLimit(input *route53.GetAccountLimitInput) (*route53.GetAccountLimitOutput, error) {
+	c.inc("GetAccountLimit")
+	return c.svc.GetAccountLimit(input)
+}
+
+// GetAccountLimitWithContext is a passthrough to the underlying GetAccountLimitWithContext method.
+// It will increment the count of requests made to GetAccountLimit.
+func (c *Route53) GetAccountLimitWithContext(ctx aws.Context, input *route53.GetAccountLimitInput, opts ...request.Option) (*route53.GetAccountLimitOutput, error) {
+	c.inc("GetAccountLimit")
+	return c.svc.GetAccountLimitWithContext(ctx, input, opts...)
+}
+
 // GetChangeRequest is a passthrough to the underlying GetChangeRequest.
 // It will increment the count of requests made to GetChange.
 func (c *Route53) GetChangeRequest(input *route53.GetChangeInput) (req *request.Request, output *route53.GetChangeOutput) {
@@ -596,6 +617,27 @@ func (c *Route53) GetHostedZoneCountWithContext(ctx aws.Context, input *route53.
 	return c.svc.GetHostedZoneCountWithContext(ctx, input, opts...)
 }
 
+// GetHostedZoneLimitRequest is a passthrough to the underlying GetHostedZoneLimitRequest.
+// It will increment the count of requests made to GetHostedZoneLimit.
+func (c *Route53) GetHostedZoneLimitRequest(input *route53.GetHostedZoneLimitInput) (req *request.Request, output *route53.GetHostedZoneLimitOutput) {
+	c.inc("GetHostedZoneLimit")
+	return c.svc.GetHostedZoneLimitRequest(input)
+}
+
+// GetHostedZoneLimit is a passthrough to the underlying GetHostedZoneLimit method.
+// It will increment the count of requests made to GetHostedZoneLimit.
+func (c *Route53) GetHostedZoneLimit(input *route53.GetHostedZoneLimitInput) (*route53.GetHostedZoneLimitOutput, error) {
+	c.inc("GetHostedZoneLimit")
+	return c.svc.GetHostedZoneLimit(input)
+}
+
+// GetHostedZoneLimitWithContext is a passthrough to the underlying GetHostedZoneLimitWithContext method.
+// It will increment the count of requests made to GetHostedZoneLimit.
+func (c *Route53) GetHostedZoneLimitWithContext(ctx aws.Context, input *route53.GetHostedZoneLimitInput, opts ...request.Option) (*route53.GetHostedZoneLimitOutput, error) {
+	c.inc("GetHostedZoneLimit")
+	return c.svc.GetHostedZoneLimitWithContext(ctx, input, opts...)
+}
+
 // GetQueryLoggingConfigRequest is a passthrough to the underlying GetQueryLoggingConfigRequest.
 // It will increment the count of requests made to GetQueryLoggingConfig.
 func (c *Route53) GetQueryLoggingConfigRequest(input *route53.GetQueryLoggingConfigInput) (req *request.Request, output *route53.GetQueryLoggingConfigOutput) {
@@ -636,6 +678,27 @@ func (c *Route53) GetReusableDelegationSet(input *route53.GetReusableDelegationS
 func (c *Route53) GetReusableDelegationSetWithContext(ctx aws.Context, input *route53.GetReusableDelegationSetInput, opts ...request.Option) (*route53.GetReusableDelegationSetOutput, error) {
 	c.inc("GetReusableDelegationSet")
 	return c.svc.GetReusableDelegationSetWithContext(ctx, input, opts...)
+}
+
+// GetReusableDelegationSetLimitRequest is a passthrough to the underlying GetReusableDelegationSetLimitRequest.
+// It will increment the count of requests made to GetReusableDelegationSetLimit.
+func (c *Route53) GetReusableDelegationSetLimitRequest(input *route53.GetReusableDelegationSetLimitInput) (req *request.Request, output *route53.GetReusableDelegationSetLimitOutput) {
+	c.inc("GetReusableDelegationSetLimit")
+	return c.svc.GetReusableDelegationSetLimitRequest(input)
+}
+
+// GetReusableDelegationSetLimit is a passthrough to the underlying GetReusableDelegationSetLimit method.
+// It will increment the count of requests made to GetReusableDelegationSetLimit.
+func (c *Route53) GetReusableDelegationSetLimit(input *route53.GetReusableDelegationSetLimitInput) (*route53.GetReusableDelegationSetLimitOutput, error) {
+	c.inc("GetReusableDelegationSetLimit")
+	return c.svc.GetReusableDelegationSetLimit(input)
+}
+
+// GetReusableDelegationSetLimitWithContext is a passthrough to the underlying GetReusableDelegationSetLimitWithContext method.
+// It will increment the count of requests made to GetReusableDelegationSetLimit.
+func (c *Route53) GetReusableDelegationSetLimitWithContext(ctx aws.Context, input *route53.GetReusableDelegationSetLimitInput, opts ...request.Option) (*route53.GetReusableDelegationSetLimitOutput, error) {
+	c.inc("GetReusableDelegationSetLimit")
+	return c.svc.GetReusableDelegationSetLimitWithContext(ctx, input, opts...)
 }
 
 // GetTrafficPolicyRequest is a passthrough to the underlying GetTrafficPolicyRequest.

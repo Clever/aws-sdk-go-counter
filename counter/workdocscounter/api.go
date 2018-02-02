@@ -508,6 +508,27 @@ func (c *WorkDocs) DescribeFolderContentsPagesWithContext(ctx aws.Context, input
 	return c.svc.DescribeFolderContentsPagesWithContext(ctx, input, fn, opts...)
 }
 
+// DescribeGroupsRequest is a passthrough to the underlying DescribeGroupsRequest.
+// It will increment the count of requests made to DescribeGroups.
+func (c *WorkDocs) DescribeGroupsRequest(input *workdocs.DescribeGroupsInput) (req *request.Request, output *workdocs.DescribeGroupsOutput) {
+	c.inc("DescribeGroups")
+	return c.svc.DescribeGroupsRequest(input)
+}
+
+// DescribeGroups is a passthrough to the underlying DescribeGroups method.
+// It will increment the count of requests made to DescribeGroups.
+func (c *WorkDocs) DescribeGroups(input *workdocs.DescribeGroupsInput) (*workdocs.DescribeGroupsOutput, error) {
+	c.inc("DescribeGroups")
+	return c.svc.DescribeGroups(input)
+}
+
+// DescribeGroupsWithContext is a passthrough to the underlying DescribeGroupsWithContext method.
+// It will increment the count of requests made to DescribeGroups.
+func (c *WorkDocs) DescribeGroupsWithContext(ctx aws.Context, input *workdocs.DescribeGroupsInput, opts ...request.Option) (*workdocs.DescribeGroupsOutput, error) {
+	c.inc("DescribeGroups")
+	return c.svc.DescribeGroupsWithContext(ctx, input, opts...)
+}
+
 // DescribeNotificationSubscriptionsRequest is a passthrough to the underlying DescribeNotificationSubscriptionsRequest.
 // It will increment the count of requests made to DescribeNotificationSubscriptions.
 func (c *WorkDocs) DescribeNotificationSubscriptionsRequest(input *workdocs.DescribeNotificationSubscriptionsInput) (req *request.Request, output *workdocs.DescribeNotificationSubscriptionsOutput) {

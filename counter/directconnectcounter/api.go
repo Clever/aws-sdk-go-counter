@@ -260,6 +260,48 @@ func (c *DirectConnect) CreateConnectionWithContext(ctx aws.Context, input *dire
 	return c.svc.CreateConnectionWithContext(ctx, input, opts...)
 }
 
+// CreateDirectConnectGatewayRequest is a passthrough to the underlying CreateDirectConnectGatewayRequest.
+// It will increment the count of requests made to CreateDirectConnectGateway.
+func (c *DirectConnect) CreateDirectConnectGatewayRequest(input *directconnect.CreateDirectConnectGatewayInput) (req *request.Request, output *directconnect.CreateDirectConnectGatewayOutput) {
+	c.inc("CreateDirectConnectGateway")
+	return c.svc.CreateDirectConnectGatewayRequest(input)
+}
+
+// CreateDirectConnectGateway is a passthrough to the underlying CreateDirectConnectGateway method.
+// It will increment the count of requests made to CreateDirectConnectGateway.
+func (c *DirectConnect) CreateDirectConnectGateway(input *directconnect.CreateDirectConnectGatewayInput) (*directconnect.CreateDirectConnectGatewayOutput, error) {
+	c.inc("CreateDirectConnectGateway")
+	return c.svc.CreateDirectConnectGateway(input)
+}
+
+// CreateDirectConnectGatewayWithContext is a passthrough to the underlying CreateDirectConnectGatewayWithContext method.
+// It will increment the count of requests made to CreateDirectConnectGateway.
+func (c *DirectConnect) CreateDirectConnectGatewayWithContext(ctx aws.Context, input *directconnect.CreateDirectConnectGatewayInput, opts ...request.Option) (*directconnect.CreateDirectConnectGatewayOutput, error) {
+	c.inc("CreateDirectConnectGateway")
+	return c.svc.CreateDirectConnectGatewayWithContext(ctx, input, opts...)
+}
+
+// CreateDirectConnectGatewayAssociationRequest is a passthrough to the underlying CreateDirectConnectGatewayAssociationRequest.
+// It will increment the count of requests made to CreateDirectConnectGatewayAssociation.
+func (c *DirectConnect) CreateDirectConnectGatewayAssociationRequest(input *directconnect.CreateDirectConnectGatewayAssociationInput) (req *request.Request, output *directconnect.CreateDirectConnectGatewayAssociationOutput) {
+	c.inc("CreateDirectConnectGatewayAssociation")
+	return c.svc.CreateDirectConnectGatewayAssociationRequest(input)
+}
+
+// CreateDirectConnectGatewayAssociation is a passthrough to the underlying CreateDirectConnectGatewayAssociation method.
+// It will increment the count of requests made to CreateDirectConnectGatewayAssociation.
+func (c *DirectConnect) CreateDirectConnectGatewayAssociation(input *directconnect.CreateDirectConnectGatewayAssociationInput) (*directconnect.CreateDirectConnectGatewayAssociationOutput, error) {
+	c.inc("CreateDirectConnectGatewayAssociation")
+	return c.svc.CreateDirectConnectGatewayAssociation(input)
+}
+
+// CreateDirectConnectGatewayAssociationWithContext is a passthrough to the underlying CreateDirectConnectGatewayAssociationWithContext method.
+// It will increment the count of requests made to CreateDirectConnectGatewayAssociation.
+func (c *DirectConnect) CreateDirectConnectGatewayAssociationWithContext(ctx aws.Context, input *directconnect.CreateDirectConnectGatewayAssociationInput, opts ...request.Option) (*directconnect.CreateDirectConnectGatewayAssociationOutput, error) {
+	c.inc("CreateDirectConnectGatewayAssociation")
+	return c.svc.CreateDirectConnectGatewayAssociationWithContext(ctx, input, opts...)
+}
+
 // CreateInterconnectRequest is a passthrough to the underlying CreateInterconnectRequest.
 // It will increment the count of requests made to CreateInterconnect.
 func (c *DirectConnect) CreateInterconnectRequest(input *directconnect.CreateInterconnectInput) (req *request.Request, output *directconnect.Interconnect) {
@@ -386,6 +428,48 @@ func (c *DirectConnect) DeleteConnectionWithContext(ctx aws.Context, input *dire
 	return c.svc.DeleteConnectionWithContext(ctx, input, opts...)
 }
 
+// DeleteDirectConnectGatewayRequest is a passthrough to the underlying DeleteDirectConnectGatewayRequest.
+// It will increment the count of requests made to DeleteDirectConnectGateway.
+func (c *DirectConnect) DeleteDirectConnectGatewayRequest(input *directconnect.DeleteDirectConnectGatewayInput) (req *request.Request, output *directconnect.DeleteDirectConnectGatewayOutput) {
+	c.inc("DeleteDirectConnectGateway")
+	return c.svc.DeleteDirectConnectGatewayRequest(input)
+}
+
+// DeleteDirectConnectGateway is a passthrough to the underlying DeleteDirectConnectGateway method.
+// It will increment the count of requests made to DeleteDirectConnectGateway.
+func (c *DirectConnect) DeleteDirectConnectGateway(input *directconnect.DeleteDirectConnectGatewayInput) (*directconnect.DeleteDirectConnectGatewayOutput, error) {
+	c.inc("DeleteDirectConnectGateway")
+	return c.svc.DeleteDirectConnectGateway(input)
+}
+
+// DeleteDirectConnectGatewayWithContext is a passthrough to the underlying DeleteDirectConnectGatewayWithContext method.
+// It will increment the count of requests made to DeleteDirectConnectGateway.
+func (c *DirectConnect) DeleteDirectConnectGatewayWithContext(ctx aws.Context, input *directconnect.DeleteDirectConnectGatewayInput, opts ...request.Option) (*directconnect.DeleteDirectConnectGatewayOutput, error) {
+	c.inc("DeleteDirectConnectGateway")
+	return c.svc.DeleteDirectConnectGatewayWithContext(ctx, input, opts...)
+}
+
+// DeleteDirectConnectGatewayAssociationRequest is a passthrough to the underlying DeleteDirectConnectGatewayAssociationRequest.
+// It will increment the count of requests made to DeleteDirectConnectGatewayAssociation.
+func (c *DirectConnect) DeleteDirectConnectGatewayAssociationRequest(input *directconnect.DeleteDirectConnectGatewayAssociationInput) (req *request.Request, output *directconnect.DeleteDirectConnectGatewayAssociationOutput) {
+	c.inc("DeleteDirectConnectGatewayAssociation")
+	return c.svc.DeleteDirectConnectGatewayAssociationRequest(input)
+}
+
+// DeleteDirectConnectGatewayAssociation is a passthrough to the underlying DeleteDirectConnectGatewayAssociation method.
+// It will increment the count of requests made to DeleteDirectConnectGatewayAssociation.
+func (c *DirectConnect) DeleteDirectConnectGatewayAssociation(input *directconnect.DeleteDirectConnectGatewayAssociationInput) (*directconnect.DeleteDirectConnectGatewayAssociationOutput, error) {
+	c.inc("DeleteDirectConnectGatewayAssociation")
+	return c.svc.DeleteDirectConnectGatewayAssociation(input)
+}
+
+// DeleteDirectConnectGatewayAssociationWithContext is a passthrough to the underlying DeleteDirectConnectGatewayAssociationWithContext method.
+// It will increment the count of requests made to DeleteDirectConnectGatewayAssociation.
+func (c *DirectConnect) DeleteDirectConnectGatewayAssociationWithContext(ctx aws.Context, input *directconnect.DeleteDirectConnectGatewayAssociationInput, opts ...request.Option) (*directconnect.DeleteDirectConnectGatewayAssociationOutput, error) {
+	c.inc("DeleteDirectConnectGatewayAssociation")
+	return c.svc.DeleteDirectConnectGatewayAssociationWithContext(ctx, input, opts...)
+}
+
 // DeleteInterconnectRequest is a passthrough to the underlying DeleteInterconnectRequest.
 // It will increment the count of requests made to DeleteInterconnect.
 func (c *DirectConnect) DeleteInterconnectRequest(input *directconnect.DeleteInterconnectInput) (req *request.Request, output *directconnect.DeleteInterconnectOutput) {
@@ -510,6 +594,69 @@ func (c *DirectConnect) DescribeConnectionsOnInterconnect(input *directconnect.D
 func (c *DirectConnect) DescribeConnectionsOnInterconnectWithContext(ctx aws.Context, input *directconnect.DescribeConnectionsOnInterconnectInput, opts ...request.Option) (*directconnect.Connections, error) {
 	c.inc("DescribeConnectionsOnInterconnect")
 	return c.svc.DescribeConnectionsOnInterconnectWithContext(ctx, input, opts...)
+}
+
+// DescribeDirectConnectGatewayAssociationsRequest is a passthrough to the underlying DescribeDirectConnectGatewayAssociationsRequest.
+// It will increment the count of requests made to DescribeDirectConnectGatewayAssociations.
+func (c *DirectConnect) DescribeDirectConnectGatewayAssociationsRequest(input *directconnect.DescribeDirectConnectGatewayAssociationsInput) (req *request.Request, output *directconnect.DescribeDirectConnectGatewayAssociationsOutput) {
+	c.inc("DescribeDirectConnectGatewayAssociations")
+	return c.svc.DescribeDirectConnectGatewayAssociationsRequest(input)
+}
+
+// DescribeDirectConnectGatewayAssociations is a passthrough to the underlying DescribeDirectConnectGatewayAssociations method.
+// It will increment the count of requests made to DescribeDirectConnectGatewayAssociations.
+func (c *DirectConnect) DescribeDirectConnectGatewayAssociations(input *directconnect.DescribeDirectConnectGatewayAssociationsInput) (*directconnect.DescribeDirectConnectGatewayAssociationsOutput, error) {
+	c.inc("DescribeDirectConnectGatewayAssociations")
+	return c.svc.DescribeDirectConnectGatewayAssociations(input)
+}
+
+// DescribeDirectConnectGatewayAssociationsWithContext is a passthrough to the underlying DescribeDirectConnectGatewayAssociationsWithContext method.
+// It will increment the count of requests made to DescribeDirectConnectGatewayAssociations.
+func (c *DirectConnect) DescribeDirectConnectGatewayAssociationsWithContext(ctx aws.Context, input *directconnect.DescribeDirectConnectGatewayAssociationsInput, opts ...request.Option) (*directconnect.DescribeDirectConnectGatewayAssociationsOutput, error) {
+	c.inc("DescribeDirectConnectGatewayAssociations")
+	return c.svc.DescribeDirectConnectGatewayAssociationsWithContext(ctx, input, opts...)
+}
+
+// DescribeDirectConnectGatewayAttachmentsRequest is a passthrough to the underlying DescribeDirectConnectGatewayAttachmentsRequest.
+// It will increment the count of requests made to DescribeDirectConnectGatewayAttachments.
+func (c *DirectConnect) DescribeDirectConnectGatewayAttachmentsRequest(input *directconnect.DescribeDirectConnectGatewayAttachmentsInput) (req *request.Request, output *directconnect.DescribeDirectConnectGatewayAttachmentsOutput) {
+	c.inc("DescribeDirectConnectGatewayAttachments")
+	return c.svc.DescribeDirectConnectGatewayAttachmentsRequest(input)
+}
+
+// DescribeDirectConnectGatewayAttachments is a passthrough to the underlying DescribeDirectConnectGatewayAttachments method.
+// It will increment the count of requests made to DescribeDirectConnectGatewayAttachments.
+func (c *DirectConnect) DescribeDirectConnectGatewayAttachments(input *directconnect.DescribeDirectConnectGatewayAttachmentsInput) (*directconnect.DescribeDirectConnectGatewayAttachmentsOutput, error) {
+	c.inc("DescribeDirectConnectGatewayAttachments")
+	return c.svc.DescribeDirectConnectGatewayAttachments(input)
+}
+
+// DescribeDirectConnectGatewayAttachmentsWithContext is a passthrough to the underlying DescribeDirectConnectGatewayAttachmentsWithContext method.
+// It will increment the count of requests made to DescribeDirectConnectGatewayAttachments.
+func (c *DirectConnect) DescribeDirectConnectGatewayAttachmentsWithContext(ctx aws.Context, input *directconnect.DescribeDirectConnectGatewayAttachmentsInput, opts ...request.Option) (*directconnect.DescribeDirectConnectGatewayAttachmentsOutput, error) {
+	c.inc("DescribeDirectConnectGatewayAttachments")
+	return c.svc.DescribeDirectConnectGatewayAttachmentsWithContext(ctx, input, opts...)
+}
+
+// DescribeDirectConnectGatewaysRequest is a passthrough to the underlying DescribeDirectConnectGatewaysRequest.
+// It will increment the count of requests made to DescribeDirectConnectGateways.
+func (c *DirectConnect) DescribeDirectConnectGatewaysRequest(input *directconnect.DescribeDirectConnectGatewaysInput) (req *request.Request, output *directconnect.DescribeDirectConnectGatewaysOutput) {
+	c.inc("DescribeDirectConnectGateways")
+	return c.svc.DescribeDirectConnectGatewaysRequest(input)
+}
+
+// DescribeDirectConnectGateways is a passthrough to the underlying DescribeDirectConnectGateways method.
+// It will increment the count of requests made to DescribeDirectConnectGateways.
+func (c *DirectConnect) DescribeDirectConnectGateways(input *directconnect.DescribeDirectConnectGatewaysInput) (*directconnect.DescribeDirectConnectGatewaysOutput, error) {
+	c.inc("DescribeDirectConnectGateways")
+	return c.svc.DescribeDirectConnectGateways(input)
+}
+
+// DescribeDirectConnectGatewaysWithContext is a passthrough to the underlying DescribeDirectConnectGatewaysWithContext method.
+// It will increment the count of requests made to DescribeDirectConnectGateways.
+func (c *DirectConnect) DescribeDirectConnectGatewaysWithContext(ctx aws.Context, input *directconnect.DescribeDirectConnectGatewaysInput, opts ...request.Option) (*directconnect.DescribeDirectConnectGatewaysOutput, error) {
+	c.inc("DescribeDirectConnectGateways")
+	return c.svc.DescribeDirectConnectGatewaysWithContext(ctx, input, opts...)
 }
 
 // DescribeHostedConnectionsRequest is a passthrough to the underlying DescribeHostedConnectionsRequest.
