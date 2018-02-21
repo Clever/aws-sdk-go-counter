@@ -2150,6 +2150,27 @@ func (c *EC2) DescribeAddressesWithContext(ctx aws.Context, input *ec2.DescribeA
 	return c.svc.DescribeAddressesWithContext(ctx, input, opts...)
 }
 
+// DescribeAggregateIdFormatRequest is a passthrough to the underlying DescribeAggregateIdFormatRequest.
+// It will increment the count of requests made to DescribeAggregateIdFormat.
+func (c *EC2) DescribeAggregateIdFormatRequest(input *ec2.DescribeAggregateIdFormatInput) (req *request.Request, output *ec2.DescribeAggregateIdFormatOutput) {
+	c.inc("DescribeAggregateIdFormat")
+	return c.svc.DescribeAggregateIdFormatRequest(input)
+}
+
+// DescribeAggregateIdFormat is a passthrough to the underlying DescribeAggregateIdFormat method.
+// It will increment the count of requests made to DescribeAggregateIdFormat.
+func (c *EC2) DescribeAggregateIdFormat(input *ec2.DescribeAggregateIdFormatInput) (*ec2.DescribeAggregateIdFormatOutput, error) {
+	c.inc("DescribeAggregateIdFormat")
+	return c.svc.DescribeAggregateIdFormat(input)
+}
+
+// DescribeAggregateIdFormatWithContext is a passthrough to the underlying DescribeAggregateIdFormatWithContext method.
+// It will increment the count of requests made to DescribeAggregateIdFormat.
+func (c *EC2) DescribeAggregateIdFormatWithContext(ctx aws.Context, input *ec2.DescribeAggregateIdFormatInput, opts ...request.Option) (*ec2.DescribeAggregateIdFormatOutput, error) {
+	c.inc("DescribeAggregateIdFormat")
+	return c.svc.DescribeAggregateIdFormatWithContext(ctx, input, opts...)
+}
+
 // DescribeAvailabilityZonesRequest is a passthrough to the underlying DescribeAvailabilityZonesRequest.
 // It will increment the count of requests made to DescribeAvailabilityZones.
 func (c *EC2) DescribeAvailabilityZonesRequest(input *ec2.DescribeAvailabilityZonesInput) (req *request.Request, output *ec2.DescribeAvailabilityZonesOutput) {
@@ -3003,6 +3024,27 @@ func (c *EC2) DescribePrefixLists(input *ec2.DescribePrefixListsInput) (*ec2.Des
 func (c *EC2) DescribePrefixListsWithContext(ctx aws.Context, input *ec2.DescribePrefixListsInput, opts ...request.Option) (*ec2.DescribePrefixListsOutput, error) {
 	c.inc("DescribePrefixLists")
 	return c.svc.DescribePrefixListsWithContext(ctx, input, opts...)
+}
+
+// DescribePrincipalIdFormatRequest is a passthrough to the underlying DescribePrincipalIdFormatRequest.
+// It will increment the count of requests made to DescribePrincipalIdFormat.
+func (c *EC2) DescribePrincipalIdFormatRequest(input *ec2.DescribePrincipalIdFormatInput) (req *request.Request, output *ec2.DescribePrincipalIdFormatOutput) {
+	c.inc("DescribePrincipalIdFormat")
+	return c.svc.DescribePrincipalIdFormatRequest(input)
+}
+
+// DescribePrincipalIdFormat is a passthrough to the underlying DescribePrincipalIdFormat method.
+// It will increment the count of requests made to DescribePrincipalIdFormat.
+func (c *EC2) DescribePrincipalIdFormat(input *ec2.DescribePrincipalIdFormatInput) (*ec2.DescribePrincipalIdFormatOutput, error) {
+	c.inc("DescribePrincipalIdFormat")
+	return c.svc.DescribePrincipalIdFormat(input)
+}
+
+// DescribePrincipalIdFormatWithContext is a passthrough to the underlying DescribePrincipalIdFormatWithContext method.
+// It will increment the count of requests made to DescribePrincipalIdFormat.
+func (c *EC2) DescribePrincipalIdFormatWithContext(ctx aws.Context, input *ec2.DescribePrincipalIdFormatInput, opts ...request.Option) (*ec2.DescribePrincipalIdFormatOutput, error) {
+	c.inc("DescribePrincipalIdFormat")
+	return c.svc.DescribePrincipalIdFormatWithContext(ctx, input, opts...)
 }
 
 // DescribeRegionsRequest is a passthrough to the underlying DescribeRegionsRequest.

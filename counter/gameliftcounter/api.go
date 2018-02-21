@@ -1079,6 +1079,27 @@ func (c *GameLift) StartGameSessionPlacementWithContext(ctx aws.Context, input *
 	return c.svc.StartGameSessionPlacementWithContext(ctx, input, opts...)
 }
 
+// StartMatchBackfillRequest is a passthrough to the underlying StartMatchBackfillRequest.
+// It will increment the count of requests made to StartMatchBackfill.
+func (c *GameLift) StartMatchBackfillRequest(input *gamelift.StartMatchBackfillInput) (req *request.Request, output *gamelift.StartMatchBackfillOutput) {
+	c.inc("StartMatchBackfill")
+	return c.svc.StartMatchBackfillRequest(input)
+}
+
+// StartMatchBackfill is a passthrough to the underlying StartMatchBackfill method.
+// It will increment the count of requests made to StartMatchBackfill.
+func (c *GameLift) StartMatchBackfill(input *gamelift.StartMatchBackfillInput) (*gamelift.StartMatchBackfillOutput, error) {
+	c.inc("StartMatchBackfill")
+	return c.svc.StartMatchBackfill(input)
+}
+
+// StartMatchBackfillWithContext is a passthrough to the underlying StartMatchBackfillWithContext method.
+// It will increment the count of requests made to StartMatchBackfill.
+func (c *GameLift) StartMatchBackfillWithContext(ctx aws.Context, input *gamelift.StartMatchBackfillInput, opts ...request.Option) (*gamelift.StartMatchBackfillOutput, error) {
+	c.inc("StartMatchBackfill")
+	return c.svc.StartMatchBackfillWithContext(ctx, input, opts...)
+}
+
 // StartMatchmakingRequest is a passthrough to the underlying StartMatchmakingRequest.
 // It will increment the count of requests made to StartMatchmaking.
 func (c *GameLift) StartMatchmakingRequest(input *gamelift.StartMatchmakingInput) (req *request.Request, output *gamelift.StartMatchmakingOutput) {

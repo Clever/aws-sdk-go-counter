@@ -279,6 +279,27 @@ func (c *Kinesis) IncreaseStreamRetentionPeriodWithContext(ctx aws.Context, inpu
 	return c.svc.IncreaseStreamRetentionPeriodWithContext(ctx, input, opts...)
 }
 
+// ListShardsRequest is a passthrough to the underlying ListShardsRequest.
+// It will increment the count of requests made to ListShards.
+func (c *Kinesis) ListShardsRequest(input *kinesis.ListShardsInput) (req *request.Request, output *kinesis.ListShardsOutput) {
+	c.inc("ListShards")
+	return c.svc.ListShardsRequest(input)
+}
+
+// ListShards is a passthrough to the underlying ListShards method.
+// It will increment the count of requests made to ListShards.
+func (c *Kinesis) ListShards(input *kinesis.ListShardsInput) (*kinesis.ListShardsOutput, error) {
+	c.inc("ListShards")
+	return c.svc.ListShards(input)
+}
+
+// ListShardsWithContext is a passthrough to the underlying ListShardsWithContext method.
+// It will increment the count of requests made to ListShards.
+func (c *Kinesis) ListShardsWithContext(ctx aws.Context, input *kinesis.ListShardsInput, opts ...request.Option) (*kinesis.ListShardsOutput, error) {
+	c.inc("ListShards")
+	return c.svc.ListShardsWithContext(ctx, input, opts...)
+}
+
 // ListStreamsRequest is a passthrough to the underlying ListStreamsRequest.
 // It will increment the count of requests made to ListStreams.
 func (c *Kinesis) ListStreamsRequest(input *kinesis.ListStreamsInput) (req *request.Request, output *kinesis.ListStreamsOutput) {

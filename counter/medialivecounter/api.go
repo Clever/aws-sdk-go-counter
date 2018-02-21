@@ -358,3 +358,24 @@ func (c *MediaLive) StopChannelWithContext(ctx aws.Context, input *medialive.Sto
 	c.inc("StopChannel")
 	return c.svc.StopChannelWithContext(ctx, input, opts...)
 }
+
+// UpdateChannelRequest is a passthrough to the underlying UpdateChannelRequest.
+// It will increment the count of requests made to UpdateChannel.
+func (c *MediaLive) UpdateChannelRequest(input *medialive.UpdateChannelInput) (req *request.Request, output *medialive.UpdateChannelOutput) {
+	c.inc("UpdateChannel")
+	return c.svc.UpdateChannelRequest(input)
+}
+
+// UpdateChannel is a passthrough to the underlying UpdateChannel method.
+// It will increment the count of requests made to UpdateChannel.
+func (c *MediaLive) UpdateChannel(input *medialive.UpdateChannelInput) (*medialive.UpdateChannelOutput, error) {
+	c.inc("UpdateChannel")
+	return c.svc.UpdateChannel(input)
+}
+
+// UpdateChannelWithContext is a passthrough to the underlying UpdateChannelWithContext method.
+// It will increment the count of requests made to UpdateChannel.
+func (c *MediaLive) UpdateChannelWithContext(ctx aws.Context, input *medialive.UpdateChannelInput, opts ...request.Option) (*medialive.UpdateChannelOutput, error) {
+	c.inc("UpdateChannel")
+	return c.svc.UpdateChannelWithContext(ctx, input, opts...)
+}

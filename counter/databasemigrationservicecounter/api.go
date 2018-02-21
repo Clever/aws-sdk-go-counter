@@ -603,6 +603,46 @@ func (c *DatabaseMigrationService) DescribeRefreshSchemasStatusWithContext(ctx a
 	return c.svc.DescribeRefreshSchemasStatusWithContext(ctx, input, opts...)
 }
 
+// DescribeReplicationInstanceTaskLogsRequest is a passthrough to the underlying DescribeReplicationInstanceTaskLogsRequest.
+// It will increment the count of requests made to DescribeReplicationInstanceTaskLogs.
+func (c *DatabaseMigrationService) DescribeReplicationInstanceTaskLogsRequest(input *databasemigrationservice.DescribeReplicationInstanceTaskLogsInput) (req *request.Request, output *databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput) {
+	c.inc("DescribeReplicationInstanceTaskLogs")
+	return c.svc.DescribeReplicationInstanceTaskLogsRequest(input)
+}
+
+// DescribeReplicationInstanceTaskLogs is a passthrough to the underlying DescribeReplicationInstanceTaskLogs method.
+// It will increment the count of requests made to DescribeReplicationInstanceTaskLogs.
+func (c *DatabaseMigrationService) DescribeReplicationInstanceTaskLogs(input *databasemigrationservice.DescribeReplicationInstanceTaskLogsInput) (*databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput, error) {
+	c.inc("DescribeReplicationInstanceTaskLogs")
+	return c.svc.DescribeReplicationInstanceTaskLogs(input)
+}
+
+// DescribeReplicationInstanceTaskLogsWithContext is a passthrough to the underlying DescribeReplicationInstanceTaskLogsWithContext method.
+// It will increment the count of requests made to DescribeReplicationInstanceTaskLogs.
+func (c *DatabaseMigrationService) DescribeReplicationInstanceTaskLogsWithContext(ctx aws.Context, input *databasemigrationservice.DescribeReplicationInstanceTaskLogsInput, opts ...request.Option) (*databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput, error) {
+	c.inc("DescribeReplicationInstanceTaskLogs")
+	return c.svc.DescribeReplicationInstanceTaskLogsWithContext(ctx, input, opts...)
+}
+
+// DescribeReplicationInstanceTaskLogsPages is a passthrough to the underlying DescribeReplicationInstanceTaskLogsPages method.
+// It will increment the count of requests made to DescribeReplicationInstanceTaskLogs on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use DescribeReplicationInstanceTaskLogsPagesWithContext to avoid this.
+func (c *DatabaseMigrationService) DescribeReplicationInstanceTaskLogsPages(input *databasemigrationservice.DescribeReplicationInstanceTaskLogsInput, fn func(*databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput, bool) bool) error {
+	wrappedFn := func(page *databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput, lastPage bool) bool {
+		c.inc("DescribeReplicationInstanceTaskLogs")
+		return fn(page, lastPage)
+	}
+	return c.svc.DescribeReplicationInstanceTaskLogsPages(input, wrappedFn)
+}
+
+// DescribeReplicationInstanceTaskLogsPagesWithContext is a passthrough to the underlying DescribeReplicationInstanceTaskLogsPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to DescribeReplicationInstanceTaskLogs when applied to the request.
+func (c *DatabaseMigrationService) DescribeReplicationInstanceTaskLogsPagesWithContext(ctx aws.Context, input *databasemigrationservice.DescribeReplicationInstanceTaskLogsInput, fn func(*databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("DescribeReplicationInstanceTaskLogs"))
+	return c.svc.DescribeReplicationInstanceTaskLogsPagesWithContext(ctx, input, fn, opts...)
+}
+
 // DescribeReplicationInstancesRequest is a passthrough to the underlying DescribeReplicationInstancesRequest.
 // It will increment the count of requests made to DescribeReplicationInstances.
 func (c *DatabaseMigrationService) DescribeReplicationInstancesRequest(input *databasemigrationservice.DescribeReplicationInstancesInput) (req *request.Request, output *databasemigrationservice.DescribeReplicationInstancesOutput) {
@@ -988,6 +1028,27 @@ func (c *DatabaseMigrationService) ModifyReplicationTask(input *databasemigratio
 func (c *DatabaseMigrationService) ModifyReplicationTaskWithContext(ctx aws.Context, input *databasemigrationservice.ModifyReplicationTaskInput, opts ...request.Option) (*databasemigrationservice.ModifyReplicationTaskOutput, error) {
 	c.inc("ModifyReplicationTask")
 	return c.svc.ModifyReplicationTaskWithContext(ctx, input, opts...)
+}
+
+// RebootReplicationInstanceRequest is a passthrough to the underlying RebootReplicationInstanceRequest.
+// It will increment the count of requests made to RebootReplicationInstance.
+func (c *DatabaseMigrationService) RebootReplicationInstanceRequest(input *databasemigrationservice.RebootReplicationInstanceInput) (req *request.Request, output *databasemigrationservice.RebootReplicationInstanceOutput) {
+	c.inc("RebootReplicationInstance")
+	return c.svc.RebootReplicationInstanceRequest(input)
+}
+
+// RebootReplicationInstance is a passthrough to the underlying RebootReplicationInstance method.
+// It will increment the count of requests made to RebootReplicationInstance.
+func (c *DatabaseMigrationService) RebootReplicationInstance(input *databasemigrationservice.RebootReplicationInstanceInput) (*databasemigrationservice.RebootReplicationInstanceOutput, error) {
+	c.inc("RebootReplicationInstance")
+	return c.svc.RebootReplicationInstance(input)
+}
+
+// RebootReplicationInstanceWithContext is a passthrough to the underlying RebootReplicationInstanceWithContext method.
+// It will increment the count of requests made to RebootReplicationInstance.
+func (c *DatabaseMigrationService) RebootReplicationInstanceWithContext(ctx aws.Context, input *databasemigrationservice.RebootReplicationInstanceInput, opts ...request.Option) (*databasemigrationservice.RebootReplicationInstanceOutput, error) {
+	c.inc("RebootReplicationInstance")
+	return c.svc.RebootReplicationInstanceWithContext(ctx, input, opts...)
 }
 
 // RefreshSchemasRequest is a passthrough to the underlying RefreshSchemasRequest.

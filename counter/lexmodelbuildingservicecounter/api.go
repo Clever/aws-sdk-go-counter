@@ -605,6 +605,27 @@ func (c *LexModelBuildingService) GetExportWithContext(ctx aws.Context, input *l
 	return c.svc.GetExportWithContext(ctx, input, opts...)
 }
 
+// GetImportRequest is a passthrough to the underlying GetImportRequest.
+// It will increment the count of requests made to GetImport.
+func (c *LexModelBuildingService) GetImportRequest(input *lexmodelbuildingservice.GetImportInput) (req *request.Request, output *lexmodelbuildingservice.GetImportOutput) {
+	c.inc("GetImport")
+	return c.svc.GetImportRequest(input)
+}
+
+// GetImport is a passthrough to the underlying GetImport method.
+// It will increment the count of requests made to GetImport.
+func (c *LexModelBuildingService) GetImport(input *lexmodelbuildingservice.GetImportInput) (*lexmodelbuildingservice.GetImportOutput, error) {
+	c.inc("GetImport")
+	return c.svc.GetImport(input)
+}
+
+// GetImportWithContext is a passthrough to the underlying GetImportWithContext method.
+// It will increment the count of requests made to GetImport.
+func (c *LexModelBuildingService) GetImportWithContext(ctx aws.Context, input *lexmodelbuildingservice.GetImportInput, opts ...request.Option) (*lexmodelbuildingservice.GetImportOutput, error) {
+	c.inc("GetImport")
+	return c.svc.GetImportWithContext(ctx, input, opts...)
+}
+
 // GetIntentRequest is a passthrough to the underlying GetIntentRequest.
 // It will increment the count of requests made to GetIntent.
 func (c *LexModelBuildingService) GetIntentRequest(input *lexmodelbuildingservice.GetIntentInput) (req *request.Request, output *lexmodelbuildingservice.GetIntentOutput) {
@@ -910,4 +931,25 @@ func (c *LexModelBuildingService) PutSlotType(input *lexmodelbuildingservice.Put
 func (c *LexModelBuildingService) PutSlotTypeWithContext(ctx aws.Context, input *lexmodelbuildingservice.PutSlotTypeInput, opts ...request.Option) (*lexmodelbuildingservice.PutSlotTypeOutput, error) {
 	c.inc("PutSlotType")
 	return c.svc.PutSlotTypeWithContext(ctx, input, opts...)
+}
+
+// StartImportRequest is a passthrough to the underlying StartImportRequest.
+// It will increment the count of requests made to StartImport.
+func (c *LexModelBuildingService) StartImportRequest(input *lexmodelbuildingservice.StartImportInput) (req *request.Request, output *lexmodelbuildingservice.StartImportOutput) {
+	c.inc("StartImport")
+	return c.svc.StartImportRequest(input)
+}
+
+// StartImport is a passthrough to the underlying StartImport method.
+// It will increment the count of requests made to StartImport.
+func (c *LexModelBuildingService) StartImport(input *lexmodelbuildingservice.StartImportInput) (*lexmodelbuildingservice.StartImportOutput, error) {
+	c.inc("StartImport")
+	return c.svc.StartImport(input)
+}
+
+// StartImportWithContext is a passthrough to the underlying StartImportWithContext method.
+// It will increment the count of requests made to StartImport.
+func (c *LexModelBuildingService) StartImportWithContext(ctx aws.Context, input *lexmodelbuildingservice.StartImportInput, opts ...request.Option) (*lexmodelbuildingservice.StartImportOutput, error) {
+	c.inc("StartImport")
+	return c.svc.StartImportWithContext(ctx, input, opts...)
 }

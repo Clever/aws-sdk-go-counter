@@ -71,6 +71,27 @@ func (c *MediaStore) DeleteContainerPolicyWithContext(ctx aws.Context, input *me
 	return c.svc.DeleteContainerPolicyWithContext(ctx, input, opts...)
 }
 
+// DeleteCorsPolicyRequest is a passthrough to the underlying DeleteCorsPolicyRequest.
+// It will increment the count of requests made to DeleteCorsPolicy.
+func (c *MediaStore) DeleteCorsPolicyRequest(input *mediastore.DeleteCorsPolicyInput) (req *request.Request, output *mediastore.DeleteCorsPolicyOutput) {
+	c.inc("DeleteCorsPolicy")
+	return c.svc.DeleteCorsPolicyRequest(input)
+}
+
+// DeleteCorsPolicy is a passthrough to the underlying DeleteCorsPolicy method.
+// It will increment the count of requests made to DeleteCorsPolicy.
+func (c *MediaStore) DeleteCorsPolicy(input *mediastore.DeleteCorsPolicyInput) (*mediastore.DeleteCorsPolicyOutput, error) {
+	c.inc("DeleteCorsPolicy")
+	return c.svc.DeleteCorsPolicy(input)
+}
+
+// DeleteCorsPolicyWithContext is a passthrough to the underlying DeleteCorsPolicyWithContext method.
+// It will increment the count of requests made to DeleteCorsPolicy.
+func (c *MediaStore) DeleteCorsPolicyWithContext(ctx aws.Context, input *mediastore.DeleteCorsPolicyInput, opts ...request.Option) (*mediastore.DeleteCorsPolicyOutput, error) {
+	c.inc("DeleteCorsPolicy")
+	return c.svc.DeleteCorsPolicyWithContext(ctx, input, opts...)
+}
+
 // DescribeContainerRequest is a passthrough to the underlying DescribeContainerRequest.
 // It will increment the count of requests made to DescribeContainer.
 func (c *MediaStore) DescribeContainerRequest(input *mediastore.DescribeContainerInput) (req *request.Request, output *mediastore.DescribeContainerOutput) {
@@ -113,6 +134,27 @@ func (c *MediaStore) GetContainerPolicyWithContext(ctx aws.Context, input *media
 	return c.svc.GetContainerPolicyWithContext(ctx, input, opts...)
 }
 
+// GetCorsPolicyRequest is a passthrough to the underlying GetCorsPolicyRequest.
+// It will increment the count of requests made to GetCorsPolicy.
+func (c *MediaStore) GetCorsPolicyRequest(input *mediastore.GetCorsPolicyInput) (req *request.Request, output *mediastore.GetCorsPolicyOutput) {
+	c.inc("GetCorsPolicy")
+	return c.svc.GetCorsPolicyRequest(input)
+}
+
+// GetCorsPolicy is a passthrough to the underlying GetCorsPolicy method.
+// It will increment the count of requests made to GetCorsPolicy.
+func (c *MediaStore) GetCorsPolicy(input *mediastore.GetCorsPolicyInput) (*mediastore.GetCorsPolicyOutput, error) {
+	c.inc("GetCorsPolicy")
+	return c.svc.GetCorsPolicy(input)
+}
+
+// GetCorsPolicyWithContext is a passthrough to the underlying GetCorsPolicyWithContext method.
+// It will increment the count of requests made to GetCorsPolicy.
+func (c *MediaStore) GetCorsPolicyWithContext(ctx aws.Context, input *mediastore.GetCorsPolicyInput, opts ...request.Option) (*mediastore.GetCorsPolicyOutput, error) {
+	c.inc("GetCorsPolicy")
+	return c.svc.GetCorsPolicyWithContext(ctx, input, opts...)
+}
+
 // ListContainersRequest is a passthrough to the underlying ListContainersRequest.
 // It will increment the count of requests made to ListContainers.
 func (c *MediaStore) ListContainersRequest(input *mediastore.ListContainersInput) (req *request.Request, output *mediastore.ListContainersOutput) {
@@ -153,4 +195,25 @@ func (c *MediaStore) PutContainerPolicy(input *mediastore.PutContainerPolicyInpu
 func (c *MediaStore) PutContainerPolicyWithContext(ctx aws.Context, input *mediastore.PutContainerPolicyInput, opts ...request.Option) (*mediastore.PutContainerPolicyOutput, error) {
 	c.inc("PutContainerPolicy")
 	return c.svc.PutContainerPolicyWithContext(ctx, input, opts...)
+}
+
+// PutCorsPolicyRequest is a passthrough to the underlying PutCorsPolicyRequest.
+// It will increment the count of requests made to PutCorsPolicy.
+func (c *MediaStore) PutCorsPolicyRequest(input *mediastore.PutCorsPolicyInput) (req *request.Request, output *mediastore.PutCorsPolicyOutput) {
+	c.inc("PutCorsPolicy")
+	return c.svc.PutCorsPolicyRequest(input)
+}
+
+// PutCorsPolicy is a passthrough to the underlying PutCorsPolicy method.
+// It will increment the count of requests made to PutCorsPolicy.
+func (c *MediaStore) PutCorsPolicy(input *mediastore.PutCorsPolicyInput) (*mediastore.PutCorsPolicyOutput, error) {
+	c.inc("PutCorsPolicy")
+	return c.svc.PutCorsPolicy(input)
+}
+
+// PutCorsPolicyWithContext is a passthrough to the underlying PutCorsPolicyWithContext method.
+// It will increment the count of requests made to PutCorsPolicy.
+func (c *MediaStore) PutCorsPolicyWithContext(ctx aws.Context, input *mediastore.PutCorsPolicyInput, opts ...request.Option) (*mediastore.PutCorsPolicyOutput, error) {
+	c.inc("PutCorsPolicy")
+	return c.svc.PutCorsPolicyWithContext(ctx, input, opts...)
 }

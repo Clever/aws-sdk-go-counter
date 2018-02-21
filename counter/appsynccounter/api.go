@@ -470,6 +470,27 @@ func (c *AppSync) StartSchemaCreationWithContext(ctx aws.Context, input *appsync
 	return c.svc.StartSchemaCreationWithContext(ctx, input, opts...)
 }
 
+// UpdateApiKeyRequest is a passthrough to the underlying UpdateApiKeyRequest.
+// It will increment the count of requests made to UpdateApiKey.
+func (c *AppSync) UpdateApiKeyRequest(input *appsync.UpdateApiKeyInput) (req *request.Request, output *appsync.UpdateApiKeyOutput) {
+	c.inc("UpdateApiKey")
+	return c.svc.UpdateApiKeyRequest(input)
+}
+
+// UpdateApiKey is a passthrough to the underlying UpdateApiKey method.
+// It will increment the count of requests made to UpdateApiKey.
+func (c *AppSync) UpdateApiKey(input *appsync.UpdateApiKeyInput) (*appsync.UpdateApiKeyOutput, error) {
+	c.inc("UpdateApiKey")
+	return c.svc.UpdateApiKey(input)
+}
+
+// UpdateApiKeyWithContext is a passthrough to the underlying UpdateApiKeyWithContext method.
+// It will increment the count of requests made to UpdateApiKey.
+func (c *AppSync) UpdateApiKeyWithContext(ctx aws.Context, input *appsync.UpdateApiKeyInput, opts ...request.Option) (*appsync.UpdateApiKeyOutput, error) {
+	c.inc("UpdateApiKey")
+	return c.svc.UpdateApiKeyWithContext(ctx, input, opts...)
+}
+
 // UpdateDataSourceRequest is a passthrough to the underlying UpdateDataSourceRequest.
 // It will increment the count of requests made to UpdateDataSource.
 func (c *AppSync) UpdateDataSourceRequest(input *appsync.UpdateDataSourceInput) (req *request.Request, output *appsync.UpdateDataSourceOutput) {

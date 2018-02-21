@@ -323,6 +323,27 @@ func (c *WAF) DeleteIPSetWithContext(ctx aws.Context, input *waf.DeleteIPSetInpu
 	return c.svc.DeleteIPSetWithContext(ctx, input, opts...)
 }
 
+// DeletePermissionPolicyRequest is a passthrough to the underlying DeletePermissionPolicyRequest.
+// It will increment the count of requests made to DeletePermissionPolicy.
+func (c *WAF) DeletePermissionPolicyRequest(input *waf.DeletePermissionPolicyInput) (req *request.Request, output *waf.DeletePermissionPolicyOutput) {
+	c.inc("DeletePermissionPolicy")
+	return c.svc.DeletePermissionPolicyRequest(input)
+}
+
+// DeletePermissionPolicy is a passthrough to the underlying DeletePermissionPolicy method.
+// It will increment the count of requests made to DeletePermissionPolicy.
+func (c *WAF) DeletePermissionPolicy(input *waf.DeletePermissionPolicyInput) (*waf.DeletePermissionPolicyOutput, error) {
+	c.inc("DeletePermissionPolicy")
+	return c.svc.DeletePermissionPolicy(input)
+}
+
+// DeletePermissionPolicyWithContext is a passthrough to the underlying DeletePermissionPolicyWithContext method.
+// It will increment the count of requests made to DeletePermissionPolicy.
+func (c *WAF) DeletePermissionPolicyWithContext(ctx aws.Context, input *waf.DeletePermissionPolicyInput, opts ...request.Option) (*waf.DeletePermissionPolicyOutput, error) {
+	c.inc("DeletePermissionPolicy")
+	return c.svc.DeletePermissionPolicyWithContext(ctx, input, opts...)
+}
+
 // DeleteRateBasedRuleRequest is a passthrough to the underlying DeleteRateBasedRuleRequest.
 // It will increment the count of requests made to DeleteRateBasedRule.
 func (c *WAF) DeleteRateBasedRuleRequest(input *waf.DeleteRateBasedRuleInput) (req *request.Request, output *waf.DeleteRateBasedRuleOutput) {
@@ -615,6 +636,27 @@ func (c *WAF) GetIPSet(input *waf.GetIPSetInput) (*waf.GetIPSetOutput, error) {
 func (c *WAF) GetIPSetWithContext(ctx aws.Context, input *waf.GetIPSetInput, opts ...request.Option) (*waf.GetIPSetOutput, error) {
 	c.inc("GetIPSet")
 	return c.svc.GetIPSetWithContext(ctx, input, opts...)
+}
+
+// GetPermissionPolicyRequest is a passthrough to the underlying GetPermissionPolicyRequest.
+// It will increment the count of requests made to GetPermissionPolicy.
+func (c *WAF) GetPermissionPolicyRequest(input *waf.GetPermissionPolicyInput) (req *request.Request, output *waf.GetPermissionPolicyOutput) {
+	c.inc("GetPermissionPolicy")
+	return c.svc.GetPermissionPolicyRequest(input)
+}
+
+// GetPermissionPolicy is a passthrough to the underlying GetPermissionPolicy method.
+// It will increment the count of requests made to GetPermissionPolicy.
+func (c *WAF) GetPermissionPolicy(input *waf.GetPermissionPolicyInput) (*waf.GetPermissionPolicyOutput, error) {
+	c.inc("GetPermissionPolicy")
+	return c.svc.GetPermissionPolicy(input)
+}
+
+// GetPermissionPolicyWithContext is a passthrough to the underlying GetPermissionPolicyWithContext method.
+// It will increment the count of requests made to GetPermissionPolicy.
+func (c *WAF) GetPermissionPolicyWithContext(ctx aws.Context, input *waf.GetPermissionPolicyInput, opts ...request.Option) (*waf.GetPermissionPolicyOutput, error) {
+	c.inc("GetPermissionPolicy")
+	return c.svc.GetPermissionPolicyWithContext(ctx, input, opts...)
 }
 
 // GetRateBasedRuleRequest is a passthrough to the underlying GetRateBasedRuleRequest.
@@ -1140,6 +1182,27 @@ func (c *WAF) ListXssMatchSets(input *waf.ListXssMatchSetsInput) (*waf.ListXssMa
 func (c *WAF) ListXssMatchSetsWithContext(ctx aws.Context, input *waf.ListXssMatchSetsInput, opts ...request.Option) (*waf.ListXssMatchSetsOutput, error) {
 	c.inc("ListXssMatchSets")
 	return c.svc.ListXssMatchSetsWithContext(ctx, input, opts...)
+}
+
+// PutPermissionPolicyRequest is a passthrough to the underlying PutPermissionPolicyRequest.
+// It will increment the count of requests made to PutPermissionPolicy.
+func (c *WAF) PutPermissionPolicyRequest(input *waf.PutPermissionPolicyInput) (req *request.Request, output *waf.PutPermissionPolicyOutput) {
+	c.inc("PutPermissionPolicy")
+	return c.svc.PutPermissionPolicyRequest(input)
+}
+
+// PutPermissionPolicy is a passthrough to the underlying PutPermissionPolicy method.
+// It will increment the count of requests made to PutPermissionPolicy.
+func (c *WAF) PutPermissionPolicy(input *waf.PutPermissionPolicyInput) (*waf.PutPermissionPolicyOutput, error) {
+	c.inc("PutPermissionPolicy")
+	return c.svc.PutPermissionPolicy(input)
+}
+
+// PutPermissionPolicyWithContext is a passthrough to the underlying PutPermissionPolicyWithContext method.
+// It will increment the count of requests made to PutPermissionPolicy.
+func (c *WAF) PutPermissionPolicyWithContext(ctx aws.Context, input *waf.PutPermissionPolicyInput, opts ...request.Option) (*waf.PutPermissionPolicyOutput, error) {
+	c.inc("PutPermissionPolicy")
+	return c.svc.PutPermissionPolicyWithContext(ctx, input, opts...)
 }
 
 // UpdateByteMatchSetRequest is a passthrough to the underlying UpdateByteMatchSetRequest.

@@ -197,6 +197,27 @@ func (c *ServiceCatalog) CreateProductWithContext(ctx aws.Context, input *servic
 	return c.svc.CreateProductWithContext(ctx, input, opts...)
 }
 
+// CreateProvisionedProductPlanRequest is a passthrough to the underlying CreateProvisionedProductPlanRequest.
+// It will increment the count of requests made to CreateProvisionedProductPlan.
+func (c *ServiceCatalog) CreateProvisionedProductPlanRequest(input *servicecatalog.CreateProvisionedProductPlanInput) (req *request.Request, output *servicecatalog.CreateProvisionedProductPlanOutput) {
+	c.inc("CreateProvisionedProductPlan")
+	return c.svc.CreateProvisionedProductPlanRequest(input)
+}
+
+// CreateProvisionedProductPlan is a passthrough to the underlying CreateProvisionedProductPlan method.
+// It will increment the count of requests made to CreateProvisionedProductPlan.
+func (c *ServiceCatalog) CreateProvisionedProductPlan(input *servicecatalog.CreateProvisionedProductPlanInput) (*servicecatalog.CreateProvisionedProductPlanOutput, error) {
+	c.inc("CreateProvisionedProductPlan")
+	return c.svc.CreateProvisionedProductPlan(input)
+}
+
+// CreateProvisionedProductPlanWithContext is a passthrough to the underlying CreateProvisionedProductPlanWithContext method.
+// It will increment the count of requests made to CreateProvisionedProductPlan.
+func (c *ServiceCatalog) CreateProvisionedProductPlanWithContext(ctx aws.Context, input *servicecatalog.CreateProvisionedProductPlanInput, opts ...request.Option) (*servicecatalog.CreateProvisionedProductPlanOutput, error) {
+	c.inc("CreateProvisionedProductPlan")
+	return c.svc.CreateProvisionedProductPlanWithContext(ctx, input, opts...)
+}
+
 // CreateProvisioningArtifactRequest is a passthrough to the underlying CreateProvisioningArtifactRequest.
 // It will increment the count of requests made to CreateProvisioningArtifact.
 func (c *ServiceCatalog) CreateProvisioningArtifactRequest(input *servicecatalog.CreateProvisioningArtifactInput) (req *request.Request, output *servicecatalog.CreateProvisioningArtifactOutput) {
@@ -321,6 +342,27 @@ func (c *ServiceCatalog) DeleteProduct(input *servicecatalog.DeleteProductInput)
 func (c *ServiceCatalog) DeleteProductWithContext(ctx aws.Context, input *servicecatalog.DeleteProductInput, opts ...request.Option) (*servicecatalog.DeleteProductOutput, error) {
 	c.inc("DeleteProduct")
 	return c.svc.DeleteProductWithContext(ctx, input, opts...)
+}
+
+// DeleteProvisionedProductPlanRequest is a passthrough to the underlying DeleteProvisionedProductPlanRequest.
+// It will increment the count of requests made to DeleteProvisionedProductPlan.
+func (c *ServiceCatalog) DeleteProvisionedProductPlanRequest(input *servicecatalog.DeleteProvisionedProductPlanInput) (req *request.Request, output *servicecatalog.DeleteProvisionedProductPlanOutput) {
+	c.inc("DeleteProvisionedProductPlan")
+	return c.svc.DeleteProvisionedProductPlanRequest(input)
+}
+
+// DeleteProvisionedProductPlan is a passthrough to the underlying DeleteProvisionedProductPlan method.
+// It will increment the count of requests made to DeleteProvisionedProductPlan.
+func (c *ServiceCatalog) DeleteProvisionedProductPlan(input *servicecatalog.DeleteProvisionedProductPlanInput) (*servicecatalog.DeleteProvisionedProductPlanOutput, error) {
+	c.inc("DeleteProvisionedProductPlan")
+	return c.svc.DeleteProvisionedProductPlan(input)
+}
+
+// DeleteProvisionedProductPlanWithContext is a passthrough to the underlying DeleteProvisionedProductPlanWithContext method.
+// It will increment the count of requests made to DeleteProvisionedProductPlan.
+func (c *ServiceCatalog) DeleteProvisionedProductPlanWithContext(ctx aws.Context, input *servicecatalog.DeleteProvisionedProductPlanInput, opts ...request.Option) (*servicecatalog.DeleteProvisionedProductPlanOutput, error) {
+	c.inc("DeleteProvisionedProductPlan")
+	return c.svc.DeleteProvisionedProductPlanWithContext(ctx, input, opts...)
 }
 
 // DeleteProvisioningArtifactRequest is a passthrough to the underlying DeleteProvisioningArtifactRequest.
@@ -491,6 +533,27 @@ func (c *ServiceCatalog) DescribeProvisionedProductWithContext(ctx aws.Context, 
 	return c.svc.DescribeProvisionedProductWithContext(ctx, input, opts...)
 }
 
+// DescribeProvisionedProductPlanRequest is a passthrough to the underlying DescribeProvisionedProductPlanRequest.
+// It will increment the count of requests made to DescribeProvisionedProductPlan.
+func (c *ServiceCatalog) DescribeProvisionedProductPlanRequest(input *servicecatalog.DescribeProvisionedProductPlanInput) (req *request.Request, output *servicecatalog.DescribeProvisionedProductPlanOutput) {
+	c.inc("DescribeProvisionedProductPlan")
+	return c.svc.DescribeProvisionedProductPlanRequest(input)
+}
+
+// DescribeProvisionedProductPlan is a passthrough to the underlying DescribeProvisionedProductPlan method.
+// It will increment the count of requests made to DescribeProvisionedProductPlan.
+func (c *ServiceCatalog) DescribeProvisionedProductPlan(input *servicecatalog.DescribeProvisionedProductPlanInput) (*servicecatalog.DescribeProvisionedProductPlanOutput, error) {
+	c.inc("DescribeProvisionedProductPlan")
+	return c.svc.DescribeProvisionedProductPlan(input)
+}
+
+// DescribeProvisionedProductPlanWithContext is a passthrough to the underlying DescribeProvisionedProductPlanWithContext method.
+// It will increment the count of requests made to DescribeProvisionedProductPlan.
+func (c *ServiceCatalog) DescribeProvisionedProductPlanWithContext(ctx aws.Context, input *servicecatalog.DescribeProvisionedProductPlanInput, opts ...request.Option) (*servicecatalog.DescribeProvisionedProductPlanOutput, error) {
+	c.inc("DescribeProvisionedProductPlan")
+	return c.svc.DescribeProvisionedProductPlanWithContext(ctx, input, opts...)
+}
+
 // DescribeProvisioningArtifactRequest is a passthrough to the underlying DescribeProvisioningArtifactRequest.
 // It will increment the count of requests made to DescribeProvisioningArtifact.
 func (c *ServiceCatalog) DescribeProvisioningArtifactRequest(input *servicecatalog.DescribeProvisioningArtifactInput) (req *request.Request, output *servicecatalog.DescribeProvisioningArtifactOutput) {
@@ -636,6 +699,27 @@ func (c *ServiceCatalog) DisassociateTagOptionFromResource(input *servicecatalog
 func (c *ServiceCatalog) DisassociateTagOptionFromResourceWithContext(ctx aws.Context, input *servicecatalog.DisassociateTagOptionFromResourceInput, opts ...request.Option) (*servicecatalog.DisassociateTagOptionFromResourceOutput, error) {
 	c.inc("DisassociateTagOptionFromResource")
 	return c.svc.DisassociateTagOptionFromResourceWithContext(ctx, input, opts...)
+}
+
+// ExecuteProvisionedProductPlanRequest is a passthrough to the underlying ExecuteProvisionedProductPlanRequest.
+// It will increment the count of requests made to ExecuteProvisionedProductPlan.
+func (c *ServiceCatalog) ExecuteProvisionedProductPlanRequest(input *servicecatalog.ExecuteProvisionedProductPlanInput) (req *request.Request, output *servicecatalog.ExecuteProvisionedProductPlanOutput) {
+	c.inc("ExecuteProvisionedProductPlan")
+	return c.svc.ExecuteProvisionedProductPlanRequest(input)
+}
+
+// ExecuteProvisionedProductPlan is a passthrough to the underlying ExecuteProvisionedProductPlan method.
+// It will increment the count of requests made to ExecuteProvisionedProductPlan.
+func (c *ServiceCatalog) ExecuteProvisionedProductPlan(input *servicecatalog.ExecuteProvisionedProductPlanInput) (*servicecatalog.ExecuteProvisionedProductPlanOutput, error) {
+	c.inc("ExecuteProvisionedProductPlan")
+	return c.svc.ExecuteProvisionedProductPlan(input)
+}
+
+// ExecuteProvisionedProductPlanWithContext is a passthrough to the underlying ExecuteProvisionedProductPlanWithContext method.
+// It will increment the count of requests made to ExecuteProvisionedProductPlan.
+func (c *ServiceCatalog) ExecuteProvisionedProductPlanWithContext(ctx aws.Context, input *servicecatalog.ExecuteProvisionedProductPlanInput, opts ...request.Option) (*servicecatalog.ExecuteProvisionedProductPlanOutput, error) {
+	c.inc("ExecuteProvisionedProductPlan")
+	return c.svc.ExecuteProvisionedProductPlanWithContext(ctx, input, opts...)
 }
 
 // ListAcceptedPortfolioSharesRequest is a passthrough to the underlying ListAcceptedPortfolioSharesRequest.
@@ -897,6 +981,27 @@ func (c *ServiceCatalog) ListPrincipalsForPortfolioPages(input *servicecatalog.L
 func (c *ServiceCatalog) ListPrincipalsForPortfolioPagesWithContext(ctx aws.Context, input *servicecatalog.ListPrincipalsForPortfolioInput, fn func(*servicecatalog.ListPrincipalsForPortfolioOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("ListPrincipalsForPortfolio"))
 	return c.svc.ListPrincipalsForPortfolioPagesWithContext(ctx, input, fn, opts...)
+}
+
+// ListProvisionedProductPlansRequest is a passthrough to the underlying ListProvisionedProductPlansRequest.
+// It will increment the count of requests made to ListProvisionedProductPlans.
+func (c *ServiceCatalog) ListProvisionedProductPlansRequest(input *servicecatalog.ListProvisionedProductPlansInput) (req *request.Request, output *servicecatalog.ListProvisionedProductPlansOutput) {
+	c.inc("ListProvisionedProductPlans")
+	return c.svc.ListProvisionedProductPlansRequest(input)
+}
+
+// ListProvisionedProductPlans is a passthrough to the underlying ListProvisionedProductPlans method.
+// It will increment the count of requests made to ListProvisionedProductPlans.
+func (c *ServiceCatalog) ListProvisionedProductPlans(input *servicecatalog.ListProvisionedProductPlansInput) (*servicecatalog.ListProvisionedProductPlansOutput, error) {
+	c.inc("ListProvisionedProductPlans")
+	return c.svc.ListProvisionedProductPlans(input)
+}
+
+// ListProvisionedProductPlansWithContext is a passthrough to the underlying ListProvisionedProductPlansWithContext method.
+// It will increment the count of requests made to ListProvisionedProductPlans.
+func (c *ServiceCatalog) ListProvisionedProductPlansWithContext(ctx aws.Context, input *servicecatalog.ListProvisionedProductPlansInput, opts ...request.Option) (*servicecatalog.ListProvisionedProductPlansOutput, error) {
+	c.inc("ListProvisionedProductPlans")
+	return c.svc.ListProvisionedProductPlansWithContext(ctx, input, opts...)
 }
 
 // ListProvisioningArtifactsRequest is a passthrough to the underlying ListProvisioningArtifactsRequest.
@@ -1162,6 +1267,46 @@ func (c *ServiceCatalog) SearchProductsAsAdminPages(input *servicecatalog.Search
 func (c *ServiceCatalog) SearchProductsAsAdminPagesWithContext(ctx aws.Context, input *servicecatalog.SearchProductsAsAdminInput, fn func(*servicecatalog.SearchProductsAsAdminOutput, bool) bool, opts ...request.Option) error {
 	opts = append(opts, c.incViaRequestOption("SearchProductsAsAdmin"))
 	return c.svc.SearchProductsAsAdminPagesWithContext(ctx, input, fn, opts...)
+}
+
+// SearchProvisionedProductsRequest is a passthrough to the underlying SearchProvisionedProductsRequest.
+// It will increment the count of requests made to SearchProvisionedProducts.
+func (c *ServiceCatalog) SearchProvisionedProductsRequest(input *servicecatalog.SearchProvisionedProductsInput) (req *request.Request, output *servicecatalog.SearchProvisionedProductsOutput) {
+	c.inc("SearchProvisionedProducts")
+	return c.svc.SearchProvisionedProductsRequest(input)
+}
+
+// SearchProvisionedProducts is a passthrough to the underlying SearchProvisionedProducts method.
+// It will increment the count of requests made to SearchProvisionedProducts.
+func (c *ServiceCatalog) SearchProvisionedProducts(input *servicecatalog.SearchProvisionedProductsInput) (*servicecatalog.SearchProvisionedProductsOutput, error) {
+	c.inc("SearchProvisionedProducts")
+	return c.svc.SearchProvisionedProducts(input)
+}
+
+// SearchProvisionedProductsWithContext is a passthrough to the underlying SearchProvisionedProductsWithContext method.
+// It will increment the count of requests made to SearchProvisionedProducts.
+func (c *ServiceCatalog) SearchProvisionedProductsWithContext(ctx aws.Context, input *servicecatalog.SearchProvisionedProductsInput, opts ...request.Option) (*servicecatalog.SearchProvisionedProductsOutput, error) {
+	c.inc("SearchProvisionedProducts")
+	return c.svc.SearchProvisionedProductsWithContext(ctx, input, opts...)
+}
+
+// SearchProvisionedProductsPages is a passthrough to the underlying SearchProvisionedProductsPages method.
+// It will increment the count of requests made to SearchProvisionedProducts on each page.
+// NOTE: this is slightly inaccurate in the case of errors, since the function will not be called.
+// Use SearchProvisionedProductsPagesWithContext to avoid this.
+func (c *ServiceCatalog) SearchProvisionedProductsPages(input *servicecatalog.SearchProvisionedProductsInput, fn func(*servicecatalog.SearchProvisionedProductsOutput, bool) bool) error {
+	wrappedFn := func(page *servicecatalog.SearchProvisionedProductsOutput, lastPage bool) bool {
+		c.inc("SearchProvisionedProducts")
+		return fn(page, lastPage)
+	}
+	return c.svc.SearchProvisionedProductsPages(input, wrappedFn)
+}
+
+// SearchProvisionedProductsPagesWithContext is a passthrough to the underlying SearchProvisionedProductsPagesWithContext method.
+// It will add a request.Option that will increment the count of requests made to SearchProvisionedProducts when applied to the request.
+func (c *ServiceCatalog) SearchProvisionedProductsPagesWithContext(ctx aws.Context, input *servicecatalog.SearchProvisionedProductsInput, fn func(*servicecatalog.SearchProvisionedProductsOutput, bool) bool, opts ...request.Option) error {
+	opts = append(opts, c.incViaRequestOption("SearchProvisionedProducts"))
+	return c.svc.SearchProvisionedProductsPagesWithContext(ctx, input, fn, opts...)
 }
 
 // TerminateProvisionedProductRequest is a passthrough to the underlying TerminateProvisionedProductRequest.

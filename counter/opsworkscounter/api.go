@@ -699,6 +699,27 @@ func (c *OpsWorks) DescribeMyUserProfileWithContext(ctx aws.Context, input *opsw
 	return c.svc.DescribeMyUserProfileWithContext(ctx, input, opts...)
 }
 
+// DescribeOperatingSystemsRequest is a passthrough to the underlying DescribeOperatingSystemsRequest.
+// It will increment the count of requests made to DescribeOperatingSystems.
+func (c *OpsWorks) DescribeOperatingSystemsRequest(input *opsworks.DescribeOperatingSystemsInput) (req *request.Request, output *opsworks.DescribeOperatingSystemsOutput) {
+	c.inc("DescribeOperatingSystems")
+	return c.svc.DescribeOperatingSystemsRequest(input)
+}
+
+// DescribeOperatingSystems is a passthrough to the underlying DescribeOperatingSystems method.
+// It will increment the count of requests made to DescribeOperatingSystems.
+func (c *OpsWorks) DescribeOperatingSystems(input *opsworks.DescribeOperatingSystemsInput) (*opsworks.DescribeOperatingSystemsOutput, error) {
+	c.inc("DescribeOperatingSystems")
+	return c.svc.DescribeOperatingSystems(input)
+}
+
+// DescribeOperatingSystemsWithContext is a passthrough to the underlying DescribeOperatingSystemsWithContext method.
+// It will increment the count of requests made to DescribeOperatingSystems.
+func (c *OpsWorks) DescribeOperatingSystemsWithContext(ctx aws.Context, input *opsworks.DescribeOperatingSystemsInput, opts ...request.Option) (*opsworks.DescribeOperatingSystemsOutput, error) {
+	c.inc("DescribeOperatingSystems")
+	return c.svc.DescribeOperatingSystemsWithContext(ctx, input, opts...)
+}
+
 // DescribePermissionsRequest is a passthrough to the underlying DescribePermissionsRequest.
 // It will increment the count of requests made to DescribePermissions.
 func (c *OpsWorks) DescribePermissionsRequest(input *opsworks.DescribePermissionsInput) (req *request.Request, output *opsworks.DescribePermissionsOutput) {

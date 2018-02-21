@@ -1247,6 +1247,27 @@ func (c *CognitoIdentityProvider) GetIdentityProviderByIdentifierWithContext(ctx
 	return c.svc.GetIdentityProviderByIdentifierWithContext(ctx, input, opts...)
 }
 
+// GetSigningCertificateRequest is a passthrough to the underlying GetSigningCertificateRequest.
+// It will increment the count of requests made to GetSigningCertificate.
+func (c *CognitoIdentityProvider) GetSigningCertificateRequest(input *cognitoidentityprovider.GetSigningCertificateInput) (req *request.Request, output *cognitoidentityprovider.GetSigningCertificateOutput) {
+	c.inc("GetSigningCertificate")
+	return c.svc.GetSigningCertificateRequest(input)
+}
+
+// GetSigningCertificate is a passthrough to the underlying GetSigningCertificate method.
+// It will increment the count of requests made to GetSigningCertificate.
+func (c *CognitoIdentityProvider) GetSigningCertificate(input *cognitoidentityprovider.GetSigningCertificateInput) (*cognitoidentityprovider.GetSigningCertificateOutput, error) {
+	c.inc("GetSigningCertificate")
+	return c.svc.GetSigningCertificate(input)
+}
+
+// GetSigningCertificateWithContext is a passthrough to the underlying GetSigningCertificateWithContext method.
+// It will increment the count of requests made to GetSigningCertificate.
+func (c *CognitoIdentityProvider) GetSigningCertificateWithContext(ctx aws.Context, input *cognitoidentityprovider.GetSigningCertificateInput, opts ...request.Option) (*cognitoidentityprovider.GetSigningCertificateOutput, error) {
+	c.inc("GetSigningCertificate")
+	return c.svc.GetSigningCertificateWithContext(ctx, input, opts...)
+}
+
 // GetUICustomizationRequest is a passthrough to the underlying GetUICustomizationRequest.
 // It will increment the count of requests made to GetUICustomization.
 func (c *CognitoIdentityProvider) GetUICustomizationRequest(input *cognitoidentityprovider.GetUICustomizationInput) (req *request.Request, output *cognitoidentityprovider.GetUICustomizationOutput) {
