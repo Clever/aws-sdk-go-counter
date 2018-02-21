@@ -78,4 +78,4 @@ At Clever you could also route logs to metrics backends like SignalFX, e.g. http
 ## Developing
 
 This repo uses a modified version of aws-sdk-go's codegen to produce the code in the `counter/` directory.
-Run `make all` in the the `counter` directory to generate the counters.
+Run `make deps` + `make all` in the the `counter` directory to generate the counters.
