@@ -75,8 +75,6 @@ You could also print the values periodically in the background e.g.
 	}()
 ```
 
-At Clever you could also route logs to metrics backends like SignalFX, e.g. https://github.com/Clever/workflow-manager/pull/87.
-
 ## Example
 
 See `example/` for a an example.
