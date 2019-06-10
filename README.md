@@ -1,12 +1,12 @@
 # aws-sdk-go-counter
 
-Wrapper around [aws-sdk-go](https://github.com/aws/aws-sdk-go) that counts API requests made to AWS.
+Session handler that counts calls made to AWS APIs.
 
 ## Motivation
 
 AWS APIs have rate limits, so monitoring the rate at which code is using different AWS APIs is useful.
 
-## Example usage
+## Usage
 
 Take normal aws-sdk-go client usage like this:
 
@@ -21,7 +21,7 @@ import (
 )
 
 func main() {
-	sess := session.New()
+	sess := session.Must(session.NewSession())
 	svc := s3.New(sess)
 	_, err := svc.ListBuckets(nil)
 	if err != nil {
@@ -30,7 +30,7 @@ func main() {
 }
 ```
 
-and wrap it
+and add a handler to the session:
 
 ``` go
 package main
@@ -39,26 +39,29 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/Clever/aws-sdk-go-counter/counter/s3counter"
+	"github.com/Clever/aws-sdk-go-counter"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
 )
 
 func main() {
-	sess := session.New()
-	svc := s3counter.New(s3.New(sess))
+	sess := session.Must(session.NewSession())
+	counter := counter.New()
+	sess.Handlers.Send.PushFront(counter.SessionHandler)
+	svc := s3.New(sess)
 	_, err := svc.ListBuckets(nil)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("%v\n", svc.Counters())
+	fmt.Printf("%v\n", counter.Counters())
 }
 ```
 
 Output:
 
 ```
-map[ListBuckets:1]
+[{s3 ListBuckets 1}]
+
 ```
 
 You could also print the values periodically in the background e.g.
@@ -67,15 +70,11 @@ You could also print the values periodically in the background e.g.
 	go func() {
 		ticker := time.NewTicker(10 * time.Second)
 		for _ = range ticker.C {
-			fmt.Printf("%v\n", svc.Counters())
+			fmt.Printf("%v\n", counter.Counters())
 		}
 	}()
 ```
 
-At Clever you could also route logs to metrics backends like SignalFX, e.g. https://github.com/Clever/workflow-manager/pull/87.
+## Example
 
-
-## Developing
-
-This repo uses a modified version of aws-sdk-go's codegen to produce the code in the `counter/` directory.
-Run `make deps` + `make all` in the the `counter` directory to generate the counters.
+See `example/` for a an example.
